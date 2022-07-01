@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Data Scientist @ <a href='www.luno.com'>Luno</a>
+subtitle: Data Scientist @ <a href='http://www.luno.com'>Luno</a>
 
 profile:
   align: right
