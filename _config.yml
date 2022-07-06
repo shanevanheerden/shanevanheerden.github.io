@@ -13,7 +13,7 @@ footer_text: >
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 📊  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 📈  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://shanevanheerden.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/
@@ -86,9 +86,9 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: All things NLP # blog_name will be displayed in your blog page
+blog_name: My personal blog # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-blog_description: a simple whitespace theme for academics
+blog_description: All things machine learning and crypto
 permalink: /blog/:year/:title/
 
 # Pagination
