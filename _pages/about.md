@@ -9,7 +9,7 @@ profile:
   image: shane.jpg
   image_cicular: false # crops the image to make it circular
   address: >
-    <p>📍Cape Town, South Africa</p>
+    📍Cape Town, South Africa
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
