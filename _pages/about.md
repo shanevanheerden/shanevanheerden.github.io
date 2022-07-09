@@ -17,9 +17,8 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 <p>
-
-  
-  
+<br>
+<br>
 Hi, I'm Shane!
 
 I believe that Artificial Intellegance and Blockchain Technology will profoundly change the world for the better.
