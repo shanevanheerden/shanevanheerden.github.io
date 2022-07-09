@@ -1,7 +1,7 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: I graduated with a BEng in Industrial Engineering from Stellenbosch University
+date: 2016-12-07 00:00:00-0000
 inline: false
 ---
 
