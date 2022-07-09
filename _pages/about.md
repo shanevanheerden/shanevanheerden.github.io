@@ -16,8 +16,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
+<p>
 
-
+  
+  
 Hi, I'm Shane!
 
-I believe that Artificial Intellegance and Blockchain Technology will fundemantally change the world for the better.
+I believe that Artificial Intellegance and Blockchain Technology will profoundly change the world for the better.
+<\p>
