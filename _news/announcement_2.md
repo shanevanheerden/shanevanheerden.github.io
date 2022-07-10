@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I successfully defended my PhD dissertation
-date: 2020-02-07 00:00:00-0000
+date: 2020-01-22 00:00:00-0000
 inline: false
 ---
 
