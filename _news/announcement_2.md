@@ -1,7 +1,7 @@
 ---
 layout: post
-title: I graduated with a PhD in Industrial Engineering from Stellenbosch University
-date: 2016-12-07 00:00:00-0000
+title: I successfully defended my PhD dissertation
+date: 2020-02-07 00:00:00-0000
 inline: false
 ---
 
