@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I successfully defended my PhD dissertation
+title: I successfully defended my PhD dissertation at Stellenbosch University
 date: 2020-01-22 00:00:00-0000
 inline: false
 ---
