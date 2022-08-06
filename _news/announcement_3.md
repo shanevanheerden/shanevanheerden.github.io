@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I attended and presented at the 30th European Conference on Operational Research in Dublin, Ireland
+title: I presented at the 30th European Conference on Operational Research in Dublin, Ireland
 date: 2019-06-23 00:00:00-0000
 inline: false
 ---
