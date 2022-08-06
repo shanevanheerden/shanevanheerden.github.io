@@ -1,7 +1,7 @@
 ---
 layout: post
-title: I successfully defended my PhD dissertation at Stellenbosch University
-date: 2020-01-22 00:00:00-0000
+title: I attended the Deep Learning Indaba in Stellenbosch, South Africa
+date: 20218-09-09 00:00:00-0000
 inline: false
 ---
 
