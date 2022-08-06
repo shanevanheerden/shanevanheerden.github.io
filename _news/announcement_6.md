@@ -1,7 +1,7 @@
 ---
 layout: post
-title: I graduated with a BEng in Industrial Engineering from Stellenbosch University
-date: 2016-12-07 00:00:00-0000
+title: I started a new role as a Data Scientist at Cape AI
+date: 2020-03-01 00:00:00-0000
 inline: false
 ---
 
