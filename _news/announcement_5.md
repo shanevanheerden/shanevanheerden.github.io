@@ -1,7 +1,7 @@
 ---
 layout: post
-title: I started a 2 month internship at DataProphet
-date: 2020-01-01 00:00:00-0000
+title: I successfully defended my PhD dissertation at Stellenbosch University
+date: 2020-01-22 00:00:00-0000
 inline: false
 ---
 
