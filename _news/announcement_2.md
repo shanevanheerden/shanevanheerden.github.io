@@ -16,3 +16,5 @@ Another highlight was the opportunity to attend a workshop led by David Silver, 
 In addition to the talks and workshops, the Indaba also provided a chance for participants to engage in networking and exchange with other researchers and practitioners in the field. I was able to make connections with people from all over the world, and had the opportunity to learn from their perspectives and experiences.
 
 Overall, my experience at the Deep Learning Indaba was incredibly rewarding, and I am grateful for the opportunity to have been a part of this amazing event. I came away with a renewed sense of excitement and motivation, and am looking forward to continuing to learn and grow in the field of AI.
+
+{% include figure.html path="assets/img/indaba.jpg" class="img-fluid rounded z-depth-1" %}
