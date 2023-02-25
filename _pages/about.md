@@ -18,5 +18,5 @@ social: true  # includes social icons at the bottom of the page
 
 <p>
 <br>
-Hi, I'm Shane! I believe that Artificial Intellegance and Blockchain Technology will fundamentally change the world for the better.
+Hi, I'm Shane! I believe that the proper implementation of Artificial Intellegance will fundamentally change the world for the better. I'm a highly motivated Machine Learning Engineer with experience in developing AI solutions for real-world problems. I have strong knowledge in deep learning, data engineering and object-oriented programming, and a passion for discovering insights from structured and unstructured data. I have demonstrated experience in leading data science projects as well as delivering productizable AI solutions.
 </p>
