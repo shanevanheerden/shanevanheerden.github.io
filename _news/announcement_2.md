@@ -2,7 +2,7 @@
 layout: post
 title: I attended the Deep Learning Indaba in Stellenbosch, South Africa
 date: 2018-09-09 00:00:00-0000
-inline: false
+inline: true
 ---
 
 Attending the Deep Learning Indaba at Stellenbosch University in South Africa was a truly transformative experience for me. From September 9th to 14th, 2018, I had the opportunity to immerse myself in the world of machine learning and artificial intelligence, and to learn from some of the most renowned experts in the field.
