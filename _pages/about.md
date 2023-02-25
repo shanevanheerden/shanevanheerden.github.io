@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Data Scientist | Machine Learning Engineer | NLP Specialist
+subtitle: Data Scientist  |  Machine Learning Engineer  |  NLP Specialist
 
 profile:
   align: right
