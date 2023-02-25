@@ -2,24 +2,28 @@
   type: map
   contents:
     - name: Full Name
-      value: Shane van Heerden
+      value: Albert Einstein
     - name: Date of Birth
-      value: 8 October 1994
+      value: 14th March 1879
     - name: Languages
-      value: English
+      value: English, German
 
 - title: Education
   type: time_table
   contents:
     - title: PhD
-      institution: Stellenbosch University, Stellenbosch, South Africa
-      year: 2019
+      institution: University of Zurich, Zurich, Switzerland
+      year: 1905
       description:
         - Description 1.
         - Description 2.
-    - title: BEng
-      institution: Stellenbosch University, Stellenbosch, South Africa
-      year: 2016
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
+    - title: Federal teaching diploma
+      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+      year: 1900
       description:
         - Description 1.
         - Description 2.
@@ -27,81 +31,59 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Data Scientist
-      institution: Luno
-      year: Sep 2021 - Present
+    - title: Professor of Theoretical Physics
+      institution: Institute for Advanced Study, Princeton University
+      year: 1933 - 1955
+      description:
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
+    - title: Visiting Professor
+      institution: California Institute of Technology, Pasadena, California, US
+      year: 1933
       description:
         - Description 1.
         - Description 2.
 
-    - title: Machine Learning Engineer
-      institution: Cape AI
-      year: Mar 2020 - Sep 2021
-      description:
-        - [Jun 2021] Involved in a project for a South African-based job recruitment firm which focused on matching resumes to job specifications by employing advanced NLP techniques. This involved developing and hosting multiple production-ready preprocessing pipelines to ingest ~70 000 documents on AWS EC2, storing and querying results from an Elasticsearch database, fine-tuning multiple BERT-based models for text classification and NER, and serving the final results to the client via an interactive Streamlit dashboard.
-        - [Apr 2021] Led a project for a Netherlands-based electronic supply client which focused on using customer segmentation to discover high-value customers, together with establishing customer look-alike profiles. This involved segmenting and clustering customer buying patterns by employing UMAP and HDBSCAN, as well as presenting results to the client by means of an interactive Streamlit dashboard.
-        - [Oct 2020] Led a project for a client's product review website advising how to decrease webpage creation time by employing automatic content generation techniques. This involved understanding how to optimize for SEO objectives and developing a proof-of-concept pipeline using Python and Huggingface Transformers.
-        - [Jul 2020] Led a project for a leading South African insurance provider advising on how to decrease the administrative burden in handling customer queries and complaints. This involved analyzing unstructured text communications and developing a proof-of-concept chatbot using DialogFlow.
-        - [Mar 2020] Led a project for a client's data exchange platform which entailed developing a C# and Python-based machine learning solution for automatically identifying sensitive client data fields. This involved employing a Logistic Regression classifier and establishing an active learning feedback loop between the client's local application and Azure cloud platform.
+    - title: Director
+      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
+      year: 1917-1933
 
-    - title: Lead Data Scientist
-      institution: Knowledgemarker
-      year: Jul 2020 - Jun 2021
+    - title: Professor of Theoretical Physics
+      institution: Karl-Ferdinand University, Prague, Czechoslovakia
+      year: 1911 - 1917
       description:
-        - Led the development of Knowledgemarker's Python-based "NLP Engine" which ingests unstructured text communications between colleagues and outputs possible opportunities for collaboration on technical topics.
-        - Responsibilities include breaking down high-level user stories into actionable development tickets, leveraging state-of-the-art Natural Language Processing research, and ensuring data pipelines are production-ready.
 
-    - title: Data Science Intern
-      institution: DataProphet
-      year: Jan 2020 - Mar 2020
-      description:
-        - Exposed to various data science-related topics and formed part of multiple teams responsible for installing DataProphet’s OMNI platform for their manufacturing clients.
-        - Projects involved discovering good operating regions for client's manufacturing machinery by employing fast Fourier transforms together with variational autoencoders using the Scikit-learn and Tensorflow Python packages.
+    - title: Associate Professor of Theoretical Physics
+      institution: University of Zurich, Zurich, Switzerland
+      year: 1909 - 1911
 
-    - title: Western Cape Chapter Chairperson
-      institution: The Operations Research Society of South Africa (ORSSA)
-      year: Jan 2017 - Dec 2018
-      description:
-        - My responsibility as chairperson was to promote a wider knowledge of the techniques and practices of Operations Research in the Western Cape.
-        - During this time, I organised a series of colloquiums, workshops, meetups, and AGM functions.
+- title: Open Source Projects
+  type: time_table
+  contents:
+    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+      year: 2015-now
+      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Honors and Awards
-  type: nested_list
+  type: time_table
   contents:
-    - title: Best Decision Support Prize for Final Year Project
-      institution: Stellenbosch University
-      year: Dec 2016
-      description:
-        - A decision support system is a set of related computer programs and the data required to assist with analysis and decision-making within an organization.
-        - At the end of my final year, I was awarded the best decision support system prize for my final year project.
-    - title: Golden Key International Honours Society member
-      institution: Golden Key International Honours Society
-      year: Jan 2014
-      description:
-        - Golden Key is an internationally recognised, non-profit organization affiliated with over 400 universities throughout Australia, Canada, India, Malaysia, New Zealand, South Africa, The Bahamas and the United States.
-    - title: Good Character Award
-      institution: Crawford College North Coast
-      year: Oct 2012
-      description:
-        - Awarded to the student who embodies the characteristics of nobility of spirit, generosity, humility and selflessness.
-    - title: Honours Blazer
-      institution: Crawford College North Coast
-      year: Jul 2012
-      description:
-        - A white Honours Blazer is the highest award a student can achieve at Crawford College. A student qualifies for an Honours Blazer by achieving full colours in at least three disciplines covering at least three of the awards categories
-        - I achieved full colours in Academics, Service and Sport.
-    - title: Dale Carnegie Highest Award for Achievement
-      institution: Dale Carnegie Training
-      year: Jul 2010
-      description:
-        - Dale Carnegie Training works with organisations and individuals in the areas of employee engagement, sales training, leadership development, sales management, talent management, process improvement, customer service, public speaking, and presentation effectiveness.
-        - The Highest Achievement Award is awarded to one individual within a training program who shows the greatest improvement in public speaking, overall confidence and presentational effectiveness.
+    - year: 1921
+      items: 
+        - Nobel Prize in Physics 
+        - Matteucci Medal
+    - year: 2029
+      items: 
+        - Max Planck Medal
 
 - title: Academic Interests
   type: nested_list
   contents:
     - title: Topic 1.
-      items:
+      items: 
         - Description 1.
         - Description 2.
     - title: Topic 2.
