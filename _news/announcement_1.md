@@ -2,7 +2,7 @@
 layout: post
 title: I graduated with a BEng in Industrial Engineering from Stellenbosch University
 date: 2016-12-07 00:00:00-0000
-inline: true
+inline: false
 ---
 
 I am excited to announce that I have graduated from Stellenbosch University with a BEng degree in Industrial Engineering. This is a major milestone in my academic and professional journey, and I am grateful for the opportunity to have studied at such a prestigious institution.
