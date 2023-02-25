@@ -7,7 +7,7 @@ inline: false
 
 Attending the Deep Learning Indaba at Stellenbosch University in South Africa was a truly transformative experience for me. From September 9th to 14th, 2018, I had the opportunity to immerse myself in the world of machine learning and artificial intelligence, and to learn from some of the most renowned experts in the field.
 
-The Indaba, whose mission is to strengthen AI on the African continent, provided a platform for teaching, research, exchange, and debate around the latest developments in the field. Among the prestigious speakers at the event were Jeff Dean, a senior researcher at Google, and David Silver, the lead researcher on the AlphaGo project at DeepMind.
+The Indaba, whose mission is to strengthen AI on the African continent, provided a platform for teaching, research, exchange, and debate around the latest developments in the field. Among the prestigious speakers at the event were <a href='https://research.google/people/jeff/'>Jeff Dean</a>, a senior researcher at Google, and <a href='https://www.davidsilver.uk/'>David Silver</a>, the lead researcher on the AlphaGo project at DeepMind.
 
 One of the highlights of the Indaba for me was the chance to hear Jeff Dean speak about the role of AI in advancing healthcare and scientific research. His talk was both informative and inspiring, and provided a glimpse into the exciting potential of what the future may hold.
 
