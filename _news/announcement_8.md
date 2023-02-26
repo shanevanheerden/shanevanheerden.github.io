@@ -6,3 +6,4 @@ inline: false
 ---
 
 {% include figure.html path="assets/img/luno1.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/luno2.jpg" class="img-fluid rounded z-depth-1" %}
