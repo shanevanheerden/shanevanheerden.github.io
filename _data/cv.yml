@@ -8,6 +8,31 @@
     - name: Languages
       value: English
 
+- title: Experience
+  type: time_table
+  contents:
+    - title: Luno
+      institution: Data Scientist
+      year: Sep 2021 – Present
+      description:
+        - Developed real-time customer AML & fraud risk models, lead development of model evaluation feedback loop, built PySpark-based Databricks pipelines and Looker dashboards for model monitoring, and advised on appropriate trade-offs between model precision and recall.
+        - Data Science Lead for Zendesk CRM migration project, identified critical data sources to ingest based on reporting requirements, coordinated with Engineers on appropriate CRM configurations, and advised on a new data architecture.
+        - Produced accurate inbound customer message forecasts for workforce hiring and scheduling optimisation, explored correlation between Bitcoin spending behaviour and inbound messages volumes, and benchmarked predictive performance of ARIMA and Prophet forecasting models.
+        - Automated various productivity reports for Luno's Customer Service Workforce Team, developed PySpark-based Databricks pipelines, and displayed productivity metrics to individual Customer Success Team Leaders via Looker dashboards.
+    - title: Cape AI
+      institution: Machine Learning Engineer
+      year: Mar 2020 – Aug 2021
+      description:
+        - Matched resumes to job specifications using advanced NLP techniques, developed production-ready preprocessing pipelines, stored and queried results from an Elasticsearch database, fine-tuned BERT-based models for text classification and NER, and served final results via interactive Streamlit dashboard.
+        - Connected employees for knowledge-sharing opportunities by analyzing unstructured text communications, leveraged state-of-the-art NLP techniques, built production-ready data pipelines interfacing with a Neo4j graph database, and deployed and monitoring an online learning model recommending possible connection opportunities.
+        - Advised a client's product review website on decreasing webpage creation time by employing automatic content generation techniques, optimised for SEO objectives, and developed a proof-of-concept pipeline using Python and Huggingface Transformers.
+        - Developed a machine learning solution for identifying sensitive client data fields in a client's data exchange platform, employed Logistic Regression classifier and established a feedback loop between the client's local application and Azure cloud platform.
+    - title: DataProphet
+      institution: Data Science Intern
+      year: Jan 2020 – Mar 2020
+      description:
+        - Projects involved discovering good operating regions for clients' manufacturing machinery by employing fast Fourier transforms together with variational autoencoders using the Scikit-learn and Tensorflow Python packages.
+
 - title: Education
   type: time_table
   contents:
@@ -22,45 +47,3 @@
       description:
         - Invited to the Golden Key International Honour Society.
         - Won the prize for the best computer-based decision support system in the final year project.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Luno
-      institution: Data Scientist
-      year: Sept 2021 – Present
-      description:
-        - Developed real-time customer AML & fraud risk models, lead development of model evaluation feedback loop, built PySpark-based Databricks pipelines and Looker dashboards for model monitoring, and advised on appropriate trade-offs between model precision and recall.
-        - Data Science Lead for Zendesk CRM migration project, identified critical data sources to ingest based on reporting requirements, coordinated with Engineers on appropriate CRM configurations, and advised on a new data architecture.
-        - Produced accurate inbound customer message forecasts for workforce hiring and scheduling optimisation, explored correlation between Bitcoin spending behaviour and inbound messages volumes, and benchmarked predictive performance of ARIMA and Prophet forecasting models.
-        - Automated various productivity reports for Luno's Customer Service Workforce Team, developed PySpark-based Databricks pipelines, and displayed productivity metrics to individual Customer Success Team Leaders via Looker dashboards.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
