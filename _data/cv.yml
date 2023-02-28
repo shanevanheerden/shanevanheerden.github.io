@@ -38,12 +38,31 @@
   contents:
     - title: PhD (Data Science)
       institution: Stellenbosch University, Stellenbosch, South Africa
-      year: 2019
+      year: 2017 – 2019
       description:
         - Research focused on the design and development of a Data Mining framework for quantifying and characterising road accident risk using machine learning and implemented as a Python-based solution.
     - title: BEng (Industrial Engineering)
       institution: Stellenbosch University, Stellenbosch, South Africa
-      year: 2016
+      year: 2013 – 2016
       description:
         - Invited to the Golden Key International Honour Society.
         - Won the prize for the best computer-based decision support system in the final year project.
+
+- title: Academic exposure
+  type: time_table
+  contents:
+    - title: European Conference on Operational Research (EURO)
+      institution: University College Dublin, Ireland
+      year: Jun 2019
+      description:
+        - Presented research findings at the 30th EURO conference in Dublin, exposed to new ideas in the fields of Operations Research and Machine Learning.
+    - title: Deep Learning Indaba
+      institution: Stellenbosch University, South Africa
+      year: Sep 2018
+      description:
+        - Attended a week-long meeting of the African Machine Learning community, exposed to teaching, research, exchange, and debate around the state-of-the-art in Machine Learning and Artificial Intelligence.
+    - title: Operations Research Society of South Africa Conference
+      institution: South Africa
+      year: 2016, 2017, 2018 & 2019
+      description:
+        - Presented research findings at the 2016, 2017, 2018 & 2019 ORSSA annual conferences.
