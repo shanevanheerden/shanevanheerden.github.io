@@ -3,6 +3,7 @@ layout: distill
 title: Word Embeddings
 description: Natural Language Processing Series
 date: 2020-10-12
+tags: NLP
 
 authors:
   - name: Shane van Heerden
