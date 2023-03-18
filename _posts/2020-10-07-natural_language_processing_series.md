@@ -2,7 +2,7 @@
 layout: distill
 title: A Brief History of Natural Language Processing
 description: Natural Language Processing Series
-date: 2021-02-16
+date: 2020-02-16
 
 authors:
   - name: Shane van Heerden
