@@ -7,7 +7,7 @@ date: 2021-02-16
 authors:
   - name: Shane van Heerden
     affiliations:
-      name: [Cape AI](https://cape-ai.com/)
+      name: Cape AI
 
 bibliography: 2018-12-22-distill.bib
 
