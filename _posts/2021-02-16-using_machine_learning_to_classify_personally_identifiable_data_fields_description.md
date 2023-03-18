@@ -18,12 +18,12 @@ bibliography: 2018-12-22-distill.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: The Problem
-  - name: Understanding the clients needs
-  - name: Rapid development
-  - name: Defining the process flow
-  - name: Evaluating the systems performance
-  - name: Wrapping up
+  - name: 1. The problem
+  - name: 2. Understanding the clients needs
+  - name: 3. Rapid development
+  - name: 4. Defining the process flow
+  - name: 5. Evaluating the systems performance
+  - name: 6. Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -49,7 +49,7 @@ _styles: >
 
 Here at Cape AI, we are always ready to tackle new challenges using Machine Learning and Advanced Analytics. In the field of AI, which is constantly changing, this is how we discover and push the bounds of what is truly possible.
 
-## The Problem
+## 1. The problem
 
 Recently, we were tasked with a new challenge by a client who provides services related to understanding consumer data. In order to strengthen their [*General Data Protection Regulation*](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) compliance and boost their clients' trust, **they wanted a solution that could help them automatically identify sensitive fields in their clients' consumer data so that these could be encrypted appropriately**. This was an important problem for us to tackle since all organisations and companies that handle data relating to EU citizens must comply with GDPR.
 
@@ -57,7 +57,7 @@ In this post, we are going to walk you through how we helped them solve this pro
 
 ***
 
-## Understanding the clients needs
+## 2. Understanding the clients needs
 
 The first step in our problem-solving process always involves engaging with the client to better understand their problem and agree on a set of solution requirements. So, what exactly was the problem? Let us unpack it a bit …
 
@@ -72,7 +72,7 @@ After the first formal engagement with the client, a set of requirements for the
 
 ***
 
-## Rapid development
+## 3. Rapid development
 
 The next step in our problem-solving process typically involves rapid analysis and developing a proof-of-concept to demonstrate how our proposed solution would work and the value it offers.
 
@@ -95,7 +95,7 @@ With this in mind, we had enough confidence to progress further with this idea a
 
 ***
 
-## Defining the process flow
+## 4. Defining the process flow
 
 One natural idea that occurred to us at the beginning of the project was to determine the column categories based solely on clever RegEx formulations. Indeed, this would be quite easy for categories such as email addresses, phone- and ID numbers, but a lot more difficult for columns that contained, say, a person's name. Nonetheless, we realised that it would be foolish to let our Logistic Regression model predict a column category if we could already say, for certain, that it belonged to a specific category based on the value of a certain RegEx feature. Take, for example, a string that contains an at-sign ("@") — it wouldn't seem too crazy to immediately assign this column to the "Email" category if we observe the first 10 records subscribing to this pattern. With this notion in mind, we decided to impose some features as having a so-called *assign condition* which would facilitate this automatic assignment of a column to a specific category.
 
@@ -109,7 +109,7 @@ If the largest predicted probability aggregated across all samples exceeds some 
 
 ***
 
-## Evaluating the systems performance
+## 5. Evaluating the systems performance
 
 The final step in our formulation was to assess the solution's performance in a real-life setting. For this, our client gave us the challenge of correctly categorising 192 consumer data columns. Figure 5 shows a snippet of the evaluation procedure we followed, where green dots indicate a correct prediction and red an incorrect prediction. We also tracked whether the assigned category was the result of assignment by a feature or prediction by the Logistic Regression model, indicated by the blue and purple dots, respectively.
 
@@ -123,6 +123,6 @@ So, how well did our solution fare overall? Figure 6 shows the results of our ev
 
 ***
 
-## Wrapping up
+## 6. Wrapping up
 
 And that's all! In this post, we walked you through our approach for automatically identifying sensitive data fields. It goes to show that Machine Learning can be used to solve almost any problem.
