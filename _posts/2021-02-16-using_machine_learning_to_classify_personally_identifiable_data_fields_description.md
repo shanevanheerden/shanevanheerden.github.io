@@ -21,7 +21,7 @@ toc:
   - name: The Problem
   - name: Understanding the clients needs
   - name: Rapid development
-  - name: Defining the process flow category assignment
+  - name: Defining the process flow
   - name: Evaluating the systems performance
   - name: Wrapping up
 
@@ -94,7 +94,7 @@ With this in mind, we had enough confidence to progress further with this idea a
 
 ***
 
-## Defining the process flow category assignment
+## Defining the process flow
 
 One natural idea that occurred to us at the beginning of the project was to determine the column categories based solely on clever RegEx formulations. Indeed, this would be quite easy for categories such as email addresses, phone- and ID numbers, but a lot more difficult for columns that contained, say, a person's name. Nonetheless, we realised that it would be foolish to let our Logistic Regression model predict a column category if we could already say, for certain, that it belonged to a specific category based on the value of a certain RegEx feature. Take, for example, a string that contains an at-sign ("@") — it wouldn't seem too crazy to immediately assign this column to the "Email" category if we observe the first 10 records subscribing to this pattern. With this notion in mind, we decided to impose some features as having a so-called *assign condition* which would facilitate this automatic assignment of a column to a specific category.
 
