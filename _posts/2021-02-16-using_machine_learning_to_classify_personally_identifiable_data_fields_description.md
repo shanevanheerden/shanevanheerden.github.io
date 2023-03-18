@@ -4,6 +4,11 @@ title: Using Machine Learning to Classify Personally Identifiable Data Fields
 description: In noisy Excel spreadsheets
 date: 2021-02-16
 
+authors:
+  - name: Shane van Heerden
+    affiliations:
+      name: [Cape AI](https://cape-ai.com/)
+
 bibliography: 2018-12-22-distill.bib
 
 # Optionally, you can add a table of contents to your post.
