@@ -1,7 +1,7 @@
 ---
 layout: distill
-title: Natural Language Processing Series
-description: Part 1 - A Brief History of Natural Language Processing
+title: A Brief History of Natural Language Processing
+description: Natural Language Processing Series
 date: 2021-02-16
 
 authors:
