@@ -22,7 +22,7 @@ toc:
   - name: Word2Vec Methods
   - name: Training a Word2Vec Model
   - name: Word2Vec Tutorial
-  - name: Wrapping Up
+  - name: Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -219,7 +219,7 @@ The list above shows us the words most similar to the word “learning” and di
 
 ***
 
-## Wrapping Up
+## Wrapping up
 
 And there you have it! In this blog post, we described the two flavours of word2vec models, namely CBOW and Skip-gram as well as the model training procedure. Armed with this information, we got a bit more practical by walking you through how to create your very own word2vec model in Python using the Gensim library.
 
