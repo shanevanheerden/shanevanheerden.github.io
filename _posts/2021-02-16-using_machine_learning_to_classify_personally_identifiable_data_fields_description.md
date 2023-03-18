@@ -55,7 +55,6 @@ Recently, we were tasked with a new challenge by a client who provides services 
 
 In this post, we are going to walk you through how we helped them solve this problem with some clever engineering and the help of Machine Learning!
 
-
 ***
 
 ## Understanding the clients needs
@@ -77,7 +76,7 @@ After the first formal engagement with the client, a set of requirements for the
 
 The next step in our problem-solving process typically involves rapid analysis and developing a proof-of-concept to demonstrate how our proposed solution would work and the value it offers.
 
->Time for some Machine Learning!
+> Time for some Machine Learning!
 
 Upon reviewing the requirements again, it was clear that this problem could be framed as a classification problem — something we are all too familiar with here at Cape AI. In this case, if we had a bunch of examples of first and last names, phone numbers, ID numbers, DoB, email addresses and VINs, each labelled as such, we could train a multi-class supervised learning model, such as [Logistic Regression](https://en.wikipedia.org/wiki/Logistic_regression). This model could then be used to classify each new "string" as one of the above labels (a catch-all term for sets of letters and/or numbers in this context). Luckily, our client had many examples of these different categories on hand for us!
 
@@ -120,7 +119,7 @@ So, how well did our solution fare overall? Figure 6 shows the results of our ev
 
 {% include figure.html path="assets/img/blog4.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-The client was happy with this performance and we proceeded with packaging the solution as a production-ready product for them.
+> The client was happy with this performance and we proceeded with packaging the solution as a production-ready product for them.
 
 ***
 
