@@ -47,9 +47,11 @@ _styles: >
 
 {% include figure.html path="assets/img/blog4.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
+Here at Cape AI, we are always ready to tackle new challenges using Machine Learning and Advanced Analytics. In the field of AI, which is constantly changing, this is how we discover and push the bounds of what is truly possible.
+
 ## The Problem
 
-Recently, we were tasked with a new challenge by a client who provides services related to understanding consumer data. In order to strengthen their [*General Data Protection Regulation*](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) compliance and boost their clients' trust, they wanted a solution that could help them automatically identify sensitive fields in their clients' consumer data so that these could be encrypted appropriately. This was an important problem for us to tackle since all organisations and companies that handle data relating to EU citizens must comply with GDPR.
+Recently, we were tasked with a new challenge by a client who provides services related to understanding consumer data. In order to strengthen their [*General Data Protection Regulation*](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) compliance and boost their clients' trust, **they wanted a solution that could help them automatically identify sensitive fields in their clients' consumer data so that these could be encrypted appropriately**. This was an important problem for us to tackle since all organisations and companies that handle data relating to EU citizens must comply with GDPR.
 
 In this post, we are going to walk you through how we helped them solve this problem with some clever engineering and the help of Machine Learning!
 
@@ -75,7 +77,7 @@ After the first formal engagement with the client, a set of requirements for the
 
 The next step in our problem-solving process typically involves rapid analysis and developing a proof-of-concept to demonstrate how our proposed solution would work and the value it offers.
 
-Time for some Machine Learning!
+>Time for some Machine Learning!
 
 Upon reviewing the requirements again, it was clear that this problem could be framed as a classification problem — something we are all too familiar with here at Cape AI. In this case, if we had a bunch of examples of first and last names, phone numbers, ID numbers, DoB, email addresses and VINs, each labelled as such, we could train a multi-class supervised learning model, such as [Logistic Regression](https://en.wikipedia.org/wiki/Logistic_regression). This model could then be used to classify each new "string" as one of the above labels (a catch-all term for sets of letters and/or numbers in this context). Luckily, our client had many examples of these different categories on hand for us!
 
