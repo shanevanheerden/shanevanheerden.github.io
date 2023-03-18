@@ -18,9 +18,9 @@ bibliography: 2018-12-22-distill.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: What exactly is a language model?
-  - name: Building our own Neural Language Model
-  - name: Wrapping up
+  - name: 1. What exactly is a language model?
+  - name: 2. Building our own Neural Language Model
+  - name: 3. Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -46,7 +46,7 @@ _styles: >
 
 This is the third blog post in our series of blog posts focusing on the exciting field of Natural Language Processing! In our first post, we saw that the application of neural networks for building language models was a major turning point in the NLP timeline, and in our second post we explored the significance of Word Embeddings in advancing the field. With this, we’re now ready to build our own language model!
 
-## What exactly is a language model?
+## 1. What exactly is a language model?
 
 In its most simple form:
 
@@ -58,7 +58,7 @@ Traditionally, this problem was tackled with Statistical Language Models which p
 
 ***
 
-## Building our own Neural Language Model
+## 2. Building our own Neural Language Model
 
 We’re going to keep things very practical in this post by jumping straight into a coding example! In this example, we are going to walk you through:
 
@@ -68,7 +68,7 @@ We’re going to keep things very practical in this post by jumping straight int
 
 Let’s get started!
 
-### Package installations
+### 2.1. Package installations
 
 We only need to install two packages for this tutorial: good-ol’ numpy and keras (which will do most of the deep learning heavy-lifting for us). Go ahead and run the following in your terminal:
 
@@ -79,7 +79,7 @@ $ pip install keras
 
 {% endhighlight %}
 
-### Creating a training document
+### 2.2. Creating a training document
 
 Now we need some high-quality text. And what better place to look than the much-loved Cat in the Hat story by Dr Seuss that we all probably all read as kids. Thankfully, Robert Dionne has already compiled a text file containing the full story which we can read in using the following code:
 
@@ -115,7 +115,7 @@ So we sat in the house.
 
 Seems right!
 
-### Text pre-processing
+### 2.3. Text pre-processing
 
 Next, we need to do some text pre-processing in which we will transform our document into a sequence of tokens which we can use to construct a training data set for our model. Based on the short snippet of the story we saw, we clean the text in the following way:
 
@@ -169,7 +169,7 @@ Number of sequences: 6225
 
 This should be more than enough training sequences for demonstration purposes.
 
-### Prepare the dataset
+### 2.4. Prepare the dataset
 
 Although the string representation of our words is nice for humans to look at, it won’t mean much for a neural network which only deals with numbers. We therefore need to map each of the words in our vocabulary to a corresponding integer value.
 
@@ -200,7 +200,7 @@ seq_length = X.shape[1]
 
 For indexing reasons, we utilise numpy’s handy splicing operation to perform this splitting. After this, we one-hot encode the target word using keras’s to_categorical() method which, in effect, transforms our output to a vector of length vocab_size with a value of 1 in the place of the word’s position and a value of 0 everywhere else. It will then be the job of the model to learn a probability distribution over all words in our vocabulary.
 
-### Define and train the model
+### 2.5. Define and train the model
 
 Hooray! We’ve arrived at the fun part of choosing the structure of our neural language model and training it.
 
@@ -255,7 +255,7 @@ model.fit(X, y, batch_size=128, epochs=100)
 
 We define a cross entropy loss function which is sensible since we are technically dealing with a multi-class classification problem. We will also specify that keras must use the efficient Adam optimizer for updating the model weights evaluated on accuracy. Finally, we fit the model on our data for 100 training epochs with a fairly modest batch size of 128. Now all we have to do is go grab a coffee and let our model train.
 
-### Training the model
+### 2.6. Training the model
 
 Congratulations! You have just trained your very own neural language model! Let’s explore your new model’s capabilities by generating some random text with it. For this, we are going to create a function that takes as input the model and associated tokenizer we have just created, together with the sequence length, number of words to generate, and some input text which will act as a starting point in the generation process.
 
@@ -298,7 +298,7 @@ Interesting choice of words, but I don’t quite think our model is going to be 
 
 ***
 
-## Wrapping up
+## 3. Wrapping up
 
 And that’s all! In this post, I walked you through how to create your very own neural language model in Python with some help from Keras and how you can use this model to generate your own text sequences.
 
