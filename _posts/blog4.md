@@ -40,6 +40,8 @@ _styles: >
 
 ---
 
+{% include figure.html path="assets/img/blog4.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+
 ## The Problem
 
 Recently, we were tasked with a new challenge by a client who provides services related to understanding consumer data. In order to strengthen their [*General Data Protection Regulation*](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) compliance and boost their clients' trust, they wanted a solution that could help them automatically identify sensitive fields in their clients' consumer data so that these could be encrypted appropriately. This was an important problem for us to tackle since all organisations and companies that handle data relating to EU citizens must comply with GDPR.
