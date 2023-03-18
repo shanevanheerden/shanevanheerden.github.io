@@ -18,11 +18,9 @@ bibliography: 2018-12-22-distill.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: What are Word Embeddings?
-  - name: Word2Vec Methods
-  - name: Training a Word2Vec Model
-  - name: Word2Vec Tutorial
-  - name: Wrapping Up
+  - name: What exactly is a language model?
+  - name: Building our own Neural Language Model
+  - name: Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
