@@ -18,14 +18,14 @@ bibliography: 2018-12-22-distill.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: Neural Language Models (2001)
-  - name: Multi-task Learning (2008)
-  - name: Word Embeddings (2013)
-  - name: Neural Networks for NLP (2013)
-  - name: Sequence-to-Sequence Models (2014)
-  - name: Attention Mechanisms (2015)
-  - name: Pre-trained Language Models (2018)
-  - name: Where we are today and looking forward…
+  - name: 1. Neural Language Models (2001)
+  - name: 2. Multi-task Learning (2008)
+  - name: 3. Word Embeddings (2013)
+  - name: 4. Neural Networks for NLP (2013)
+  - name: 5. Sequence-to-Sequence Models (2014)
+  - name: 6. Attention Mechanisms (2015)
+  - name: 7. Pre-trained Language Models (2018)
+  - name: 8. Where we are today and looking forward…
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -53,7 +53,7 @@ This is the first blog post in a series focusing on the wonderful world of Natur
 
 Short disclaimer before we begin: This post is heavily skewed towards neural network-based advancements. Many of these milestones, however, were built on many influential ideas presented by non-neural network-based work during the same era, which, for brevity purposes, have been omitted from this post.
 
-## Neural Language Models (2001)
+## 1. Neural Language Models (2001)
 
 It’s 2001 and the field of NLP is quite nascent. Academics all around the world are beginning to think more about how language could be modelled. After a lot of research, Neural Language models are born. Language modelling is simply the task of determining the probability of the next word (often referred to as a token) occurring in a piece of text given all the previous words. Traditional approaches for tackling this problem were based on n-gram models in combination with some sort of smoothing technique [1]. Bengio et al. [2] were the first to propose using a feed-forward neural network, a so-called word “lookup-table”, for representing the n previous words in a sequence as illustrated in Figure 1. Today, this is known as word embeddings.
 
@@ -61,7 +61,7 @@ It’s 2001 and the field of NLP is quite nascent. Academics all around the worl
 
 ***
 
-## Multi-task Learning (2008)
+## 2. Multi-task Learning (2008)
 
 Excitement and interest grows steadily in the years following Neural Language models. Advances in computer hardware allow researchers to push the boundaries on language modelling, giving rise to new NLP methods. One such method is multi-task learning. The notion of multi-task learning involves training models to solve more than one learning task, while also using a set of shared parameters. As a result, models are forced to learn a representation that exploits the commonalities and differences across all tasks.
 
@@ -71,7 +71,7 @@ Collobert and Weston [3] were the first to apply a form of multi-task learning i
 
 ***
 
-## Word Embeddings (2013)
+## 3. Word Embeddings (2013)
 
 If you’ve had any exposure to NLP, the first thing you have probably come across is the idea of word embeddings (or more commonly known as word2vec). Although we have seen that word embeddings have been used as far back as 2001, in 2013 Mikolov et al. [4] proposed a simple but novel method for efficiently training these word embeddings on very large unlabeled corpora which ultimately led to their wide-scale adoption.
 
@@ -81,13 +81,13 @@ Word embeddings attempt to create a dense vector representation of text, and add
 
 ***
 
-## Neural Networks for NLP (2013)
+## 4. Neural Networks for NLP (2013)
 
 Looking back, 2013 appeared to be an inflection point in the NLP field, as research and development grew exponentially thereon. The advancements in word embeddings ultimately sparked the wider application of neural networks in NLP. The key challenge that needed to be addressed was architecturally allowing sequences of variable lengths to be inputted into the neural net which ultimately lead to three architectures emerging, namely: recurrent neural networks (RNNs) (which were soon replaced by long-short term memory (LSTM) networks), convolutional neural networks (CNNs), and recursive neural networks. Today, these neural network architectures have produced exceptional results and are widely used for many NLP applications.
 
 ***
 
-## Sequence-to-Sequence Models (2014)
+## 5. Sequence-to-Sequence Models (2014)
 
 Soon after the emergence of RNNs and CNNs for language modelling, Sutskever et al. [5] were the first to propose a general framework for mapping one sequence to another, which is now known as sequence-to-sequence models. In this framework, an encoder network processes an input sequence token by token and compresses it into a vector representation, represented by the blue layers in Figure 4. A decoder network (represented by the red layers) is then used to predict a new sequence of output tokens based on the encoder state, which takes every previously predicted token as input.
 
@@ -97,7 +97,7 @@ This architecture is particularly useful in tasks such as machine translation (M
 
 ***
 
-## Attention Mechanisms (2015)
+## 6. Attention Mechanisms (2015)
 
 Although useful in a wide range of tasks, sequence-to-sequence models were struggling with being able to capture long-range dependencies between words in text. In 2015, the concept of attention was introduced by Bahdanau et al. [9] as a way of addressing this bottleneck. In essence, attention in a neural network is a mechanism for deciding which parts of the input sequence to attend to when routing information. Various attention mechanisms have also been applied in the computer vision space for image captioning [10], which also provides a glimpse into the inner workings of the model, as is seen in Figure 5.
 
@@ -107,7 +107,7 @@ Attention is not only restricted to the input sequence and can also be used to f
 
 {% include figure.html path="assets/img/blog1.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-## Pre-trained Language Models (2018)
+## 7. Pre-trained Language Models (2018)
 
 Dai & Le [13] were the first to propose using pre-trained language models in 2015 but this notion was only recently shown to be beneficial across a broad range of NLP-related tasks. More specifically, it was shown that pre-trained language models could be fine-tuned on other data related to a specific target task [14, 15]. Additionally, language model embeddings could also be used as features in a target model leading to significant improvements over the then state-of-the-art models [16], as shown in Figure 7.
 
@@ -115,7 +115,7 @@ Dai & Le [13] were the first to propose using pre-trained language models in 201
 
 ***
 
-## Where we are today and looking forward…
+## 8. Where we are today and looking forward…
 
 Nowadays, there exists an array of initiatives aimed at open-sourcing many large state-of-the-art pre-trained models. These models can be fine-tuned to perform various NLP-related tasks like sequence classification, extractive question answering, named entity recognition and text summarization (to name a few).
 
