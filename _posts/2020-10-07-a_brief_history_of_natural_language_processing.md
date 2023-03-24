@@ -51,7 +51,7 @@ _styles: >
 
 {% include figure.html path="assets/img/blog1.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-This is the first blog post in a series focusing on the wonderful world of Natural Language Processing (NLP)! In this post we present you with the lay of the land — describing seven important milestones which have been achieved in the NLP field over the last 20 years. This is largely inspired by Sebastian Ruder’s talk at the 2018 Deep Learning Indaba which took place in Stellenbosch.
+This is the first blog post in a series focusing on the wonderful world of Natural Language Processing (NLP)! In this post we present you with the lay of the land — describing seven important milestones which have been achieved in the NLP field over the last 20 years. This is largely inspired by [Sebastian Ruder’s talk](https://www.youtube.com/watch?v=sGVi4gb90zk) at the 2018 Deep Learning Indaba which took place in Stellenbosch.
 
 Short disclaimer before we begin: This post is heavily skewed towards neural network-based advancements. Many of these milestones, however, were built on many influential ideas presented by non-neural network-based work during the same era, which, for brevity purposes, have been omitted from this post.
 
