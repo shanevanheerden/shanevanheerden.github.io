@@ -26,8 +26,8 @@ toc:
   - name: 5. Sequence-to-Sequence Models (2014)
   - name: 6. Attention Mechanisms (2015)
   - name: 7. Pre-trained Language Models (2018)
-  - name: Where we are today and looking forward…
-  - name: References
+  - name: 8. Where we are today and looking forward…
+  - name: 9. References
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -63,7 +63,7 @@ It’s 2001 and the field of NLP is quite nascent. Academics all around the worl
 
 {% include figure.html path="assets/img/blog1.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    Figure 1: The first feed-forward neural network used for language modelling [1]
+    <em>Figure 1:</em> The first feed-forward neural network used for language modelling [1].
 </div>
 
 ***
@@ -76,7 +76,7 @@ Excitement and interest grows steadily in the years following Neural Language mo
 
 {% include figure.html path="assets/img/blog1.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    Figure 2: The first multi-task model sharing a common word lookup table [3]
+    <em>Figure 2:</em> The first multi-task model sharing a common word lookup table [3].
 </div>
 
 ***
@@ -89,7 +89,7 @@ Word embeddings attempt to create a dense vector representation of text, and add
 
 {% include figure.html path="assets/img/blog1.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    Figure 3: The intuitive relationships captured by word embeddings [4]
+    <em>Figure 3:</em> The intuitive relationships captured by word embeddings [4].
 </div>
 
 ***
@@ -106,7 +106,7 @@ Soon after the emergence of RNNs and CNNs for language modelling, [Sutskever *et
 
 {% include figure.html path="assets/img/blog1.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    Figure 4: A visual representation of a sequence-to-sequence model used for translation [6]
+    <em>Figure 4:</em> A visual representation of a sequence-to-sequence model used for translation [6].
 </div>
 
 This architecture is particularly useful in tasks such as *machine translation* (MT) and *natural language generation* (NLG). It’s no surprise that, in 2016, Google announced that it is in the process of replacing all of its [statistical-based MT systems with neural MT models [7]](https://arxiv.org/pdf/1609.08144.pdf%20(7.pdf). Additionally, since the decoder model can be conditioned on any arbitrary representation, it can also be used for tasks like [generating captions for images [8]](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf).
@@ -119,14 +119,14 @@ Although useful in a wide range of tasks, sequence-to-sequence models were strug
 
 {% include figure.html path="assets/img/blog1.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    Figure 5: A visual representation of the attention mechanism in an image captioning model [10]
+    <em>Figure 5:</em> A visual representation of the attention mechanism in an image captioning model [10].
 </div>
 
 Attention is not only restricted to the input sequence and can also be used to focus on surrounding words in a body of text — commonly referred to as *self attention* — to obtain more contextual meaning. This is at the heart of the current state-of-the-art *transformer* architecture, proposed by [Vaswani et al. [11]](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) in 2017, which is composed of multiple self-attention layers. The transformer sparked an explosion of new language model architectures (and an inside joke among AI practitioners regarding Sesame Street Muppets), the most notable being *Bidirectional Encoder Representations from Transformers* (BERT) and *Generative Pre-trained Transformers* (GPT).
 
 {% include figure.html path="assets/img/blog1.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    Figure 6: The various language model architectures based on the transformer model [12]
+    <em>Figure 6:</em> The various language model architectures based on the transformer model [12].
 </div>
 
 ## 7. Pre-trained Language Models (2018)
@@ -135,7 +135,7 @@ Attention is not only restricted to the input sequence and can also be used to f
 
 {% include figure.html path="assets/img/blog1.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    Figure 7: Improvements over state-of-the-art models when employing language model embeddings [16]
+    <em>Figure 7:</em> Improvements over state-of-the-art models when employing language model embeddings [16].
 </div>
 
 ***
@@ -150,7 +150,7 @@ Stay tuned to this series to learn more about the awesome world of NLP as we sha
 
 ***
 
-## References
+## 9. References
 
 1. Kneser, R., & Ney, H. (1995, May). Improved backing-off for m-gram language modeling. In ICASSP (Vol. 1, p. 181e4).
 2. Bengio, Y., Ducharme, R., & Vincent, P. (2001). A Neural Probabilistic Language Model. Proceedings of NIPS.
