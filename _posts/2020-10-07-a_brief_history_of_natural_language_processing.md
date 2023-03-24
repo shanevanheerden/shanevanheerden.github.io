@@ -49,6 +49,8 @@ _styles: >
 
 ---
 
+*This blog was originally posted on the [Cape AI Medium page](https://medium.com/cape-ai-stories/natural-language-processing-series-8d51b87b6004)*
+
 {% include figure.html path="assets/img/blog1.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 This is the first blog post in a series focusing on the wonderful world of Natural Language Processing (NLP)! In this post we present you with the lay of the land — describing seven important milestones which have been achieved in the NLP field over the last 20 years. This is largely inspired by [Sebastian Ruder’s talk](https://www.youtube.com/watch?v=sGVi4gb90zk) at the 2018 Deep Learning Indaba which took place in Stellenbosch.
