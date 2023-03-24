@@ -26,7 +26,8 @@ toc:
   - name: 5. Sequence-to-Sequence Models (2014)
   - name: 6. Attention Mechanisms (2015)
   - name: 7. Pre-trained Language Models (2018)
-  - name: 8. Where we are today and looking forward…
+  - name: Where we are today and looking forward…
+  - name: References
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -59,6 +60,9 @@ Short disclaimer before we begin: This post is heavily skewed towards neural net
 It’s 2001 and the field of NLP is quite nascent. Academics all around the world are beginning to think more about how language could be modelled. After a lot of research, Neural Language models are born. Language modelling is simply the task of determining the probability of the next word (often referred to as a *token*) occurring in a piece of text given all the previous words. Traditional approaches for tackling this problem were based on n-gram models in combination with some sort of [smoothing technique [1]](http://www-i6.informatik.rwth-aachen.de/publications/download/951/Kneser-ICASSP-1995.pdf). [Bengio *et al.* [2]](https://proceedings.neurips.cc/paper_files/paper/2000/file/728f206c2a01bf572b5940d7d9a8fa4c-Paper.pdf) were the first to propose using a feed-forward neural network, a so-called word "lookup-table", for representing the *n* previous words in a sequence as illustrated in Figure 1. Today, this is known as *word embeddings*.
 
 {% include figure.html path="assets/img/blog1.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    Figure 1: The first feed-forward neural network used for language modelling [1]
+</div>
 
 ***
 
@@ -69,6 +73,9 @@ Excitement and interest grows steadily in the years following Neural Language mo
 [Collobert and Weston [3]](https://thetalkingmachines.com/sites/default/files/2018-12/unified_nlp.pdf) were the first to apply a form of multi-task learning in the NLP domain back in 2008. They trained two convolutional models with max pooling to perform both part-of-speech and named entity recognition tagging, while also sharing a common word lookup table (or word embedding), as shown in Figure 2. Years later, their paper was highlighted by many experts as a fundamental milestone in deep learning for NLP and received the Test-of-time Award at the 2018 *International Conference on Machine Learning* (ICML).
 
 {% include figure.html path="assets/img/blog1.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    Figure 2: The first multi-task model sharing a common word lookup table [3]
+</div>
 
 ***
 
@@ -79,6 +86,9 @@ If you’ve had any exposure to NLP, the first thing you have probably come acro
 Word embeddings attempt to create a dense vector representation of text, and addresses many challenges faced with using traditional sparse bag-of-words representation. Word embeddings were shown to capture every intuitive relationship between words such as gender, verb tense and country capital, as illustrated in Figure 3.
 
 {% include figure.html path="assets/img/blog1.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    Figure 3: The intuitive relationships captured by word embeddings [4]
+</div>
 
 ***
 
@@ -93,6 +103,9 @@ Looking back, 2013 appeared to be an inflection point in the NLP field, as resea
 Soon after the emergence of RNNs and CNNs for language modelling, [Sutskever *et al.* [5]](https://proceedings.neurips.cc/paper_files/paper/2014/file/a14ac55a4f27472c5d894ec1c3c743d2-Paper.pdf) were the first to propose a general framework for mapping one sequence to another, which is now known as *sequence-to-sequence* models. In this framework, an encoder network processes an input sequence token by token and compresses it into a vector representation, represented by the blue layers in Figure 4. A decoder network (represented by the red layers) is then used to predict a new sequence of output tokens based on the encoder state, which takes every previously predicted token as input.
 
 {% include figure.html path="assets/img/blog1.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    Figure 4: A visual representation of a sequence-to-sequence model used for translation [6]
+</div>
 
 This architecture is particularly useful in tasks such as *machine translation* (MT) and *natural language generation* (NLG). It’s no surprise that, in 2016, Google announced that it is in the process of replacing all of its [statistical-based MT systems with neural MT models [7]](https://arxiv.org/pdf/1609.08144.pdf%20(7.pdf). Additionally, since the decoder model can be conditioned on any arbitrary representation, it can also be used for tasks like [generating captions for images [8]](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf).
 
@@ -103,16 +116,25 @@ This architecture is particularly useful in tasks such as *machine translation* 
 Although useful in a wide range of tasks, sequence-to-sequence models were struggling with being able to capture long-range dependencies between words in text. In 2015, the concept of attention was introduced by Bahdanau *et al.* [9] as a way of addressing this bottleneck. In essence, attention in a neural network is a mechanism for deciding which parts of the input sequence to attend to when routing information. Various attention mechanisms have also been applied in the computer vision space for image captioning [10], which also provides a glimpse into the inner workings of the model, as is seen in Figure 5.
 
 {% include figure.html path="assets/img/blog1.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    Figure 5: A visual representation of the attention mechanism in an image captioning model [10]
+</div>
 
 Attention is not only restricted to the input sequence and can also be used to focus on surrounding words in a body of text — commonly referred to as *self attention* — to obtain more contextual meaning. This is at the heart of the current state-of-the-art *transformer* architecture, proposed by [Vaswani et al. [11]](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) in 2017, which is composed of multiple self-attention layers. The transformer sparked an explosion of new language model architectures (and an inside joke among AI practitioners regarding Sesame Street Muppets), the most notable being *Bidirectional Encoder Representations from Transformers* (BERT) and *Generative Pre-trained Transformers* (GPT).
 
 {% include figure.html path="assets/img/blog1.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    Figure 6: The various language model architectures based on the transformer model [12]
+</div>
 
 ## 7. Pre-trained Language Models (2018)
 
 [Dai & Le [13]](https://proceedings.neurips.cc/paper_files/paper/2015/file/7137debd45ae4d0ab9aa953017286b20-Paper.pdf) were the first to propose using pre-trained language models in 2015 but this notion was only recently shown to be beneficial across a broad range of NLP-related tasks. More specifically, it was shown that pre-trained language models could be *fine-tuned* on other data related to a specific target task [14, 15]. Additionally, language model embeddings could also be used as features in a target model leading to significant improvements over the then state-of-the-art models [16], as shown in Figure 7.
 
 {% include figure.html path="assets/img/blog1.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    Figure 7: Improvements over state-of-the-art models when employing language model embeddings [16]
+</div>
 
 ***
 
