@@ -49,7 +49,7 @@ _styles: >
 
 ---
 
-*This blog was originally posted on the [Cape AI Medium page](https://medium.com/cape-ai-stories/natural-language-processing-series-8d51b87b6004)*
+*This blog was originally posted on the [Cape AI Medium page](https://medium.com/cape-ai-stories/natural-language-processing-series-8d51b87b6004).*
 
 {% include figure.html path="assets/img/blog1.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
