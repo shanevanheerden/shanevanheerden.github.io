@@ -45,6 +45,8 @@ _styles: >
 
 ---
 
+*This blog post was originally featured on the [Cape AI Medium page](https://medium.com/cape-ai-stories/natural-language-processing-series-8d51b87b6004).*
+
 {% include figure.html path="assets/img/blog2.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 This is the second post in a series of blog posts focusing on the exciting field of Natural Language Processing (NLP)! In our previous blog post, we saw that word embeddings were an important milestone in the history of NLP. Although these were used as far back as 2001, in 2013 Mikolov et al. [1] proposed a simple but novel method for efficiently training word embeddings (or word2vec models) on very large unlabelled corpora which ultimately led to their wide-scale adoption. So, what actually are word embeddings and how do they fit into an NLP practitioner’s toolkit? Let’s find out!
