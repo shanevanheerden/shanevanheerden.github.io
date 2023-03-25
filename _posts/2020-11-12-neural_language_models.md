@@ -43,6 +43,8 @@ _styles: >
 
 ---
 
+*This blog post was originally featured on the [Cape AI Medium page](https://medium.com/cape-ai-stories/natural-language-processing-series-8d51b87b6004).*
+
 {% include figure.html path="assets/img/blog3.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 This is the third blog post in our series of blog posts focusing on the exciting field of Natural Language Processing! In our first post, we saw that the application of neural networks for building language models was a major turning point in the NLP timeline, and in our second post we explored the significance of Word Embeddings in advancing the field. With this, we’re now ready to build our own language model!
