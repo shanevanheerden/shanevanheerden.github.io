@@ -49,7 +49,7 @@ _styles: >
 
 {% include figure.html path="assets/img/blog2.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-This is the second post in a series of blog posts focusing on the exciting field of Natural Language Processing (NLP)! In our previous blog post, we saw that word embeddings were an important milestone in the history of NLP. Although these were used as far back as 2001, in 2013 Mikolov et al. [1] proposed a simple but novel method for efficiently training word embeddings (or word2vec models) on very large unlabelled corpora which ultimately led to their wide-scale adoption. So, what actually are word embeddings and how do they fit into an NLP practitioner’s toolkit? Let’s find out!
+This is the second post in a series of blog posts focusing on the exciting field of *Natural Language Processing* (NLP)! In [our previous blog post](https://shanevanheerden.github.io/blog/2020/a_brief_history_of_natural_language_processing/), we saw that word embeddings were an important milestone in the history of NLP. Although these were used as far back as 2001, in 2013 [Mikolov <em>et al.</em>](https://arxiv.org/pdf/1301.3781.pdf%C3%AC%E2%80%94%20%C3%AC%E2%80%9E%C5%93) [1] proposed a simple but novel method for efficiently training word embeddings (or word2vec models) on very large unlabelled corpora which ultimately led to their wide-scale adoption. So, what actually are word embeddings and how do they fit into an NLP practitioner’s toolkit? Let’s find out!
 
 ## 1. What are Word Embeddings?
 
@@ -229,3 +229,8 @@ And there you have it! In this blog post, we described the two flavours of word2
 Stay tuned to this series to learn more about the awesome world of NLP as we share more on the latest developments, code implementations and thought-provoking perspectives on NLP’s impact on the way we interact with the world. It’s an extremely exciting time for anyone to get into the world of NLP!
 
 ***
+
+## 6. References
+
+1. Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). Distributed Representations of Words and Phrases and their Compositionality. In Advances in Neural Information Processing Systems.
+2. Alammar, Jay (2019). The Illustrated Word2vec [Blog post]. Retrieved from https://jalammar.github.ioillustrated-word2vecr/
