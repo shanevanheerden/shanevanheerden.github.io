@@ -115,7 +115,7 @@ First things first, we need to install and import a few packages. We will begin 
 
 Go ahead and run:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 
 $ pip install beautifulsoup4
 $ pip install lxml
@@ -130,7 +130,7 @@ In practice, word2vec models are commonly trained on millions of words. For illu
 
 The following Python script does this for us:
 
-{% highlight python linenos %}
+{% highlight python %}
 
 import bs4 as bs
 import urllib.request
@@ -151,7 +151,7 @@ In the script above, we first scrape and read all html data from the Wikipedia p
 
 The next step involves pre-processing the text so that it is in the correct format for training the Gensim Word2Vec model:
 
-{% highlight python linenos %}
+{% highlight python %}
 
 import nltk
 from nltk.corpus import stopwords
@@ -177,7 +177,7 @@ In the script above, we clean the text by first converting all characters to the
 
 With this, we can now easily train our own Word2Vec model as follows:
 
-{% highlight python linenos %}
+{% highlight python %}
 
 from gensim.models import Word2Vec
 
@@ -197,7 +197,7 @@ Congratulations! You now have your very own word2vec model trained on your own c
 
 We know that the word2vec model is used to map all words to a vector representation. We can view the vector corresponding to any word in our model’s vocabulary as follows:
 
-{% highlight python linenos %}
+{% highlight python %}
 
 # Print vector of word
 print(word2vec.wv['learning'])
@@ -208,7 +208,7 @@ print(word2vec.wv['learning'])
 
 From these outputs, we can see that Gensim, by default, maps all words to a one hundred dimensional numpy vector. As we have seen, one of the benefits of using word2vec is that the model is able to capture the semantic meaning of words in relation to one another. Let’s try and confirm this by printing out the words most similar (in vector space) to the word “learning”:
 
-{% highlight python linenos %}
+{% highlight python %}
 
 # Print most similar words
 print(word2vec.wv.most_similar('learning'))
