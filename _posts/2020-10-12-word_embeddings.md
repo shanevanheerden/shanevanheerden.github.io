@@ -24,6 +24,7 @@ toc:
   - name: 3. Training a Word2Vec Model
   - name: 4. Word2Vec Tutorial
   - name: 5. Wrapping up
+  - name: 6. References
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
