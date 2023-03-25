@@ -53,7 +53,7 @@ This is the second post in a series of blog posts focusing on the exciting field
 
 ## 1. What are Word Embeddings?
 
-A word embedding is simply an alternative representation for text where words are represented as real-valued vectors as opposed to a sequence of string characters. This representation is '*learnt*' in such a way that words that share the same or similar meaning also have similar vector representations.
+A word embedding is simply an alternative representation for text where words are represented as real-valued vectors as opposed to a sequence of string characters. This representation is *learnt* in such a way that words that share the same or similar meaning also have similar vector representations.
 
 To get a feel for this concept, let's look at Figure 1 which is a visual representation of a word’s vector, where red indicates a value close to 2 and blue a value close to -2. As we can see, the vectors for "man" and "woman" appear to be more similar in colour to each other than when compared to the word "king". A mystical property of word embeddings is that they often capture semantic meaning between words. This means that we can add and subtract word vectors and arrive at intuitive results. Probably the most famous of these is the vector resulting from taking the word "king", subtracting the word “man” and adding the word “woman”. The resultant vector is visually shown in Figure 1 and, if we compare this against all 400 000 words that make up the embedding vocabulary, we find that the vector for the word "queen" is in fact the closest to this resultant vector!
 
@@ -93,7 +93,7 @@ Continuing with the previous example, the Skip-gram model constructs a dataset i
     <em>Figure 4:</em> The skip-gram method for constructing a dataset [2].
 </div>
 
-In reality, training a model on this form of the dataset is computationally expensive. This is due to the fact that we have to compute the error of the neural language model against the whole output vocabulary vector for every training sample! In practice, a technique called *negative sampling* is employed. This involves transforming the dataset shown in Figure 4 to a new form shown in Figure 5. In this procedure, the input and output words are now both features and a new target column is added, where a value of '1' indicates that the two words are neighbours.
+In reality, training a model on this form of the dataset is computationally expensive. This is due to the fact that we have to compute the error of the neural language model against the whole output vocabulary vector for every training sample! In practice, a technique called *negative sampling* is employed. This involves transforming the dataset shown in Figure 4 to a new form shown in Figure 5. In this procedure, the input and output words are now both features and a new target column is added, where a value of `1` indicates that the two words are neighbours.
 
 In other words, the task has now changed from predicting the neighbour of a word to predicting if two words are neighbours.
 
@@ -112,7 +112,7 @@ Alright, quick checkpoint: CBOW and Skip-gram with negative sampling are methods
 
 At the beginning, we initialise each word in our dataset as a vector (with some specified length) of random values. In each training step, we look at just a single positive sample with its associated negative samples, as shown in Figure 6. If we compute the dot product between the input and output word vectors for each sample and squash this value through a sigmoid function (so that all values are between zero and one), we obtain a specific score. Now, we know that in the case of the positive sample the resultant sigmoid score should be close to one (because the two words are indeed neighbours) and the others should be close to zero. We can therefore compute an error by subtracting this sigmoid score from the target labels.
 
-Here comes the '*learning*' part: we can now use this error to adjust the values of each word vector in such a way so that we compute a lower error score the next time. We continue this process for all word vectors in our dataset, incrementally adjusting their values to achieve slightly better embeddings until the learning algorithm (which is usually a neural network) converges.
+Here comes the *learning* part: we can now use this error to adjust the values of each word vector in such a way so that we compute a lower error score the next time. We continue this process for all word vectors in our dataset, incrementally adjusting their values to achieve slightly better embeddings until the learning algorithm (which is usually a neural network) converges.
 
 {% include figure.html path="assets/img/blog2.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -213,7 +213,7 @@ Here, we simply instantiate a Gensim Word2Vec object using our collection of wor
 
 Congratulations! You now have your very own word2vec model trained on your own corpus of text. Let’s explore your creation a bit further.
 
-We know that the word2vec model is used to map all words to a vector representation. We can view the vector corresponding to any word in our model’s vocabulary as follows:
+We know that the word2vec model is used to map all words to a vector representation. We can view the vector corresponding to any word in our model's vocabulary as follows:
 
 {% highlight python %}
 
@@ -231,8 +231,7 @@ From these outputs, we can see that Gensim, by default, maps all words to a one 
 # Print most similar words
 print(word2vec.wv.most_similar('learning'))
 
->>  [('machine', 0.9990278482437134),('data', 0.9989383220672607),
-('model', 0.9988012313842773),('training', 0.9987066984176636), ('biases', 0.9984654784202576),('set', 0.9983999729156494),('classification', 0.9983198046684265),('used', 0.9982497692108154),('use', 0.9981957674026489),('systems', 0.9980695247650146)]
+>>  [('machine', 0.9990278482437134), ('data', 0.9989383220672607), ('model', 0.9988012313842773), ('training', 0.9987066984176636), ('biases', 0.9984654784202576), ('set', 0.9983999729156494), ('classification', 0.9983198046684265), ('used', 0.9982497692108154), ('use', 0.9981957674026489),('systems', 0.9980695247650146)]
 
 {% endhighlight %}
 
@@ -244,7 +243,7 @@ The list above shows us the words most similar to the word "learning" and displa
 
 And there you have it! In this blog post, we described the two flavours of word2vec models, namely CBOW and Skip-gram as well as the model training procedure. Armed with this information, we got a bit more practical by walking you through how to create your very own word2vec model in Python using the Gensim library.
 
-Stay tuned to this series to learn more about the awesome world of NLP as we share more on the latest developments, code implementations and thought-provoking perspectives on NLP’s impact on the way we interact with the world. It’s an extremely exciting time for anyone to get into the world of NLP!
+Stay tuned to this series to learn more about the awesome world of NLP as we share more on the latest developments, code implementations and thought-provoking perspectives on NLP's impact on the way we interact with the world. It's an extremely exciting time for anyone to get into the world of NLP!
 
 ***
 
