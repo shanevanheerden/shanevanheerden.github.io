@@ -3,7 +3,7 @@ layout: distill
 title: Using Machine Learning to Classify Personally Identifiable Data Fields
 description: In noisy Excel spreadsheets
 date: 2021-02-16
-tags: CaseStudies
+tags: CaseStudy
 
 authors:
   - name: Shane van Heerden
