@@ -46,6 +46,8 @@ _styles: >
 
 ---
 
+*This blog post was originally featured on the [Cape AI Medium page](https://medium.com/cape-ai-stories/case-study-using-machine-learning-to-classify-personally-identifiable-data-fields-6b9c5b0743e7).*
+
 {% include figure.html path="assets/img/blog4.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 Here at Cape AI, we are always ready to tackle new challenges using Machine Learning and Advanced Analytics. In the field of AI, which is constantly changing, this is how we discover and push the bounds of what is truly possible.
