@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I join the SUnORE Research Group at Stellenbosch University
+title: I join the SUnORE Research Group at Stellenbosch University pursuing a masters
 date: 2017-01-16 00:00:00-0000
 inline: false
 ---
