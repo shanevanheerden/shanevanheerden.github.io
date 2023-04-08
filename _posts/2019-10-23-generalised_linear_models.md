@@ -123,10 +123,10 @@ The formulation of a GLM is traditionally achieved within the framework of the *
 p(y;\mathbf{\eta})=b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y)-a(\mathbf{\eta})),\label{4.eqn.expfam}
 \end{equation}
 
-where $\mathbf{\eta}$ is the so-called *canonical parameter* (or *natural parameter*) of the distribution, $\mathbf{T}(y)$ is the sufficient statistic (for the majority of the distributions, it is often the case that $\mathbf{T}(y)=y$), $b(y)$ is the *underlying measure*, and $a(\mathbf{\eta})$ is the *log partition function*, which ensures that the distribution sums/integrates to one. Hence,
+where $\mathbf{\eta}$ is the so-called *canonical parameter* (or *natural parameter*) of the distribution, $\mathbf{T}(y)$ is the sufficient statistic (for the majority of the distributions, it is often the case that $\mathbf{T}(y)=y$), $b(y)$ is the *underlying measure*, and $a(\mathbf{\eta})$ is the *log partition function*, which ensures that the distribution integrates to one. Hence,
 
 \begin{equation}
-a(\mathbf{\eta})=\log\hspace{1mm}\displaystyle\int\mathllap{\sum}b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y))\hspace{0.8mm}\mathrm{d}{x}.
+a(\mathbf{\eta})=\log\displaystyle\int b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y))\hspace{0.8mm}\mathrm{d}{x}.
 \end{equation}
 
 Therefore, for a fixed choice of the functions $b(y)$, $\mathbf{T}(y)$, and $a(\mathbf{\eta})$, one may define a *family* (or set) of distributions. Furthermore, by varying the canonical parameter $\mathbf{\eta}$, one may obtain different distributions within this family. It may be shown that many well-known distributions, such as the Gaussian, Bernoulli, multinomial, Poisson, gamma, beta, exponential and inverse Gaussian form part of the exponential family of distributions \cite{McCullagh1989}.
