@@ -89,16 +89,16 @@ $$
 
 One would like to obtain an estimate of $\mathbf{\beta}$ which maximises the value of $L(\mathbf{\beta})$, called the *maximum likelihood estimation* (MLE). Instead of maximising $L(\mathbf{\beta})$, one may also maximise any strictly increasing function of the likelihood function. As a result, it is often more convenient to maximise a logarithmic form of the likelihood function (due to its relatively simple differentiability), appropriately called the *log likelihood* $\ell(\mathbf{\beta})$, where
 
-$
-\hspace{50pt}\ell(\mathbf{\beta})=\log L(\mathbf{\beta})
-$
+$$
+\mkern-18mu\ell(\mathbf{\beta})=\log L(\mathbf{\beta})
+$$
 
 $$=\log\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)$$
 
 $$=\sum_{i=1}^{m}\log\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)$$
 
 \begin{equation}
-\hspace{4pt}=m\log\frac{1}{\sqrt{2\pi}\sigma}-\frac{1}{2\sigma^2}\sum_{i=1}^{m}(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2.
+\hspace{3pt}=m\log\frac{1}{\sqrt{2\pi}\sigma}-\frac{1}{2\sigma^2}\sum_{i=1}^{m}(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2.
 \end{equation}
 
 From these results, one may conclude that the final choice of $\beta$-values does not depend on the variance $\sigma^2$ of the Gaussian distribution (this fact will prove useful later). Hence, for a general linear model, maximising $\ell(\mathbf{\beta})$ is equivalent to minimising the cost function
