@@ -146,7 +146,7 @@ Notice that this form of the Gaussian probability density expression is in the e
 As in the case of the Gaussian distribution, the well-known Bernoulli distribution can also be shown to reside within the set of exponential family distributions. The Bernoulli distribution specifies the distribution of a variable $y\in\{0,1\}$ with mean $\phi$ as
 
 $$
-p(y;\phi)&=\phi^y(1-\phi)^{1-y}
+p(y;\phi)=\phi^y(1-\phi)^{1-y}
 $$
 
 $$
