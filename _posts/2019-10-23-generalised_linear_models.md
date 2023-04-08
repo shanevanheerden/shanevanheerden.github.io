@@ -146,11 +146,11 @@ Notice that this form of the Gaussian probability density expression is in the e
 As in the case of the Gaussian distribution, the well-known Bernoulli distribution can also be shown to reside within the set of exponential family distributions. The Bernoulli distribution specifies the distribution of a variable $y\in\{0,1\}$ with mean $\phi$ as
 
 $$
-\mkern-80pt p(y;\phi)=\phi^y(1-\phi)^{1-y}
+\mkern-110pt p(y;\phi)=\phi^y(1-\phi)^{1-y}
 $$
 
 $$
-\mkern-50pt=\exp(y\log\phi+(1-y)\log(1-\phi))
+\mkern-20pt=\exp(y\log\phi+(1-y)\log(1-\phi))
 $$
 
 \begin{equation}
