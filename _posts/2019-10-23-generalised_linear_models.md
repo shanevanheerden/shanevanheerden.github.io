@@ -146,15 +146,15 @@ Notice that this form of the Gaussian probability density expression is in the e
 As in the case of the Gaussian distribution, the well-known Bernoulli distribution can also be shown to reside within the set of exponential family distributions. The Bernoulli distribution specifies the distribution of a variable $y\in\{0,1\}$ with mean $\phi$ as
 
 $$
-p(y;\phi)=\phi^y(1-\phi)^{1-y}
+\mkern-80pt p(y;\phi)=\phi^y(1-\phi)^{1-y}
 $$
 
 $$
-=\exp(y\log\phi+(1-y)\log(1-\phi))
+\mkern-50pt=\exp(y\log\phi+(1-y)\log(1-\phi))
 $$
 
 \begin{equation}
-=\exp\bigg(\bigg(\log\left(\frac{\phi}{1-\phi}\right)\bigg)y+\log(1-\phi)\bigg).
+=\exp\bigg(\log\left(\frac{\phi}{1-\phi}\right)y+\log(1-\phi)\bigg).
 \end{equation}
 
 Again notice that this form of the Bernoulli probability mass expression is in the exponential family of the form (\ref{4.eqn.expfam}) with $\eta=\log(\phi/(1-\phi))$, $T(y)=y$, $a(\eta)=-\log(1-\phi)=\log(1+e^\eta)$ and $b(y)=1$. Interestingly, if the definition of $\eta$ is inverted by solving for $\phi$, the relation $\phi=1/(1+e^{-\eta})$ is obtained. One may notice this as the familiar sigmoid function --- a fact that will prove useful during the derivation of logistic regression as a GLM.
