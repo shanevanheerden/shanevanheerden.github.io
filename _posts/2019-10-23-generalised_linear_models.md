@@ -125,13 +125,13 @@ p(y;\mathbf{\eta})=b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y)-a(\mathbf{\eta})),\labe
 
 where $\mathbf{\eta}$ is the so-called *canonical parameter* (or *natural parameter*) of the distribution, $\mathbf{T}(y)$ is the sufficient statistic (for the majority of the distributions, it is often the case that $\mathbf{T}(y)=y$), $b(y)$ is the *underlying measure*, and $a(\mathbf{\eta})$ is the *log partition function*, which ensures that the distribution sums/integrates to one. Hence,
 
-\begin{equation*}
+\begin{equation}
 a(\mathbf{\eta})=\log\hspace{1mm}\displaystyle\int\mathllap{\sum}b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y))\hspace{0.8mm}\mathrm{d}{x}.
-\end{equation*}
+\end{equation}
 
 Therefore, for a fixed choice of the functions $b(y)$, $\mathbf{T}(y)$, and $a(\mathbf{\eta})$, one may define a *family* (or set) of distributions. Furthermore, by varying the canonical parameter $\mathbf{\eta}$, one may obtain different distributions within this family. It may be shown that many well-known distributions, such as the Gaussian, Bernoulli, multinomial, Poisson, gamma, beta, exponential and inverse Gaussian form part of the exponential family of distributions \cite{McCullagh1989}.
 
-Using this formulation, one can show that the celebrated Gaussian (or normal) distribution is, in fact, a member of the exponential family of distributions. Recall that, during the derivation of a general linear model in \S\ref{4.sub.gen}, the value of $\sigma^2$ did not depend on the final choice of $\mathbf{\beta}$. Consequently, one may choose an arbitrary value for $\sigma^2$ without loss of generality. To simplify the subsequent derivation, $\sigma^2$ is set to unity (*i.e.*\ $\sigma^2=1$). In this way, the standard Gaussian distribution can be expanded to the form
+Using this formulation, one can show that the celebrated Gaussian (or normal) distribution is, in fact, a member of the exponential family of distributions. Recall that, during the derivation of a general linear model in Section 2, the value of $\sigma^2$ did not depend on the final choice of $\mathbf{\beta}$. Consequently, one may choose an arbitrary value for $\sigma^2$ without loss of generality. To simplify the subsequent derivation, $\sigma^2$ is set to unity (*i.e.*\ $\sigma^2=1$). In this way, the standard Gaussian distribution can be expanded to the form
 
 $$
 p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)
