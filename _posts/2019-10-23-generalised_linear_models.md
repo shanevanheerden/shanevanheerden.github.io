@@ -52,7 +52,7 @@ _styles: >
 
 This is the first post in a series of blog posts focusing on the some of the core Machine Learning algorithms! In this post, we will talk about 
 
-## 1. Intorduction
+## 1. Introduction
 
 In the world of statistics, we often come across various models that aim to explain a particular phenomenon. However, what if we could find a way to unify these models under a single theoretical framework? That's precisely what Nelder and Wedderburn did in their groundbreaking 1972 paper [183]. They showed that many of the linear statistical models shared common properties and could be estimated using a common method. This led to the development of the Generalized Linear Models (GLMs), which allowed us to view different models as a single class, rather than a disjointed set of topics. In this article, we'll see how some well-known models like Ordinary Least Squares Regression and Logistic Regression can be considered as special cases of GLMs. But before that, let's start with a brief overview of the General Linear Models, which serve as the foundation for GLMs.
 
@@ -60,11 +60,13 @@ In the world of statistics, we often come across various models that aim to expl
 
 ## 2. General linear models
 
-In a general linear model, the fundamental assumption is that the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$, now denoted by the vector $\bm{y}$, and the set of explanatory variables $\mathcal{X}=\{\bm{x}^{(i)},\ldots,\bm{x}^{(m)}\}$, now denoted by the {\em design matrix} $\bm{X}$, are related linearly by an equation of the form
+In a general linear model, the fundamental assumption is that the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$, now denoted by the vector $\bm{y}$, and the set of explanatory variables $\mathcal{X}=\{\bm{x}^{(i)},\ldots,\bm{x}^{(m)}\}$, now denoted by the *design matrix* $\bm{X}$, are related linearly by an equation of the form
+
 \begin{equation}
-\bm{y}=\bm{X}\bm{\beta}+\bm{\epsilon},\label{4.eqn.asmp}
+\mathbold{y}=\mathbold{X}\mathbold{\beta}+\mathbold{\epsilon},\label{4.eqn.asmp}
 \end{equation}
-where $\bm{\beta}$ is a column vector of unknown parameters, while $\bm{\epsilon}$ is a column vector containing independently and identically distributed error terms that capture any unmodelled effects or random noise in the data. It is assumed that the expected values $\bm{\mu}=E(\bm{y}\mid\bm{X};\bm{\beta})$ of the target variables have an identity relationship with the linear predictor $\bm{X}\bm{\beta}$ in the sense that the hypothesis of the general linear model is given by $h(\bm{\tilde{x}})=E(y\mid \bm{x};\bm{\beta})=\bm{x}\bm{\beta}$. The strong assumption made by a general linear model is that the error terms are assumed to be sampled from a Gaussian (or normal) distribution with zero mean and a constant variance $\sigma^2$, written as $\epsilon^{(i)}\sim\mathcal{N}(0,\sigma^2)$. The density of $\epsilon^{(i)}$ is, therefore, given by
+
+where $\mathbold{\beta}$ is a column vector of unknown parameters, while $\bm{\epsilon}$ is a column vector containing independently and identically distributed error terms that capture any unmodelled effects or random noise in the data. It is assumed that the expected values $\bm{\mu}=E(\bm{y}\mid\bm{X};\bm{\beta})$ of the target variables have an identity relationship with the linear predictor $\bm{X}\bm{\beta}$ in the sense that the hypothesis of the general linear model is given by $h(\bm{\tilde{x}})=E(y\mid \bm{x};\bm{\beta})=\bm{x}\bm{\beta}$. The strong assumption made by a general linear model is that the error terms are assumed to be sampled from a Gaussian (or normal) distribution with zero mean and a constant variance $\sigma^2$, written as $\epsilon^{(i)}\sim\mathcal{N}(0,\sigma^2)$. The density of $\epsilon^{(i)}$ is, therefore, given by
 \begin{equation*}
 p(\epsilon^{(i)})=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(\epsilon^{(i)})^2}{2\sigma^2}\right),
 \end{equation*}
