@@ -60,40 +60,66 @@ In the world of statistics, we often come across various models that aim to expl
 
 ## 2. General linear models
 
-In a general linear model, the fundamental assumption is that the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$, now denoted by the vector $\bm{y}$, and the set of explanatory variables $\mathcal{X}=\{\bm{x}^{(i)},\ldots,\bm{x}^{(m)}\}$, now denoted by the *design matrix* $\bm{X}$, are related linearly by an equation of the form
+In a general linear model, the fundamental assumption is that the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$, now denoted by the vector $\mathbf{y}$, and the set of explanatory variables $\mathcal{X}=\{\mathbf{x}^{(i)},\ldots,\mathbf{x}^{(m)}\}$, now denoted by the *design matrix* $\mathbf{X}$, are related linearly by an equation of the form
 
 \begin{equation}
 \mathbf{y}=X\mathbf{\beta}+\mathbf{\epsilon},\label{4.eqn.asmp}
 \end{equation}
 
-where $\mathbf{\beta}$ is a column vector of unknown parameters, while $\bm{\epsilon}$ is a column vector containing independently and identically distributed error terms that capture any unmodelled effects or random noise in the data. It is assumed that the expected values $\bm{\mu}=E(\bm{y}\mid\bm{X};\bm{\beta})$ of the target variables have an identity relationship with the linear predictor $\bm{X}\bm{\beta}$ in the sense that the hypothesis of the general linear model is given by $h(\bm{\tilde{x}})=E(y\mid \bm{x};\bm{\beta})=\bm{x}\bm{\beta}$. The strong assumption made by a general linear model is that the error terms are assumed to be sampled from a Gaussian (or normal) distribution with zero mean and a constant variance $\sigma^2$, written as $\epsilon^{(i)}\sim\mathcal{N}(0,\sigma^2)$. The density of $\epsilon^{(i)}$ is, therefore, given by
+where $\mathbf{\beta}$ is a column vector of unknown parameters, while $\mathbf{\epsilon}$ is a column vector containing independently and identically distributed error terms that capture any unmodelled effects or random noise in the data. It is assumed that the expected values $\mathbf{\mu}=E(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})$ of the target variables have an identity relationship with the linear predictor $\mathbf{X}\mathbf{\beta}$ in the sense that the hypothesis of the general linear model is given by $h(\mathbf{\tilde{x}})=E(y\mid \mathbf{x};\mathbf{\beta})=\mathbf{x}\mathbf{\beta}$. The strong assumption made by a general linear model is that the error terms are assumed to be sampled from a Gaussian (or normal) distribution with zero mean and a constant variance $\sigma^2$, written as $\epsilon^{(i)}\sim\mathcal{N}(0,\sigma^2)$. The density of $\epsilon^{(i)}$ is, therefore, given by
+
 \begin{equation*}
 p(\epsilon^{(i)})=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(\epsilon^{(i)})^2}{2\sigma^2}\right),
 \end{equation*}
+
 which implies that
+
 \begin{equation*}
-p(y^{(i)}\mid\bm{x}^{(i)};\bm{\beta})=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\bm{x}^{(i)}\bm{\beta})^2}{2\sigma^2}\right).
+p(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right).
 \end{equation*}
-The distribution of the observed target variables $\bm{y}$ are consequently characterised by $\bm{y}\mid\bm{X};\bm{\beta}\sim\mathcal{N}(\bm{\beta},\sigma^2)$. Since each observation $(\bm{x}^{(i)}, y^{(i)})$ is assumed to be independent of all the other observations, the joint density or {\em likelihood} $L(\bm{\beta})=L(\bm{\beta};\bm{X},\bm{y})=p(\bm{y}\mid\bm{X};\bm{\beta})$ of the data is given by the product of the individual probabilities
+
+The distribution of the observed target variables $\mathbf{y}$ are consequently characterised by $\mathbf{y}\mid\mathbf{X};\mathbf{\beta}\sim\mathcal{N}(\mathbf{\beta},\sigma^2)$. Since each observation $(\mathbf{x}^{(i)}, y^{(i)})$ is assumed to be independent of all the other observations, the joint density or {\em likelihood} $L(\mathbf{\beta})=L(\mathbf{\beta};\mathbf{X},\mathbf{y})=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})$ of the data is given by the product of the individual probabilities
+
 \begin{align*}
-L(\bm{\beta})&=\prod_{i=1}^{m}p(y^{(i)}\mid\bm{x};\bm{\beta})\\
-&=\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\bm{x}^{(i)}\bm{\beta})^2}{2\sigma^2}\right).
+L(\mathbf{\beta})&=\prod_{i=1}^{m}p(y^{(i)}\mid\mathbf{x};\mathbf{\beta})\\
+&=\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right).
 \end{align*}
-One would like to obtain an estimate of $\bm{\beta}$ which maximises the value of $L(\bm{\beta})$, called the {\em maximum likelihood estimation} (MLE). Instead of maximising $L(\bm{\beta})$, one may also maximise any strictly increasing function of the likelihood function. As a result, it is often more convenient to maximise a logarithmic form of the likelihood function (due to its relatively simple differentiability), appropriately called the {\em log likelihood} $\ell(\bm{\beta})$, where
+
+One would like to obtain an estimate of $\mathbf{\beta}$ which maximises the value of $L(\mathbf{\beta})$, called the {\em maximum likelihood estimation} (MLE). Instead of maximising $L(\mathbf{\beta})$, one may also maximise any strictly increasing function of the likelihood function. As a result, it is often more convenient to maximise a logarithmic form of the likelihood function (due to its relatively simple differentiability), appropriately called the {\em log likelihood} $\ell(\mathbf{\beta})$, where
+
 \begin{align}
-\ell(\bm{\beta})&=\log L(\bm{\beta})\\
-&=\log\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\bm{x}^{(i)}\bm{\beta})^2}{2\sigma^2}\right)\nonumber\\
-&=\sum_{i=1}^{m}\log\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\bm{x}^{(i)}\bm{\beta})^2}{2\sigma^2}\right)\nonumber\\
-&=m\log\frac{1}{\sqrt{2\pi}\sigma}-\frac{1}{2\sigma^2}\sum_{i=1}^{m}(y^{(i)}-\bm{x}^{(i)}\bm{\beta})^2.
+\ell(\mathbf{\beta})&=\log L(\mathbf{\beta})\\
+&=\log\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)\nonumber\\
+&=\sum_{i=1}^{m}\log\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)\nonumber\\
+&=m\log\frac{1}{\sqrt{2\pi}\sigma}-\frac{1}{2\sigma^2}\sum_{i=1}^{m}(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2.
 \end{align}
-From these results, one may conclude that the final choice of $\beta$-values does not depend on the variance $\sigma^2$ of the Gaussian distribution (this fact will prove useful later). Hence, for a general linear model, maximising $\ell(\bm{\beta})$ is equivalent to minimising the cost function
+
+From these results, one may conclude that the final choice of $\beta$-values does not depend on the variance $\sigma^2$ of the Gaussian distribution (this fact will prove useful later). Hence, for a general linear model, maximising $\ell(\mathbf{\beta})$ is equivalent to minimising the cost function
 \begin{equation}
-\sum_{i=1}^{m}(y^{(i)}-\bm{x}^{(i)}\bm{\beta})^2.\label{4.eqn.ols}
+\sum_{i=1}^{m}(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2.\label{4.eqn.ols}
 \end{equation}
-The expression (\ref{4.eqn.ols}) may be recognised as that occurring in the well-known OLSR method for estimating the unknown parameters in a linear regression model. The optimal parameter values $\bm{\beta}^*$ are, therefore, those that minimise the sum of the squared errors between the actual and predicted target variable, for all observations in the training set. For most statistical models, these parameter values are typically computed using a technique called {\em gradient decent}, the details of which are described by Ng \cite{Ng2012}. In the case of OLSR, however, these $\bm{\beta}$-values may be computed analytically by solving the well-known normal equations \cite{Hastie2009}, to yield
+The expression (\ref{4.eqn.ols}) may be recognised as that occurring in the well-known OLSR method for estimating the unknown parameters in a linear regression model. The optimal parameter values $\mathbf{\beta}^{\*} are, therefore, those that minimise the sum of the squared errors between the actual and predicted target variable, for all observations in the training set. For most statistical models, these parameter values are typically computed using a technique called {\em gradient decent}, the details of which are described by Ng \cite{Ng2012}. In the case of OLSR, however, these $\mathbf{\beta}$-values may be computed analytically by solving the well-known normal equations \cite{Hastie2009}, to yield
 \begin{equation*}
-\bm{\beta}^*=(\bm{X}^T\bm{X})^{-1}\bm{X}^T\bm{y}.\label{4.eqn.norm}
+\mathbf{\beta}{^\*}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}.\label{4.eqn.norm}
 \end{equation*}
+
+***
+
+## 3. The exponential family
+
+
+
+***
+
+## 4. Constructing a generalised linear model
+
+
+
+***
+
+## 5. Logistic regression
+
+
 
 ***
 
