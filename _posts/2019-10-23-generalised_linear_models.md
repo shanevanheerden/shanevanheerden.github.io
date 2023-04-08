@@ -95,7 +95,7 @@ $$
 
 $$=\log\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)$$
 
-$$\hspace{1pt}=\sum_{i=1}^{m}\log\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)$$
+$$\hspace{2pt}=\sum_{i=1}^{m}\log\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)$$
 
 \begin{equation}
 \hspace{3pt}=m\log\frac{1}{\sqrt{2\pi}\sigma}-\frac{1}{2\sigma^2}\sum_{i=1}^{m}(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2.
