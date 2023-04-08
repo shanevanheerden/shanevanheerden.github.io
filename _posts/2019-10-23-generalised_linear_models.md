@@ -154,8 +154,8 @@ $$
 $$
 
 \begin{equation}
-=\exp\bigg(\underbrace{\bigg(\log\left(\frac{\phi}{1-\phi}\right)\bigg)}_{\eta}y+\underbrace{\log(1-\phi)}_{-a(\eta)}\bigg).
-\end{align}
+=\exp\bigg(\bigg(\log\left(\frac{\phi}{1-\phi}\right)\bigg)y+\log(1-\phi)\bigg).
+\end{equation}
 
 Again notice that this form of the Bernoulli probability mass expression is in the exponential family of the form (\ref{4.eqn.expfam}) with $\eta=\log(\phi/(1-\phi))$, $T(y)=y$, $a(\eta)=-\log(1-\phi)=\log(1+e^\eta)$ and $b(y)=1$. Interestingly, if the definition of $\eta$ is inverted by solving for $\phi$, the relation $\phi=1/(1+e^{-\eta})$ is obtained. One may notice this as the familiar sigmoid function --- a fact that will prove useful during the derivation of logistic regression as a GLM.
 
