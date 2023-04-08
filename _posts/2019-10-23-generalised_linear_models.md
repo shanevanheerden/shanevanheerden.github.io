@@ -91,8 +91,11 @@ One would like to obtain an estimate of $\mathbf{\beta}$ which maximises the val
 
 
 $$\hspace{50pt}\ell(\mathbf{\beta})=\log L(\mathbf{\beta})$$
+
 $$\hspace{70pt}=\log\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)$$
+
 $$\hspace{70pt}=\sum_{i=1}^{m}\log\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)$$
+
 \begin{equation}
 =m\log\frac{1}{\sqrt{2\pi}\sigma}-\frac{1}{2\sigma^2}\sum_{i=1}^{m}(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2.
 \end{equation}
