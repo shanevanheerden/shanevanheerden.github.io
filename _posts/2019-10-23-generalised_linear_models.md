@@ -83,9 +83,9 @@ The distribution of the observed target variables $\mathbf{y}$ are consequently 
 $$
 L(\mathbf{\beta})=\prod_{i=1}^{m}p(y^{(i)}\mid\mathbf{x};\mathbf{\beta})\\
 $$
-$$
+\begin{equation}
 =\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right).
-$$
+\end{equation}
 
 One would like to obtain an estimate of $\mathbf{\beta}$ which maximises the value of $L(\mathbf{\beta})$, called the *maximum likelihood estimation* (MLE). Instead of maximising $L(\mathbf{\beta})$, one may also maximise any strictly increasing function of the likelihood function. As a result, it is often more convenient to maximise a logarithmic form of the likelihood function (due to its relatively simple differentiability), appropriately called the *log likelihood* $\ell(\mathbf{\beta})$, where
 
