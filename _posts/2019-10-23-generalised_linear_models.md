@@ -80,7 +80,7 @@ p(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})=\frac{1}{\sqrt{2\pi}\sigma}\exp\le
 
 The distribution of the observed target variables $\mathbf{y}$ are consequently characterised by $\mathbf{y}\mid\mathbf{X};\mathbf{\beta}\sim\mathcal{N}(\mathbf{\beta},\sigma^2)$. Since each observation $(\mathbf{x}^{(i)}, y^{(i)})$ is assumed to be independent of all the other observations, the joint density or *likelihood* $L(\mathbf{\beta})=L(\mathbf{\beta};\mathbf{X},\mathbf{y})=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})$ of the data is given by the product of the individual probabilities
 
-$$\hspace{5pt}
+$$\hspace{50pt}
 L(\mathbf{\beta})=\prod_{i=1}^{m}p(y^{(i)}\mid\mathbf{x};\mathbf{\beta})\\
 $$
 \begin{equation}
