@@ -117,7 +117,47 @@ The expression (\ref{4.eqn.ols}) may be recognised as that occurring in the well
 
 ## 3. The exponential family
 
+The formulation of a GLM is traditionally achieved within the framework of the *exponential family* of distributions. A class of distributions is said to form part of the exponential family if their probability mass/density functions may be written in the form
 
+\begin{equation}
+p(y;\mathbf{\eta})=b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y)-a(\mathbf{\eta})),\label{4.eqn.expfam}
+\end{equation}
+
+where $\mathbf{\eta}$ is the so-called *canonical parameter* (or *natural parameter*) of the distribution, $\mathbf{T}(y)$ is the sufficient statistic (for the majority of the distributions, it is often the case that $\mathbf{T}(y)=y$), $b(y)$ is the *underlying measure*, and $a(\mathbf{\eta})$ is the *log partition function*, which ensures that the distribution sums/integrates to one. Hence,
+
+\begin{equation*}
+a(\mathbf{\eta})=\log\hspace{1mm}\displaystyle\int\mathllap{\sum}b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y))\hspace{0.8mm}\mathrm{d}{x}.
+\end{equation*}
+
+Therefore, for a fixed choice of the functions $b(y)$, $\mathbf{T}(y)$, and $a(\mathbf{\eta})$, one may define a *family* (or set) of distributions. Furthermore, by varying the canonical parameter $\mathbf{\eta}$, one may obtain different distributions within this family. It may be shown that many well-known distributions, such as the Gaussian, Bernoulli, multinomial, Poisson, gamma, beta, exponential and inverse Gaussian form part of the exponential family of distributions \cite{McCullagh1989}.
+
+Using this formulation, one can show that the celebrated Gaussian (or normal) distribution is, in fact, a member of the exponential family of distributions. Recall that, during the derivation of a general linear model in \S\ref{4.sub.gen}, the value of $\sigma^2$ did not depend on the final choice of $\mathbf{\beta}$. Consequently, one may choose an arbitrary value for $\sigma^2$ without loss of generality. To simplify the subsequent derivation, $\sigma^2$ is set to unity (*i.e.*\ $\sigma^2=1$). In this way, the standard Gaussian distribution can be expanded to the form
+
+$$
+p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)
+$$
+
+\begin{equation}
+=\underbrace{\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}y^2\right)}_{b(y)}\cdot\exp\bigg(\mu y-\underbrace{\frac{1}{2}\mu^2}_{a(\eta)}\bigg).
+\end{equation}
+
+Notice that this form of the Gaussian probability density expression is in the exponential family form of (\ref{4.eqn.expfam}) with $\eta=\mu$, $T(y)=y$, $a(\eta)=\mu^2/2$ and $b(y)=(1/\sqrt{2\pi})\exp(-y^2/2)$.
+
+As in the case of the Gaussian distribution, the well-known Bernoulli distribution can also be shown to reside within the set of exponential family distributions. The Bernoulli distribution specifies the distribution of a variable $y\in\{0,1\}$ with mean $\phi$ as
+
+$$
+p(y;\phi)&=\phi^y(1-\phi)^{1-y}
+$$
+
+$$
+=\exp(y\log\phi+(1-y)\log(1-\phi))
+$$
+
+\begin{equation}
+=\exp\bigg(\underbrace{\bigg(\log\left(\frac{\phi}{1-\phi}\right)\bigg)}_{\eta}y+\underbrace{\log(1-\phi)}_{-a(\eta)}\bigg).
+\end{align}
+
+Again notice that this form of the Bernoulli probability mass expression is in the exponential family of the form (\ref{4.eqn.expfam}) with $\eta=\log(\phi/(1-\phi))$, $T(y)=y$, $a(\eta)=-\log(1-\phi)=\log(1+e^\eta)$ and $b(y)=1$. Interestingly, if the definition of $\eta$ is inverted by solving for $\phi$, the relation $\phi=1/(1+e^{-\eta})$ is obtained. One may notice this as the familiar sigmoid function --- a fact that will prove useful during the derivation of logistic regression as a GLM.
 
 ***
 
