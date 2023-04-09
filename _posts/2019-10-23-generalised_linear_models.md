@@ -107,7 +107,7 @@ From these results, one may conclude that the final choice of $\beta$-values doe
 \sum_{i=1}^{m}(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2.\label{4.eqn.ols}
 \end{equation}
 
-The expression (\ref{4.eqn.ols}) may be recognised as that occurring in the well-known OLSR method for estimating the unknown parameters in a linear regression model. The optimal parameter values $\mathbf{\beta}^{\*} are, therefore, those that minimise the sum of the squared errors between the actual and predicted target variable, for all observations in the training set. For most statistical models, these parameter values are typically computed using a technique called *gradient decent*, the details of which are described by Ng [2]. In the case of OLSR, however, these $\mathbf{\beta}$-values may be computed analytically by solving the well-known normal equations [3], to yield
+The expression (\ref{4.eqn.ols}) may be recognised as that occurring in the well-known OLSR method for estimating the unknown parameters in a linear regression model. The optimal parameter values $\mathbf{\beta}^{\*}$ are, therefore, those that minimise the sum of the squared errors between the actual and predicted target variable, for all observations in the training set. For most statistical models, these parameter values are typically computed using a technique called *gradient decent*, the details of which are described by Ng [2]. In the case of OLSR, however, these $\mathbf{\beta}$-values may be computed analytically by solving the well-known normal equations [3], to yield
 
 \begin{equation}
 \mathbf{\beta}{^\*}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}.\label{4.eqn.norm}
@@ -123,7 +123,7 @@ The formulation of a GLM is traditionally achieved within the framework of the *
 p(y;\mathbf{\eta})=b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y)-a(\mathbf{\eta})),\label{4.eqn.expfam}
 \end{equation}
 
-where $\mathbf{\eta}$ is the so-called *canonical parameter* (or *natural parameter*) of the distribution, $\mathbf{T}(y)$ is the sufficient statistic (for the majority of the distributions, it is often the case that $\mathbf{T}(y)=y$), $b(y)$ is the *underlying measure*, and $a(\mathbf{\eta})$ is the *log partition function*, which ensures that the distribution integrates to one. Hence,
+where $\mathbf{\eta}$ is the so-called *canonical parameter* (or *natural parameter*) of the distribution, $\mathbf{T}(y)$ is the sufficient statistic (for the majority of the distributions, it is often the case that $\mathbf{T}(y)=y$), $b(y)$ is the *underlying measure*, and $a(\mathbf{\eta})$ is the *log partition function*, which ensures that the distribution sums/integrates to one. Hence,
 
 \begin{equation}
 a(\mathbf{\eta})=\log\displaystyle\int b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y))\hspace{0.8mm}\mathrm{d}{x}.
@@ -186,15 +186,12 @@ As in the case of OLSR, one may also show that logistic regression is simply a s
 \begin{equation}
 \mkern-34pt h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
 \end{equation}
-
 \begin{equation}
 \mkern-30pt =\phi\label{4.lr2}
 \end{equation}
-
 \begin{equation}
 \mkern-12pt =\frac{1}{1+e^{-\eta}}\label{4.lr3}
 \end{equation}
-
 \begin{equation}
 =\frac{1}{1+e^{-\mathbf{\beta}^T\mathbf{x}}}.\label{4.lr4}
 \end{equation}
