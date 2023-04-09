@@ -50,11 +50,11 @@ _styles: >
 
 {% include figure.html path="assets/img/blog5.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-This is the first post in a series of blog posts focusing on the some of the core Machine Learning algorithms! In this post, we will talk about 
+This is the first post in a series of blog posts focusing on the some of the core Machine Learning algorithms! In this post, we will talk about a classic suite of statistical learning models, namely *Generalized Linear Models* (GLMs). Let's get started!
 
 ## 1. Introduction
 
-In the world of statistics, we often come across various models that aim to explain a particular phenomenon. However, what if we could find a way to unify these models under a single theoretical framework? That's precisely what Nelder and Wedderburn did in their groundbreaking 1972 paper [1]. They showed that many of the linear statistical models shared common properties and could be estimated using a common method. This led to the development of the *Generalized Linear Models* (GLMs), which allowed us to view different models as a single class, rather than a disjointed set of topics. In this article, we'll see how some well-known models like Ordinary Least Squares Regression and Logistic Regression can be considered as special cases of GLMs. But before that, let's start with a brief overview of the General Linear Models, which serve as the foundation for GLMs.
+In the world of statistics, we often come across various models that aim to explain a particular phenomenon. However, what if we could find a way to unify these models under a single theoretical framework? That's precisely what Nelder and Wedderburn did in their groundbreaking 1972 paper [1]. They showed that many of the linear statistical models shared common properties and could be estimated using a common method. This led to the development of the GLMs, which allowed us to view different models as a single class, rather than a disjointed set of topics. In this article, we'll see how some well-known models like Ordinary Least Squares Regression and Logistic Regression can be considered as special cases of GLMs. But before that, let's start with a brief overview of the General Linear Models, which serve as the foundation for GLMs.
 
 ***
 
