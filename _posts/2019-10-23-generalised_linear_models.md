@@ -134,7 +134,7 @@ Therefore, for a fixed choice of the functions $b(y)$, $\mathbf{T}(y)$, and $a(\
 Using this formulation, one can show that the celebrated Gaussian (or normal) distribution is, in fact, a member of the exponential family of distributions. Recall that, during the derivation of a general linear model in Section 2, the value of $\sigma^2$ did not depend on the final choice of $\mathbf{\beta}$. Consequently, one may choose an arbitrary value for $\sigma^2$ without loss of generality. To simplify the subsequent derivation, $\sigma^2$ is set to unity (*i.e.*\ $\sigma^2=1$). In this way, the standard Gaussian distribution can be expanded to the form
 
 $$
-\mkern-100pt p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)
+\mkern-94pt p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)
 $$
 
 \begin{equation}
@@ -184,15 +184,15 @@ The distribution of a set of independent target variables $\mathbf{y}$ may now b
 As in the case of OLSR, one may also show that logistic regression is simply a special case of the family of GLMs. Consider the case in which the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$ are binary in nature ({\em i.e.}\ $y\in\{0,1\}$). In this case, it seems natural to model the conditional distribution of $\mathcal{Y}$ given the set of observations $\mathcal{X}$ as a Bernoulli distribution. Consequently, in the case of logistic regression, the hypothesis $h(\mathbf{x})$ is given by
 
 $$
-h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
+\mkern-70pt h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
 $$
 
 $$
-=\phi\label{4.lr2}
+\mkern-100pt =\phi\label{4.lr2}
 $$
 
 $$
-=\frac{1}{1+e^{-\eta}}\label{4.lr3}
+\mkern-40pt =\frac{1}{1+e^{-\eta}}\label{4.lr3}
 $$
 
 \begin{equation}
@@ -222,11 +222,11 @@ p(y\mid\mathbf{x};\mathbf{\beta})=h(\mathbf{x})^y(1-h(\mathbf{x}))^{1-y}.\label{
 Since the $m$ observations in $\mathcal{X}$ are assumed to be generated independently, the likelihood of the parameters $\mathbf{\beta}$ may, therefore, be expressed as
 
 $$
-\mathcal{L}(\mathbf{\beta})=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})
+\mkern-150pt \mathcal{L}(\mathbf{\beta})=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})
 $$
 
 $$
-=\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})\nonumber
+\mkern-113pt =\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})\nonumber
 $$
 
 \begin{equation}
@@ -236,7 +236,7 @@ $$
 where, again, it is typically easier to maximise (\ref{4.eqn.lr4}) in terms of its log likelihood
 
 $$
-\ell(\mathbf{\beta})=\log\mathcal{L}(\beta)
+\mkern-150pt \ell(\mathbf{\beta})=\log\mathcal{L}(\beta)
 $$
 
 \begin{equation}
@@ -247,15 +247,15 @@ As previously mentioned, optimal values of $\mathbf{\beta}^{\*}$ are typically r
 
 Often, an additional {\em regularisation} term is added to (\ref{4.eqn.lr5}) so as to penalise (\ref{4.eqn.lr5}) for large choices of the value of $\beta$ in an attempt to avoid overfitting [5]. Although the notion of regularisation may be applied in the case of many different learning models, this concept is described exclusively in the context of the logistic regression model derivation. The two most popular regularisation types are {\em L1 regularisation} (often termed {\em lasso regression}) and {\em L2 regularisation} (often termed {\em ridge regression}). In the case of the former, the logistic regression log likelihood in (\ref{4.eqn.lr5}) can be redefined as
 
-\begin{equation*}
+\begin{equation}
 \ell(\mathbf{\beta})=\sum_{i=1}^my^{(i)}\log h(\mathbf{x}^{(i)})+(1-y^{(i)})\log(1-h(\mathbf{x}^{(i)}))-\lambda\sum_{j=1}^n|\beta_j|
-\end{equation*}
+\end{equation}
 
 and, in the case of the latter as
 
-\begin{equation*}
+\begin{equation}
 \ell(\mathbf{\beta})=\sum_{i=1}^my^{(i)}\log h(\mathbf{x}^{(i)})+(1-y^{(i)})\log(1-h(\mathbf{x}^{(i)}))-\lambda\sum_{j=1}^n\beta_j^2,
-\end{equation*}
+\end{equation}
 
 where $\lambda$ is a parameter used to inflate the regularisation penalty. If $\lambda=0$, no regularisation is applied while, if a large value of $\lambda$ is chosen, the $\beta$-values will approach zero.
 
