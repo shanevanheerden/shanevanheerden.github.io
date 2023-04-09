@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Generalised Linear Models
-description: ML Algorithms
+description: Classic Machine Learning Algorithms Series
 date: 2019-10-23
 tags: MLAlgorithms
 
@@ -50,7 +50,7 @@ _styles: >
 
 {% include figure.html path="assets/img/blog5.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-This is the first post in a series of blog posts focusing on the some of the core Machine Learning algorithms! In this post, we will talk about a classic suite of statistical learning models, namely *Generalized Linear Models* (GLMs). Let's get started!
+This is the first post in a series of blog posts focusing on the some of the classic Machine Learning algorithms! In this post, we will talk about a classic suite of statistical learning models, namely *Generalized Linear Models* (GLMs). Let's get started!
 
 ## 1. Introduction
 
