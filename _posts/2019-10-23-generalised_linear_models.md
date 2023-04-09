@@ -134,7 +134,7 @@ Therefore, for a fixed choice of the functions $b(y)$, $\mathbf{T}(y)$, and $a(\
 Using this formulation, one can show that the celebrated Gaussian (or normal) distribution is, in fact, a member of the exponential family of distributions. Recall that, during the derivation of a general linear model in Section 2, the value of $\sigma^2$ did not depend on the final choice of $\mathbf{\beta}$. Consequently, one may choose an arbitrary value for $\sigma^2$ without loss of generality. To simplify the subsequent derivation, $\sigma^2$ is set to unity (*i.e.*\ $\sigma^2=1$). In this way, the standard Gaussian distribution can be expanded to the form
 
 $$
-p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)
+\mkern-50pt p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)
 $$
 
 \begin{equation}
@@ -169,7 +169,7 @@ Consider a classification or regression problem in which the objective is to pre
 2. A *systematic component*: The linear combination of the input features $\mathbf{X}$ produces a linear predictor $\mathbf{\eta}=\mathbf{X}\mathbf{\beta}$.
 3. A *functional link*: A known monotonic differentiable *link function* $g(\cdot)$ relates the expected values $\mathbf{\mu}=E[\mathbf{T}(y)\mid\mathbf{X};\mathbf{\beta}]$ of the target variable (random component) to the linear predictor $\mathbf{\eta}=\mathbf{X}\mathbf{\beta}$ of features (systematic component), such that the hypothesis of the GLM is given by $h(\mathbf{\tilde{x}})=E[\mathbf{T}(y)\mid\mathbf{\tilde{x}};\mathbf{\beta}]=g(\mathbf{\tilde{x}}\mathbf{\beta})^{-1}$.
 
-In the case of OLSR, Assumption~1 was merely a Gaussian distribution and Assumption~3 was and identity link function, implying that $\mathbf{\mu}=\mathbf{\eta}$. GLMs, therefore, extend the assumption in (\ref{4.eqn.asmp}) of general linear models to the relation
+In the case of OLSR, Assumptio 1 was merely a Gaussian distribution and Assumption 3 was and identity link function, implying that $\mathbf{\mu}=\mathbf{\eta}$. GLMs, therefore, extend the assumption in (\ref{4.eqn.asmp}) of general linear models to the relation
 
 \begin{equation}
 \mathbf{y}=g(\mathbf{X}\mathbf{\beta})^{-1}+\mathbf{\epsilon}.
