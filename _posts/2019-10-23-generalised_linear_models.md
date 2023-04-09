@@ -134,7 +134,7 @@ Therefore, for a fixed choice of the functions $b(y)$, $\mathbf{T}(y)$, and $a(\
 Using this formulation, one can show that the celebrated Gaussian (or normal) distribution is, in fact, a member of the exponential family of distributions. Recall that, during the derivation of a general linear model in Section 2, the value of $\sigma^2$ did not depend on the final choice of $\mathbf{\beta}$. Consequently, one may choose an arbitrary value for $\sigma^2$ without loss of generality. To simplify the subsequent derivation, $\sigma^2$ is set to unity (*i.e.*\ $\sigma^2=1$). In this way, the standard Gaussian distribution can be expanded to the form
 
 $$
-\mkern-50pt p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)
+\mkern-100pt p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)
 $$
 
 \begin{equation}
@@ -221,18 +221,27 @@ p(y\mid\mathbf{x};\mathbf{\beta})=h(\mathbf{x})^y(1-h(\mathbf{x}))^{1-y}.\label{
 
 Since the $m$ observations in $\mathcal{X}$ are assumed to be generated independently, the likelihood of the parameters $\mathbf{\beta}$ may, therefore, be expressed as
 
-\begin{align}
-\mathcal{L}(\mathbf{\beta})&=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})\nonumber\\
-&=\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})\nonumber\\
-&=\prod_{i=1}^m\left(h(\mathbf{x}^{(i)})\right)^{y^{(i)}}\left(1-h(\mathbf{x}^{(i)})\right)^{1-y^{(i)}},\label{4.eqn.lr4}
-\end{align}
+$$
+\mathcal{L}(\mathbf{\beta})=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})
+$$
+
+$$
+=\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})\nonumber
+$$
+
+\begin{equation}
+=\prod_{i=1}^m\left(h(\mathbf{x}^{(i)})\right)^{y^{(i)}}\left(1-h(\mathbf{x}^{(i)})\right)^{1-y^{(i)}},\label{4.eqn.lr4}
+\end{equation}
 
 where, again, it is typically easier to maximise (\ref{4.eqn.lr4}) in terms of its log likelihood
 
-\begin{align}
-\ell(\mathbf{\beta})&=\log\mathcal{L}(\beta)\nonumber\\
-&=\sum_{i=1}^my^{(i)}\log h(\mathbf{x}^{(i)}+(1-y^{(i)}\log(1-h(\mathbf{x}^{(i)}))\label{4.eqn.lr5}.
-\end{align}
+$$
+\ell(\mathbf{\beta})=\log\mathcal{L}(\beta)
+$$
+
+\begin{equation}
+=\sum_{i=1}^my^{(i)}\log h(\mathbf{x}^{(i)}+(1-y^{(i)}\log(1-h(\mathbf{x}^{(i)}))\label{4.eqn.lr5}.
+\end{equation}
 
 As previously mentioned, optimal values of $\mathbf{\beta}^{\*}$ are typically realised by maximising (\ref{4.eqn.lr5}) using the method of gradient decent [2].
 
