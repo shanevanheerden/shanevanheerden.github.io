@@ -184,10 +184,10 @@ The distribution of a set of independent target variables $\mathbf{y}$ may now b
 As in the case of OLSR, one may also show that logistic regression is simply a special case of the family of GLMs. Consider the case in which the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$ are binary in nature ({\em i.e.}\ $y\in\{0,1\}$). In this case, it seems natural to model the conditional distribution of $\mathcal{Y}$ given the set of observations $\mathcal{X}$ as a Bernoulli distribution. Consequently, in the case of logistic regression, the hypothesis $h(\mathbf{x})$ is given by
 
 \begin{equation}
-\mkern-34pt h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
+\mkern-32pt h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
 \end{equation}
 \begin{equation}
-\mkern-30pt =\phi\label{4.lr2}
+\mkern-34pt =\phi\label{4.lr2}
 \end{equation}
 \begin{equation}
 \mkern-12pt =\frac{1}{1+e^{-\eta}}\label{4.lr3}
