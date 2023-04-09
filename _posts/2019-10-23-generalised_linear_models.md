@@ -54,7 +54,7 @@ This is the first post in a series of blog posts focusing on the some of the cor
 
 ## 1. Introduction
 
-In the world of statistics, we often come across various models that aim to explain a particular phenomenon. However, what if we could find a way to unify these models under a single theoretical framework? That's precisely what Nelder and Wedderburn did in their groundbreaking 1972 paper [183]. They showed that many of the linear statistical models shared common properties and could be estimated using a common method. This led to the development of the *Generalized Linear Models* (GLMs), which allowed us to view different models as a single class, rather than a disjointed set of topics. In this article, we'll see how some well-known models like Ordinary Least Squares Regression and Logistic Regression can be considered as special cases of GLMs. But before that, let's start with a brief overview of the General Linear Models, which serve as the foundation for GLMs.
+In the world of statistics, we often come across various models that aim to explain a particular phenomenon. However, what if we could find a way to unify these models under a single theoretical framework? That's precisely what Nelder and Wedderburn did in their groundbreaking 1972 paper [1]. They showed that many of the linear statistical models shared common properties and could be estimated using a common method. This led to the development of the *Generalized Linear Models* (GLMs), which allowed us to view different models as a single class, rather than a disjointed set of topics. In this article, we'll see how some well-known models like Ordinary Least Squares Regression and Logistic Regression can be considered as special cases of GLMs. But before that, let's start with a brief overview of the General Linear Models, which serve as the foundation for GLMs.
 
 ***
 
@@ -107,7 +107,7 @@ From these results, one may conclude that the final choice of $\beta$-values doe
 \sum_{i=1}^{m}(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2.\label{4.eqn.ols}
 \end{equation}
 
-The expression (\ref{4.eqn.ols}) may be recognised as that occurring in the well-known OLSR method for estimating the unknown parameters in a linear regression model. The optimal parameter values $\mathbf{\beta}^{\*} are, therefore, those that minimise the sum of the squared errors between the actual and predicted target variable, for all observations in the training set. For most statistical models, these parameter values are typically computed using a technique called *gradient decent*, the details of which are described by Ng \cite{Ng2012}. In the case of OLSR, however, these $\mathbf{\beta}$-values may be computed analytically by solving the well-known normal equations \cite{Hastie2009}, to yield
+The expression (\ref{4.eqn.ols}) may be recognised as that occurring in the well-known OLSR method for estimating the unknown parameters in a linear regression model. The optimal parameter values $\mathbf{\beta}^{\*} are, therefore, those that minimise the sum of the squared errors between the actual and predicted target variable, for all observations in the training set. For most statistical models, these parameter values are typically computed using a technique called *gradient decent*, the details of which are described by Ng [2]. In the case of OLSR, however, these $\mathbf{\beta}$-values may be computed analytically by solving the well-known normal equations [3], to yield
 
 \begin{equation}
 \mathbf{\beta}{^\*}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}.\label{4.eqn.norm}
@@ -129,7 +129,7 @@ where $\mathbf{\eta}$ is the so-called *canonical parameter* (or *natural parame
 a(\mathbf{\eta})=\log\displaystyle\int b(y)\exp(\mathbf{\eta}^T\mathbf{T}(y))\hspace{0.8mm}\mathrm{d}{x}.
 \end{equation}
 
-Therefore, for a fixed choice of the functions $b(y)$, $\mathbf{T}(y)$, and $a(\mathbf{\eta})$, one may define a *family* (or set) of distributions. Furthermore, by varying the canonical parameter $\mathbf{\eta}$, one may obtain different distributions within this family. It may be shown that many well-known distributions, such as the Gaussian, Bernoulli, multinomial, Poisson, gamma, beta, exponential and inverse Gaussian form part of the exponential family of distributions \cite{McCullagh1989}.
+Therefore, for a fixed choice of the functions $b(y)$, $\mathbf{T}(y)$, and $a(\mathbf{\eta})$, one may define a *family* (or set) of distributions. Furthermore, by varying the canonical parameter $\mathbf{\eta}$, one may obtain different distributions within this family. It may be shown that many well-known distributions, such as the Gaussian, Bernoulli, multinomial, Poisson, gamma, beta, exponential and inverse Gaussian form part of the exponential family of distributions [4].
 
 Using this formulation, one can show that the celebrated Gaussian (or normal) distribution is, in fact, a member of the exponential family of distributions. Recall that, during the derivation of a general linear model in Section 2, the value of $\sigma^2$ did not depend on the final choice of $\mathbf{\beta}$. Consequently, one may choose an arbitrary value for $\sigma^2$ without loss of generality. To simplify the subsequent derivation, $\sigma^2$ is set to unity (*i.e.*\ $\sigma^2=1$). In this way, the standard Gaussian distribution can be expanded to the form
 
@@ -163,7 +163,7 @@ Again notice that this form of the Bernoulli probability mass expression is in t
 
 ## 4. Constructing a generalised linear model
 
-Consider a classification or regression problem in which the objective is to predict some target variable $y$ as a function of the explanatory variables $\mathbf{x}$. In order to derive a GLM for this problem, McCullagh and Nelder \cite{McCullagh1989} formally proposed the establishment of three model assumptions (or components):
+Consider a classification or regression problem in which the objective is to predict some target variable $y$ as a function of the explanatory variables $\mathbf{x}$. In order to derive a GLM for this problem, McCullagh and Nelder [4] formally proposed the establishment of three model assumptions (or components):
 
 1. A *random component*: Given a matrix of features $\mathbf{X}$ parameterised by $\mathbf{\beta}$, the target variables $\mathbf{y}$ are characterised by a probability distribution that belongs to the exponential family with canonical parameter $\mathbf{\eta}$, written as $\mathbf{y}\mid\mathbf{X};\mathbf{\beta}\sim$ ExpFamily($\mathbf{\eta}$).
 2. A *systematic component*: The linear combination of the input features $\mathbf{X}$ produces a linear predictor $\mathbf{\eta}=\mathbf{X}\mathbf{\beta}$.
@@ -175,16 +175,63 @@ In the case of OLSR, Assumptio 1 was merely a Gaussian distribution and Assumpti
 \mathbf{y}=g(\mathbf{X}\mathbf{\beta})^{-1}+\mathbf{\epsilon}.
 \end{equation}
 
-The distribution of a set of independent target variables $\mathbf{y}$ may now be characterised by any distribution in the exponential family while the homogeneity of variance is not satisfied (it rather varies as a function of the covariate mean) \cite{Ng2012}. Furthermore, the target variable and the explanatory variables no longer assume a linear relationship but are rather related *via* a link function.
+The distribution of a set of independent target variables $\mathbf{y}$ may now be characterised by any distribution in the exponential family while the homogeneity of variance is not satisfied (it rather varies as a function of the covariate mean)[2]. Furthermore, the target variable and the explanatory variables no longer assume a linear relationship but are rather related *via* a link function.
 
 ***
 
 ## 5. Logistic regression
 
+As in the case of OLSR, one may also show that logistic regression is simply a special case of the family of GLMs. Consider the case in which the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$ are binary in nature ({\em i.e.}\ $y\in\{0,1\}$). In this case, it seems natural to model the conditional distribution of $\mathcal{Y}$ given the set of observations $\mathcal{X}$ as a Bernoulli distribution. Consequently, in the case of logistic regression, the hypothesis $h(\bm{x})$ is given by
+\begin{align}
+h(\bm{x})&=E[y\mid \bm{x};\bm{\beta}]\label{4.lr1}\\
+&=\phi\label{4.lr2}\\
+&=\frac{1}{1+e^{-\eta}}\label{4.lr3}\\
+&=\frac{1}{1+e^{-\bm{\beta}^T\bm{x}}}.\label{4.lr4}
+\end{align}
+Again, (\ref{4.lr1}) is the functional link of Assumption~3, (\ref{4.lr2}) follows from the fact that $y\mid\bm{x};\bm{b}\sim \operatorname{Bern}(\phi)$, (\ref{4.lr3}) follows from Assumption~1 and the earlier derivation in \S\ref{4.sub.expfamily} which showed that $\phi=1/(1+e^{-\eta})$ in the formulation of a Bernoulli distribution as an exponential family distribution. Finally, (\ref{4.lr4}) follows from Assumption~3.
+
+Notice that $h(\bm{x})$ is always bounded between zero and one since $h(\bm{x})\rightarrow 1$ as $\bm{\beta}^T\bm{x}\rightarrow \infty$ and $h(\bm{x})\rightarrow 0$ as $\bm{\beta}^T\bm{x}\rightarrow -\infty$. By convention, $p(y=1\mid\bm{x};\bm{\beta})$ can be chosen as
+\begin{equation}
+p(y=1\mid\bm{x};\bm{\beta})=h(\bm{x})\label{4.eqn.lr1}
+\end{equation}
+which means that
+\begin{equation}
+p(y=0\mid\bm{x};\bm{\beta})=1-h(\bm{x}).\label{4.eqn.lr2}
+\end{equation}
+Given that $p(y=0\mid\bm{x};\bm{\beta})+p(y=1\mid\bm{x};\bm{\beta})=1$, (\ref{4.eqn.lr1}) and (\ref{4.eqn.lr2}) may be combined into the more compact Bernoulli representation
+\begin{equation*}
+p(y\mid\bm{x};\bm{\beta})=h(\bm{x})^y(1-h(\bm{x}))^{1-y}.\label{4.eqn.lr3}
+\end{equation*}
+Since the $m$ observations in $\mathcal{X}$ are assumed to be generated independently, the likelihood of the parameters $\bm{\beta}$ may, therefore, be expressed as
+\begin{align}
+\mathcal{L}(\bm{\beta})&=p(\bm{y}\mid\bm{X};\bm{\beta})\nonumber\\
+&=\prod_{i=1}^mp(y^{(i)}\mid\bm{x}^{(i)};\bm{\beta})\nonumber\\
+&=\prod_{i=1}^m\left(h(\bm{x}^{(i)})\right)^{y^{(i)}}\left(1-h(\bm{x}^{(i)})\right)^{1-y^{(i)}},\label{4.eqn.lr4}
+\end{align}
+where, again, it is typically easier to maximise (\ref{4.eqn.lr4}) in terms of its log likelihood
+\begin{align}
+\ell(\bm{\beta})&=\log\mathcal{L}(\beta)\nonumber\\
+&=\sum_{i=1}^my^{(i)}\log h(\bm{x}^{(i)}+(1-y^{(i)}\log(1-h(\bm{x}^{(i)}))\label{4.eqn.lr5}.
+\end{align}
+As previously mentioned, optimal values of $\bm{\beta}^{\*}$ are typically realised by maximising (\ref{4.eqn.lr5}) using the method of gradient decent [2].
+
+Often, an additional {\em regularisation} term is added to (\ref{4.eqn.lr5}) so as to penalise (\ref{4.eqn.lr5}) for large choices of the value of $\beta$ in an attempt to avoid overfitting [5]. Although the notion of regularisation may be applied in the case of many different learning models, this concept is described exclusively in the context of the logistic regression model derivation. The two most popular regularisation types are {\em L1 regularisation} (often termed {\em lasso regression}) and {\em L2 regularisation} (often termed {\em ridge regression}). In the case of the former, the logistic regression log likelihood in (\ref{4.eqn.lr5}) can be redefined as
+\begin{equation*}
+\ell(\bm{\beta})=\sum_{i=1}^my^{(i)}\log h(\bm{x}^{(i)})+(1-y^{(i)})\log(1-h(\bm{x}^{(i)}))-\lambda\sum_{j=1}^n|\beta_j|
+\end{equation*}
+and, in the case of the latter as
+\begin{equation*}
+\ell(\bm{\beta})=\sum_{i=1}^my^{(i)}\log h(\bm{x}^{(i)})+(1-y^{(i)})\log(1-h(\bm{x}^{(i)}))-\lambda\sum_{j=1}^n\beta_j^2,
+\end{equation*}
+where $\lambda$ is a parameter used to inflate the regularisation penalty. If $\lambda=0$, no regularisation is applied while, if a large value of $\lambda$ is chosen, the $\beta$-values will approach zero.
 
 
 ***
 
 ## 6. References
 
-1. 
+1. Nelder JA & Wedderburn RWM, 1972, *Generalized linear models*, Journal of the Royal Statistical Society, Series A (General), 135(3), pp. 370–384.
+2. Ng A, 2012, *CS229 — Machine Learning*, Stanford University, [Lecture notes], Available from https://see.stanford.edu/Course/CS229.
+3. Hastie T, Tibshirani R & Friedman J, 2009, *The elements of statistical learning*, 2nd Edition, Springer, New York (NY).
+4. McCullagh P & Nelder JA, 1989, *Generalised linear models*, 2nd Edition, Chapman & Hall, London.
+5. Bühlmann P & Geer SVD, 2011, *Statistics for high-dimensional data*, Springer, Berlin.
