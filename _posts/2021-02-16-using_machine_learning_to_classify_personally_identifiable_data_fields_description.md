@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Using Machine Learning to Classify Personally Identifiable Data Fields
-description: In noisy Excel spreadsheets
+description: Real Life Case Studies Series
 date: 2021-02-16
 tags: CaseStudy
 
