@@ -81,6 +81,7 @@ p(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})=\frac{1}{\sqrt{2\pi}\sigma}\exp\le
 The distribution of the observed target variables $\mathbf{y}$ are consequently characterised by $\mathbf{y}\mid\mathbf{X};\mathbf{\beta}\sim\mathcal{N}(\mathbf{\beta},\sigma^2)$. Since each observation $(\mathbf{x}^{(i)}, y^{(i)})$ is assumed to be independent of all the other observations, the joint density or *likelihood* $L(\mathbf{\beta})=L(\mathbf{\beta};\mathbf{X},\mathbf{y})=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})$ of the data is given by the product of the individual probabilities
 
 $$\hspace{70pt}L(\mathbf{\beta})=\prod_{i=1}^{m}p(y^{(i)}\mid\mathbf{x};\mathbf{\beta})$$
+
 \begin{equation}
 =\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right).
 \end{equation}
@@ -88,8 +89,11 @@ $$\hspace{70pt}L(\mathbf{\beta})=\prod_{i=1}^{m}p(y^{(i)}\mid\mathbf{x};\mathbf{
 One would like to obtain an estimate of $\mathbf{\beta}$ which maximises the value of $L(\mathbf{\beta})$, called the *maximum likelihood estimation* (MLE). Instead of maximising $L(\mathbf{\beta})$, one may also maximise any strictly increasing function of the likelihood function. As a result, it is often more convenient to maximise a logarithmic form of the likelihood function (due to its relatively simple differentiability), appropriately called the *log likelihood* $\ell(\mathbf{\beta})$, where
 
 $$\mkern-107pt\ell(\mathbf{\beta})=\log L(\mathbf{\beta})$$
+
 $$=\log\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)$$
+
 $$\hspace{2pt}=\sum_{i=1}^{m}\log\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2}{2\sigma^2}\right)$$
+
 \begin{equation}
 \hspace{3pt}=m\log\frac{1}{\sqrt{2\pi}\sigma}-\frac{1}{2\sigma^2}\sum_{i=1}^{m}(y^{(i)}-\mathbf{x}^{(i)}\mathbf{\beta})^2.
 \end{equation}
@@ -127,6 +131,7 @@ Therefore, for a fixed choice of the functions $b(y)$, $\mathbf{T}(y)$, and $a(\
 Using this formulation, one can show that the celebrated Gaussian (or normal) distribution is, in fact, a member of the exponential family of distributions. Recall that, during the derivation of a general linear model in Section 2, the value of $\sigma^2$ did not depend on the final choice of $\mathbf{\beta}$. Consequently, one may choose an arbitrary value for $\sigma^2$ without loss of generality. To simplify the subsequent derivation, $\sigma^2$ is set to unity (*i.e.*\ $\sigma^2=1$). In this way, the standard Gaussian distribution can be expanded to the form
 
 $$\mkern-89pt p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)$$
+
 \begin{equation}
 =\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}y^2\right)\cdot\exp\bigg(\mu y-\frac{1}{2}\mu^2\bigg).
 \end{equation}
@@ -136,7 +141,9 @@ Notice that this form of the Gaussian probability density expression is in the e
 As in the case of the Gaussian distribution, the well-known Bernoulli distribution can also be shown to reside within the set of exponential family distributions. The Bernoulli distribution specifies the distribution of a variable $y\in\{0,1\}$ with mean $\phi$ as
 
 $$\mkern-113pt p(y;\phi)=\phi^y(1-\phi)^{1-y}$$
+
 $$\mkern-16pt=\exp(y\log\phi+(1-y)\log(1-\phi))$$
+
 \begin{equation}
 =\exp\bigg(\log\left(\frac{\phi}{1-\phi}\right)y+\log(1-\phi)\bigg).
 \end{equation}
@@ -203,6 +210,7 @@ p(y\mid\mathbf{x};\mathbf{\beta})=h(\mathbf{x})^y(1-h(\mathbf{x}))^{1-y}.\label{
 Since the $m$ observations in $\mathcal{X}$ are assumed to be generated independently, the likelihood of the parameters $\mathbf{\beta}$ may, therefore, be expressed as
 
 $$\mkern-101pt \mathcal{L}(\mathbf{\beta})=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})$$
+
 $$\mkern-71pt =\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})$$
 \begin{equation}
 =\prod_{i=1}^m\left(h(\mathbf{x}^{(i)})\right)^{y^{(i)}}\left(1-h(\mathbf{x}^{(i)})\right)^{1-y^{(i)}},\label{4.eqn.lr4}
@@ -211,6 +219,7 @@ $$\mkern-71pt =\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})$$
 where, again, it is typically easier to maximise (\ref{4.eqn.lr4}) in terms of its log likelihood
 
 $$\mkern-120pt \ell(\mathbf{\beta})=\log\mathcal{L}(\beta)$$
+
 \begin{equation}
 =\sum_{i=1}^my^{(i)}\log h(\mathbf{x}^{(i)}+(1-y^{(i)}\log(1-h(\mathbf{x}^{(i)}))\label{4.eqn.lr5}.
 \end{equation}
