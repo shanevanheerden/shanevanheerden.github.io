@@ -138,7 +138,7 @@ p(y;\mu)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(y-\mu)^2\right)
 $$
 
 \begin{equation}
-=\underbrace{\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}y^2\right)}_{b(y)}\cdot\exp\bigg(\mu y-\underbrace{\frac{1}{2}\mu^2}_{a(\eta)}\bigg).
+=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}y^2\right)\cdot\exp\bigg(\mu y-\frac{1}{2}\mu^2\bigg).
 \end{equation}
 
 Notice that this form of the Gaussian probability density expression is in the exponential family form of (\ref{4.eqn.expfam}) with $\eta=\mu$, $T(y)=y$, $a(\eta)=\mu^2/2$ and $b(y)=(1/\sqrt{2\pi})\exp(-y^2/2)$.
@@ -163,7 +163,19 @@ Again notice that this form of the Bernoulli probability mass expression is in t
 
 ## 4. Constructing a generalised linear model
 
+Consider a classification or regression problem in which the objective is to predict some target variable $y$ as a function of the explanatory variables $\mathbf{x}$. In order to derive a GLM for this problem, McCullagh and Nelder \cite{McCullagh1989} formally proposed the establishment of three model assumptions (or components):
 
+1. A *random component*: Given a matrix of features $\mathbf{X}$ parameterised by $\mathbf{\beta}$, the target variables $\mathbf{y}$ are characterised by a probability distribution that belongs to the exponential family with canonical parameter $\mathbf{\eta}$, written as $\mathbf{y}\mid\mathbf{X};\mathbf{\beta}\sim$ ExpFamily($\mathbf{\eta}$).
+2. A *systematic component*: The linear combination of the input features $\mathbf{X}$ produces a linear predictor $\mathbf{\eta}=\mathbf{X}\mathbf{\beta}$.
+3. A *functional link*: A known monotonic differentiable *link function* $g(\cdot)$ relates the expected values $\mathbf{\mu}=E[\mathbf{T}(y)\mid\mathbf{X};\mathbf{\beta}]$ of the target variable (random component) to the linear predictor $\mathbf{\eta}=\mathbf{X}\mathbf{\beta}$ of features (systematic component), such that the hypothesis of the GLM is given by $h(\mathbf{\tilde{x}})=E[\mathbf{T}(y)\mid\mathbf{\tilde{x}};\mathbf{\beta}]=g(\mathbf{\tilde{x}}\mathbf{\beta})^{-1}$.
+
+In the case of OLSR, Assumption~1 was merely a Gaussian distribution and Assumption~3 was and identity link function, implying that $\mathbf{\mu}=\mathbf{\eta}$. GLMs, therefore, extend the assumption in (\ref{4.eqn.asmp}) of general linear models to the relation
+
+\begin{equation}
+\mathbf{y}=g(\mathbf{X}\mathbf{\beta})^{-1}+\mathbf{\epsilon}.
+\end{equation}
+
+The distribution of a set of independent target variables $\mathbf{y}$ may now be characterised by any distribution in the exponential family while the homogeneity of variance is not satisfied (it rather varies as a function of the covariate mean) \cite{Ng2012}. Furthermore, the target variable and the explanatory variables no longer assume a linear relationship but are rather related *via* a link function.
 
 ***
 
