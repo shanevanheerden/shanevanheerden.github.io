@@ -48,7 +48,7 @@ _styles: >
 
 *This blog post was adapted from my [PhD dissertation](https://sunore.co.za/wp-content/uploads/2021/03/vanheerden_phd_2020.pdf).*
 
-{% include figure.html path="assets/img/blog5.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog5.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 This is the first post in a series of blog posts focusing on the some of the core Machine Learning algorithms! In this post, we will talk about 
 
@@ -181,50 +181,74 @@ The distribution of a set of independent target variables $\mathbf{y}$ may now b
 
 ## 5. Logistic regression
 
-As in the case of OLSR, one may also show that logistic regression is simply a special case of the family of GLMs. Consider the case in which the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$ are binary in nature ({\em i.e.}\ $y\in\{0,1\}$). In this case, it seems natural to model the conditional distribution of $\mathcal{Y}$ given the set of observations $\mathcal{X}$ as a Bernoulli distribution. Consequently, in the case of logistic regression, the hypothesis $h(\bm{x})$ is given by
-\begin{align}
-h(\bm{x})&=E[y\mid \bm{x};\bm{\beta}]\label{4.lr1}\\
-&=\phi\label{4.lr2}\\
-&=\frac{1}{1+e^{-\eta}}\label{4.lr3}\\
-&=\frac{1}{1+e^{-\bm{\beta}^T\bm{x}}}.\label{4.lr4}
-\end{align}
-Again, (\ref{4.lr1}) is the functional link of Assumption~3, (\ref{4.lr2}) follows from the fact that $y\mid\bm{x};\bm{b}\sim \operatorname{Bern}(\phi)$, (\ref{4.lr3}) follows from Assumption~1 and the earlier derivation in \S\ref{4.sub.expfamily} which showed that $\phi=1/(1+e^{-\eta})$ in the formulation of a Bernoulli distribution as an exponential family distribution. Finally, (\ref{4.lr4}) follows from Assumption~3.
+As in the case of OLSR, one may also show that logistic regression is simply a special case of the family of GLMs. Consider the case in which the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$ are binary in nature ({\em i.e.}\ $y\in\{0,1\}$). In this case, it seems natural to model the conditional distribution of $\mathcal{Y}$ given the set of observations $\mathcal{X}$ as a Bernoulli distribution. Consequently, in the case of logistic regression, the hypothesis $h(\mathbf{x})$ is given by
 
-Notice that $h(\bm{x})$ is always bounded between zero and one since $h(\bm{x})\rightarrow 1$ as $\bm{\beta}^T\bm{x}\rightarrow \infty$ and $h(\bm{x})\rightarrow 0$ as $\bm{\beta}^T\bm{x}\rightarrow -\infty$. By convention, $p(y=1\mid\bm{x};\bm{\beta})$ can be chosen as
+$$
+h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
+$$
+
+$$
+=\phi\label{4.lr2}
+$$
+
+$$
+=\frac{1}{1+e^{-\eta}}\label{4.lr3}
+$$
+
 \begin{equation}
-p(y=1\mid\bm{x};\bm{\beta})=h(\bm{x})\label{4.eqn.lr1}
+=\frac{1}{1+e^{-\mathbf{\beta}^T\mathbf{x}}}.\label{4.lr4}
 \end{equation}
+
+Again, (\ref{4.lr1}) is the functional link of Assumption~3, (\ref{4.lr2}) follows from the fact that $y\mid\mathbf{x};\mathbf{b}\sim \operatorname{Bern}(\phi)$, (\ref{4.lr3}) follows from Assumption~1 and the earlier derivation in \S\ref{4.sub.expfamily} which showed that $\phi=1/(1+e^{-\eta})$ in the formulation of a Bernoulli distribution as an exponential family distribution. Finally, (\ref{4.lr4}) follows from Assumption~3.
+
+Notice that $h(\mathbf{x})$ is always bounded between zero and one since $h(\mathbf{x})\rightarrow 1$ as $\mathbf{\beta}^T\mathbf{x}\rightarrow \infty$ and $h(\mathbf{x})\rightarrow 0$ as $\mathbf{\beta}^T\mathbf{x}\rightarrow -\infty$. By convention, $p(y=1\mid\mathbf{x};\mathbf{\beta})$ can be chosen as
+
+\begin{equation}
+p(y=1\mid\mathbf{x};\mathbf{\beta})=h(\mathbf{x})\label{4.eqn.lr1}
+\end{equation}
+
 which means that
+
 \begin{equation}
-p(y=0\mid\bm{x};\bm{\beta})=1-h(\bm{x}).\label{4.eqn.lr2}
+p(y=0\mid\mathbf{x};\mathbf{\beta})=1-h(\mathbf{x}).\label{4.eqn.lr2}
 \end{equation}
-Given that $p(y=0\mid\bm{x};\bm{\beta})+p(y=1\mid\bm{x};\bm{\beta})=1$, (\ref{4.eqn.lr1}) and (\ref{4.eqn.lr2}) may be combined into the more compact Bernoulli representation
-\begin{equation*}
-p(y\mid\bm{x};\bm{\beta})=h(\bm{x})^y(1-h(\bm{x}))^{1-y}.\label{4.eqn.lr3}
-\end{equation*}
-Since the $m$ observations in $\mathcal{X}$ are assumed to be generated independently, the likelihood of the parameters $\bm{\beta}$ may, therefore, be expressed as
+
+Given that $p(y=0\mid\mathbf{x};\mathbf{\beta})+p(y=1\mid\mathbf{x};\mathbf{\beta})=1$, (\ref{4.eqn.lr1}) and (\ref{4.eqn.lr2}) may be combined into the more compact Bernoulli representation
+
+\begin{equation}
+p(y\mid\mathbf{x};\mathbf{\beta})=h(\mathbf{x})^y(1-h(\mathbf{x}))^{1-y}.\label{4.eqn.lr3}
+\end{equation}
+
+Since the $m$ observations in $\mathcal{X}$ are assumed to be generated independently, the likelihood of the parameters $\mathbf{\beta}$ may, therefore, be expressed as
+
 \begin{align}
-\mathcal{L}(\bm{\beta})&=p(\bm{y}\mid\bm{X};\bm{\beta})\nonumber\\
-&=\prod_{i=1}^mp(y^{(i)}\mid\bm{x}^{(i)};\bm{\beta})\nonumber\\
-&=\prod_{i=1}^m\left(h(\bm{x}^{(i)})\right)^{y^{(i)}}\left(1-h(\bm{x}^{(i)})\right)^{1-y^{(i)}},\label{4.eqn.lr4}
+\mathcal{L}(\mathbf{\beta})&=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})\nonumber\\
+&=\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})\nonumber\\
+&=\prod_{i=1}^m\left(h(\mathbf{x}^{(i)})\right)^{y^{(i)}}\left(1-h(\mathbf{x}^{(i)})\right)^{1-y^{(i)}},\label{4.eqn.lr4}
 \end{align}
+
 where, again, it is typically easier to maximise (\ref{4.eqn.lr4}) in terms of its log likelihood
+
 \begin{align}
-\ell(\bm{\beta})&=\log\mathcal{L}(\beta)\nonumber\\
-&=\sum_{i=1}^my^{(i)}\log h(\bm{x}^{(i)}+(1-y^{(i)}\log(1-h(\bm{x}^{(i)}))\label{4.eqn.lr5}.
+\ell(\mathbf{\beta})&=\log\mathcal{L}(\beta)\nonumber\\
+&=\sum_{i=1}^my^{(i)}\log h(\mathbf{x}^{(i)}+(1-y^{(i)}\log(1-h(\mathbf{x}^{(i)}))\label{4.eqn.lr5}.
 \end{align}
-As previously mentioned, optimal values of $\bm{\beta}^{\*}$ are typically realised by maximising (\ref{4.eqn.lr5}) using the method of gradient decent [2].
+
+As previously mentioned, optimal values of $\mathbf{\beta}^{\*}$ are typically realised by maximising (\ref{4.eqn.lr5}) using the method of gradient decent [2].
 
 Often, an additional {\em regularisation} term is added to (\ref{4.eqn.lr5}) so as to penalise (\ref{4.eqn.lr5}) for large choices of the value of $\beta$ in an attempt to avoid overfitting [5]. Although the notion of regularisation may be applied in the case of many different learning models, this concept is described exclusively in the context of the logistic regression model derivation. The two most popular regularisation types are {\em L1 regularisation} (often termed {\em lasso regression}) and {\em L2 regularisation} (often termed {\em ridge regression}). In the case of the former, the logistic regression log likelihood in (\ref{4.eqn.lr5}) can be redefined as
-\begin{equation*}
-\ell(\bm{\beta})=\sum_{i=1}^my^{(i)}\log h(\bm{x}^{(i)})+(1-y^{(i)})\log(1-h(\bm{x}^{(i)}))-\lambda\sum_{j=1}^n|\beta_j|
-\end{equation*}
-and, in the case of the latter as
-\begin{equation*}
-\ell(\bm{\beta})=\sum_{i=1}^my^{(i)}\log h(\bm{x}^{(i)})+(1-y^{(i)})\log(1-h(\bm{x}^{(i)}))-\lambda\sum_{j=1}^n\beta_j^2,
-\end{equation*}
-where $\lambda$ is a parameter used to inflate the regularisation penalty. If $\lambda=0$, no regularisation is applied while, if a large value of $\lambda$ is chosen, the $\beta$-values will approach zero.
 
+\begin{equation*}
+\ell(\mathbf{\beta})=\sum_{i=1}^my^{(i)}\log h(\mathbf{x}^{(i)})+(1-y^{(i)})\log(1-h(\mathbf{x}^{(i)}))-\lambda\sum_{j=1}^n|\beta_j|
+\end{equation*}
+
+and, in the case of the latter as
+
+\begin{equation*}
+\ell(\mathbf{\beta})=\sum_{i=1}^my^{(i)}\log h(\mathbf{x}^{(i)})+(1-y^{(i)})\log(1-h(\mathbf{x}^{(i)}))-\lambda\sum_{j=1}^n\beta_j^2,
+\end{equation*}
+
+where $\lambda$ is a parameter used to inflate the regularisation penalty. If $\lambda=0$, no regularisation is applied while, if a large value of $\lambda$ is chosen, the $\beta$-values will approach zero.
 
 ***
 
