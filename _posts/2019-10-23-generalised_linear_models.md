@@ -184,10 +184,10 @@ The distribution of a set of independent target variables $\mathbf{y}$ may now b
 As in the case of OLSR, one may also show that logistic regression is simply a special case of the family of GLMs. Consider the case in which the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$ are binary in nature ({\em i.e.}\ $y\in\{0,1\}$). In this case, it seems natural to model the conditional distribution of $\mathcal{Y}$ given the set of observations $\mathcal{X}$ as a Bernoulli distribution. Consequently, in the case of logistic regression, the hypothesis $h(\mathbf{x})$ is given by
 
 \begin{equation}
-\mkern-32pt h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
+\mkern-30pt h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
 \end{equation}
 \begin{equation}
-\mkern-34pt =\phi\label{4.lr2}
+\mkern-38pt =\phi\label{4.lr2}
 \end{equation}
 \begin{equation}
 \mkern-12pt =\frac{1}{1+e^{-\eta}}\label{4.lr3}
@@ -219,11 +219,11 @@ p(y\mid\mathbf{x};\mathbf{\beta})=h(\mathbf{x})^y(1-h(\mathbf{x}))^{1-y}.\label{
 Since the $m$ observations in $\mathcal{X}$ are assumed to be generated independently, the likelihood of the parameters $\mathbf{\beta}$ may, therefore, be expressed as
 
 $$
-\mkern-102pt \mathcal{L}(\mathbf{\beta})=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})
+\mkern-101pt \mathcal{L}(\mathbf{\beta})=p(\mathbf{y}\mid\mathbf{X};\mathbf{\beta})
 $$
 
 $$
-\mkern-74pt =\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})
+\mkern-73pt =\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})
 $$
 
 \begin{equation}
