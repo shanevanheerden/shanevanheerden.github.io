@@ -226,7 +226,7 @@ $$
 $$
 
 $$
-\mkern-76pt =\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})
+\mkern-74pt =\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})
 $$
 
 \begin{equation}
@@ -245,7 +245,7 @@ $$
 
 As previously mentioned, optimal values of $\mathbf{\beta}^{\*}$ are typically realised by maximising (\ref{4.eqn.lr5}) using the method of gradient decent [2].
 
-Often, an additional {\em regularisation} term is added to (\ref{4.eqn.lr5}) so as to penalise (\ref{4.eqn.lr5}) for large choices of the value of $\beta$ in an attempt to avoid overfitting [5]. Although the notion of regularisation may be applied in the case of many different learning models, this concept is described exclusively in the context of the logistic regression model derivation. The two most popular regularisation types are {\em L1 regularisation} (often termed {\em lasso regression}) and {\em L2 regularisation} (often termed {\em ridge regression}). In the case of the former, the logistic regression log likelihood in (\ref{4.eqn.lr5}) can be redefined as
+Often, an additional *regularisation* term is added to (\ref{4.eqn.lr5}) so as to penalise (\ref{4.eqn.lr5}) for large choices of the value of $\beta$ in an attempt to avoid overfitting [5]. Although the notion of regularisation may be applied in the case of many different learning models, this concept is described exclusively in the context of the logistic regression model derivation. The two most popular regularisation types are *L1 regularisation* (often termed *lasso regression*) and *L2 regularisation* (often termed *ridge regression*). In the case of the former, the logistic regression log likelihood in (\ref{4.eqn.lr5}) can be redefined as
 
 \begin{equation}
 \ell(\mathbf{\beta})=\sum_{i=1}^my^{(i)}\log h(\mathbf{x}^{(i)})+(1-y^{(i)})\log(1-h(\mathbf{x}^{(i)}))-\lambda\sum_{j=1}^n|\beta_j|
