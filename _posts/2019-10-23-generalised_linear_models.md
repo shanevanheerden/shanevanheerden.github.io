@@ -46,7 +46,7 @@ _styles: >
 
 ---
 
-*This blog post was adapted from my [PhD dissertation](https://sunore.co.za/wp-content/uploads/2021/03/vanheerden_phd_2020.pdf).*
+*This blog post was adapted from Section 4.4 in my [PhD dissertation](https://sunore.co.za/wp-content/uploads/2021/03/vanheerden_phd_2020.pdf).*
 
 {% include figure.html path="assets/img/blog5.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
@@ -183,23 +183,23 @@ The distribution of a set of independent target variables $\mathbf{y}$ may now b
 
 As in the case of OLSR, one may also show that logistic regression is simply a special case of the family of GLMs. Consider the case in which the set of target variables $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$ are binary in nature ({\em i.e.}\ $y\in\{0,1\}$). In this case, it seems natural to model the conditional distribution of $\mathcal{Y}$ given the set of observations $\mathcal{X}$ as a Bernoulli distribution. Consequently, in the case of logistic regression, the hypothesis $h(\mathbf{x})$ is given by
 
-$$
-\mkern-40pt h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
-$$
+\begin{equation}
+\mkern-34pt h(\mathbf{x})=E[y\mid \mathbf{x};\mathbf{\beta}]\label{4.lr1}
+\end{equation}
 
-$$
-\mkern-40pt =\phi\label{4.lr2}
-$$
+\begin{equation}
+\mkern-30pt =\phi\label{4.lr2}
+\end{equation}
 
-$$
-\mkern-18pt =\frac{1}{1+e^{-\eta}}\label{4.lr3}
-$$
+\begin{equation}
+\mkern-12pt =\frac{1}{1+e^{-\eta}}\label{4.lr3}
+\end{equation}
 
 \begin{equation}
 =\frac{1}{1+e^{-\mathbf{\beta}^T\mathbf{x}}}.\label{4.lr4}
 \end{equation}
 
-Again, (\ref{4.lr1}) is the functional link of Assumption~3, (\ref{4.lr2}) follows from the fact that $y\mid\mathbf{x};\mathbf{b}\sim \operatorname{Bern}(\phi)$, (\ref{4.lr3}) follows from Assumption~1 and the earlier derivation in \S\ref{4.sub.expfamily} which showed that $\phi=1/(1+e^{-\eta})$ in the formulation of a Bernoulli distribution as an exponential family distribution. Finally, (\ref{4.lr4}) follows from Assumption~3.
+Again, (\ref{4.lr1}) is the functional link of Assumption 3, (\ref{4.lr2}) follows from the fact that $y\mid\mathbf{x};\mathbf{b}\sim \text{Bern}(\phi)$, (\ref{4.lr3}) follows from Assumption 1 and the earlier derivation in Section 3 which showed that $\phi=1/(1+e^{-\eta})$ in the formulation of a Bernoulli distribution as an exponential family distribution. Finally, (\ref{4.lr4}) follows from Assumption 3.
 
 Notice that $h(\mathbf{x})$ is always bounded between zero and one since $h(\mathbf{x})\rightarrow 1$ as $\mathbf{\beta}^T\mathbf{x}\rightarrow \infty$ and $h(\mathbf{x})\rightarrow 0$ as $\mathbf{\beta}^T\mathbf{x}\rightarrow -\infty$. By convention, $p(y=1\mid\mathbf{x};\mathbf{\beta})$ can be chosen as
 
@@ -226,7 +226,7 @@ $$
 $$
 
 $$
-\mkern-80pt =\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})\nonumber
+\mkern-76pt =\prod_{i=1}^mp(y^{(i)}\mid\mathbf{x}^{(i)};\mathbf{\beta})
 $$
 
 \begin{equation}
@@ -236,7 +236,7 @@ $$
 where, again, it is typically easier to maximise (\ref{4.eqn.lr4}) in terms of its log likelihood
 
 $$
-\mkern-118pt \ell(\mathbf{\beta})=\log\mathcal{L}(\beta)
+\mkern-120pt \ell(\mathbf{\beta})=\log\mathcal{L}(\beta)
 $$
 
 \begin{equation}
