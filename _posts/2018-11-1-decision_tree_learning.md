@@ -10,7 +10,7 @@ authors:
     affiliations:
       name: SUnORE, Stellenbosch University
 
-bibliography: 2018-12-22-distill.bib
+bibliography: bibliography.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
@@ -54,7 +54,7 @@ This is the second post in a series of blog posts focusing on the some of the cl
 
 ## 1. Introduction
 
-*Decision tree learning* is one of the most widely used supervised learning approaches --- a fact that is primarily attributed to their capability of performing both classification and regression tasks, their relatively simple mathematical formulation and their ability to represent their underlying decision making process visually and explicitly [1]. A decision tree can, in essence, be explained in terms of two entities, namely decision *nodes* and *leaves*. Decision nodes describe the rule by which data are partitioned into smaller sub-parts, while leaves denote the final decisions or outcomes [2]. There exists a wide variety of tree-based learning algorithms in the literature, the most widely used being *classification and regression trees* (CART), *random forests*, the *C4.5* algorithm and *gradient boosted decision trees*.
+*Decision tree learning* is one of the most widely used supervised learning approaches --- a fact that is primarily attributed to their capability of performing both classification and regression tasks, their relatively simple mathematical formulation and their ability to represent their underlying decision making process visually and explicitly <d-cite key="Gupta2017"></d-cite>. A decision tree can, in essence, be explained in terms of two entities, namely decision *nodes* and *leaves*. Decision nodes describe the rule by which data are partitioned into smaller sub-parts, while leaves denote the final decisions or outcomes [2]. There exists a wide variety of tree-based learning algorithms in the literature, the most widely used being *classification and regression trees* (CART), *random forests*, the *C4.5* algorithm and *gradient boosted decision trees*.
 
 ***
 
