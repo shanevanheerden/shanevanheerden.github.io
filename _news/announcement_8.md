@@ -7,11 +7,12 @@ inline: false
 
 {% include figure.html path="assets/img/phd1.jpeg" class="img-fluid rounded z-depth-1" %}
 {% include figure.html path="assets/img/phd2.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/phd.mp4" class="video-fluid rounded z-depth-1" controls="true" %}
 
+<!--
 <video width="320" height="240" controls="controls autoplay">
   <source src="assets/img/phd3.mp4" type="video/mp4">
   <source src="assets/img/phd3.webm" type="video/webm">
   <source src="assets/img/phd3.ogg"  type="video/ogg">
 Your browser does not support the video tag.
 </video>
+-->
