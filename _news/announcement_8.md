@@ -7,3 +7,8 @@ inline: false
 
 {% include figure.html path="assets/img/phd1.jpeg" class="img-fluid rounded z-depth-1" %}
 {% include figure.html path="assets/img/phd2.jpg" class="img-fluid rounded z-depth-1" %}
+
+<video width="320" height="240" controls>
+  <source src="assets/img/phd3.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
