@@ -1,4 +1,3 @@
-
 ---
 layout: page
 permalink: /publications/
@@ -8,9 +7,7 @@ years: [2018]
 nav: true
 nav_order: 1
 ---
-
 <!-- _pages/publications.md -->
-
 <div class="publications">
 
 {%- for y in page.years %}
