@@ -16,6 +16,6 @@ Saying goodbye to Jönköping was very difficult, mostly because I had made many
 
 My perception of the academic standard in South Africa also significantly changed during my Sweden programme. I originally thought our standard was much lower than other countries and that our tertiary education was not comparable to Sweden.  After my experience I realise that the education standard in South Africa is extremely high and that our university degrees are extremely difficult to obtain and require far more work to achieve. Regarding future travel, the one thing this trip did above all else was to ignite my passion for travelling and experience the world and its many cultures.
 
-{% include figure.html path="assets/img/jonkoping1.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/jonkoping1.jpg" class="img-fluid rounded z-depth-1" %}
 
-{% include figure.html path="assets/img/jonkoping2.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/jonkoping2.jpg" class="img-fluid rounded z-depth-1" %}

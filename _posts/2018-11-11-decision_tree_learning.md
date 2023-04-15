@@ -47,7 +47,7 @@ _styles: >
 
 *This blog post was adapted from Section 4.5 in my [PhD dissertation](https://sunore.co.za/wp-content/uploads/2021/03/vanheerden_phd_2020.pdf).*
 
-{% include figure.html path="assets/img/blog6.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog6.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 This is the second post in a series of blog posts focusing on the some of the classic Machine Learning algorithms! In this post, we will talk about a much-loved class of machine learning models, namely Decision Trees. Let's get started!
 
@@ -63,7 +63,7 @@ CART is a popular non-parametric algorithm for producing either classification o
 
 The process of producing a classification tree begins at an initial node, called the *root node*, in which the entire training set is contained. Tree growth is achieved by partitioning each node in such a way as to maximise a defined splitting criterion. If the $j$<sup>*th*</sup> attribute is defined as the parent node $d_p$, then there exists an optimal splitting value $x_j^{\*}$ for this node. Once this value has been determined, an *if-then* splitting procedure may follow whereby all observations with a $j$<sup>*th*</sup> attribute value of $x_j^{\*}$ or greater are partitioned into a right-hand child node $t_r$, as illustrated in Figure 1, while all observations with a $j$*<sup>th</sup>* attribute value less than $x_j^{\*}$ are partitioned into a left-hand child node $t_l$<d-cite key="Rashidi2014"></d-cite>. The question, however, remains as to how to determine this "optimal" splitting value $x_j^{\*}$ for the $j$*<sup>th</sup>* attribute.
 
-{% include figure.html path="assets/img/blog6.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog6.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 1:</em> Splitting a parent node into corresponding child nodes in a CART<d-cite key="Timofeev2004"></d-cite>.
 </div>
@@ -84,7 +84,7 @@ Although this process of maximising the change in impurity described in (\ref{4.
 
 A tree that has been grown to the point where it fits the training data almost perfectly typically results in an overly complex model that performs poorly in respect of the validation data, as illustrated in Figure 2. A tree that is too small, on the other hand, is not able to discover the underlying relationships present in the data. Consequently, the ideal tree size is one that achieves a suitable trade-off between overfitting and underfitting the training data. A CART is, therefore, grown to a near optimal size by employing one of two methods: The growth of the tree can be terminated according to (1) a *stopping criterion* or (2) employing a *pruning* procedure.
 
-{% include figure.html path="assets/img/blog6.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog6.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 2:</em> The change in misclassification rate according to a tree’s size<d-cite key="Steynberg2016"></d-cite>.
 </div>

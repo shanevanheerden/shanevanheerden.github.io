@@ -47,7 +47,7 @@ _styles: >
 
 *This blog post was adapted from Section 4.4 in my [PhD dissertation](https://sunore.co.za/wp-content/uploads/2021/03/vanheerden_phd_2020.pdf).*
 
-{% include figure.html path="assets/img/blog5.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog5.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 This is the first post in a series of blog posts focusing on the some of the classic Machine Learning algorithms! In this post, we will talk about a classic suite of statistical learning models, namely *Generalized Linear Models* (GLMs). Let's get started!
 

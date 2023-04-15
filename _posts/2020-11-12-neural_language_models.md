@@ -46,7 +46,7 @@ _styles: >
 
 *This blog post was originally featured on the [Cape AI Medium page](https://medium.com/cape-ai-stories/natural-language-processing-series-3d2857bc67ab).*
 
-{% include figure.html path="assets/img/blog3.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog3.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 This is the third blog post in our series of blog posts focusing on the exciting field of Natural Language Processing! In [our first post](https://shanevanheerden.github.io/blog/2020/a_brief_history_of_natural_language_processing/), we saw that the application of neural networks for building language models was a major turning point in the NLP timeline, and in [our second post](https://shanevanheerden.github.io/blog/2020/word_embeddings/) we explored the significance of Word Embeddings in advancing the field. With this, we’re now ready to build our own language model!
 
@@ -58,7 +58,7 @@ In its most simple form:
 
 Traditionally, this problem was tackled with Statistical Language Models which primarily consisted of using so-called [n-gram](http://www-i6.informatik.rwth-aachen.de/publications/download/951/Kneser-ICASSP-1995.pdf) models in combination with some sort of smoothing technique [1]. The big pivot in the way researchers thought about this problem occurred when Bengio et al. [2] proposed using a feed-forward neural network together with a word "lookup-table" for representing the n previous words (often referred to as a *token*) in a sequence, as shown in Figure 1. Today, this "lookup-table" is known as a *word embedding* which you may already be familiar with if you read our second blog post. And thus the *Neural Language Model* was born!
 
-{% include figure.html path="assets/img/blog3.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog3.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 1:</em> The first feed-forward neural network used for language modelling [1].
 </div>

@@ -48,7 +48,7 @@ _styles: >
 
 *This blog post was originally featured on the [Cape AI Medium page](https://medium.com/cape-ai-stories/natural-language-processing-series-3f412d3ab933).*
 
-{% include figure.html path="assets/img/blog2.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog2.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 This is the second post in a series of blog posts focusing on the exciting field of *Natural Language Processing* (NLP)! In [our previous blog post](https://shanevanheerden.github.io/blog/2020/a_brief_history_of_natural_language_processing/), we saw that word embeddings were an important milestone in the history of NLP. Although these were used as far back as 2001, in 2013 [Mikolov *et al.*](https://arxiv.org/pdf/1301.3781.pdf%C3%AC%E2%80%94%20%C3%AC%E2%80%9E%C5%93) [1] proposed a simple but novel method for efficiently training word embeddings (or *word2vec* models) on very large unlabelled corpora which ultimately led to their wide-scale adoption. So, what actually are word embeddings and how do they fit into an NLP practitioner's toolkit? Let's find out!
 
@@ -58,7 +58,7 @@ A word embedding is simply an alternative representation for text where words ar
 
 To get a feel for this concept, let's look at Figure 1 which is a visual representation of a word’s vector, where red indicates a value close to 2 and blue a value close to -2. As we can see, the vectors for "man" and "woman" appear to be more similar in colour to each other than when compared to the word "king". A mystical property of word embeddings is that they often capture semantic meaning between words. This means that we can add and subtract word vectors and arrive at intuitive results. Probably the most famous of these is the vector resulting from taking the word "king", subtracting the word “man” and adding the word “woman”. The resultant vector is visually shown in Figure 1 and, if we compare this against all 400 000 words that make up the embedding vocabulary, we find that the vector for the word "queen" is in fact the closest to this resultant vector!
 
-{% include figure.html path="assets/img/blog2.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog2.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 1:</em> A visual representation of the word vectors corresponding to gender-specific words [2].
 </div>
@@ -69,7 +69,7 @@ To get a feel for this concept, let's look at Figure 1 which is a visual represe
 
 Now that we have a bit of an intuitive feel of word embeddings, let's get a better grasp on the theory surrounding word embeddings. In their paper, Mikolov et al. proposed two methods for creating word embeddings, namely the *Continuous Bag-of-Words* (CBOW) and *Skip-gram* method, as shown in Figure 2. In the CBOW method, the current word *w(t)* is predicted based on the context of the surrounding words. The Skip-gram method does the exact opposite by attempting to predict the surrounding words given the current word *w(t)*.
 
-{% include figure.html path="assets/img/blog2.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog2.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 2:</em> The CBOW and Skip-gram method [1].
 </div>
@@ -80,7 +80,7 @@ Let's expand on this a bit more by diving into how one would go about constructi
 
 As a way of example, suppose we had a large text corpus which contained the sentence: "*Thou shalt not make a machine in the likeness of a human mind*". In order to create a dataset from this, the CBOW method, in essence, slides a context window of a fixed word size (let's say three in this case) over the sentence, as illustrated in Figure 3. In this case, we take the first two words in the window as input features and the last word to be the output label. We repeat this process of constructing the dataset by moving the window one word on until the end of the corpus has been reached.
 
-{% include figure.html path="assets/img/blog2.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog2.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 3:</em> The CBOW method for constructing a dataset [2].
 </div>
@@ -89,7 +89,7 @@ As a way of example, suppose we had a large text corpus which contained the sent
 
 Continuing with the previous example, the Skip-gram model constructs a dataset in a slightly different way. Instead of just considering the n previous words when trying to predict a target word, we now consider predicting all the words within a specific context window surrounding a specific word. A context window could be, say, two words before and after the word being considered. This is illustrated in Figure 4. In this case, the centre word in the window is the input word and a target word is created for each surrounding word. Again, we repeat this window-sliding process of constructing the dataset until the end of the corpus has been reached.
 
-{% include figure.html path="assets/img/blog2.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog2.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 4:</em> The skip-gram method for constructing a dataset [2].
 </div>
@@ -100,7 +100,7 @@ In other words, the task has now changed from predicting the neighbour of a word
 
 In order to ensure that not all samples have a target variable of one, we introduce a few negative samples (hence the method's name) to the dataset by sampling a set of random words from our vocabulary and setting the corresponding target label to zero.
 
-{% include figure.html path="assets/img/blog2.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog2.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 5:</em> The notion of negative sampling in the skip-gram method [2].
 </div>
@@ -115,7 +115,7 @@ At the beginning, we initialise each word in our dataset as a vector (with some 
 
 Here comes the *learning* part: we can now use this error to adjust the values of each word vector in such a way so that we compute a lower error score the next time. We continue this process for all word vectors in our dataset, incrementally adjusting their values to achieve slightly better embeddings until the learning algorithm (which is usually a neural network) converges.
 
-{% include figure.html path="assets/img/blog2.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog2.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 6:</em> Training a Skip-gram language model with negative sampling [2].
 </div>

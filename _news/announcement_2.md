@@ -5,7 +5,7 @@ date: 2017-01-16 00:00:00-0000
 inline: false
 ---
 
-{% include figure.html path="assets/img/sunore1.png" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/sunore1.png" class="img-fluid rounded z-depth-1" %}
 
 I am thrilled to announce that I have recently joined the [Stellenbosch Unit for Operations Research in Engineering](https://sunore.co.za/) (SUnORE) to pursue my master's degree. SUnORE is a leading research group situated within the Department of Industrial Engineering at Stellenbosch University, and it has an impressive reputation for conducting both fundamental and applied research in the fields of operations research, data science, and machine learning.
 
@@ -15,4 +15,4 @@ My research will focus on understanding and reducing the risk of road accidents,
 
 Overall, I am thrilled to have the opportunity to work with such a talented and dedicated team at SUnORE and to be a part of a broader scientific community that is committed to pushing the boundaries of knowledge and innovation. I am confident that this experience will be a pivotal moment in my academic journey and will provide me with the skills and knowledge I need to make a positive impact in the world.
 
-{% include figure.html path="assets/img/sunore2.png" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/sunore2.png" class="img-fluid rounded z-depth-1" %}

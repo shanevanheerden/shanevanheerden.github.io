@@ -15,5 +15,5 @@ In addition to the academic aspect, the conference also provided ample opportuni
 
 Overall, the 30th European Conference on Operational Research (EURO) was a fantastic experience, and I am grateful for the opportunity to have attended and presented my research findings. I look forward to attending more conferences in the future and continuing to learn about new research and advancements in my field.
 
-{% include figure.html path="assets/img/euro1.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/euro2.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/euro1.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/euro2.jpg" class="img-fluid rounded z-depth-1" %}
