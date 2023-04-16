@@ -68,12 +68,18 @@ The majority of ML algorithms reside, for the most part, in one of four broad le
 - **Reinforcement learning.** Lastly, in a *reinforcement learning* paradigm, an algorithm, commonly referred to as an *agent*, is exposed to a dynamic *environment* which is typically some abstraction of the real world. The task of the agent is to determine, through a trial-and-error process, the correct set of *actions* (collectively called a *policy*) which maximises (or minimises) some long-term cumulative *reward* (or punishment)<d-cite key="Marsland2009"></d-cite>. Reinforcement learning differs from supervised learning in that, instead of correcting sub-optimal actions, the focus is on striking a balance between the *exploration* of uncharted territory and the *exploitation* of current knowledge<d-cite key="Kaelbling1996"></d-cite>.
 
 {% include figure.html path="assets/img/blog/blog7.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 1:</em> The Machine Learning paradigms.
+</div>
 
 ## 3. The supervised learning procedure
 
 The primary goal of any supervised learning process is to choose an appropriate ML algorithm that can accurately model an underlying relationship between the variables in a data set. The standard process by which this is achieved is illustrated graphically in Figure~\ref{4.fig.supervised}, where the process begins by developing a well-formulated research question. To answer this research question by means of supervised learning, a researcher must first transform one or more sets of raw data (deemed relevant to the current investigation) by means of a host of data preprocessing techniques into a set of prepared data. The process of ensuring that the data are appropriately prepared for the application of an ML algorithm is often iterative in nature, usually requiring the data to be reshaped in such a way that one may draw the best scientific conclusions from them. Once a set of appropriately prepared data has been established, the researcher may apply a selection of supervised ML algorithms to the data in an attempt at predicting a specific feature that is able to provide insight into the original research question. Again, this is an iterative process, whereby the performance of each candidate model is trained and evaluated in respect of the prepared data until an appropriate model has been found. Thereafter, the researcher may draw insight from this model by predicting the outcome of new scenarios presented to the model.
 
 {% include figure.html path="assets/img/blog/blog7.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 2:</em> The supervised learning process<d-cite key="Kearn2016"></d-cite>.
+</div>
 
 As a way of establishing a set of formal notation and naming conventions for use in the remainder of this chapter, the "input" variables, hereafter referred to as *explanatory variables*, are denoted by the set $\mathcal{X}=\{\mathbf{x}^{(1)},\ldots,\mathbf{x}^{(m)}\}$ of $m$ vectors, where the $i$<sup>th</sup> vector of explanatory variables $\mathbf{x}^{(i)}=\langle x_1^{(i)}\cdots x_n^{(i)}\rangle$ has values associated with $n$ *explanatory attributes* (or *features*) of interest. All explanatory variables correspond to a set of "output" variables, hereafter referred to as the *target variables*, which are denoted by $\mathcal{Y}=\{y^{(1)},\ldots,y^{(m)}\}$, where only one *target attribute* defines this set. A pair of the form $(\mathbf{x}^{(i)}, y^{(i)})$, therefore, denotes the $i$<sup>th</sup> *observation* recorded for a specific event, where a vector $\mathbf{x}^{(i)}$ of explanatory variables is mapped to a single target variable $y^{(i)}$. A data set $\{(\mathbf{x}^{(1)}, y^{(1)}),\ldots,(\mathbf{x}^{(m)}, y^{(m)})\}$ of $m$ independent observations of a specific event is called a *sample set*. Given such a sample set, the goal of a supervised learning algorithm, hereafter referred to as a *learning model*, is to learn a function $h:\mathcal{X}\mapsto\mathcal{Y}$ such that, for an unseen vector $\mathbf{x}$, $h(\mathbf{x})=y$ is a "good" predictor of the actual target variable $y$. The function $h(\mathbf{x})$ is called the *hypothesis* of the learning model and may predict either a categorical or a continuous target variable. Furthermore, if the fundamental working of a learning model is based on a specific assumption of the distribution of observations, it is called a *parametric* model, while learning models that do not make any explicit assumptions about the distribution of observations are termed *non-parametric* models.
 
@@ -88,6 +94,9 @@ The format of data can, in its most primordial form, be classified into two broa
 The data type of an attribute describes the inherent values a data item can assume and may, in its most basic form, be grouped into one of two categories, namely as a *qualitative* (categorical) attribute or a *quantitative* attribute. The latter describes an attribute which is inherently captured on a numerical scale, such as the velocity or mass of a vehicle<d-cite key="Curry2009, James2013"></d-cite>. Although all quantitative attributes are numeric, all numeric attributes are not necessarily quantitative. A person's identification number may, for example, be numeric, but not necessarily quantitative. Qualitative attributes, on the other hand, classify all data items into a set of distinct categories which describe the inherent characteristics of the object under consideration. An optometrist record may, for example, describe a client's eye colour as being either blue, green or brown. Both qualitative and quantitative attributes may be further classified according to the hierarchical categories shown in Figure~\ref{4.fig.datatype}.
 
 {% include figure.html path="assets/img/blog/blog7.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 3:</em> A taxonomy of the various data types<d-cite key="Steynberg2016"></d-cite>.
+</div>
 
 Qualitative attributes may further be categorised into attributes that are either *nominal* or *ordinal* in nature<d-cite key="Hastie2009"></d-cite>, where the former contains two or more categories that are all assumed to be of equal importance (*i.e.* there exists no meaningful sequence in which to order the categories of an attribute). One cannot, for example, say that a brown eye colour is more important than a blue eye colour. Nominal attributes can be further decomposed into attributes that are binary in nature, referred to as *dichotomous*, or contain more than two categories, in which case they are referred to as *multichotomous*. In contrast to nominal attributes, ordinal attributes contain categories that *are* intrinsically ranked<d-cite key="Bramer2007"></d-cite>. In a survey, for example, one may be required to rate a customer experience as either: "Bad," "Satisfactory" or "Good." It should be noted, however, that, although ordinal attributes express an inherent ordering of the associated categories, the differences between attribute categories is not necessarily equal<d-cite key="Hastie2009"></d-cite>.
 
@@ -125,12 +134,18 @@ The final activity in the data cleaning process is concerned with the detection 
 The initial sample set is typically partitioned into three separate data sets, namely a *training set*, a *validation set* and a *testing set*<d-cite key="Brownlee2017"></d-cite>, as shown in Figure~\ref{4.fig.sampledata}. The training set is used to find optimal parameter settings (or weights) for a learning model so that it fits the set of training examples. The validation set (sometimes called the *hold-out set*) is used to provide an unbiased evaluation of a learning model's fit in respect of the training set while also tuning the hyper-parameters of the model. For this reason, the combined training and validation sets are often referred to as the *learning set*. The evaluation of a model, however, becomes more biased as its predictive ability in respect of the validation set is incorporated into the learning model's configuration<d-cite key="Shah2017"></d-cite>. It is, therefore, necessary to evaluate a learning model's performance in respect of an independent test set so as to provide a completely unbiased evaluation of a final model fit in respect of the training set. In order to enhance the performance of learning models, various *data re-sampling* methods may be employed to construct the training and validation sets<d-cite key="James2013"></d-cite>, two of the most popular being the method of *cross-validation* and the *bootstrap re-sampling* method.
 
 {% include figure.html path="assets/img/blog/blog7.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 4:</em> Sample data partitioned into the training, validation and testing sets.
+</div>
 
 ### Cross-validation
 
 There are two main types of cross-validation methods, namely: $k$-*fold* cross-validation and *leave-one-out* cross-validation. In the case of $k$-fold cross-validation, the set of $m$ observations is partitioned into $k$ equal (or as close to equal as possible) parts (or folds), as illustrated graphically in Figure~\ref{4.fig.kfold}. A total of $k-1$ folds of the data are then used for training a learning model, while the remaining fold is used for model validation. This process is repeated a total of $k$ times, each time using a different fold for validation purposes. The final performance of a learning model is then estimated as the average of the misclassification errors seen during the $k$ repetitions.
 
 {% include figure.html path="assets/img/blog/blog7.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 5:</em> The $k$-fold cross-validation procedure<d-cite key="Steynberg2016"></d-cite>.
+</div>
 
 The leave-one-out method of cross-validation is a special case of the $k$-fold cross-validation that occurs when $k=m$ (*i.e.* $k$ is equal to the number of observations). As its name suggests, all observations, except one (*i.e.* $m-1$ observations), are used to train the learning model according to this method, and the remaining observation is used for model validation. This procedure is thus repeated a total of $m$ times, where the final performance of a learning model is estimated as the average of the $m$ misclassification errors.
 
@@ -139,6 +154,9 @@ The leave-one-out method of cross-validation is a special case of the $k$-fold c
 The second type of data sampling method is that of *bootstrap re-sampling* (or just *bootstrapping*), where the aim is to create a *bootstrap sample* of observations for training and validating learning models --- the method by which it achieves these subsets is, however, quite different. Bootstrapping involves the repeated selection of observations from the learning set *with* replacement<d-cite key="Tonidandel2009"></d-cite> to construct a new set of any cardinality, denoted by $L$ (since observations can be reused). Given a specified validation-training proportion split $p$, validation and training sets of cardinalities $pL$ and $(1-p)L$, respectively, may be defined a total of $b$ times, as illustrated in Figure~\ref{4.fig.bootstrapping}. The final performance of a learning model is then estimated as the average of the misclassification errors achieved over the $b$ validating sets. This method, therefore, stands in contrast to $k$-fold cross-validation which is limited by the size of the learning set and the number of folds.
 
 {% include figure.html path="assets/img/blog/blog7.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 6:</em> The bootstrap re-sampling procedure<d-cite key="Steynberg2016"></d-cite>.
+</div>
 
 ## 7. Performance measures
 
@@ -199,16 +217,21 @@ while its FPR may be expressed as
 \end{equation}
 
 {% include figure.html path="assets/img/blog/blog7.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog7.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 7:</em> (a) The two distributions of the actual positive and negative observations according to the category probabilities predicted by a learning model are used to produce (b) an ROC curve by varying the classification threshold and plotting the TPR of the learning mode against its FPR.
+</div>
 
 The area under the ROC curve (or just the AUC) indicates to what extent a model is able to distinguish between positive and negative observations. The AUC score may also be interpreted as the probability that a learning model ranks a randomly chosen positive observation higher than a random negative observation. An AUC score of one is, therefore, the most ideal scenario as it indicates that a learning model can perfectly distinguish between positive and negative categories. An AUC score of zero indicates that the learning model is, in fact, reciprocating the categories (*i.e.* positive observations are always predicted as negative and *vice versa*). In actuality, this is also an ideal scenario since merely inverting the predictions of the learning model would produce a perfect classifier. An AUC score of $0.5$ (indicated by the area under the dashed line in Figure~\ref{4.fig.auc}(b)), on the other hand, is the worst-case scenario as it indicates that a learning model has no discrimination capacity to distinguish between the positive and negative categories (*i.e.* the learning model is no better than random guessing)<d-cite key="Tape2001"></d-cite>.
-
-{% include figure.html path="assets/img/blog/blog7.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ## 8. Overfitting vs underfitting the training data
 
 One of the most fundamental concepts to grasp in ML is the notion of a learning model *underfitting* or *overfitting* a set of training data. Underfitting occurs when a learning model does not perform well in respect of either the training set or the validation set, as illustrated by a learning model with a complexity of "A" in Figure~\ref{4.fig.underover}. In this case, the model is too simple and cannot model the underlying pattern (or trend) in the training set, resulting in a poor ability to predict unseen observations accurately. Overfitting, on the other hand, occurs when a learning model performs well in respect of the training set, but significantly poor in respect of the validation set, as illustrated by a learning model with a complexity of "C" in Figure~\ref{4.fig.underover}. In this case, the learning model is not learning the underlying trend. It is rather memorising the observations in the training set, again resulting in a poor generalisation ability (and thus a poor prediction performance) in respect of unseen observations. An ideal learning model is, therefore, one that achieves a suitable trade-off between underfitting and overfitting the observations in the training set, as illustrated by a learning model with a complexity of "B" in Figure~\ref{4.fig.underover}. In this case, the learning model is able to generalise the underlying trend displayed appropriately by the observations in the training set which result in a better overall prediction performance in respect of unseen observations.
 
 {% include figure.html path="assets/img/blog/blog7.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 8:</em> An illustration of how the complexity of a learning model results in either underfitting or overfitting the training set, resulting in large prediction errors in respect of the validation set.
+</div>
 
 ## 9. Model performance vs model interpretability
 
@@ -243,3 +266,6 @@ where $|\mathbf{z}^{\prime}|$ is the number of non-zero entries in $\mathbf{z}^{
 Using this result, Lundberg and Lee<d-cite key="Lundberg2017"></d-cite> proposed a unified measure of feature importance, called SHAP values, which are defined as the Shapley values of a conditional expectation function of the original model, and are thus solutions to (\ref{3.eqn.shapely}) for which $f_x(\mathbf{z}^{\prime})=f(\mathbf{h}_{\mathbf{x}}(\mathbf{z}^{\prime}))=E[f(\mathbf{z})\mid \{z_i=x_i\mid i\in\mathcal{S}\}]$, where $\mathcal{S}$ is the set of non-zero indices in $\mathbf{z}^{\prime}$. By way of example, consider the illustration in Figure~\ref{3.fig.shap}. In this case, $f(\mathbf{x})$ is the output predicted by the model, and $E[f(\mathbf{z})]$ is the base value (or average model output) which would be predicted if no features were present. If the feature value $x_1$ is included in the model, then $\phi_1$ explains how the base value $E[f(\mathbf{z})]$ became the new predicted value $E[f(\mathbf{z})\mid z_1=x_1]$. Repeating this process for the remaining feature values $x_2$, $x_3$ and $x_4$, estimates of the SHAP values for $\phi_2$, $\phi_3$ and $\phi_4$ are obtained, showing how the model ultimately arrives at the predicted output $f(\mathbf{x})$.
 
 {% include figure.html path="assets/img/blog/blog7.11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 9:</em> The SHAP values $\phi_1$, $\phi_2$, $\phi_3$ and $\phi_4$ attributed to the $N=4$ feature values $x_1$, $x_2$, $x_3$ and $x_4$, respectively, denote the change in the expected model prediction when conditioning on a feature which explains how the base value $E[f(\mathbf{z})]$ becomes the current model output $f(\mathbf{x})$<d-cite key="Lundberg2017"></d-cite>.
+</div>
