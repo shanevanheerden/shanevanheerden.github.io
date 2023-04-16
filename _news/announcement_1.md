@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I was invited to join the Golden Key International Honour Society at Stellenbosch University
-date: 2014-05-09 00:00:00-0000
+date: 2014-08-13 00:00:00-0000
 inline: false
 ---
 
