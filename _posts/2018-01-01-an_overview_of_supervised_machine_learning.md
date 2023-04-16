@@ -26,6 +26,7 @@ toc:
   - name: 5. Data cleaning
   - name: 6. Data partitioning methods
   - name: 7. Performance measures
+  - name: 8. Overfitting *vs* underfitting the training data
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -155,16 +156,87 @@ Since the evaluation of a learning model is essential in any ML investigation, o
 \end{table}
 
 Perhaps the best-known performance measure is *classification accuracy* (CA), which describes the total proportion of correct predictions made by a learning model, expressed mathematically as
+
 \begin{equation}
-\mbox{CA}=\frac{\mbox{TP}+\mbox{TN}}{\mbox{TP}+\mbox{FP}+\mbox{FN}+\mbox{TN}}.
+\text{CA}=\frac{\text{TP}+\mbox{TN}}{\text{TP}+\text{FP}+\text{FN}+\text{TN}}.
 \end{equation}
-Although CA seems to be an intuitive measure by which to assess a classifier, it should never be used when there is a large category imbalance in a data set. Consider, for example, a case in which $950$ positive observations and $50$ negative observations are contained in a data set. Then a learning model can easily achieve a CA of $95\%$ simply by always predicting the majority category ({\em i.e.}\ the positive category).
 
+Although CA seems to be an intuitive measure by which to assess a classifier, it should never be used when there is a large category imbalance in a data set. Consider, for example, a case in which $950$ positive observations and $50$ negative observations are contained in a data set. Then a learning model can easily achieve a CA of $95\%$ simply by always predicting the majority category (*i.e.* the positive category).
 
+In order to overcome this flaw, the performance of a learning model can instead be described in terms of two separate measures, namely *precision* and *recall*. Precision describes what proportion of the observations predicated as positive are actually positive observations, expressed mathematically as
 
+\begin{equation}
+\mbox{Precision}=\frac{\mbox{TP}}{\mbox{TP}+\mbox{FP}}.\label{4.eqn.precision}
+\end{equation}
 
+Recall (also known as *sensitivity*) describes what proportion of the observations that are actually positive were correctly classified as positive, expressed mathematically as
 
+\begin{equation}
+\mbox{Recall}=\frac{\mbox{TP}}{\mbox{TP}+\mbox{FN}}.\label{4.eqn.recall}
+\end{equation}
 
+Although these two performance measures can be used together to measure the performance of a single learning model, in the case when two learning models are compared, it is not always clear which learning model achieves superior performance. For this reason, an alternative performance measure, called the $\text{F}_{\beta}$-score is defined as
 
+\begin{equation}
+\text{F}_{\beta}=\left(\frac{1}{\beta\left(\frac{1}{\text{Precision}}\right)+(1-\beta)\left(\frac{1}{\text{Recall}}\right)}\right).\label{4.eqn.fbeta}
+\end{equation}
 
+This score is a weighted harmonic mean of precision and recall in which $\beta$ is a weight parameter used to specify the importance of precision over recall. The choice of $\beta$ is, to a large extent, problem-specific. A value of $\beta$ close to one essentially reduces (\ref{4.eqn.fbeta}) to (\ref{4.eqn.precision}), while a value of $\beta$ close to zero reduces (\ref{4.eqn.fbeta}) to (\ref{4.eqn.recall}). A $\beta$-value of $b=0.5$ weights both precision and recall equally and is known in statistics as the F$_1$-score.
 
+Arguably the most popular classification performance measure is the *area under curve* (AUC) performance measure \cite{Hand2001b, Huang2005, Rosset2004} as a result of its robustness against significant category imbalances \cite{Fawcett2006}. As its name implies, AUC measures the area under a specific curve, called the *receiver operating characteristic* (ROC) curve. An ROC curve is a graphical plot of the predictive ability of a binary classifier. Consider, for example, a binary classification problem in which a learning model predicts a category probability (*i.e.* a value between zero and one) for a set of observations, where one denotes a strong positive category prediction and zero indicates a strong negative category prediction. The two distributions of the actual positive and actual negative observations are illustrated graphically in Figure~\ref{4.fig.auc}(a) according to the category probabilities predicted by the learning model. An ROC curve (like that shown in Figure~\ref{4.fig.auc}(b)) may, therefore, be constructed by varying the classification threshold (indicated in Figure~\ref{4.fig.auc}(a)) from a category probability of zero to one and plotting the learning model's *true positive rate* (TPR) against its *false positive rate* (FPR) for all possible classification thresholds. The TPR of a learning model may be expressed mathematically as
+
+\begin{equation}
+\text{TPR}=\frac{\text{TP}}{\text{TP}+\text{FN}}=\text{Recall},
+\end{equation}
+
+while its FPR may be expressed as
+
+\begin{equation}
+\text{FPR}=\frac{\text{FP}}{\text{FP}+\text{TN}}.
+\end{equation}
+
+{% include figure.html path="assets/img/blog/blog7.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+The area under the ROC curve (or just the AUC) indicates to what extent a model is able to distinguish between positive and negative observations. The AUC score may also be interpreted as the probability that a learning model ranks a randomly chosen positive observation higher than a random negative observation. An AUC score of one is, therefore, the most ideal scenario as it indicates that a learning model can perfectly distinguish between positive and negative categories. An AUC score of zero indicates that the learning model is, in fact, reciprocating the categories (*i.e.* positive observations are always predicted as negative and *vice versa*). In actuality, this is also an ideal scenario since merely inverting the predictions of the learning model would produce a perfect classifier. An AUC score of $0.5$ (indicated by the area under the dashed line in Figure~\ref{4.fig.auc}(b)), on the other hand, is the worst-case scenario as it indicates that a learning model has no discrimination capacity to distinguish between the positive and negative categories (*i.e.* the learning model is no better than random guessing) \cite{Tape2001}.
+
+{% include figure.html path="assets/img/blog/blog7.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+## Overfitting *vs* underfitting the training data
+
+One of the most fundamental concepts to grasp in ML is the notion of a learning model *underfitting* or *overfitting* a set of training data. Underfitting occurs when a learning model does not perform well in respect of either the training set or the validation set, as illustrated by a learning model with a complexity of "A" in Figure~\ref{4.fig.underover}. In this case, the model is too simple and cannot model the underlying pattern (or trend) in the training set, resulting in a poor ability to predict unseen observations accurately. Overfitting, on the other hand, occurs when a learning model performs well in respect of the training set, but significantly poor in respect of the validation set, as illustrated by a learning model with a complexity of "C" in Figure~\ref{4.fig.underover}. In this case, the learning model is not learning the underlying trend. It is rather memorising the observations in the training set, again resulting in a poor generalisation ability (and thus a poor prediction performance) in respect of unseen observations. An ideal learning model is, therefore, one that achieves a suitable trade-off between underfitting and overfitting the observations in the training set, as illustrated by a learning model with a complexity of "B" in Figure~\ref{4.fig.underover}. In this case, the learning model is able to generalise the underlying trend displayed appropriately by the observations in the training set which result in a better overall prediction performance in respect of unseen observations.
+
+{% include figure.html path="assets/img/blog/blog7.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+## Model performance *vs* model interpretability
+
+Understanding why an ML model makes a specific prediction may, in many applications, be just as crucial as the accuracy of the prediction itself. A model that is interpretable creates a certain degree of trust in its predictions, provides insights into the process being modelled, and highlights potential biases present in the data under consideration. The lack of interpretability of many ML models (often called *black-box* models) is a frequent barrier to their adoption, since end-users typically prefer solutions that are understandable to a human \cite{Molnar2018}. This may require researchers to sacrifice models which achieve superior predictive ability in favour of models that yield more understandable results (often called *white-box* models), but possibly achieve a lower overall performance. In the ML literature, this is referred to as the trade-off between the accuracy and interpretability of a model's output.
+
+The ethical considerations associated with autonomous vehicles, for example, are often called into question since the learning models (typically reinforcement learning algorithms \cite{Dar2018}) used to control such a vehicle are inherently black-box in nature. Consequently, if an autonomous vehicle is involved in an RA, humans are not able to understand *why* an autonomous vehicle made the manoeuvres it did. This has significant legal implications as the notion of accountability comes into question, especially if an autonomous vehicle RA results in fatalities \cite{Bonnefon2016}. Researchers have, therefore, been investing more time into developing techniques that provide insights into the working of specific black-box learning models so that humans may begin to understand the methods by which specific models arrive at their conclusions \cite{Lewis2017}. A wide variety of methods have recently been proposed for addressing this issue \cite{Bach2015, Datta2016, Lipovetsky2001, Ribeiro2016, Shrikumar2016, Strumbelj2014}. The understanding of how these methods are related and which method is preferable to another was, however, still unclear until Lundberg and Lee \cite{Lundberg2017} proposed their idea of unifying these methods into a single approach for interpreting model predictions, which they termed *Additive Feature Attribution* (AFA) methods.
+
+An AFA method seeks to locally approximate a complex, non-linear ML model by using a simpler, linear model, called an *explanation model*, whose predictions are much easier to interpret. As a way of explanation, let $f$ be the original learning model to be explained and let $g$ be the associated explanation model. Most explanation models are expressed in terms of so-called *simplified inputs* $\mathbf{x}^{\prime}=\langle x_1^{\prime}\cdots x_N^{\prime}\rangle$ that map to the original inputs through a mapping function $\mathbf{x}=\mathbf{h}_{\mathbf{x}}(\mathbf{x}^{\prime})$. These local approximation methods, therefore, attempt to ensure that $g(\mathbf{z}^{\prime})\approx f(\mathbf{h}_{\mathbf{x}}(\mathbf{z}^{\prime}))$ whenever $\mathbf{z}^{\prime}\approx \mathbf{x}^{\prime}$. An AFA method is, therefore, one in which its explanation model is a linear function of binary variables which takes the form
+
+\begin{equation}
+g(\mathbf{z}^{\prime})=\phi_0+\sum_{i=1}^N\phi_iz_i^{\prime},\label{3.eqn.afa}
+\end{equation}
+
+where $\phi_0,\ldots,\phi_N\in\mathbb{R}$, $\mathbf{z}^{\prime}\in\{0,1\}^N$ and $\phi_0=f(\mathbf{h}_{\mathbf{x}}(\mathbf{0}))$ \cite{Lundberg2017}. In essence, an importance $\phi_i$ is attributed to each of the $N$ features and, by summing the effects of all feature attributions, an approximation is obtained of the original model output $f(\mathbf{x})$.
+
+Lundberg and Lee \cite{Lundberg2017} demonstrated that many current methods in the literature conform to the representation in (\ref{3.eqn.afa}) but it was still not obvious how to compare one AFA method with another appropriately. They therefore went on to define three desirable properties that any AFA method should exhibit: The first is the so-called *local accuracy property* which requires the output of the explanation model $g$ to match the original model $f$ for the simplified input $\mathbf{x}^{\prime}$ being explained (*i.e.* $f(\mathbf{x})=g(\mathbf{x}^{\prime})=\phi_0+\sum_{i=1}^N\phi_ix_i^{\prime})$. The second is the *missingness property* which specifies that a missing feature should have no attributed importance (*i.e.* $x_i^{\prime}=0\Longrightarrow\phi_i=0$). And finally, the third property is that of *consistency* which states that if feature $i$ always has the same or a greater impact in model $f^{\prime}$ than in model $f$, then the importance $\phi_i$ of feature $i$ should be greater in model $f^{\prime}$ than in model $f$, described mathematically as
+
+\begin{equation}
+f^{\prime}_{x}(\mathbf{z}^{\prime})-f^{\prime}_{x}(\mathbf{z}^{\prime}\backslash i)\geq f_{x}(\mathbf{z}^{\prime})-f_{x}(\mathbf{z}^{\prime}\backslash i)\mbox{ for all } \mathbf{z}^{\prime}\in\{0,1\}^N\Longrightarrow\phi_i(f^{\prime},\mathbf{x})\geq\phi_i(f,\mathbf{x}),\label{3.pro.3}
+\end{equation}
+
+where $f_{x}(\mathbf{z}^{\prime})=f(\mathbf{h}_{\mathbf{x}}(\mathbf{z}^{\prime}))$ and $\mathbf{z}^{\prime}\backslash i$ denotes setting $z^{\prime}_i=0$.
+
+It follows from the theory of cooperative games that there exists only one solution for the values $\phi_0,\ldots,\phi_N$ in (\ref{3.eqn.afa}) which always satisfies the three aforementioned properties:
+
+\begin{equation}
+\phi_i(f,\mathbf{x})=\sum_{\mathbf{z}^{\prime}\subset_0 \mathbf{x}^{\prime}}\frac{|\mathbf{z}^{\prime}|!(N-|\mathbf{z}^{\prime}|-1)!}{N!}[f_{x}(\mathbf{z}^{\prime})-f_{x}(\mathbf{z}^{\prime}\backslash i)],\label{3.eqn.shapely}
+\end{equation}
+
+where $|\mathbf{z}^{\prime}|$ is the number of non-zero entries in $\mathbf{z}^{\prime}$, $\mathbf{z}^{\prime}\subset_0 \mathbf{x}^{\prime}$ represents all the vectors for which the non-zero entries are a subset of the non-zero entries in $\mathbf{x}^{\prime}$, and the values $\phi_i$ are known as Shapley values \cite{Shapely1953}. In essence, the importance $\phi_i$ of feature $i$ is determined by comparing a model's prediction with and without the feature, weighted over all possible feature combinations. Due to the large computational cost associated with exploring all possible feature combinations, sampling techniques used to approximate the Shapely values in (\ref{3.eqn.shapely}) are commonly employed \cite{Lundberg2017}.
+
+Using this result, Lundberg and Lee \cite{Lundberg2017} proposed a unified measure of feature importance, called SHAP values, which are defined as the Shapley values of a conditional expectation function of the original model, and are thus solutions to (\ref{3.eqn.shapely}) for which $f_x(\mathbf{z}^{\prime})=f(\mathbf{h}_{\mathbf{x}}(\mathbf{z}^{\prime}))=E[f(\mathbf{z})\mid \{z_i=x_i\mid i\in\mathcal{S}\}]$, where $\mathcal{S}$ is the set of non-zero indices in $\mathbf{z}^{\prime}$. By way of example, consider the illustration in Figure~\ref{3.fig.shap}. In this case, $f(\mathbf{x})$ is the output predicted by the model, and $E[f(\mathbf{z})]$ is the base value (or average model output) which would be predicted if no features were present. If the feature value $x_1$ is included in the model, then $\phi_1$ explains how the base value $E[f(\mathbf{z})]$ became the new predicted value $E[f(\mathbf{z})\mid z_1=x_1]$. Repeating this process for the remaining feature values $x_2$, $x_3$ and $x_4$, estimates of the SHAP values for $\phi_2$, $\phi_3$ and $\phi_4$ are obtained, showing how the model ultimately arrives at the predicted output $f(\mathbf{x})$.
+
+{% include figure.html path="assets/img/blog/blog7.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
