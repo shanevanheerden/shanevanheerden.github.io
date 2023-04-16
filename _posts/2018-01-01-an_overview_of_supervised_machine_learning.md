@@ -69,7 +69,7 @@ The majority of ML algorithms reside, for the most part, in one of four broad le
 
 {% include figure.html path="assets/img/blog/blog7.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1:</em> The Machine Learning paradigms.
+    <em>Figure 1:</em> The Machine Learning paradigms<d-cite key="Cognub2018"></d-cite>.
 </div>
 
 ## 3. The supervised learning procedure
