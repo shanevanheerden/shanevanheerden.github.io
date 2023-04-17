@@ -317,6 +317,9 @@ imagemagick:
     - ".jpeg"
     - ".png"
     - ".tiff"
+    - ".mp4"
+    - ".ogg"
+    - ".webm"
   output_formats:
     webp: "-resize 800x"
 
