@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I was awarded the Best Decision Support Prize for my final year industrial engineering project
+title: I was awarded the Best Decision Support Prize for my final-year Industrial Engineering project
 date: 2016-12-06 00:00:00-0000
 inline: false
 ---
