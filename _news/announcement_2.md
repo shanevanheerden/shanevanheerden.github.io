@@ -9,3 +9,4 @@ Golden Key is the world’s largest internationally recognised, non-profit organ
 
 {% include figure.html path="assets/img/news/golden_key1.jpg" class="img-fluid rounded z-depth-1" %}
 {% include figure.html path="assets/img/news/golden_key2.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/golden_key3.jpg" class="img-fluid rounded z-depth-1" %}
