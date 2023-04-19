@@ -22,7 +22,7 @@ Hi there and welcome to my personal website! My name is Shane and I believe in t
 <br><br>
 I'm a Machine Learning Engineer by trade with demonstrated experience in leading Data Science projects and developing AI solutions for real-world problems. I have strong knowledge in Deep Learning, Data Engineering and Natural Language Processing, and a passion for discovering insights from structured and unstructured data.
 <br><br>
-My educational background includes a degree in Industrial Engineering from Stellenbosch University, as well as a PhD in Data Science. Currently, I am working at <a href='http://www.luno.com'>Luno</a>, a cryptocurrency exchange, where I use my expertise to lead the development of predictive models that help combat fraudulent activity on the platform.
+My educational background includes a degree in Industrial Engineering from Stellenbosch University, as well as a PhD in Data Science. I am currently a Data Scientist at <a href='http://www.luno.com'>Luno</a>, a cryptocurrency exchange, where I use my expertise to lead the development of predictive models that help combat fraudulent activity on the platform.
 <br><br>
 Feel free to browse my thoughts and experiences on all topics related to Data Science and Machine Learning. Thank you for stopping by and I hope you enjoy your visit.
 </p>
