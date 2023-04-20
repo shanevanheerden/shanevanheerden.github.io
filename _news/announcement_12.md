@@ -9,5 +9,5 @@ inline: false
 {% include figure.html path="assets/img/news/phd2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 <iframe width="420" height="315"
-src="https://www.youtube.com/embed/tgbNymZ7vqY">
+src="https://www.youtube.com/embed/sF7bixXnzVE">
 </iframe>
