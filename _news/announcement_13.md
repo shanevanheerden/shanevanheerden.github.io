@@ -6,4 +6,4 @@ inline: false
 ---
 
 {% include figure.html path="assets/img/news/capeai1.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/capeai2.jpeg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/capeai2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
