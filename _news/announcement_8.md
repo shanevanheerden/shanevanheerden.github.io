@@ -19,5 +19,5 @@ In addition to the talks and workshops, the Indaba also provided a chance for pa
 
 Overall, my experience at the Deep Learning Indaba was incredibly rewarding, and I am grateful for the opportunity to have been a part of this amazing event. I came away with a renewed sense of excitement and motivation, and am looking forward to continuing to learn and grow in the field of AI.
 
-{% include figure.html path="assets/img/news/indaba2.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/indaba3.png" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/indaba2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/news/indaba3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
