@@ -11,5 +11,5 @@ As an industrial engineer, I will be equipped with the skills to design, optimis
 
 More than just learning technical skills, I am excited to develop critical thinking, communication, and leadership abilities that will serve me well in my future career. I cannot wait to see where this journey takes me, and I am grateful for the opportunity to pursue my passion at such a prestigious institution.
 
-{% include figure.html path="assets/img/news/stellenbosch1.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/stellenbosch2.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/stellenbosch1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/news/stellenbosch2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
