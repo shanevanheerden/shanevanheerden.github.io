@@ -12,7 +12,19 @@ In order to optimize the slotting process and balance conflicting objectives of 
 I packaged this model into a flexible decision support system that can recommend high-quality stock setups for real-life DCs. I am proud to have applied this system to a special case study using real-life data and compared its recommendation with the actual stock setup implemented at the retail DC under consideration. I am incredibly grateful for this recognition, and I look forward to continuing to apply my skills and knowledge to tackle complex business challenges in the future.
 
 {% include figure.html path="assets/img/news/dss_prize1.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/dss_prize2.png" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/dss_prize3.png" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/dss_prize4.png" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/dss_prize5.png" class="img-fluid rounded z-depth-1" %}
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/news/dss_prize2.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/news/dss_prize3.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/news/dss_prize4.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/news/dss_prize5.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
