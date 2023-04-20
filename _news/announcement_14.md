@@ -6,5 +6,5 @@ inline: false
 ---
 
 {% include figure.html path="assets/img/news/luno1.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/luno2.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/luno3.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/luno2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/news/luno3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
