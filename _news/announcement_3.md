@@ -11,4 +11,4 @@ Over the next year, I will be organising a series of colloquiums, workshops, and
 
 I am excited about the opportunity to serve in this role and look forward to working with ORSSA members and partners to achieve our shared vision of advancing the field of Operations Research in South Africa. Stay tuned for updates on upcoming events and initiatives on our [Western Cape ORSSA Chapter Activities page](https://www.orssa.org.za/western-cape-chapter-activities)!
 
-{% include figure.html path="assets/img/news/orssa_wc1.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/orssa_wc1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
