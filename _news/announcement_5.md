@@ -11,5 +11,5 @@ As an Industrial Engineer, I have learned how to analyze and design complex syst
 
 Looking back on my time at Stellenbosch University, I am grateful for the experiences and growth that I have had. As I embark on my career, I will continue to be open to new opportunities and challenges and strive to learn and grow even more.
 
-{% include figure.html path="assets/img/news/graduation1.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/graduation2.jpg" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/graduation1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/news/graduation2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
