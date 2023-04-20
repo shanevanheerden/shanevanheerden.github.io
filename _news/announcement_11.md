@@ -6,4 +6,4 @@ inline: false
 ---
 
 {% include figure.html path="assets/img/news/dataprophet1.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/dataprophet2.gif" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/dataprophet2.gif" class="img-fluid rounded z-depth-1" zoomable=true %}
