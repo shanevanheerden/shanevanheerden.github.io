@@ -11,6 +11,12 @@ Joining Golden Key is a significant achievement for me, as it reflects my hard w
 
 I am deeply grateful for this recognition of my achievements and look forward to continuing to pursue excellence in all areas of my life. Thank you, Golden Key, for this incredible honour!
 
-{% include figure.html path="assets/img/news/golden_key1.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/golden_key2.jpg" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/news/golden_key3.jpg" class="img-fluid rounded z-depth-1" %}
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/news/golden_key1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/news/golden_key2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+{% include figure.html path="assets/img/news/golden_key3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
