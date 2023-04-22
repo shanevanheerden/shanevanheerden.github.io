@@ -24,6 +24,7 @@ toc:
   - name: 3. Random forests
   - name: 4. The C4.5 algorithm
   - name: 5. Gradient boosted decision trees
+  - name: 6. Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -146,5 +147,12 @@ Unlike its predecessor, this formulation is more robust since it effectively pen
 ***
 
 ## 5. Gradient boosted decision trees
+
+
+
+***
+
+## 6. Wrapping up
+
 
 
