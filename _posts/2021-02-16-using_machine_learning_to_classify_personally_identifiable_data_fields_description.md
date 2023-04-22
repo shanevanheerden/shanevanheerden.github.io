@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Using Machine Learning to Classify Personally Identifiable Data Fields
-description: Part 1: Rapid Machine Learning Development
+description: Part 1 - Rapid Machine Learning Development
 date: 2021-02-16
 tags: CaseStudy
 
