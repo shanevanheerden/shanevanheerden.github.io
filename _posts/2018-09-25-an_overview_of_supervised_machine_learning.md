@@ -32,21 +32,11 @@ toc:
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
-_styles: >
-  .fake-img {
-    background: #bbb;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 12px;
-  }
-  .fake-img p {
-    font-family: monospace;
-    color: white;
-    text-align: left;
-    margin: 12px 0;
-    text-align: center;
-    font-size: 16px;
-  }
+figure > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
 
 ---
 
@@ -187,7 +177,7 @@ The second type of data sampling method is that of *bootstrap re-sampling* (or j
 
 As previously described in Section 3, the primary goal of any supervised learning procedure is choosing an appropriate model. One must, therefore, be aware of various notions that may assist in selecting, configuring and evaluation a model for a specific learning task. More specifically, one should be able to: (1) Evaluate the performance of a learning model according to an appropriate performance measure, (2) identify whether a learning algorithm is generalising the data, and (3) appreciate the trade-off associated with employing a complex learning model rather than one that is easier to understand. These topics are discussed in this section.
 
-Since the evaluation of a learning model is essential in any ML investigation, one must be able to choose a performance measure that is most appropriate when presented with either a classification or regression task. In the case of the latter, the most popular performance measures are the well-known *mean square error*, *mean absolute error* and *R-squared error*<d-cite key="Scikit2013"></d-cite>. In the case of a classification task, however, the performance evaluation of a learning model is more involved. The performance of a classifier is typically first described in the form of a confusion matrix, as illustrated in Table~\ref{4.tbl.confusion} (for a binary classification task), where each row of the matrix represents the *actual* category of the observations while each column represents the observation category *predicted* by the learning model.
+Since the evaluation of a learning model is essential in any ML investigation, one must be able to choose a performance measure that is most appropriate when presented with either a classification or regression task. In the case of the latter, the most popular performance measures are the well-known *mean square error*, *mean absolute error* and *R-squared error*<d-cite key="Scikit2013"></d-cite>. In the case of a classification task, however, the performance evaluation of a learning model is more involved. The performance of a classifier is typically first described in the form of a confusion matrix, as illustrated in Figure 7 (for a binary classification task), where each row of the matrix represents the *actual* category of the observations while each column represents the observation category *predicted* by the learning model.
 
 {% include figure.html path="assets/img/blog/blog7.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -236,10 +226,10 @@ while its FPR may be expressed as
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/blog/blog7.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/blog/blog7.9.png" class="img-fluid rounded z-depth-1" zoomable=true object-fit=cover %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/blog/blog7.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/blog/blog7.10.png" class="img-fluid rounded z-depth-1" zoomable=true object-fit=cover %}
     </div>
 </div>
 <div class="caption">
