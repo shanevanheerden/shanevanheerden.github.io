@@ -38,6 +38,7 @@ d-article {
   d-contents {
     align-self: start;
     text-align: justify;
+    text-justify: inter-word;
     grid-column: 1 / 4;
     grid-row: auto / span 4;
     justify-self: end;
