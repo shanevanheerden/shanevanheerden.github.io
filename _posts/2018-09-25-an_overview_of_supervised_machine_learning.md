@@ -189,17 +189,10 @@ As previously described in Section 3, the primary goal of any supervised learnin
 
 Since the evaluation of a learning model is essential in any ML investigation, one must be able to choose a performance measure that is most appropriate when presented with either a classification or regression task. In the case of the latter, the most popular performance measures are the well-known *mean square error*, *mean absolute error* and *R-squared error*<d-cite key="Scikit2013"></d-cite>. In the case of a classification task, however, the performance evaluation of a learning model is more involved. The performance of a classifier is typically first described in the form of a confusion matrix, as illustrated in Table~\ref{4.tbl.confusion} (for a binary classification task), where each row of the matrix represents the *actual* category of the observations while each column represents the observation category *predicted* by the learning model.
 
-\begin{table}[!htb]
-	\centering
-	\caption[A confusion matrix]{A confusion matrix showing the possible outcomes of a learning model's predictions.}\label{4.tbl.confusion}
-	\begin{tabular}{cc|c|c|}
-		\hhline{~~--}
-		& & \multicolumn{2}{c|}{\cellcolor{gray!75}Predicted category} \\ \hhline{~~--}
-		& & \cellcolor{gray!50}Positive & \cellcolor{gray!50}Negative \\ \hline
-		\multicolumn{1}{|c|}{\cellcolor{gray!75}} & \cellcolor{gray!50}Positive & True positive (TP) & \cellcolor{gray!25}False negative (FN) \\ \hhline{|*1{>{\arrayrulecolor{gray!75}}-}>{\arrayrulecolor{black}}|*3{-}|}
-		\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor{gray!75}Actual category}} & \cellcolor{gray!50}Negative & \cellcolor{gray!25}False positive (FP) & True negative (TN) \\ \hline
-	\end{tabular}
-\end{table}
+{% include figure.html path="assets/img/blog/blog7.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 7:</em> A confusion matrix showing the possible outcomes of a learning model's predictions..
+</div>
 
 Perhaps the best-known performance measure is *classification accuracy* (CA), which describes the total proportion of correct predictions made by a learning model, expressed mathematically as
 
@@ -241,8 +234,14 @@ while its FPR may be expressed as
 \text{FPR}=\frac{\text{FP}}{\text{FP}+\text{TN}}.
 \end{equation}
 
-{% include figure.html path="assets/img/blog/blog7.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-{% include figure.html path="assets/img/blog/blog7.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog7.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog7.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 <div class="caption">
     <em>Figure 7:</em> (a) The two distributions of the actual positive and negative observations according to the category probabilities predicted by a learning model are used to produce (b) an ROC curve by varying the classification threshold and plotting the TPR of the learning mode against its FPR.
 </div>
@@ -253,7 +252,7 @@ The area under the ROC curve (or just the AUC) indicates to what extent a model 
 
 One of the most fundamental concepts to grasp in ML is the notion of a learning model *underfitting* or *overfitting* a set of training data. Underfitting occurs when a learning model does not perform well in respect of either the training set or the validation set, as illustrated by a learning model with a complexity of "A" in Figure 8. In this case, the model is too simple and cannot model the underlying pattern (or trend) in the training set, resulting in a poor ability to predict unseen observations accurately. Overfitting, on the other hand, occurs when a learning model performs well in respect of the training set, but significantly poor in respect of the validation set, as illustrated by a learning model with a complexity of "C" in Figure 8. In this case, the learning model is not learning the underlying trend. It is rather memorising the observations in the training set, again resulting in a poor generalisation ability (and thus a poor prediction performance) in respect of unseen observations. An ideal learning model is, therefore, one that achieves a suitable trade-off between underfitting and overfitting the observations in the training set, as illustrated by a learning model with a complexity of "B" in Figure 8. In this case, the learning model is able to generalise the underlying trend displayed appropriately by the observations in the training set which result in a better overall prediction performance in respect of unseen observations.
 
-{% include figure.html path="assets/img/blog/blog7.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog7.11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 8:</em> An illustration of how the complexity of a learning model results in either underfitting or overfitting the training set, resulting in large prediction errors in respect of the validation set.
 </div>
@@ -290,7 +289,7 @@ where $|\mathbf{z}^{\prime}|$ is the number of non-zero entries in $\mathbf{z}^{
 
 Using this result, Lundberg and Lee<d-cite key="Lundberg2017"></d-cite> proposed a unified measure of feature importance, called SHAP values, which are defined as the Shapley values of a conditional expectation function of the original model, and are thus solutions to (\ref{3.eqn.shapely}) for which $f_x(\mathbf{z}^{\prime})=f(\mathbf{h}_{\mathbf{x}}(\mathbf{z}^{\prime}))=E[f(\mathbf{z})\mid \{z_i=x_i\mid i\in\mathcal{S}\}]$, where $\mathcal{S}$ is the set of non-zero indices in $\mathbf{z}^{\prime}$. By way of example, consider the illustration in Figure 9. In this case, $f(\mathbf{x})$ is the output predicted by the model, and $E[f(\mathbf{z})]$ is the base value (or average model output) which would be predicted if no features were present. If the feature value $x_1$ is included in the model, then $\phi_1$ explains how the base value $E[f(\mathbf{z})]$ became the new predicted value $E[f(\mathbf{z})\mid z_1=x_1]$. Repeating this process for the remaining feature values $x_2$, $x_3$ and $x_4$, estimates of the SHAP values for $\phi_2$, $\phi_3$ and $\phi_4$ are obtained, showing how the model ultimately arrives at the predicted output $f(\mathbf{x})$.
 
-{% include figure.html path="assets/img/blog/blog7.11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog7.12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 9:</em> The SHAP values $\phi_1$, $\phi_2$, $\phi_3$ and $\phi_4$ attributed to the $N=4$ feature values $x_1$, $x_2$, $x_3$ and $x_4$, respectively, denote the change in the expected model prediction when conditioning on a feature which explains how the base value $E[f(\mathbf{z})]$ becomes the current model output $f(\mathbf{x})$<d-cite key="Lundberg2017"></d-cite>.
 </div>
