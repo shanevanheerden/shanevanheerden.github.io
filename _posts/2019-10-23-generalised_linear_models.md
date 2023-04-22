@@ -49,7 +49,7 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog5.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-This is the first post in a series of blog posts focusing on the some of the classic Machine Learning algorithms! In this post, we will talk about a classic suite of statistical learning models, namely *Generalized Linear Models* (GLMs). Let's get started!
+This is the second post in a series of blog posts focusing on the some of the classic Machine Learning algorithms! In [my previous post](https://shanevanheerden.github.io/blog/2018/an_overview_of_supervised_machine_learning/), I gave a brief introduction of Supervised Learning together with many considerations that you need to bear in mind when framing a problem as a supervised learning problem. In this post, we will begin exploring the classic suite of statistical learning models, namely *Generalized Linear Models* (GLMs). Let's get started!
 
 ## 1. Introduction
 
