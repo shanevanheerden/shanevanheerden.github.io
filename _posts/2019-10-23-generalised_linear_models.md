@@ -3,7 +3,7 @@ layout: distill
 title: Generalised Linear Models
 description: Classic Machine Learning Algorithms Series
 date: 2019-10-23
-tags: MLAlgorithms
+tags: ClassicAlgorithms
 
 authors:
   - name: Shane van Heerden
