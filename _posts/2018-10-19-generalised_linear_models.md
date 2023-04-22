@@ -2,7 +2,7 @@
 layout: distill
 title: Generalised Linear Models
 description: Classic Machine Learning Algorithms Series
-date: 2019-10-23
+date: 2018-10-19
 tags: ClassicAlgorithms
 
 authors:
