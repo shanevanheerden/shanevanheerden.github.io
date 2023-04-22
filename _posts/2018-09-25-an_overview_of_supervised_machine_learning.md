@@ -2,7 +2,7 @@
 layout: distill
 title: An Overview of Supervised Machine Learning
 description: Classic Machine Learning Algorithms Series
-date: 2018-01-01
+date: 2018-09-25
 tags: ClassicAlgorithms
 
 authors:
