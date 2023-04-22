@@ -21,6 +21,8 @@ d-article {
   border-top-color: var(--global-divider-color) !important;
   p, h1, h2, h3, h4, h5, h6, li, table {
     color: var(--global-text-color) !important;
+    text-align: justify;
+    text-justify: inter-word;
   }
   h1, h2, hr, table, table th, table td {
     border-bottom-color: var(--global-divider-color) !important;
@@ -37,8 +39,6 @@ d-article {
 
   d-contents {
     align-self: start;
-    text-align: justify;
-    text-justify: inter-word;
     grid-column: 1 / 4;
     grid-row: auto / span 4;
     justify-self: end;
