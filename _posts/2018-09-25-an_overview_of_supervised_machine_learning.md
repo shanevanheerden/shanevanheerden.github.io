@@ -28,6 +28,7 @@ toc:
   - name: 7. Performance measures
   - name: 8. Overfitting vs underfitting the training data
   - name: 9. Model performance vs model interpretability
+  - name: 10. Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -53,7 +54,7 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog7.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-This is the first post in a series of blog posts focusing on the some of the classic Machine Learning algorithms! In this post, we will give a brief overview of the exciting field of Machine Learning. Let's get started!
+This is the first post in a series of blog posts where I'll deep-dive into some of the classic Machine Learning algorithms that have paved the way for some of the more sophisticated techniques that are changing the world as we know it. In this blog post, I'll introduce the bread-and-butter machine learning paradigm, Supervised Learning, as well as come practical considerations that come with framing a problem as a supervised learning problem. Let's get started!
 
 ## 1. Introduction
 
@@ -269,3 +270,7 @@ Using this result, Lundberg and Lee<d-cite key="Lundberg2017"></d-cite> proposed
 <div class="caption">
     <em>Figure 9:</em> The SHAP values $\phi_1$, $\phi_2$, $\phi_3$ and $\phi_4$ attributed to the $N=4$ feature values $x_1$, $x_2$, $x_3$ and $x_4$, respectively, denote the change in the expected model prediction when conditioning on a feature which explains how the base value $E[f(\mathbf{z})]$ becomes the current model output $f(\mathbf{x})$<d-cite key="Lundberg2017"></d-cite>.
 </div>
+
+## Wrapping up
+
+
