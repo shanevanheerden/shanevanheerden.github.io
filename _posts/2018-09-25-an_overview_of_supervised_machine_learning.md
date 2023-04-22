@@ -105,24 +105,48 @@ Quantitative attributes may further be categorised into attributes that are eith
 
 ## 5. Data cleaning
 
-Probably the most important and, at the same time, mundane tasks associated with the data preparation process is that of *data cleaning*<d-cite key="Press2016"></d-cite>. The purpose of data cleaning is to remove any errors in and/or missing values from a data set so as to ensure that the data being used to formulate a learning model's hypothesis is of a high quality, thereby instilling confidence in the results obtained. This typically involves three types of activities, namely: (1) correcting erroneous values, (2) *imputing* (filling in) missing data entries and (3) detecting outliers<d-cite key="Nisbet2009"></d-cite>. Examples of these occurrences are illustrated in Table~\ref{7.tbl.errors}, where the first column denotes the data attribute the recorder attempted to capture, the second column describes the true data that should have been entered by the data recorder, and the last column contains the actual data recorded for an observation. As may be seen, the values for the attributes `Annual income` and `Ethnicity` have been left blank, the attributes `Name`, `Date of birth` and `Place of birth` are incomplete, and the attribute `Sex`, although in the correct format, does not reflect the true value.
+Probably the most important and, at the same time, mundane tasks associated with the data preparation process is that of *data cleaning*<d-cite key="Press2016"></d-cite>. The purpose of data cleaning is to remove any errors in and/or missing values from a data set so as to ensure that the data being used to formulate a learning model's hypothesis is of a high quality, thereby instilling confidence in the results obtained. This typically involves three types of activities, namely: (1) correcting erroneous values, (2) *imputing* (filling in) missing data entries and (3) detecting outliers<d-cite key="Nisbet2009"></d-cite>. Examples of these occurrences are illustrated in Table 1, where the first column denotes the data attribute the recorder attempted to capture, the second column describes the true data that should have been entered by the data recorder, and the last column contains the actual data recorded for an observation. As may be seen, the values for the attributes `Annual income` and `Ethnicity` have been left blank, the attributes `Name`, `Date of birth` and `Place of birth` are incomplete, and the attribute `Sex`, although in the correct format, does not reflect the true value.
 
-\begin{table}[!htb]
-	\centering
-	\caption[Examples of erroneous and missing data values]{Examples of erroneous and missing data values<d-cite key="Davis2010"></d-cite>.}\label{7.tbl.errors}
-	\rowcolors{2}{gray!25}{white}
-	\begin{tabular}{|l|l|l|}
-		\hline
-		\rowcolor{gray!75}
-		\multicolumn{1}{|c|}{\textbf{Attribute}}      & \multicolumn{1}{c|}{\textbf{True data}}              & \multicolumn{1}{c|}{\textbf{Actual data}} \\ \hline
-		Name           & Maria Margaret Smith    & Maria Smith                      \\ \hline
-		Date of birth  & 2/19/1981               & 1981                             \\ \hline
-		Sex            & F                       & M                                \\ \hline
-		Ethnicity      & Hispanic and Caucasian  &                                  \\ \hline
-		Place of Birth & Nogales, Somora, Mexico & Nogales                          \\ \hline
-		Annual income  & \$50,000                &                                  \\ \hline
-	\end{tabular}
-\end{table}
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>True data</th>
+    <th>Actual data</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>Maria Margaret Smith</td>
+    <td>Maria Smith</td>
+  </tr>
+  <tr>
+    <td>Date of birth</td>
+    <td>2/19/1981</td>
+    <td>1981</td>
+  </tr>
+  <tr>
+    <td>Sex</td>
+    <td>F</td>
+    <td>M</td>
+  </tr>
+  <tr>
+    <td>Ethnicity</td>
+    <td>Hispanic and Caucasian</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Place of Birth</td>
+    <td>Nogales, Somora, Mexico</td>
+    <td>Nogales</td>
+  </tr>
+  <tr>
+    <td>Annual income</td>
+    <td>$50,000</td>
+    <td></td>
+  </tr>
+</table>
+<div class="caption">
+    <em>Table 1:</em> Examples of erroneous and missing data values<d-cite key="Davis2010"></d-cite>.
+</div>
 
 According to Hellerstein<d-cite key="Hellerstein2008"></d-cite>, there exists four main origins of erroneous values in a data set. The first of these is described as *data entry errors* which are primarily attributed to the typographic and misinterpretation errors humans make when attempting to capture the data. The second origin is described as *measurement errors* which occur when measuring a physical property is not conducted according to a proper procedure. The third origin is described as *distillation errors* which occur during the preprocessing and summarising phase before subsequently being added to a system database. The final origin is described as *data integration errors* which occur when multiple data sets are integrated into a single database.
 
