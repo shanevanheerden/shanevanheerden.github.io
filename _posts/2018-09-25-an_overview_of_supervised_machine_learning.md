@@ -271,6 +271,6 @@ Using this result, Lundberg and Lee<d-cite key="Lundberg2017"></d-cite> proposed
     <em>Figure 9:</em> The SHAP values $\phi_1$, $\phi_2$, $\phi_3$ and $\phi_4$ attributed to the $N=4$ feature values $x_1$, $x_2$, $x_3$ and $x_4$, respectively, denote the change in the expected model prediction when conditioning on a feature which explains how the base value $E[f(\mathbf{z})]$ becomes the current model output $f(\mathbf{x})$<d-cite key="Lundberg2017"></d-cite>.
 </div>
 
-## Wrapping up
+## 10. Wrapping up
 
 
