@@ -24,6 +24,7 @@ toc:
   - name: 3. The exponential family
   - name: 4. Constructing a generalised linear model
   - name: 5. Logistic regression
+  - name: 6. Warpping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -257,3 +258,7 @@ and, in the case of the latter as
 \end{equation}
 
 where $\lambda$ is a parameter used to inflate the regularisation penalty. If $\lambda=0$, no regularisation is applied while, if a large value of $\lambda$ is chosen, the $\beta$-values will approach zero.
+
+## 6. Wrapping up
+
+
