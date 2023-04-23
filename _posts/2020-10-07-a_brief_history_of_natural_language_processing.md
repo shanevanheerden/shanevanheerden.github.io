@@ -10,7 +10,7 @@ authors:
     affiliations:
       name: Cape AI
 
-bibliography: 2018-12-22-distill.bib
+bibliography: bibliography.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
@@ -106,7 +106,7 @@ Soon after the emergence of RNNs and CNNs for language modelling, Sutskever *et 
 
 {% include figure.html path="assets/img/blog/blog1.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 4:</em> A visual representation of a sequence-to-sequence model used for translation [6].
+    <em>Figure 4:</em> A visual representation of a sequence-to-sequence model used for translation<d-cite key="See2016"></d-cite>.
 </div>
 
 This architecture is particularly useful in tasks such as *machine translation* (MT) and *natural language generation* (NLG). It’s no surprise that, in 2016, Google announced that it is in the process of replacing all of its [statistical-based MT systems with neural MT models [7]](https://arxiv.org/pdf/1609.08144.pdf%20(7.pdf). Additionally, since the decoder model can be conditioned on any arbitrary representation, it can also be used for tasks like [generating captions for images [8]](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf).
