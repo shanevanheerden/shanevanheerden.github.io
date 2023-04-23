@@ -27,7 +27,6 @@ toc:
   - name: 6. Attention Mechanisms (2015)
   - name: 7. Pre-trained Language Models (2018)
   - name: 8. Where we are today and looking forward…
-  - name: 9. References
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
