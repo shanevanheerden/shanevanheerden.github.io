@@ -109,20 +109,20 @@ Soon after the emergence of RNNs and CNNs for language modelling, Sutskever *et 
     <em>Figure 4:</em> A visual representation of a sequence-to-sequence model used for translation<d-cite key="See2016"></d-cite>.
 </div>
 
-This architecture is particularly useful in tasks such as *machine translation* (MT) and *natural language generation* (NLG). It’s no surprise that, in 2016, Google announced that it is in the process of replacing all of its [statistical-based MT systems with neural MT models [7]](https://arxiv.org/pdf/1609.08144.pdf%20(7.pdf). Additionally, since the decoder model can be conditioned on any arbitrary representation, it can also be used for tasks like [generating captions for images [8]](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf).
+This architecture is particularly useful in tasks such as *machine translation* (MT) and *natural language generation* (NLG). It’s no surprise that, in 2016, Google announced that it is in the process of replacing all of its statistical-based MT systems with neural MT models<d-cite key="Wu2016"></d-cite>. Additionally, since the decoder model can be conditioned on any arbitrary representation, it can also be used for tasks like generating captions for images<d-cite key="Vinyals2015"></d-cite>.
 
 ***
 
 ## 6. Attention Mechanisms (2015)
 
-Although useful in a wide range of tasks, sequence-to-sequence models were struggling with being able to capture long-range dependencies between words in text. In 2015, the concept of attention was introduced by Bahdanau *et al.* [9] as a way of addressing this bottleneck. In essence, attention in a neural network is a mechanism for deciding which parts of the input sequence to attend to when routing information. Various attention mechanisms have also been applied in the computer vision space for image captioning [10], which also provides a glimpse into the inner workings of the model, as is seen in Figure 5.
+Although useful in a wide range of tasks, sequence-to-sequence models were struggling with being able to capture long-range dependencies between words in text. In 2015, the concept of attention was introduced by Bahdanau *et al.*<d-cite key="Bahdanau2015"></d-cite> as a way of addressing this bottleneck. In essence, attention in a neural network is a mechanism for deciding which parts of the input sequence to attend to when routing information. Various attention mechanisms have also been applied in the computer vision space for image captioning<d-cite key="Xu2015"></d-cite>, which also provides a glimpse into the inner workings of the model, as is seen in Figure 5.
 
 {% include figure.html path="assets/img/blog/blog1.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 5:</em> A visual representation of the attention mechanism in an image captioning model [10].
+    <em>Figure 5:</em> A visual representation of the attention mechanism in an image captioning model<d-cite key="Xu2015"></d-cite>.
 </div>
 
-Attention is not only restricted to the input sequence and can also be used to focus on surrounding words in a body of text — commonly referred to as *self attention* — to obtain more contextual meaning. This is at the heart of the current state-of-the-art *transformer* architecture, proposed by [Vaswani et al. [11]](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) in 2017, which is composed of multiple self-attention layers. The transformer sparked an explosion of new language model architectures (and an inside joke among AI practitioners regarding Sesame Street Muppets), the most notable being *Bidirectional Encoder Representations from Transformers* (BERT) and *Generative Pre-trained Transformers* (GPT).
+Attention is not only restricted to the input sequence and can also be used to focus on surrounding words in a body of text — commonly referred to as *self attention* — to obtain more contextual meaning. This is at the heart of the current state-of-the-art *transformer* architecture, proposed by Vaswani *et al.*<d-cite key="Vaswani2017"></d-cite> in 2017, which is composed of multiple self-attention layers. The transformer sparked an explosion of new language model architectures (and an inside joke among AI practitioners regarding Sesame Street Muppets), the most notable being *Bidirectional Encoder Representations from Transformers* (BERT) and *Generative Pre-trained Transformers* (GPT).
 
 {% include figure.html path="assets/img/blog/blog1.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -153,12 +153,6 @@ Stay tuned to this series to learn more about the awesome world of NLP as we sha
 ## 9. References
 
 
-6. Abigail & Luong, Minh-Thang & Manning, Christoper. (2016). Compression of Neural Machine Translation Models via Pruning. 291–301. 10.18653/v1/K16–1029.
-7. Wu, Y., Schuster, M., Chen, Z., Le, Q. V, Norouzi, M., Macherey, W., … Dean, J. (2016). Google’s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation. ArXiv Preprint ArXiv:1609.08144.
-8. Vinyals, O., Toshev, A., Bengio, S., & Erhan, D. (2015). Show and tell: A neural image caption generator. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 3156–3164).
-9. Bahdanau, D., Cho, K., & Bengio, Y. (2015). Neural Machine Translation by Jointly Learning to Align and Translate. In ICLR 2015.
-10. Xu, K., Courville, A., Zemel, R. S., & Bengio, Y. (2015). Show, Attend and Tell: Neural Image Caption Generation with Visual Attention. In Proceedings of ICML 2015.
-11. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., … Polosukhin, I. (2017). Attention Is All You Need. In Advances in Neural Information Processing Systems.
 12. Wang, X. and Zhang Z., (2019). PMLpapers. Available at: https://github.com/thunlp/PLMpapers
 13. Dai, A. M., & Le, Q. V. (2015). Semi-supervised Sequence Learning. Advances in Neural Information Processing Systems (NIPS ’15). Retrieved from http://arxiv.org/abs/1511.01432
 14. Ramachandran, P., Liu, P. J., & Le, Q. V. (2017). Unsupervised Pretraining for Sequence to Sequence Learning. In Proceedings of EMNLP 2017.
