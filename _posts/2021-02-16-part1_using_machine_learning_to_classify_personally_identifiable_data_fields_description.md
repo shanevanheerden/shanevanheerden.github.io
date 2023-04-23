@@ -67,6 +67,9 @@ The first step in my problem-solving process always involves engaging with the c
 Roughly once a week, the client would receive new structured data tables like that in Figure 1, where rows denote consumers and columns various attributes related to these consumers. In essence, the problem entailed identifying so-called Personal Information (PI) columns that could be linked to a specific individual (e.g. name, ID number, phone number). To add further complications, there was hardly ever a predictable column structure in these tables and, on occasion, they contained junk data, or were missing data, in some cells.
 
 {% include figure.html path="assets/img/blog/blog4.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 1:</em> Typical consumer data.
+</div>
 
 After the first formal engagement with the client, I helped establish a set of requirements for the solution. More specifically, the solution should be:
 
@@ -87,14 +90,142 @@ Upon reviewing the requirements again, it was clear that this problem could be f
 
 But there was just one problem: to train a supervised model, we needed a set of features that could appropriately characterise similar strings belonging to different categories — a phone number and an ID number, for example. The idea was therefore to construct a set of informative features using [*Regular Expressions*](https://en.wikipedia.org/wiki/Regular_expression) (RegEx). Table 1 shows the 17 features that were constructed together with a RegEx description of each feature and the category the feature was intended to target. Feature 10, for example, checks whether the 7th character in the string is either a "0" or a "5" since, at least when dealing with South African IDs, would indicate whether a person is male or female, respectively.
 
+<table>
+  <tr>
+    <th>#</th>
+    <th>Feature name</th>
+    <th>Target category</th>
+    <th>RegEx description</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>countLength</td>
+    <td>All</td>
+    <td>Count # of characters in string</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>countUpper</td>
+    <td>Name & VIN</td>
+    <td>Count # of uppercase characters in string</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>countLower</td>
+    <td>Name & VIN</td>
+    <td>Count # of lowercase characters in string</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>countNumerical</td>
+    <td>Name</td>
+    <td>Count # of numbers in string</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>countSpace</td>
+    <td>Last name</td>
+    <td>Count # of spaces (‘ ’) in string</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>countDashesSlashes</td>
+    <td>DoB</td>
+    <td>Count # of dashes (‘-’) and forward slashes (‘/’) in string</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>countVowels</td>
+    <td>First name & Last name</td>
+    <td>Count # of vowels in string</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>countConsonants</td>
+    <td>First name & Last name</td>
+    <td>Count # of consonants in string</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>checkCitizen</td>
+    <td>ID number</td>
+    <td>Check if 3rd to 2nd last characters are ‘08’</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>checkGender</td>
+    <td>ID number</td>
+    <td>Check if 7th character is either ‘0’ or ‘5’</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>checkCountry</td>
+    <td>Phone number</td>
+    <td>Check if string starts with ‘27’ or ‘+27’</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>checkArea</td>
+    <td>Phone number</td>
+    <td>Check if 2nd to 4th characters are area code numbers</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>checkPrefix</td>
+    <td>Last name</td>
+    <td>Check if string starts with common surname prefixes</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>checkSyllables</td>
+    <td>Name</td>
+    <td>Check if string contains syllables</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>checkEmail</td>
+    <td>Email</td>
+    <td>Check if string contains ‘@’ or ‘.’</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>checkFirst</td>
+    <td>First name</td>
+    <td>Check if string is in list of first names</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>checkLast</td>
+    <td>Last name</td>
+    <td>Check if string is in list of last names</td>
+  </tr>
+</table>
+<div class="caption">
+    <em>Table 1:</em> The set of features that were constructed from RegEx.
+</div>
+
 Before jumping straight to training the model with my newly constructed features, I wanted to get a bit of an intuitive feel of the feature space I had constructed. Figure 2 allows just that, showing the result of squashing the 17-dimensional feature space down to only two dimensions with the help of a dimensionality reduction technique called [*Uniform Manifold Approximation and Projection*](https://arxiv.org/abs/1802.03426) (UMAP). It seemed like the RegEx features did a pretty good job at separating out the 7 categories.
 
 {% include figure.html path="assets/img/blog/blog4.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 2:</em> A two-dimensional projection of the 17-dimensional feature space.
+</div>
 
 Since the feature space appeared pretty [linearly separable](https://en.wikipedia.org/wiki/Linear_separability), at this point it seemed reasonable to assume that Logistic Regression wouldn't have much of a problem distinguishing between the categories (with maybe the exception of first and last names), and that is exactly what I observed. Below, in Figure 3, you can see the [*Area Under the Curve*](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) (AUC) and *Classification Accuracy* (CA) results for each category (using 10-fold [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics))), together with the corresponding [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix), which shows the difference between the actual categories and the ones predicted by the Logistic Regression model.
 
-{% include figure.html path="assets/img/blog/blog4.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-{% include figure.html path="assets/img/blog/blog4.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog4.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        <center>(a)</center>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog4.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        <center>(b)</center>
+    </div>
+</div>
+<div class="caption">
+    <em>Figure 3:</em> Results from training a Logistic Regression model using 10-fold cross validation.
+</div>
 
 With this in mind, I had enough confidence to progress further with this idea and develop it into a consumable and concrete solution for the client.
 
@@ -107,6 +238,9 @@ One natural idea that occurred to me at the beginning of the project was to dete
 Figure 4 describes my proposed process flow for predicting whether a column is PI or non-PI, as well as the corresponding category (if the column is PI). Starting from the top, a number of string records are sampled from the column in question. For each string record, a feature value is computed according to the set of defined RegEx features. If the feature currently being computed has an assign condition, the total proportion of records satisfying this condition is calculated and compared to a *category assignment threshold*.
 
 {% include figure.html path="assets/img/blog/blog4.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 4:</em> A process flow diagram describing how a category is either assigned or predicted for a column.
+</div>
 
 As a way of explanation, consider an example where 100 records have been sampled from a column and a category assignment threshold of 0.1 (or 10%) has been specified. If the feature under consideration is checking whether the string record contains a “@”, the column will immediately be assigned as a PI column with the category of “Email”, if at least 10 of the 100 sampled string records (or 10%) contain an “@”. In the case where all features have been extracted and no assign conditions have been satisfied, the pre-trained Logistic Regression model would only then be used to predict the category of the column under consideration. For each of the defined categories, a probability is computed using the values of the extracted features and the Logistic Regression weights.
 
@@ -119,10 +253,16 @@ If the largest predicted probability aggregated across all samples exceeds some 
 The final step in my formulation was to assess the solution's performance in a real-life setting. For this, the client gave myself the challenge of correctly categorising 192 consumer data columns. Figure 5 shows a snippet of the evaluation procedure we followed, where green dots indicate a correct prediction and red an incorrect prediction. I also tracked whether the assigned category was the result of assignment by a feature or prediction by the Logistic Regression model, indicated by the blue and purple dots, respectively.
 
 {% include figure.html path="assets/img/blog/blog4.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 5:</em> A snippet of the column evaluation procedure.
+</div>
 
 So, how well did my solution fare overall? Figure 6 shows the results of my evaluation in the form of a confusion matrix. I found that, overall, my solution was able to correctly classify **97.9%** of the columns, where the Logistic Regression model contributed 26.6% of these predictions. Confusion typically arose when institution names were sometimes misclassified as first names by the Logistic Regression model.
 
 {% include figure.html path="assets/img/blog/blog4.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 6:</em> Confusion matrix of column predictions.
+</div>
 
 > The client was happy with this performance and we proceeded to the next phase of the project which entailed packaging the solution as a production-ready system for them.
 
