@@ -59,11 +59,11 @@ Short disclaimer before we begin: This post is heavily skewed towards neural net
 
 ## 1. Neural Language Models (2001)
 
-It’s 2001 and the field of NLP is quite nascent. Academics all around the world are beginning to think more about how language could be modelled. After a lot of research, Neural Language models are born. Language modelling is simply the task of determining the probability of the next word (often referred to as a *token*) occurring in a piece of text given all the previous words. Traditional approaches for tackling this problem were based on n-gram models in combination with some sort of [smoothing technique [1]](http://www-i6.informatik.rwth-aachen.de/publications/download/951/Kneser-ICASSP-1995.pdf). [Bengio *et al.* [2]](https://proceedings.neurips.cc/paper_files/paper/2000/file/728f206c2a01bf572b5940d7d9a8fa4c-Paper.pdf) were the first to propose using a feed-forward neural network, a so-called word "lookup-table", for representing the *n* previous words in a sequence as illustrated in Figure 1. Today, this is known as *word embeddings*.
+It’s 2001 and the field of NLP is quite nascent. Academics all around the world are beginning to think more about how language could be modelled. After a lot of research, Neural Language models are born. Language modelling is simply the task of determining the probability of the next word (often referred to as a *token*) occurring in a piece of text given all the previous words. Traditional approaches for tackling this problem were based on n-gram models in combination with some sort of smoothing technique<d-cite key="Kneser1995"></d-cite>. Bengio *et al.* <d-cite key="Bengio2000"></d-cite> were the first to propose using a feed-forward neural network, a so-called word "lookup-table", for representing the *n* previous words in a sequence as illustrated in Figure 1. Today, this is known as *word embeddings*.
 
 {% include figure.html path="assets/img/blog/blog1.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1:</em> The first feed-forward neural network used for language modelling [1].
+    <em>Figure 1:</em> The first feed-forward neural network used for language modelling<d-cite key="Kneser1995"></d-cite>.
 </div>
 
 ***
@@ -72,24 +72,24 @@ It’s 2001 and the field of NLP is quite nascent. Academics all around the worl
 
 Excitement and interest grows steadily in the years following Neural Language models. Advances in computer hardware allow researchers to push the boundaries on language modelling, giving rise to new NLP methods. One such method is multi-task learning. The notion of multi-task learning involves training models to solve more than one learning task, while also using a set of shared parameters. As a result, models are forced to learn a representation that exploits the commonalities and differences across all tasks.
 
-[Collobert and Weston [3]](https://thetalkingmachines.com/sites/default/files/2018-12/unified_nlp.pdf) were the first to apply a form of multi-task learning in the NLP domain back in 2008. They trained two convolutional models with max pooling to perform both part-of-speech and named entity recognition tagging, while also sharing a common word lookup table (or word embedding), as shown in Figure 2. Years later, their paper was highlighted by many experts as a fundamental milestone in deep learning for NLP and received the Test-of-time Award at the 2018 *International Conference on Machine Learning* (ICML).
+Collobert and Weston<d-cite key="Collobert2008"></d-cite> were the first to apply a form of multi-task learning in the NLP domain back in 2008. They trained two convolutional models with max pooling to perform both part-of-speech and named entity recognition tagging, while also sharing a common word lookup table (or word embedding), as shown in Figure 2. Years later, their paper was highlighted by many experts as a fundamental milestone in deep learning for NLP and received the Test-of-time Award at the 2018 *International Conference on Machine Learning* (ICML).
 
 {% include figure.html path="assets/img/blog/blog1.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 2:</em> The first multi-task model sharing a common word lookup table [3].
+    <em>Figure 2:</em> The first multi-task model sharing a common word lookup table<d-cite key="Collobert2008"></d-cite>.
 </div>
 
 ***
 
 ## 3. Word Embeddings (2013)
 
-If you’ve had any exposure to NLP, the first thing you have probably come across is the idea of word embeddings (or more commonly known as *word2vec*). Although we have seen that word embeddings have been used as far back as 2001, in 2013 [Mikolov *et al.* [4]](https://proceedings.neurips.cc/paper_files/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf) proposed a simple but novel method for efficiently training these word embeddings on very large unlabeled corpora which ultimately led to their wide-scale adoption.
+If you’ve had any exposure to NLP, the first thing you have probably come across is the idea of word embeddings (or more commonly known as *word2vec*). Although we have seen that word embeddings have been used as far back as 2001, in 2013 Mikolov *et al.*<d-cite key="Mikolov2013"></d-cite> proposed a simple but novel method for efficiently training these word embeddings on very large unlabeled corpora which ultimately led to their wide-scale adoption.
 
 Word embeddings attempt to create a dense vector representation of text, and addresses many challenges faced with using traditional sparse bag-of-words representation. Word embeddings were shown to capture every intuitive relationship between words such as gender, verb tense and country capital, as illustrated in Figure 3.
 
 {% include figure.html path="assets/img/blog/blog1.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 3:</em> The intuitive relationships captured by word embeddings [4].
+    <em>Figure 3:</em> The intuitive relationships captured by word embeddings<d-cite key="Mikolov2013"></d-cite>.
 </div>
 
 ***
@@ -102,7 +102,7 @@ Looking back, 2013 appeared to be an inflection point in the NLP field, as resea
 
 ## 5. Sequence-to-Sequence Models (2014)
 
-Soon after the emergence of RNNs and CNNs for language modelling, [Sutskever *et al.* [5]](https://proceedings.neurips.cc/paper_files/paper/2014/file/a14ac55a4f27472c5d894ec1c3c743d2-Paper.pdf) were the first to propose a general framework for mapping one sequence to another, which is now known as *sequence-to-sequence* models. In this framework, an encoder network processes an input sequence token by token and compresses it into a vector representation, represented by the blue layers in Figure 4. A decoder network (represented by the red layers) is then used to predict a new sequence of output tokens based on the encoder state, which takes every previously predicted token as input.
+Soon after the emergence of RNNs and CNNs for language modelling, Sutskever *et al.*<d-cite key="Sutskever2014"></d-cite> were the first to propose a general framework for mapping one sequence to another, which is now known as *sequence-to-sequence* models. In this framework, an encoder network processes an input sequence token by token and compresses it into a vector representation, represented by the blue layers in Figure 4. A decoder network (represented by the red layers) is then used to predict a new sequence of output tokens based on the encoder state, which takes every previously predicted token as input.
 
 {% include figure.html path="assets/img/blog/blog1.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -152,11 +152,7 @@ Stay tuned to this series to learn more about the awesome world of NLP as we sha
 
 ## 9. References
 
-1. Kneser, R., & Ney, H. (1995, May). Improved backing-off for m-gram language modeling. In ICASSP (Vol. 1, p. 181e4).
-2. Bengio, Y., Ducharme, R., & Vincent, P. (2001). A Neural Probabilistic Language Model. Proceedings of NIPS.
-3. Collobert, R., & Weston, J. (2008). A unified architecture for natural language processing. In Proceedings of the 25th International Conference on Machine Learning (pp. 160–167).
-4. Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). Distributed Representations of Words and Phrases and their Compositionality. In Advances in Neural Information Processing Systems.
-5. Sutskever, I., Vinyals, O., & Le, Q. V. (2014). Sequence to sequence learning with neural networks. In Advances in Neural Information Processing Systems.
+
 6. Abigail & Luong, Minh-Thang & Manning, Christoper. (2016). Compression of Neural Machine Translation Models via Pruning. 291–301. 10.18653/v1/K16–1029.
 7. Wu, Y., Schuster, M., Chen, Z., Le, Q. V, Norouzi, M., Macherey, W., … Dean, J. (2016). Google’s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation. ArXiv Preprint ArXiv:1609.08144.
 8. Vinyals, O., Toshev, A., Bengio, S., & Erhan, D. (2015). Show and tell: A neural image caption generator. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 3156–3164).
