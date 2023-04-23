@@ -22,7 +22,6 @@ toc:
   - name: 1. What exactly is a language model?
   - name: 2. Building our own Neural Language Model
   - name: 3. Wrapping up
-  - name: 4. References
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -56,11 +55,11 @@ In its most simple form:
 
 > The task of a language model is simply to predict the probability of the next word appearing in a sequence of text given the previous words that have occurred.
 
-Traditionally, this problem was tackled with Statistical Language Models which primarily consisted of using so-called [n-gram](http://www-i6.informatik.rwth-aachen.de/publications/download/951/Kneser-ICASSP-1995.pdf) models in combination with some sort of smoothing technique [1]. The big pivot in the way researchers thought about this problem occurred when Bengio et al. [2] proposed using a feed-forward neural network together with a word "lookup-table" for representing the n previous words (often referred to as a *token*) in a sequence, as shown in Figure 1. Today, this "lookup-table" is known as a *word embedding* which you may already be familiar with if you read our second blog post. And thus the *Neural Language Model* was born!
+Traditionally, this problem was tackled with Statistical Language Models which primarily consisted of using so-called n-gram models in combination with some sort of smoothing technique<d-cite key="Kneser1995"></d-cite>. The big pivot in the way researchers thought about this problem occurred when Bengio *et al.*<d-cite key="Bengio2000"></d-cite> proposed using a feed-forward neural network together with a word "lookup-table" for representing the n previous words (often referred to as a *token*) in a sequence, as shown in Figure 1. Today, this "lookup-table" is known as a *word embedding* which you may already be familiar with if you read our second blog post. And thus the *Neural Language Model* was born!
 
 {% include figure.html path="assets/img/blog/blog3.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1:</em> The first feed-forward neural network used for language modelling [1].
+    <em>Figure 1:</em> The first feed-forward neural network used for language modelling<d-cite key="Kneser1995"></d-cite>.
 </div>
 
 ***
@@ -308,10 +307,3 @@ Interesting choice of words, but I don't quite think our model is going to be th
 ## 3. Wrapping up
 
 And that's all! In this post, I walked you through how to create your very own neural language model in Python with some help from Keras and how you can use this model to generate your own text sequences.
-
-***
-
-## 4. References
-
-1. Kneser, R., & Ney, H. (1995, May). Improved backing-off for m-gram language modeling. In ICASSP (Vol. 1, p. 181e4).
-2. Bengio, Y., Ducharme, R., & Vincent, P. (2001). A Neural Probabilistic Language Model. Proceedings of NIPS.
