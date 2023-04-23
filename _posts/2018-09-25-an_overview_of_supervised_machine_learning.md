@@ -237,11 +237,11 @@ while its FPR may be expressed as
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog7.9.png" class="img-fluid rounded z-depth-1" zoomable=true object-fit=cover %}
-        (a)
+        <center>(a)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog7.10.png" class="img-fluid rounded z-depth-1" zoomable=true object-fit=cover %}
-        (b)
+        <center>(b)</center>
     </div>
 </div>
 <div class="caption">
