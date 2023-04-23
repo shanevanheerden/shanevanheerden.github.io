@@ -24,7 +24,6 @@ toc:
   - name: 3. Training a Word2Vec Model
   - name: 4. Word2Vec Tutorial
   - name: 5. Wrapping up
-  - name: 6. References
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -50,7 +49,7 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog2.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-This is the second post in a series of blog posts focusing on the exciting field of *Natural Language Processing* (NLP)! In [our previous blog post](https://shanevanheerden.github.io/blog/2020/a_brief_history_of_natural_language_processing/), we saw that word embeddings were an important milestone in the history of NLP. Although these were used as far back as 2001, in 2013 [Mikolov *et al.*](https://arxiv.org/pdf/1301.3781.pdf%C3%AC%E2%80%94%20%C3%AC%E2%80%9E%C5%93) [1] proposed a simple but novel method for efficiently training word embeddings (or *word2vec* models) on very large unlabelled corpora which ultimately led to their wide-scale adoption. So, what actually are word embeddings and how do they fit into an NLP practitioner's toolkit? Let's find out!
+This is the second post in a series of blog posts focusing on the exciting field of *Natural Language Processing* (NLP)! In [our previous blog post](https://shanevanheerden.github.io/blog/2020/a_brief_history_of_natural_language_processing/), we saw that word embeddings were an important milestone in the history of NLP. Although these were used as far back as 2001, in 2013 Mikolov *et al.*<d-cite key="Mikolov2013"></d-cite> proposed a simple but novel method for efficiently training word embeddings (or *word2vec* models) on very large unlabelled corpora which ultimately led to their wide-scale adoption. So, what actually are word embeddings and how do they fit into an NLP practitioner's toolkit? Let's find out!
 
 ## 1. What are Word Embeddings?
 
@@ -60,7 +59,7 @@ To get a feel for this concept, let's look at Figure 1 which is a visual represe
 
 {% include figure.html path="assets/img/blog/blog2.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1:</em> A visual representation of the word vectors corresponding to gender-specific words [2].
+    <em>Figure 1:</em> A visual representation of the word vectors corresponding to gender-specific words<d-cite key="Alammar2019"></d-cite>.
 </div>
 
 ***
@@ -71,7 +70,7 @@ Now that we have a bit of an intuitive feel of word embeddings, let's get a bett
 
 {% include figure.html path="assets/img/blog/blog2.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 2:</em> The CBOW and Skip-gram method [1].
+    <em>Figure 2:</em> The CBOW and Skip-gram method<d-cite key="Mikolov2013"></d-cite>.
 </div>
 
 Let's expand on this a bit more by diving into how one would go about constructing a dataset from an unlabelled corpus of text to leverage each of these two methods. For a more in-depth explanation of these concepts, we highly recommend reading [Jay Alammar’s blog post](http://jalammar.github.io/illustrated-word2vec/) on this subject which inspired this section.
@@ -82,7 +81,7 @@ As a way of example, suppose we had a large text corpus which contained the sent
 
 {% include figure.html path="assets/img/blog/blog2.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 3:</em> The CBOW method for constructing a dataset [2].
+    <em>Figure 3:</em> The CBOW method for constructing a dataset<d-cite key="Alammar2019"></d-cite>.
 </div>
 
 ### 2.2. Skip-gram
@@ -91,7 +90,7 @@ Continuing with the previous example, the Skip-gram model constructs a dataset i
 
 {% include figure.html path="assets/img/blog/blog2.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 4:</em> The skip-gram method for constructing a dataset [2].
+    <em>Figure 4:</em> The skip-gram method for constructing a dataset<d-cite key="Alammar2019"></d-cite>.
 </div>
 
 In reality, training a model on this form of the dataset is computationally expensive. This is due to the fact that we have to compute the error of the neural language model against the whole output vocabulary vector for every training sample! In practice, a technique called *negative sampling* is employed. This involves transforming the dataset shown in Figure 4 to a new form shown in Figure 5. In this procedure, the input and output words are now both features and a new target column is added, where a value of `1` indicates that the two words are neighbours.
@@ -102,7 +101,7 @@ In order to ensure that not all samples have a target variable of one, we introd
 
 {% include figure.html path="assets/img/blog/blog2.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 5:</em> The notion of negative sampling in the skip-gram method [2].
+    <em>Figure 5:</em> The notion of negative sampling in the skip-gram method<d-cite key="Alammar2019"></d-cite>.
 </div>
 
 ***
@@ -117,7 +116,7 @@ Here comes the *learning* part: we can now use this error to adjust the values o
 
 {% include figure.html path="assets/img/blog/blog2.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 6:</em> Training a Skip-gram language model with negative sampling [2].
+    <em>Figure 6:</em> Training a Skip-gram language model with negative sampling<d-cite key="Alammar2019"></d-cite>.
 </div>
 
 ***
@@ -245,10 +244,3 @@ The list above shows us the words most similar to the word "learning" and displa
 And there you have it! In this blog post, we described the two flavours of word2vec models, namely CBOW and Skip-gram as well as the model training procedure. Armed with this information, we got a bit more practical by walking you through how to create your very own word2vec model in Python using the Gensim library.
 
 Stay tuned to this series to learn more about the awesome world of NLP as we share more on the latest developments, code implementations and thought-provoking perspectives on NLP's impact on the way we interact with the world. It's an extremely exciting time for anyone to get into the world of NLP!
-
-***
-
-## 6. References
-
-1. Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). Distributed Representations of Words and Phrases and their Compositionality. In Advances in Neural Information Processing Systems.
-2. Alammar, Jay (2019). The Illustrated Word2vec [Blog post]. Retrieved from https://jalammar.github.ioillustrated-word2vecr/
