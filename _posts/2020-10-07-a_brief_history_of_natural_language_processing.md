@@ -52,13 +52,13 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog1.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-This is the first blog post in a series focusing on the wonderful world of Natural Language Processing (NLP)! In this post we present you with the lay of the land — describing seven important milestones which have been achieved in the NLP field over the last 20 years. This is largely inspired by [Sebastian Ruder’s talk](https://www.youtube.com/watch?v=sGVi4gb90zk) at the 2018 Deep Learning Indaba which [I attended](https://shanevanheerden.github.io/news/announcement_9/) in Stellenbosch.
+This is the first blog post in a series focusing on the wonderful world of Natural Language Processing (NLP)! In this post I'll present you with the lay of the land — describing seven important milestones which have been achieved in the NLP field over the last 20 years. This is largely inspired by [Sebastian Ruder's talk](https://www.youtube.com/watch?v=sGVi4gb90zk) at the 2018 Deep Learning Indaba which [I attended](https://shanevanheerden.github.io/news/announcement_9/) in Stellenbosch.
 
-Short disclaimer before we begin: This post is heavily skewed towards neural network-based advancements. Many of these milestones, however, were built on many influential ideas presented by non-neural network-based work during the same era, which, for brevity purposes, have been omitted from this post.
+Short disclaimer before I begin: This post is heavily skewed towards neural network-based advancements. Many of these milestones, however, were built on many influential ideas presented by non-neural network-based work during the same era, which, for brevity purposes, have been omitted from this post.
 
 ## 1. Neural Language Models (2001)
 
-It’s 2001 and the field of NLP is quite nascent. Academics all around the world are beginning to think more about how language could be modelled. After a lot of research, Neural Language models are born. Language modelling is simply the task of determining the probability of the next word (often referred to as a *token*) occurring in a piece of text given all the previous words. Traditional approaches for tackling this problem were based on n-gram models in combination with some sort of smoothing technique<d-cite key="Kneser1995"></d-cite>. Bengio *et al.*<d-cite key="Bengio2000"></d-cite> were the first to propose using a feed-forward neural network, a so-called word "lookup-table", for representing the *n* previous words in a sequence as illustrated in Figure 1. Today, this is known as *word embeddings*.
+It's 2001 and the field of NLP is quite nascent. Academics all around the world are beginning to think more about how language could be modelled. After a lot of research, Neural Language models are born. Language modelling is simply the task of determining the probability of the next word (often referred to as a *token*) occurring in a piece of text given all the previous words. Traditional approaches for tackling this problem were based on n-gram models in combination with some sort of smoothing technique<d-cite key="Kneser1995"></d-cite>. Bengio *et al.*<d-cite key="Bengio2000"></d-cite> were the first to propose using a feed-forward neural network, a so-called word "lookup-table", for representing the *n* previous words in a sequence as illustrated in Figure 1. Today, this is known as *word embeddings*.
 
 {% include figure.html path="assets/img/blog/blog1.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -82,7 +82,7 @@ Collobert and Weston<d-cite key="Collobert2008"></d-cite> were the first to appl
 
 ## 3. Word Embeddings (2013)
 
-If you’ve had any exposure to NLP, the first thing you have probably come across is the idea of word embeddings (or more commonly known as *word2vec*). Although we have seen that word embeddings have been used as far back as 2001, in 2013 Mikolov *et al.*<d-cite key="Mikolov2013"></d-cite> proposed a simple but novel method for efficiently training these word embeddings on very large unlabeled corpora which ultimately led to their wide-scale adoption.
+If you've had any exposure to NLP, the first thing you have probably come across is the idea of word embeddings (or more commonly known as *word2vec*). Although we have seen that word embeddings have been used as far back as 2001, in 2013 Mikolov *et al.*<d-cite key="Mikolov2013"></d-cite> proposed a simple but novel method for efficiently training these word embeddings on very large unlabeled corpora which ultimately led to their wide-scale adoption.
 
 Word embeddings attempt to create a dense vector representation of text, and addresses many challenges faced with using traditional sparse bag-of-words representation. Word embeddings were shown to capture every intuitive relationship between words such as gender, verb tense and country capital, as illustrated in Figure 3.
 
@@ -108,7 +108,7 @@ Soon after the emergence of RNNs and CNNs for language modelling, Sutskever *et 
     <em>Figure 4:</em> A visual representation of a sequence-to-sequence model used for translation<d-cite key="See2016"></d-cite>.
 </div>
 
-This architecture is particularly useful in tasks such as *machine translation* (MT) and *natural language generation* (NLG). It’s no surprise that, in 2016, Google announced that it is in the process of replacing all of its statistical-based MT systems with neural MT models<d-cite key="Wu2016"></d-cite>. Additionally, since the decoder model can be conditioned on any arbitrary representation, it can also be used for tasks like generating captions for images<d-cite key="Vinyals2015"></d-cite>.
+This architecture is particularly useful in tasks such as *machine translation* (MT) and *natural language generation* (NLG). It's no surprise that, in 2016, Google announced that it is in the process of replacing all of its statistical-based MT systems with neural MT models<d-cite key="Wu2016"></d-cite>. Additionally, since the decoder model can be conditioned on any arbitrary representation, it can also be used for tasks like generating captions for images<d-cite key="Vinyals2015"></d-cite>.
 
 ***
 
@@ -141,8 +141,6 @@ Dai & Le<d-cite key="Dai2015"></d-cite>. were the first to propose using pre-tra
 
 ## 8. Where we are today and looking forward…
 
-Nowadays, there exists an array of initiatives aimed at open-sourcing many large state-of-the-art pre-trained models. These models can be fine-tuned to perform various NLP-related tasks like *sequence classification*, *extractive question answering*, *named entity recognition* and *text summarization* (to name a few).
+Nowadays, there exists an array of initiatives aimed at open-sourcing many large state-of-the-art pre-trained models. These models can be fine-tuned to perform various NLP-related tasks like *sequence classification*, *extractive question answering*, *named entity recognition* and *text summarization* (to name a few). NLP is advancing at an incredible pace and is giving rise to global communities dedicated to solving the world's most important problems through language understanding.
 
-NLP is advancing at an incredible pace and is giving rise to global communities dedicated to solving the world’s most important problems through language understanding.
-
-Stay tuned to this series to learn more about the awesome world of NLP as we share more on the latest developments, code implementations and thought-provoking perspectives on NLP’s impact on the way we interact with the world. It’s an extremely exciting time for anyone to get into the world of NLP!
+Stay tuned to this series to learn more about the awesome world of NLP as I share more on the latest developments, code implementations and thought-provoking perspectives on NLP's impact on the way we interact with the world. It's an extremely exciting time for anyone to get into the world of NLP!
