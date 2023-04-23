@@ -59,7 +59,7 @@ Short disclaimer before we begin: This post is heavily skewed towards neural net
 
 ## 1. Neural Language Models (2001)
 
-It’s 2001 and the field of NLP is quite nascent. Academics all around the world are beginning to think more about how language could be modelled. After a lot of research, Neural Language models are born. Language modelling is simply the task of determining the probability of the next word (often referred to as a *token*) occurring in a piece of text given all the previous words. Traditional approaches for tackling this problem were based on n-gram models in combination with some sort of smoothing technique<d-cite key="Kneser1995"></d-cite>. Bengio *et al.* <d-cite key="Bengio2000"></d-cite> were the first to propose using a feed-forward neural network, a so-called word "lookup-table", for representing the *n* previous words in a sequence as illustrated in Figure 1. Today, this is known as *word embeddings*.
+It’s 2001 and the field of NLP is quite nascent. Academics all around the world are beginning to think more about how language could be modelled. After a lot of research, Neural Language models are born. Language modelling is simply the task of determining the probability of the next word (often referred to as a *token*) occurring in a piece of text given all the previous words. Traditional approaches for tackling this problem were based on n-gram models in combination with some sort of smoothing technique<d-cite key="Kneser1995"></d-cite>. Bengio *et al.*<d-cite key="Bengio2000"></d-cite> were the first to propose using a feed-forward neural network, a so-called word "lookup-table", for representing the *n* previous words in a sequence as illustrated in Figure 1. Today, this is known as *word embeddings*.
 
 {% include figure.html path="assets/img/blog/blog1.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -126,16 +126,16 @@ Attention is not only restricted to the input sequence and can also be used to f
 
 {% include figure.html path="assets/img/blog/blog1.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 6:</em> The various language model architectures based on the transformer model [12].
+    <em>Figure 6:</em> The various language model architectures based on the transformer model<d-cite key="Wang2019"></d-cite>.
 </div>
 
 ## 7. Pre-trained Language Models (2018)
 
-[Dai & Le [13]](https://proceedings.neurips.cc/paper_files/paper/2015/file/7137debd45ae4d0ab9aa953017286b20-Paper.pdf) were the first to propose using pre-trained language models in 2015 but this notion was only recently shown to be beneficial across a broad range of NLP-related tasks. More specifically, it was shown that pre-trained language models could be *fine-tuned* on other data related to a specific target task [14, 15]. Additionally, language model embeddings could also be used as features in a target model leading to significant improvements over the then state-of-the-art models [16], as shown in Figure 7.
+Dai & Le<d-cite key="Dai2015"></d-cite>. were the first to propose using pre-trained language models in 2015 but this notion was only recently shown to be beneficial across a broad range of NLP-related tasks. More specifically, it was shown that pre-trained language models could be *fine-tuned* on other data related to a specific target task<d-cite key="Ramachandran2017, Howard2018"></d-cite>. Additionally, language model embeddings could also be used as features in a target model leading to significant improvements over the then state-of-the-art models<d-cite key="Peters2018"></d-cite>, as shown in Figure 7.
 
 {% include figure.html path="assets/img/blog/blog1.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 7:</em> Improvements over state-of-the-art models when employing language model embeddings [16].
+    <em>Figure 7:</em> Improvements over state-of-the-art models when employing language model embeddings<d-cite key="Peters2018"></d-cite>.
 </div>
 
 ***
@@ -147,14 +147,3 @@ Nowadays, there exists an array of initiatives aimed at open-sourcing many large
 NLP is advancing at an incredible pace and is giving rise to global communities dedicated to solving the world’s most important problems through language understanding.
 
 Stay tuned to this series to learn more about the awesome world of NLP as we share more on the latest developments, code implementations and thought-provoking perspectives on NLP’s impact on the way we interact with the world. It’s an extremely exciting time for anyone to get into the world of NLP!
-
-***
-
-## 9. References
-
-
-12. Wang, X. and Zhang Z., (2019). PMLpapers. Available at: https://github.com/thunlp/PLMpapers
-13. Dai, A. M., & Le, Q. V. (2015). Semi-supervised Sequence Learning. Advances in Neural Information Processing Systems (NIPS ’15). Retrieved from http://arxiv.org/abs/1511.01432
-14. Ramachandran, P., Liu, P. J., & Le, Q. V. (2017). Unsupervised Pretraining for Sequence to Sequence Learning. In Proceedings of EMNLP 2017.
-15. Howard, J., & Ruder, S. (2018). Universal Language Model Fine-tuning for Text Classification. In Proceedings of ACL 2018. Retrieved from http://arxiv.org/abs/1801.06146
-16. Peters, M. E., Neumann, M., Iyyer, M., Gardner, M., Clark, C., Lee, K., & Zettlemoyer, L. (2018). Deep contextualized word representations. In Proceedings of NAACL-HLT 2018.
