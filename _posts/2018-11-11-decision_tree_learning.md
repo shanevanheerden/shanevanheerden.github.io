@@ -23,8 +23,8 @@ toc:
   - name: 2. Classification and regression trees
   - name: 3. Random forests
   - name: 4. The C4.5 algorithm
-  - name: 5. Gradient boosted decision trees
-  - name: 6. Wrapping up
+  <!--- - name: 5. Gradient boosted decision trees-->
+  - name: 5. Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -144,15 +144,13 @@ If a large proportion of observations in a data subset $\mathcal{S}$ exhibit the
 
 Unlike its predecessor, this formulation is more robust since it effectively penalises the choice of splitting attributes with many categories. A drawback of this approach, however, is that (\ref{4.eqn.gainratio}) tends to favour unbalanced splits in which one node partition is much larger than the rest<d-cite key="Harris2002"></d-cite>.
 
+<!---
 ***
 
 ## 5. Gradient boosted decision trees
-
-
-
+-->
 ***
 
-## 6. Wrapping up
+## 5. Wrapping up
 
-
-
+And that's all I have. In this blog post, I walked yoiu through a host of different decision tree algorithms that are still widely used in practice today, namely CARTs, Random forests and the C4.5 algorithm. Stay tuned to this series where I'll dive into even more classic machine learning algorithms. Until next time!
