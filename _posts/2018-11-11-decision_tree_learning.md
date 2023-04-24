@@ -23,7 +23,6 @@ toc:
   - name: 2. Classification and regression trees
   - name: 3. Random forests
   - name: 4. The C4.5 algorithm
-  <!--- - name: 5. Gradient boosted decision trees-->
   - name: 5. Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
