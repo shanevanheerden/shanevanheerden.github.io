@@ -261,4 +261,4 @@ where $\lambda$ is a parameter used to inflate the regularisation penalty. If $\
 
 ## 6. Wrapping up
 
-
+And that's all folks — congratulations for making it to the end! In this blog post, we went deep into GLMs and their relation to the exponential family of distributions. I also showed how the well-known OLSR and Logistic Regression model is meerly a special case of a much broader family of statistical models. Join me in my [next blog post](https://shanevanheerden.github.io/blog/2018/decision_tree_learning/) where I'll describe a much-loved (and less math-heavy) class of machine learning models, namely Decision Trees. See you there!
