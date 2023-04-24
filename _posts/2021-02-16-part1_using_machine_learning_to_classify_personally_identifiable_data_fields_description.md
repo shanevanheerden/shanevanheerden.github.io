@@ -270,4 +270,4 @@ So, how well did my solution fare overall? Figure 6 shows the results of my eval
 
 ## 6. Wrapping up
 
-And that's it for Part 1! In this post, I walked you through my approach for automatically identifying sensitive data fields. It goes to show that Machine Learning can be used to solve almost any problem. Stick around for [Part 2](https://shanevanheerden.github.io/blog/2021/part2_using_machine_learning_to_classify_personally_identifiable_data_fields_description/) where I describe how I went about packaging this solution as a production-ready system for the client.
+And that's it for Part 1! In this post, I walked you through my approach for automatically identifying sensitive data fields. It goes to show that Machine Learning can be used to solve almost any problem. Stick around for Part 2 where I'll describe how I went about packaging this solution as a production-ready system for the client.
