@@ -49,7 +49,7 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog6.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-This is the third post in a series of blog posts focusing on the some of the classic Machine Learning algorithms! In [my last blog post](https://shanevanheerden.github.io/blog/2019/generalised_linear_models/), I described the notion of Generalised Linear Models and showed how the well-known Logistic Regression model is meerly a special case of a much broader family of statistical models. In this post, we will talk about another much-loved class of machine learning models, namely Decision Trees. Let's get started!
+This is the third post in a series of blog posts focusing on the some of the classic Machine Learning algorithms! In [my last blog post](https://shanevanheerden.github.io/blog/2018/generalised_linear_models/), I described the notion of Generalised Linear Models and showed how the well-known Logistic Regression model is meerly a special case of a much broader family of statistical models. In this post, we will talk about another much-loved class of machine learning models, namely Decision Trees. Let's get started!
 
 ## 1. Introduction
 
