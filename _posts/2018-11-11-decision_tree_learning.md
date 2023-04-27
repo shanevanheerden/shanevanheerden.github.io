@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Decision Tree Learning
+title: 🌲 Decision Tree Learning
 description: Classic Machine Learning Algorithms Series
 date: 2018-11-11
 tags: ClassicAlgorithms
