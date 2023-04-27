@@ -1,14 +1,21 @@
-<!--
 ---
 layout: page
-permalink: /teaching/
-title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+permalink: /certifications/
+title: 🎓 certifications
+description: Here are some of the certifications I've completed.
 nav: true
 nav_order: 4
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+<div class="datatable-begin"></div>
 
-Organize your courses by years, topics, or universities, however you like!
--->
+Date | Name | Organiser | Description | Links
+---- | ---- | --------- | ----------- | -----
+Dec 28, 2020 | Career Guidance on ECE / EEE for KLE Technological University | BVB IEEE Student Branch | Interaction with KLETech students about EE-related career paths | [Slides](/assets/pdf/slides/2020dec_28_bvbieee_career.pdf)
+Dec 22, 2020 | Hacking Your Career (with hardware, academics, research and open-source) | IEEE NITK Chapter | Insight on opportunities in Electrical Engineering | [Slides](/assets/pdf/slides/2020dec_22_ieee_insight.pdf) <br> [Video](https://youtu.be/D4BBHsh62rg?t=194)
+Oct 10, 2020 | Experimenting with Open ISAs | OpenPOWER Developer Community | Simulation with OpenPOWER Microwatt and Open-Source hardware projects | [Slides](/assets/pdf/slides/2020oct_10_openpower.pdf) <br> [Video](https://www.youtube.com/watch?v=nejEA15xTnU&feature=youtu.be)
+Jul 30, 2020 | Open ISAs, Hardware and Innovation Opportunities | OpenPOWER Developer Community | OpenPOWER ISA, cores and potential projects | [Slides](/assets/pdf/slides/2020jul_30_openpower.pdf) <br> [Video](https://youtu.be/5UveNHW_Zi0?t=2077)
+May 9, 2020 | Embedded Systems and IoT - Moving Ahead | ACM NITK Chapter | For beginners to get started with IoT and Embedded Systems | [Slides](/assets/pdf/slides/2020may_9_emsys.pdf)
+Jan 4, 2020 | Conceptualization and Design of Remotely Accessible Hardware Interface (RAHI) Lab | FICTA-2020 | Paper presentation | [Slides](/assets/pdf/slides/2020jan_4_ficta.pdf)
+
+<div class="datatable-end"></div>
