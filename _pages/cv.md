@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: 📄 cv
 nav: true
 nav_order: 3
 cv_pdf: shanevanheerden_march2023.pdf
