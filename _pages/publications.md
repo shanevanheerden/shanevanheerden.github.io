@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: 📚 publications
 description: Here's a list of my publications.
 years: [2018]
 nav: true
