@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: A Brief History of Natural Language Processing
+title: 🕰️ A Brief History of Natural Language Processing
 description: Natural Language Processing Series
 date: 2020-02-16
 tags: NLP
