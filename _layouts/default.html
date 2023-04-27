@@ -7,6 +7,20 @@
     <meta http-equiv="refresh" content="3; url={{ site.baseurl }}/" />
   {%- endif -%}
   {% include head.html %}
+  {% if page.datatable == true %}
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+    <script>
+      $(document).ready(function(){
+          $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+          $('table.display').DataTable( {
+              paging: true,
+              stateSave: true,
+              searching: true
+          });
+       });
+    </script>
+  {% endif %}
   </head>
 
   <!-- Body -->
