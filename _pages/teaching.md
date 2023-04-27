@@ -3,6 +3,7 @@ layout: page
 permalink: /certifications/
 title: 🎓 certifications
 description: Here are some of the certifications I've completed.
+datatable: true
 nav: true
 nav_order: 4
 ---
