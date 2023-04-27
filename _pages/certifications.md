@@ -8,7 +8,7 @@ nav: true
 order: 4
 ---
 
-<table id="datatable" class="display" style="width:100%">
+<table id="example" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>
