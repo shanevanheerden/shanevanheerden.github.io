@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I came runner-up in ORSSA's Fourth Year National Student Competition
+title: 🥈 I came runner-up in ORSSA's Fourth Year National Student Competition
 date: 2017-09-12 00:00:00-0000
 inline: false
 ---
