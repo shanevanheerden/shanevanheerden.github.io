@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I attended a month-long summer school at Jönköping University, Sweden
+title: 🇸🇪 I attended a month-long summer school at Jönköping University, Sweden
 date: 2018-06-04 00:00:00-0000
 inline: false
 ---
