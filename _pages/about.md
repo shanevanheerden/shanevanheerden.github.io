@@ -24,5 +24,5 @@ I'm a Machine Learning Engineer by trade with demonstrated experience in leading
 <br><br>
 My educational background includes a degree in Industrial Engineering from Stellenbosch University, as well as a PhD in Data Science. I am currently a Data Scientist at <a href='http://www.luno.com'>Luno</a>, a cryptocurrency exchange, where I use my expertise to lead the development of predictive models that help combat fraudulent activity on the platform.
 <br><br>
-Feel free to browse my thoughts and experiences on all topics related to Data Science and Machine Learning. Thank you for stopping by and I hope you enjoy your visit.
+Feel free to browse my thoughts and experiences on all topics related to Data Science and Machine Learning. Thank you for stopping by and I hope you enjoy your visit!
 </p>
