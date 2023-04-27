@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Neural Language Models
+title: 🧠 Neural Language Models
 description: Natural Language Processing Series
 date: 2020-11-12
 tags: NLP
