@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: 👋 about
 permalink: /
 subtitle: <b>Machine Learning Engineer</b>&nbsp;&nbsp;│&nbsp;&nbsp;<b>Data Scientist</b>&nbsp;&nbsp;│&nbsp;&nbsp;<b>NLP Specialist</b>
 
