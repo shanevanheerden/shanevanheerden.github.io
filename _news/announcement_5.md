@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I graduated with a BEng in Industrial Engineering from Stellenbosch University
+title: 🎓 I graduated with a BEng in Industrial Engineering from Stellenbosch University
 date: 2016-12-07 00:00:00-0000
 inline: false
 ---
