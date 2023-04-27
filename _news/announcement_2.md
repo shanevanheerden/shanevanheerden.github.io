@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I was invited to join the Golden Key International Honour Society
+title: 🔑 I was invited to join the Golden Key International Honour Society
 date: 2014-08-13 00:00:00-0000
 inline: false
 ---
