@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I started a 2 month Data Science internship at DataProphet
+title: 🤖 I started a 2 month Data Science internship at DataProphet
 date: 2020-01-01 00:00:00-0000
 inline: false
 ---
