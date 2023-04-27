@@ -12,13 +12,8 @@
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
     <script>
       $(document).ready(function(){
-          $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
-          $('table.display').DataTable( {
-              paging: true,
-              stateSave: true,
-              searching: true
-          });
-       });
+$('#datatable').DataTable();
+});
     </script>
   {% endif %}
   </head>
