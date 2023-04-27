@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I started studying a BEng Industrial Engineering degree at Stellenbosch University
+title: 🏫 I started studying a BEng Industrial Engineering degree at Stellenbosch University
 date: 2013-02-04 00:00:00-0000
 inline: false
 ---
