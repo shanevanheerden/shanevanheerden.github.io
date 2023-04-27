@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Word Embeddings
+title: 📊 Word Embeddings
 description: Natural Language Processing Series
 date: 2020-10-12
 tags: NLP
