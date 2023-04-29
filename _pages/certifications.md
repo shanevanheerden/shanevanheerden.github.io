@@ -1,3 +1,4 @@
+<!--
 ---
 layout: page
 permalink: /certifications/
@@ -488,3 +489,4 @@ order: 4
             </tr>
         </tfoot>
     </table>
+-->
