@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🎨 hobbies
+title: 🎮 hobbies
 permalink: /hobbies/
 description: Here are some of my hobbies outside of work.
 nav: true
