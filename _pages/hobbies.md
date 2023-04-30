@@ -22,14 +22,18 @@ horizontal: false
   <div class="container">
     <div class="row row-cols-2">
     {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
+      {%- if project.type = "hobby" -%}
+        {% include projects_horizontal.html %}
+      {%- endif -%}
     {%- endfor %}
     </div>
   </div>
   {%- else -%}
   <div class="grid">
     {%- for project in sorted_projects -%}
-      {% include projects.html %}
+      {%- if project.type = "hobby" -%}
+        {% include projects.html %}
+      {%- endif -%}
     {%- endfor %}
   </div>
   {%- endif -%}
@@ -43,14 +47,18 @@ horizontal: false
   <div class="container">
     <div class="row row-cols-2">
     {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
+      {%- if project.type = "hobby" -%}
+        {% include projects_horizontal.html %}
+      {%- endif -%}
     {%- endfor %}
     </div>
   </div>
   {%- else -%}
   <div class="grid">
     {%- for project in sorted_projects -%}
-      {% include projects.html %}
+      {%- if project.type = "hobby" -%}
+        {% include projects.html %}
+      {%- endif -%}
     {%- endfor %}
   </div>
   {%- endif -%}
