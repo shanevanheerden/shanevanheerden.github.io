@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /certifications/
-title: 🎓 certifications
-description: Here are some of the certifications I've completed.
+permalink: /courses/
+title: 🎓 courses
+description: Here are some of the courses I've completed.
 datatable: true
 nav: true
 order: 3
