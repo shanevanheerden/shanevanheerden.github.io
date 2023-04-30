@@ -1,4 +1,4 @@
-<!--
+
 ---
 layout: page
 permalink: /certifications/
@@ -9,6 +9,9 @@ nav: true
 order: 4
 ---
 
+### Under construction.
+
+<!--
 <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
