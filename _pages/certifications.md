@@ -5,7 +5,7 @@ title: 🎓 certifications
 description: Here are some of the certifications I've completed.
 datatable: true
 nav: true
-order: 4
+order: 3
 ---
 
 ### Under construction.
