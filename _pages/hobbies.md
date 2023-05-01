@@ -2,7 +2,7 @@
 layout: page
 title: 🎨 hobbies
 permalink: /hobbies/
-description: Here are some of my hobbies outside of work.
+description: Here are some of my hobbies that keep me busy outside of work.
 nav: true
 nav_order: 4
 horizontal: false
