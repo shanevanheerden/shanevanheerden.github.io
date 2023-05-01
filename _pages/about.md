@@ -18,11 +18,9 @@ social: true  # includes social icons at the bottom of the page
 
 <p>
 <br>
-Hi there and welcome to my personal website! My name is Shane and I believe in the potential for Artificial Intelligence to fundamentally change the world for the better.
+Hi there and welcome to my personal website! My name is Shane and I believe in the potential for Artificial Intelligence to fundamentally change the world for the better. I am currently a Data Scientist at <a href='http://www.luno.com'>Luno</a>, a cryptocurrency exchange, where I use my expertise to lead the development of predictive models that help combat fraudulent activity on the platform.
 <br><br>
-I'm a Machine Learning Engineer by trade with demonstrated experience in leading Data Science projects and developing AI solutions for real-world problems. I have strong knowledge in Deep Learning, Data Engineering and Natural Language Processing, and a passion for discovering insights from structured and unstructured data.
-<br><br>
-My educational background includes a degree in Industrial Engineering from Stellenbosch University, as well as a PhD in Data Science. I am currently a Data Scientist at <a href='http://www.luno.com'>Luno</a>, a cryptocurrency exchange, where I use my expertise to lead the development of predictive models that help combat fraudulent activity on the platform.
+I'm a Machine Learning Engineer by trade with demonstrated experience in leading Data Science projects and developing AI solutions for real-world problems. My educational background includes a degree in Industrial Engineering from Stellenbosch University, as well as a PhD in Data Science. I have strong knowledge in Deep Learning, Data Engineering and Natural Language Processing, and a passion for discovering insights from structured and unstructured data.
 <br><br>
 Feel free to browse my thoughts and experiences on all topics related to Data Science and Machine Learning. Thank you for stopping by and I hope you enjoy your visit!
 </p>
