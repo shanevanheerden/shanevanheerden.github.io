@@ -3,7 +3,6 @@ layout: page
 permalink: /courses/
 title: 🎓 courses
 description: Here are some of the courses I've completed.
-datatable: true
 nav: true
 order: 3
 ---
