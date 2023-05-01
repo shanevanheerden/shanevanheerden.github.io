@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🧊 Speedcubing
+title: <p>🧊 Speedcubing</p>
 description: Another one of my passions is Speedcubing - the exhilarating sport of solving a Rubik's Cube as quickly as possible.
 img: assets/img/hobbies/speedcubing.gif
 importance: 1
