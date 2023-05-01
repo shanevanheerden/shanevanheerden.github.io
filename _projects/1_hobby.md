@@ -2,7 +2,7 @@
 layout: page
 title: Speedcubing
 description: speedcubing
-img: assets/img/12.jpg
+img: assets/img/hobbies/speedcubing.gif
 importance: 1
 page_type: hobby
 ---
