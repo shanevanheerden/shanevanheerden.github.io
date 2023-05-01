@@ -22,7 +22,7 @@ horizontal: false
   <div class="container">
     <div class="row row-cols-2">
     {%- for project in sorted_projects -%}
-      {%- if project.page_type = "hobby" -%}
+      {%- if project.page_type == "hobby" -%}
         {% include projects_horizontal.html %}
       {%- endif -%}
     {%- endfor %}
@@ -31,7 +31,7 @@ horizontal: false
   {%- else -%}
   <div class="grid">
     {%- for project in sorted_projects -%}
-      {%- if project.page_type = "hobby" -%}
+      {%- if project.page_type == "hobby" -%}
         {% include projects.html %}
       {%- endif -%}
     {%- endfor %}
@@ -47,7 +47,7 @@ horizontal: false
   <div class="container">
     <div class="row row-cols-2">
     {%- for project in sorted_projects -%}
-      {%- if project.page_type = "hobby" -%}
+      {%- if project.page_type == "hobby" -%}
         {% include projects_horizontal.html %}
       {%- endif -%}
     {%- endfor %}
@@ -56,7 +56,7 @@ horizontal: false
   {%- else -%}
   <div class="grid">
     {%- for project in sorted_projects -%}
-      {%- if project.page_type = "hobby" -%}
+      {%- if project.page_type == "hobby" -%}
         {% include projects.html %}
       {%- endif -%}
     {%- endfor %}
