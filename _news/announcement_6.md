@@ -20,7 +20,7 @@ Overall, I am thrilled to have the opportunity to work with such a talented and 
         {% include figure.html path="assets/img/news/sunore2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <iframe width="226" height="400" src="https://www.youtube.com/embed/d5-3AbDtlJw"></iframe>
+        <iframe width="1383" height="756" src="https://www.youtube.com/embed/d5-3AbDtlJw"></iframe>
     </div>
 </div>
 {% include figure.html path="assets/img/news/sunore3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
