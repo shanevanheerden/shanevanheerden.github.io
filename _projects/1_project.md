@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 1
+title: 🔍 Using Machine Learning to Classify Personally Identifiable Data Fields
 description: a project with a background image
 img: assets/img/blog/blog4.1.png
 importance: 1
