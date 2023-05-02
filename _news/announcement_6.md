@@ -15,11 +15,5 @@ My research will focus on understanding and reducing the risk of road accidents,
 
 Overall, I am thrilled to have the opportunity to work with such a talented and dedicated team at SUnORE and to be a part of a broader scientific community that is committed to pushing the boundaries of knowledge and innovation. I am confident that this experience will be a pivotal moment in my academic journey and will provide me with the skills and knowledge I need to make a positive impact in the world.
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/news/sunore2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/news/sunore3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-</div>
+{% include figure.html path="assets/img/news/sunore2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/news/sunore3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
