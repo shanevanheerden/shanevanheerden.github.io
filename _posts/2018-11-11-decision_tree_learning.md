@@ -5,6 +5,7 @@ description: Classic Machine Learning Algorithms Series
 date: 2018-11-11
 tags: ClassicAlgorithms
 giscus_comments: true
+thumbnail: assets/img/blog/blog6.1.png
 
 authors:
   - name: Shane van Heerden
