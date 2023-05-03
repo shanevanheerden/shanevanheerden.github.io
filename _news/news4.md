@@ -3,6 +3,7 @@ layout: post
 title: 🎖️ I was elected as the ORSSA Western Cape Chapter Chairperson
 date: 2016-11-28 00:00:00-0000
 inline: false
+related_posts: false
 ---
 
 I am delighted to announce that I have been elected as the Western Cape Chapter Chairperson of the [Operations Research Society of South Africa](https://www.orssa.org.za/) (ORSSA). As the new chairperson, I am excited to take on this responsibility and to promote the wider knowledge of OR techniques and practices in the Western Cape.
