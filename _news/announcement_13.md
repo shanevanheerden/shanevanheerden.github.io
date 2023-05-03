@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🎤 I presented my PhD in the 48th Annual ORSSA Conference
+title: 🎤 I presented my PhD at the 48th Annual ORSSA Conference in Cape Town
 date: 2019-09-08 00:00:00-0000
 inline: false
 ---
