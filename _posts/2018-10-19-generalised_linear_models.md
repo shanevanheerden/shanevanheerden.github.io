@@ -4,6 +4,7 @@ title: 🧮 Generalised Linear Models
 description: Classic Machine Learning Algorithms Series
 date: 2018-10-19
 tags: ClassicAlgorithms
+giscus_comments: true
 
 authors:
   - name: Shane van Heerden
