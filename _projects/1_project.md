@@ -1,6 +1,6 @@
 ---
 layout: page
-title: <h4><center>🔍 Using Machine Learning to Classify Personally Identifiable Data Fields</center></h4>
+title: <h4>🔍 Using Machine Learning to Classify Personally Identifiable Data Fields</h4>
 description: Part 1 - Rapid Machine Learning Development
 img: assets/img/blog/blog4.1.png
 importance: 1
