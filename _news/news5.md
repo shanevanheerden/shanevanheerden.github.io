@@ -3,6 +3,7 @@ layout: post
 title: 🏆 I was awarded the Best Decision Support Prize for my final-year project
 date: 2016-12-06 00:00:00-0000
 inline: false
+related_posts: false
 ---
 
 I am thrilled to announce that [my final-year project](https://sunore.co.za/wp-content/uploads/2017/02/SA_vanHeerden.pdf) has been awarded the Best Decision Support System prize at my graduation function. My project, titled *"The Placement of Stock Keeping Units in a Retail Distribution Centre"*, focused on the challenge of efficiently managing the storage and consolidation of finished goods within a distribution center (DC), with a particular emphasis on the retail problem of slotting.
