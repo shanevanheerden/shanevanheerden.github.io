@@ -3,6 +3,7 @@ layout: post
 title: 🥈 I came runner-up in ORSSA's Fourth Year National Student Competition
 date: 2017-09-12 00:00:00-0000
 inline: false
+related_posts: false
 ---
 
 <div class="row mt-3">
