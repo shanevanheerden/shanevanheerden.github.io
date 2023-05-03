@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 🥈 I came runner-up in ORSSA's Fourth Year National Student Competition
-date: 2017-09-12 00:00:00-0000
+title: 🎤 I presented my PhD in the 48th Annual ORSSA Conference
+date: 2019-09-08 00:00:00-0000
 inline: false
 ---
 
