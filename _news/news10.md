@@ -3,6 +3,7 @@ layout: post
 title: 🧠 I attended the Deep Learning Indaba in Stellenbosch, South Africa
 date: 2018-09-09 00:00:00-0000
 inline: false
+related_posts: false
 ---
 
 {% include figure.html path="assets/img/news/indaba1.jpg" class="img-fluid rounded z-depth-1" %}
