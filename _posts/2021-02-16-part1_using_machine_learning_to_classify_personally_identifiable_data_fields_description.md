@@ -5,6 +5,7 @@ description: Part 1 - Rapid Machine Learning Development
 date: 2021-02-16
 tags: CaseStudy
 giscus_comments: true
+thumbnail: assets/img/blog/blog4.1.png
 
 authors:
   - name: Shane van Heerden
