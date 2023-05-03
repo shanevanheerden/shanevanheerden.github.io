@@ -4,6 +4,7 @@ title: 📊 Word Embeddings
 description: Natural Language Processing Series
 date: 2020-10-12
 tags: NLP
+giscus_comments: true
 
 authors:
   - name: Shane van Heerden
