@@ -3,6 +3,7 @@ layout: post
 title: 🔑 I was invited to join the Golden Key International Honour Society
 date: 2014-08-13 00:00:00-0000
 inline: false
+related_posts: false
 ---
 
 I am thrilled to share that I have been invited to join the prestigious [Golden Key International Honours Society](https://goldenkey.org/)! As the world's largest honour society affiliated with over 400 universities across the globe, Golden Key is a mission-driven organisation that is committed to recognising and connecting individuals who are dedicated to achieving academic excellence and making a positive impact in their communities.
