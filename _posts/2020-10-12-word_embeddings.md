@@ -5,6 +5,7 @@ description: Natural Language Processing Series
 date: 2020-10-12
 tags: NLP
 giscus_comments: true
+thumbnail: assets/img/blog/blog2.1.png
 
 authors:
   - name: Shane van Heerden
