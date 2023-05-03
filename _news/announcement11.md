@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 🎤 I presented my masters at the 47th Annual ORSSA Conference in Pretoria
-date: 2018-09-16 00:00:00-0000
+date: 2018-09-17 00:00:00-0000
 inline: false
 ---
 
