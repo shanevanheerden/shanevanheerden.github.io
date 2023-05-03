@@ -3,6 +3,7 @@ layout: post
 title: 🇸🇪 I attended a month-long summer school at Jönköping University, Sweden
 date: 2018-06-04 00:00:00-0000
 inline: false
+related_posts: false
 ---
 
 Numerous times throughout my Industrial Engineering studies, I would ponder what it would be like to study abroad and get a new perspective of the knowledge I had gained throughout my studies. At the beginning of my second year of masters, I took a leap of faith and applied with one of my friends to a Swedish Summer School entitled *"Purchasing Logistics with a Global Perspective"* at [Jönköping University](https://ju.se/en), situated in the heart of Sweden. This university immediately caught my attention as they are an international university, and widely known in Sweden for their student entrepreneurship, strong research and successful collaborations with industry. Furthermore, it was summer in Sweden — the best (and only) time to visit this part of the world. After receiving news that both our applications were accepted to join the summer school, I was absolutely overjoyed!
