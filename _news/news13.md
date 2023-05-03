@@ -3,6 +3,7 @@ layout: post
 title: 🇮🇪 I presented at the 30th European Conference on Operational Research in Dublin, Ireland
 date: 2019-06-23 00:00:00-0000
 inline: false
+related_posts: false
 ---
 
 From June 23rd to 26th, 2019, I had the incredible opportunity to attend the <a href='https://euro2019.euro-online.org/'>30th European Conference on Operational Research</a> (EURO) at University College Dublin, Dublin Ireland. As a PhD researcher, I was excited to present my research findings and explore the latest ideas and advancements in the fields of Operations Research and Machine Learning.
