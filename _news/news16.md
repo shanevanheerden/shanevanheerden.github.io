@@ -3,6 +3,7 @@ layout: post
 title: 🛡️ I successfully defended my PhD dissertation at Stellenbosch University
 date: 2020-01-22 00:00:00-0000
 inline: false
+related_posts: false
 ---
 
 {% include figure.html path="assets/img/news/phd1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
