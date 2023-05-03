@@ -4,6 +4,7 @@ title: 🕰️ A Brief History of Natural Language Processing
 description: Natural Language Processing Series
 date: 2020-02-16
 tags: NLP
+giscus_comments: true
 
 authors:
   - name: Shane van Heerden
