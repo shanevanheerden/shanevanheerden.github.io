@@ -3,6 +3,7 @@ layout: post
 title: 🏫 I started studying a BEng Industrial Engineering degree at Stellenbosch University
 date: 2013-02-04 00:00:00-0000
 inline: false
+related_posts: false
 ---
 
 I am excited to be embarking on a new academic chapter in my life as I begin my Bachelor of Engineering in [Industrial Engineering](https://en.wikipedia.org/wiki/Industrial_engineering) at [Stellenbosch University](http://www.sun.ac.za/english). As someone who has always been fascinated by how things work and how they can be improved, I am incredibly excited to dive into this new academic chapter.
