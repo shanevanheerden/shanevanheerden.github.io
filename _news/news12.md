@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 ---
 
-I recently had the opportunity to present my Masters at the 47th Annual Conference of the *Operations Research Society of South Africa* (ORSSA), which took place at the CSIR International Conference Centre in Pretoria. The conference was a highlight on the ORSSA calendar and brought together a diverse range of professionals from the fields of machine learning, OR in energy and healthcare, and behavioural modelling and data analysis.
+I recently had the opportunity to present my Masters at the 47th Annual Conference of the *Operations Research Society of South Africa* (ORSSA), which took place at the CSIR International Conference Centre in Pretoria (see programme [here](https://www.orssa.org.za/_files/ugd/568002_9b994f1dbca247cba2307b26d72cb25b.pdf)). The conference was a highlight on the ORSSA calendar and brought together a diverse range of professionals from the fields of machine learning, OR in energy and healthcare, and behavioural modelling and data analysis.
 
 During my presentation, I introduced a model framework that can be used to quantify the risk experienced by road users in different driving scenarios. I explained how this framework, which incorporates techniques from the realm of machine learning, can be used to analyze various road accident factors that contribute to higher levels of risk. This platform has the potential to be incredibly flexible and could prove invaluable in improving road safety across the world.
 
