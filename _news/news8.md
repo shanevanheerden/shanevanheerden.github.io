@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 ---
 
-I am excited to share that I recently participated in the ORSSA Fourth-year National Student Competition and came in as the runner-up! The competition is organized annually by the *Operations Research Society of South Africa* (ORSSA) to encourage the use of Operations Research (OR) in higher education and to market ORSSA among students and staff at South African universities.
+I am excited to share that I recently participated in the ORSSA Fourth-year National Student Competition and came in as the runner-up! The competition is organized annually by the *Operations Research Society of South Africa* (ORSSA) to encourage the use of *Operations Research* (OR) in higher education and to market ORSSA among students and staff at South African universities.
 
 I presented my final year project, which focused on solving the retail problem of slotting, and developed a mathematical framework for evaluating the effectiveness of a given stock setup in a *distribution center* (DC) section. My project aimed to identify multiple stock setups that achieve acceptable trade-offs between minimizing the expected total distance travelled by stock pickers during order consolidation and the resulting level of congestion they experience between aisle racking.
 
