@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 ---
 
-I had the pleasure of presenting my master's research at the 47th Annual ORSSA Conference, held at the Champagne Sports Resort in the beautiful Drakensberg Mountains. The conference was a gathering of scholars and enthusiasts of operations research, all eager to share their knowledge and insights on the latest developments in the field.
+I had the pleasure of presenting my master's research at the 47th Annual ORSSA Conference, held at the Champagne Sports Resort in the beautiful Drakensberg Mountains (see programme [here](https://www.orssa.org.za/_files/ugd/568002_9b57b7647e874b8fa1f6c6666cdc9847.pdf)). The conference was a gathering of scholars and enthusiasts of operations research, all eager to share their knowledge and insights on the latest developments in the field.
 
 The keynote speeches from Dr. Susara van den Heever and Prof. Riaan de Jongh were especially inspiring, as they discussed the future of *Operations Research* (OR) in the context of new developments in Big Data and Data Sciences. It was a privilege to hear from John Chaves from IBM, who shared his expertise on creating optimization applications through the use of IBM’s Decision Optimization Center.
 
