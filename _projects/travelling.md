@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 🌍 travelling
-description: I love travelling the all corners of the world with my wife.
+description: I love travelling to all corners of the world with my wife.
 img: assets/img/hobbies/travelling.jpg
 importance: 1
 page_type: hobby
