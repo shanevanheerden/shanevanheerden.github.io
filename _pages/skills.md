@@ -34,13 +34,18 @@ order: 5
   Here is a list of my accreditations.
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-      {% include figure.html path="assets/img/skills/lakehouse_fundamentals.png" class="img-fluid rounded z-depth-1" %}
+      <a href="https://credentials.databricks.com/55fb7987-70cc-4296-802c-58a4924c76c2#gs.yqniy9" target="_blank">
+        <img src="assets/img/skills/lakehouse_fundamentals.png">
+      </a>
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      {% include figure.html path="assets/img/skills/1.png" class="img-fluid rounded z-depth-1" %}
+      
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      {% include figure.html path="assets/img/skills/1.png" class="img-fluid rounded z-depth-1" %}
+      
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+      
     </div>
 </div>
 <h2 class="category">courses</h2>
