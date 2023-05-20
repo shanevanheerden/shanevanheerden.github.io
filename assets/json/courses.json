@@ -5,7 +5,7 @@
         "date": "31 July 2017",
         "hours": 30,
         "skills": "Spatial Analysis, Data Analysis, Data Visualization (DataViz), Software",
-        "credential": "<a href=\"https://www.coursera.org/account/accomplishments/verify/5ATT49R8HFMD\">link text</a>",
-        "certificate": "{% include figure.html path=\"assets/img/blog/blog5.1.jpg\" class=\"img-fluid rounded z-depth-1\" zoomable=true %}"
+        "credential": "<a href=\"https://www.coursera.org/account/accomplishments/verify/5ATT49R8HFMD\">link</a>",
+        "certificate": "<a href=\"/assets/pdf/fundamentals_of_gis.pdf\">pdf</a>"
     }
 ]
