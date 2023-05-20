@@ -35,7 +35,7 @@ order: 5
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
       <a href="https://credentials.databricks.com/55fb7987-70cc-4296-802c-58a4924c76c2#gs.yqniy9" target="_blank">
-        <img src="assets/img/skills/lakehouse_fundamentals.png">
+        <img src="/assets/img/skills/lakehouse_fundamentals.png">
       </a>
     </div>
     <div class="col-sm mt-3 mt-md-0">
