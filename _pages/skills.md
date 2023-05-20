@@ -2,12 +2,16 @@
 layout: page
 permalink: /courses/
 title: 🎓 courses
-description: Here are some of the courses/certifications I've completed.
+description: Here are some of the tools I'm proficient in, as well as the accreditations and courses I've completed.
 nav: true
 order: 5
 ---
 
-<table
+<div class="projects">
+<h2 class="category">tools</h2>
+<h2 class="category">accreditations</h2>
+<h2 class="category">courses</h2>
+  <table
   data-click-to-select="false"
   data-height="780"
   data-pagination="true"
@@ -26,3 +30,4 @@ order: 5
     </tr>
   </thead>
 </table>
+</div>
