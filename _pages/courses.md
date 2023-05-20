@@ -4,7 +4,7 @@ permalink: /courses/
 title: 🎓 courses
 description: Here are some of the courses I've completed.
 nav: true
-order: 3
+order: 5
 ---
 
 <table
