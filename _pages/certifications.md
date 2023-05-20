@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /certifications/
-title: 🎓 certifications
-description: Here are some of the certifications I've completed.
+permalink: /courses/
+title: 🎓 courses
+description: Here are some of the courses I've completed.
 nav: true
 order: 3
 ---
@@ -13,7 +13,7 @@ order: 3
   data-pagination="true"
   data-search="true"
   data-toggle="table"
-  data-url="{{ '/assets/json/certifications.json' | relative_url }}">
+  data-url="{{ '/assets/json/courses.json' | relative_url }}">
   <thead>
     <tr>
       <th data-field="name" data-halign="left" data-align="left" data-sortable="true">Course Name</th>
