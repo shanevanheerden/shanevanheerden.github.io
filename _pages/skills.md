@@ -17,6 +17,7 @@ order: 5
       <img src="/assets/img/skills/docker.png">
       <img src="/assets/img/skills/neo4j.png">
       <img src="/assets/img/skills/postgressql.png">
+      <img src="/assets/img/skills/streamlit.png">
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <img src="/assets/img/skills/databricks.png">
