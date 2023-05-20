@@ -2,7 +2,7 @@
 layout: page
 permalink: /courses/
 title: 🎓 courses
-description: Here are some of the courses I've completed.
+description: Here are some of the courses/certifications I've completed.
 nav: true
 order: 5
 ---
