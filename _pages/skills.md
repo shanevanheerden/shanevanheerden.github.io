@@ -12,35 +12,35 @@ order: 5
   Here are some of the tools I'm proficient in.
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-      <img src="/assets/img/skills/python.png">
-      <img src="/assets/img/skills/sklearn.png">
-      <img src="/assets/img/skills/docker.png">
-      <img src="/assets/img/skills/neo4j.png">
-      <img src="/assets/img/skills/postgressql.png">
-      <img src="/assets/img/skills/streamlit.png">
+      <img src="/assets/img/skills/python.png" width="150">
+      <img src="/assets/img/skills/sklearn.png" width="150">
+      <img src="/assets/img/skills/docker.png" width="150">
+      <img src="/assets/img/skills/neo4j.png" width="150">
+      <img src="/assets/img/skills/postgressql.png" width="150">
+      <img src="/assets/img/skills/streamlit.png" width="150">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <img src="/assets/img/skills/databricks.png">
-      <img src="/assets/img/skills/tensorflow.png">
-      <img src="/assets/img/skills/git.png">
-      <img src="/assets/img/skills/spacy.png">
-      <img src="/assets/img/skills/latex.png">
-      <img src="/assets/img/skills/looker.png">
+      <img src="/assets/img/skills/databricks.png" width="150">
+      <img src="/assets/img/skills/tensorflow.png" width="150">
+      <img src="/assets/img/skills/git.png" width="150">
+      <img src="/assets/img/skills/spacy.png" width="150">
+      <img src="/assets/img/skills/latex.png" width="150">
+      <img src="/assets/img/skills/looker.png" width="150">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <img src="/assets/img/skills/pandas.png">
-      <img src="/assets/img/skills/pytorch.png">
-      <img src="/assets/img/skills/plotly.png">
-      <img src="/assets/img/skills/shap.png">
-      <img src="/assets/img/skills/r.png">
-      <img src="/assets/img/skills/gitlab.png">
+      <img src="/assets/img/skills/pandas.png" width="150">
+      <img src="/assets/img/skills/pytorch.png" width="150">
+      <img src="/assets/img/skills/plotly.png" width="150">
+      <img src="/assets/img/skills/shap.png" width="150">
+      <img src="/assets/img/skills/r.png" width="150">
+      <img src="/assets/img/skills/gitlab.png" width="150">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <img src="/assets/img/skills/numpy.png">
-      <img src="/assets/img/skills/transformers.png">
-      <img src="/assets/img/skills/spark.png">
-      <img src="/assets/img/skills/mlflow.png">
-      <img src="/assets/img/skills/flask.png">
+      <img src="/assets/img/skills/numpy.png" width="150">
+      <img src="/assets/img/skills/transformers.png" width="150">
+      <img src="/assets/img/skills/spark.png" width="150">
+      <img src="/assets/img/skills/mlflow.png" width="150">
+      <img src="/assets/img/skills/flask.png" width="150">
     </div>
   </div>
 <h2 class="category">accreditations</h2>
