@@ -9,7 +9,7 @@ order: 3
 
 <table
   data-click-to-select="false"
-  data-height="770"
+  data-height="780"
   data-pagination="true"
   data-search="true"
   data-toggle="table"
