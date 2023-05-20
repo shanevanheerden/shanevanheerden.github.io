@@ -16,7 +16,7 @@ order: 5
       <img src="/assets/img/skills/sklearn.png" width="150">
       <img src="/assets/img/skills/docker.png" width="150">
       <img src="/assets/img/skills/neo4j.png" width="150">
-      <img src="/assets/img/skills/postgressql.png" width="150">
+      <img src="/assets/img/skills/postgressql.png" width="100">
       <img src="/assets/img/skills/streamlit.png" width="150">
     </div>
     <div class="col-sm mt-3 mt-md-0">
