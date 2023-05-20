@@ -27,6 +27,7 @@ order: 5
       <a href="/assets/img/skills/pandas.png" target="_blank">
       <a href="/assets/img/skills/pytorch.png" target="_blank">
       <a href="/assets/img/skills/plotly.png" target="_blank">
+      <a href="/assets/img/skills/shap.png" target="_blank">
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <a href="/assets/img/skills/mlflow.png" target="_blank">
