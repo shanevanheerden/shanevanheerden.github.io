@@ -60,6 +60,8 @@ order: 5
       <img src="/assets/img/skills/mlflow.png" width="150">
       <br>
       <img src="/assets/img/skills/flask.png" width="150">
+      <br>
+      <img src="/assets/img/skills/selenium.png" width="150">
     </div>
   </div>
 <h2 class="category">accreditations</h2>
