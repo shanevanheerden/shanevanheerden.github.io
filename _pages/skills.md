@@ -12,30 +12,30 @@ order: 5
   Here are some of the tools I'm proficient in.
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-      <a href="/assets/img/skills/python.png" target="_blank">
-      <a href="/assets/img/skills/sklearn.png" target="_blank">
-      <a href="/assets/img/skills/docker.png" target="_blank">
-      <a href="/assets/img/skills/neo4j.png" target="_blank">
+      <img src="/assets/img/skills/python.png">
+      <img src="/assets/img/skills/sklearn.png">
+      <img src="/assets/img/skills/docker.png">
+      <img src="/assets/img/skills/neo4j.png">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <a href="/assets/img/skills/databricks.png" target="_blank">
-      <a href="/assets/img/skills/tensorflow.png" target="_blank">
-      <a href="/assets/img/skills/git.png" target="_blank">
-      <a href="/assets/img/skills/spacy.png" target="_blank">
+      <img src="/assets/img/skills/databricks.png">
+      <img src="/assets/img/skills/tensorflow.png">
+      <img src="/assets/img/skills/git.png">
+      <img src="/assets/img/skills/spacy.png">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <a href="/assets/img/skills/pandas.png" target="_blank">
-      <a href="/assets/img/skills/pytorch.png" target="_blank">
-      <a href="/assets/img/skills/plotly.png" target="_blank">
-      <a href="/assets/img/skills/shap.png" target="_blank">
+      <img src="/assets/img/skills/pandas.png">
+      <img src="/assets/img/skills/pytorch.png">
+      <img src="/assets/img/skills/plotly.png">
+      <img src="/assets/img/skills/shap.png">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <a href="/assets/img/skills/numpy.png" target="_blank">
-      <a href="/assets/img/skills/transformers.png" target="_blank">
-      <a href="/assets/img/skills/spark.png" target="_blank">
-      <a href="/assets/img/skills/mlflow.png" target="_blank">
+      <img src="/assets/img/skills/numpy.png">
+      <img src="/assets/img/skills/transformers.png">
+      <img src="/assets/img/skills/spark.png">
+      <img src="/assets/img/skills/mlflow.png">
     </div>
-</div>
+  </div>
 <h2 class="category">accreditations</h2>
   Here is a list of my accreditations.
   <div class="row mt-3">
