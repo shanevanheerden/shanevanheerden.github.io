@@ -6,6 +6,6 @@
         "hours": 30,
         "skills": "Spatial Analysis, Data Analysis, Data Visualization (DataViz), Software",
         "credential": "<a href=\"https://www.coursera.org/account/accomplishments/verify/5ATT49R8HFMD\">link text</a>",
-        "certificate": "<img src=\"/assets/img/shane.jpg\">"
+        "certificate": "{% include figure.html path=\"assets/img/blog/blog5.1.jpg\" class=\"img-fluid rounded z-depth-1\" zoomable=true %}"
     }
 ]
