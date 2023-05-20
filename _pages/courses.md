@@ -9,11 +9,11 @@ order: 3
 
 <table
   data-click-to-select="true"
-  data-height="460"
+  data-height="900"
   data-pagination="true"
   data-search="true"
   data-toggle="table"
-  data-url="{{ '/assets/json/table_data.json' | relative_url }}">
+  data-url="{{ '/assets/json/courses.json' | relative_url }}">
   <thead>
     <tr>
       <th data-checkbox="true"></th>
