@@ -25,6 +25,7 @@ order: 5
       <img src="/assets/img/skills/git.png">
       <img src="/assets/img/skills/spacy.png">
       <img src="/assets/img/skills/latex.png">
+      <img src="/assets/img/skills/looker.png">
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <img src="/assets/img/skills/pandas.png">
@@ -32,6 +33,7 @@ order: 5
       <img src="/assets/img/skills/plotly.png">
       <img src="/assets/img/skills/shap.png">
       <img src="/assets/img/skills/r.png">
+      <img src="/assets/img/skills/gitlab.png">
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <img src="/assets/img/skills/numpy.png">
