@@ -13,7 +13,7 @@
         "platform": "Udemy",
         "date": "8 May 2021",
         "hours": "10",
-        "skills": "",
+        "skills": "Algorithmic trading, Backtesting, Python",
         "credential": "<a href=\"https://www.udemy.com/certificate/UC-3273eaea-bc15-4603-be42-b719634dce8a/\" target=\"_blank\">link</a>",
         "certificate": "<a href=\"/assets/pdf/algorithmic_trading.pdf\" target=\"_blank\">pdf</a>"
     },
@@ -22,7 +22,7 @@
         "platform": "Coursera",
         "date": "31 July 2017",
         "hours": "~30",
-        "skills": "Spatial Analysis, Data Analysis, Data Visualization, Software",
+        "skills": "Spatial analysis, Data analysis, Data visualization, ArcGIS (software)",
         "credential": "<a href=\"https://www.coursera.org/account/accomplishments/verify/5ATT49R8HFMD\" target=\"_blank\">link</a>",
         "certificate": "<a href=\"/assets/pdf/fundamentals_of_gis.pdf\" target=\"_blank\">pdf</a>"
     }
