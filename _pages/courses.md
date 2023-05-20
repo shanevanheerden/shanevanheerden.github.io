@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /courses/
-title: 🎓 courses
+permalink: /certifications/
+title: 🎓 certifications
 description: Here are some of the courses I've completed.
 nav: true
 order: 3
@@ -9,7 +9,7 @@ order: 3
 
 <table
   data-click-to-select="true"
-  data-height="900"
+  data-height="770"
   data-pagination="true"
   data-search="true"
   data-toggle="table"
