@@ -19,7 +19,7 @@ order: 5
       <th data-field="name" data-halign="left" data-align="left" data-sortable="true">Course Name</th>
       <th data-field="platform" data-halign="center" data-align="center" data-sortable="true">Platform</th>
       <th data-field="date" data-halign="center" data-align="center" data-sortable="true">Completed Date</th>
-      <th data-field="hours" data-halign="right" data-align="right" data-sortable="true">Hours</th>
+      <th data-field="hours" data-halign="center" data-align="center" data-sortable="true">Hours</th>
       <th data-field="skills" data-halign="left" data-align="left" data-sortable="true">Skills Gained</th>
       <th data-field="credential" data-halign="center" data-align="center" data-sortable="true">Credential</th>
       <th data-field="certificate" data-halign="center" data-align="center" data-sortable="true">Certificate</th>
