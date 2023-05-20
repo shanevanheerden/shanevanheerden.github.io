@@ -37,6 +37,7 @@ order: 5
       <img src="/assets/img/skills/transformers.png">
       <img src="/assets/img/skills/spark.png">
       <img src="/assets/img/skills/mlflow.png">
+      <img src="/assets/img/skills/flask.png">
     </div>
   </div>
 <h2 class="category">accreditations</h2>
