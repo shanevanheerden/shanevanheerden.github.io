@@ -13,25 +13,25 @@ order: 5
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
       <a href="/assets/img/skills/python.png" target="_blank">
-      <a href="assets/img/skills/sklearn.png" target="_blank">
-      <a href="assets/img/skills/docker.png" target="_blank">
-      <a href="assets/img/skills/neo4j.png" target="_blank">
+      <a href="/assets/img/skills/sklearn.png" target="_blank">
+      <a href="/assets/img/skills/docker.png" target="_blank">
+      <a href="/assets/img/skills/neo4j.png" target="_blank">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <a href="assets/img/skills/databricks.png" target="_blank">
-      <a href="assets/img/skills/tensorflow.png" target="_blank">
-      <a href="assets/img/skills/git.png" target="_blank">
-      <a href="assets/img/skills/spacy.png" target="_blank">
+      <a href="/assets/img/skills/databricks.png" target="_blank">
+      <a href="/assets/img/skills/tensorflow.png" target="_blank">
+      <a href="/assets/img/skills/git.png" target="_blank">
+      <a href="/assets/img/skills/spacy.png" target="_blank">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <a href="assets/img/skills/pandas.png" target="_blank">
-      <a href="assets/img/skills/pytorch.png" target="_blank">
-      <a href="assets/img/skills/plotly.png" target="_blank">
+      <a href="/assets/img/skills/pandas.png" target="_blank">
+      <a href="/assets/img/skills/pytorch.png" target="_blank">
+      <a href="/assets/img/skills/plotly.png" target="_blank">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <a href="assets/img/skills/mlflow.png" target="_blank">
-      <a href="assets/img/skills/transformers.png" target="_blank">
-      <a href="assets/img/skills/spark.png" target="_blank">
+      <a href="/assets/img/skills/mlflow.png" target="_blank">
+      <a href="/assets/img/skills/transformers.png" target="_blank">
+      <a href="/assets/img/skills/spark.png" target="_blank">
     </div>
 </div>
 <h2 class="category">accreditations</h2>
