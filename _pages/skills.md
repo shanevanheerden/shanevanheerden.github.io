@@ -7,10 +7,6 @@ nav: true
 order: 5
 ---
 
-img{
-    margin:10px;
-}
-
 <div class="projects">
 <h2 class="category">tools</h2>
   Here are some of the tools I'm proficient in.
@@ -28,7 +24,7 @@ img{
       <img src="/assets/img/skills/tensorflow.png" width="150">
       <img src="/assets/img/skills/git.png" width="150">
       <img src="/assets/img/skills/spacy.png" width="150">
-      <img src="/assets/img/skills/shap.png" height="300">
+      <img src="/assets/img/skills/shap.png" width="50">
       <img src="/assets/img/skills/looker.png" width="150">
     </div>
     <div class="col-sm mt-3 mt-md-0">
@@ -36,7 +32,7 @@ img{
       <img src="/assets/img/skills/pytorch.png" width="150">
       <img src="/assets/img/skills/plotly.png" width="150">
       <img src="/assets/img/skills/latex.png" width="150">
-      <img src="/assets/img/skills/r.png" height="300">
+      <img src="/assets/img/skills/r.png" width="50">
       <img src="/assets/img/skills/gitlab.png" width="150">
     </div>
     <div class="col-sm mt-3 mt-md-0">
