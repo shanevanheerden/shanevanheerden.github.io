@@ -2,15 +2,18 @@
 layout: page
 permalink: /skills/
 title: 🎓 skills
-description: Here are some of the tools I'm proficient in, as well as the accreditations and courses I've completed.
+description: Here are some of my skills.
 nav: true
 order: 5
 ---
 
 <div class="projects">
 <h2 class="category">tools</h2>
+  Here are some of the tools I'm proficient in.
 <h2 class="category">accreditations</h2>
+  Here is a list of my accreditations.
 <h2 class="category">courses</h2>
+  Here are some of the courses I've completed.
   <table
   data-click-to-select="false"
   data-height="780"
