@@ -10,8 +10,39 @@ order: 5
 <div class="projects">
 <h2 class="category">tools</h2>
   Here are some of the tools I'm proficient in.
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+      {% include figure.html path="assets/img/skills/python.png" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/skills/sklearn.png" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/skills/docker.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+      {% include figure.html path="assets/img/skills/databricks.png" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/skills/tensorflow.png" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/skills/git.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+      {% include figure.html path="assets/img/skills/pandas.png" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/skills/pytorch.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+      {% include figure.html path="assets/img/skills/mlflow.png" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/skills/transformers.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <h2 class="category">accreditations</h2>
   Here is a list of my accreditations.
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+      {% include figure.html path="assets/img/skills/lakehouse_fundamentals.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+      {% include figure.html path="assets/img/skills/1.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+      {% include figure.html path="assets/img/skills/1.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <h2 class="category">courses</h2>
   Here are some of the courses I've completed.
   <table
