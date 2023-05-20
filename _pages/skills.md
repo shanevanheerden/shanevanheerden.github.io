@@ -33,7 +33,7 @@ order: 5
       <br>
       <img src="/assets/img/skills/spacy.png" width="150">
       <br>
-      <img src="/assets/img/skills/latex.png" width="150">
+      <img src="/assets/img/skills/shap.png" height="300">
       <br>
       <img src="/assets/img/skills/looker.png" width="150">
     </div>
@@ -44,9 +44,9 @@ order: 5
       <br>
       <img src="/assets/img/skills/plotly.png" width="150">
       <br>
-      <img src="/assets/img/skills/shap.png" width="150">
+      <img src="/assets/img/skills/latex.png" width="150">
       <br>
-      <img src="/assets/img/skills/r.png" width="150">
+      <img src="/assets/img/skills/r.png" height="300">
       <br>
       <img src="/assets/img/skills/gitlab.png" width="150">
     </div>
