@@ -16,18 +16,21 @@ order: 5
       <img src="/assets/img/skills/sklearn.png">
       <img src="/assets/img/skills/docker.png">
       <img src="/assets/img/skills/neo4j.png">
+      <img src="/assets/img/skills/postgressql.png">
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <img src="/assets/img/skills/databricks.png">
       <img src="/assets/img/skills/tensorflow.png">
       <img src="/assets/img/skills/git.png">
       <img src="/assets/img/skills/spacy.png">
+      <img src="/assets/img/skills/latex.png">
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <img src="/assets/img/skills/pandas.png">
       <img src="/assets/img/skills/pytorch.png">
       <img src="/assets/img/skills/plotly.png">
       <img src="/assets/img/skills/shap.png">
+      <img src="/assets/img/skills/r.png">
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <img src="/assets/img/skills/numpy.png">
