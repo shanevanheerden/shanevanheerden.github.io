@@ -12,22 +12,26 @@ order: 5
   Here are some of the tools I'm proficient in.
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-      {% include figure.html path="assets/img/skills/python.png" class="img-fluid rounded z-depth-1" %}
-      {% include figure.html path="assets/img/skills/sklearn.png" class="img-fluid rounded z-depth-1" %}
-      {% include figure.html path="assets/img/skills/docker.png" class="img-fluid rounded z-depth-1" %}
+      <a href="/assets/img/skills/python.png" target="_blank">
+      <a href="assets/img/skills/sklearn.png" target="_blank">
+      <a href="assets/img/skills/docker.png" target="_blank">
+      <a href="assets/img/skills/neo4j.png" target="_blank">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      {% include figure.html path="assets/img/skills/databricks.png" class="img-fluid rounded z-depth-1" %}
-      {% include figure.html path="assets/img/skills/tensorflow.png" class="img-fluid rounded z-depth-1" %}
-      {% include figure.html path="assets/img/skills/git.png" class="img-fluid rounded z-depth-1" %}
+      <a href="assets/img/skills/databricks.png" target="_blank">
+      <a href="assets/img/skills/tensorflow.png" target="_blank">
+      <a href="assets/img/skills/git.png" target="_blank">
+      <a href="assets/img/skills/spacy.png" target="_blank">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      {% include figure.html path="assets/img/skills/pandas.png" class="img-fluid rounded z-depth-1" %}
-      {% include figure.html path="assets/img/skills/pytorch.png" class="img-fluid rounded z-depth-1" %}
+      <a href="assets/img/skills/pandas.png" target="_blank">
+      <a href="assets/img/skills/pytorch.png" target="_blank">
+      <a href="assets/img/skills/plotly.png" target="_blank">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      {% include figure.html path="assets/img/skills/mlflow.png" class="img-fluid rounded z-depth-1" %}
-      {% include figure.html path="assets/img/skills/transformers.png" class="img-fluid rounded z-depth-1" %}
+      <a href="assets/img/skills/mlflow.png" target="_blank">
+      <a href="assets/img/skills/transformers.png" target="_blank">
+      <a href="assets/img/skills/spark.png" target="_blank">
     </div>
 </div>
 <h2 class="category">accreditations</h2>
