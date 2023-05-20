@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /courses/
-title: 🎓 courses
+permalink: /skills/
+title: 🎓 skills
 description: Here are some of the tools I'm proficient in, as well as the accreditations and courses I've completed.
 nav: true
 order: 5
