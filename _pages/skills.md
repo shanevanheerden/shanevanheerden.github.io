@@ -38,6 +38,7 @@ order: 5
         <img src="/assets/img/skills/plotly.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/latex.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/r.png" width="100" style="vertical-align:middle;margin:20px 0px">
+        <img src="/assets/img/skills/jupyter.png" width="100" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/gitlab.png" width="150" style="vertical-align:middle;margin:20px 0px">
       </center>
     </div>
@@ -47,6 +48,7 @@ order: 5
         <img src="/assets/img/skills/transformers.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/spark.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/looker.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        <img src="/assets/img/skills/matplotlib.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/flask.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/selenium.png" width="150" style="vertical-align:middle;margin:20px 0px">
       </center>
