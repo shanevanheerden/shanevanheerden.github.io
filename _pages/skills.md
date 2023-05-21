@@ -27,6 +27,7 @@ order: 5
         <img src="/assets/img/skills/tensorflow.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/git.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/spacy.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        <img src="/assets/img/skills/mlflow.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/shap.png" width="100" style="vertical-align:middle;margin:20px 0px">
       </center>
     </div>
