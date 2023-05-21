@@ -18,7 +18,7 @@ order: 5
         <img src="/assets/img/skills/docker.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/neo4j.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/postgressql.png" width="100" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/streamlit.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        <img src="/assets/img/skills/streamlit.png" width="150" style="vertical-align:middle;margin:0px 0px">
       </center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
@@ -28,7 +28,7 @@ order: 5
         <img src="/assets/img/skills/git.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/spacy.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/mlflow.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/shap.png" width="100" style="vertical-align:middle;margin:20px 0px">
+        <img src="/assets/img/skills/shap.png" width="100" style="vertical-align:middle;margin:0px 0px">
       </center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
@@ -39,7 +39,7 @@ order: 5
         <img src="/assets/img/skills/jupyter.png" width="100" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/latex.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/r.png" width="100" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/gitlab.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        <img src="/assets/img/skills/gitlab.png" width="150" style="vertical-align:middle;margin:0px 0px">
       </center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
@@ -50,7 +50,7 @@ order: 5
         <img src="/assets/img/skills/looker.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/matplotlib.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/flask.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/selenium.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        <img src="/assets/img/skills/selenium.png" width="150" style="vertical-align:middle;margin:0px 0px">
       </center>
     </div>
   </div>
