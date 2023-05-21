@@ -50,6 +50,7 @@ order: 5
         <img src="/assets/img/skills/looker.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/matplotlib.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/flask.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        <img src="/assets/img/skills/greatexpectations.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/selenium.png" width="150" style="vertical-align:middle;margin:0px 0px">
       </center>
     </div>
