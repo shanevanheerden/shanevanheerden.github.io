@@ -36,9 +36,9 @@ order: 5
         <img src="/assets/img/skills/pandas.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/pytorch.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/plotly.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        <img src="/assets/img/skills/jupyter.png" width="100" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/latex.png" width="150" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/r.png" width="100" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/jupyter.png" width="100" style="vertical-align:middle;margin:20px 0px">
         <img src="/assets/img/skills/gitlab.png" width="150" style="vertical-align:middle;margin:20px 0px">
       </center>
     </div>
