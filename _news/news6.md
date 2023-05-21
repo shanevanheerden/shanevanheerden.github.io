@@ -15,6 +15,7 @@ Looking back on my time at Stellenbosch University, I am grateful for the experi
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/news/graduation3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include video.html path="assets/img/news/graduation.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/news/graduation2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
