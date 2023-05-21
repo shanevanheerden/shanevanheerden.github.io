@@ -13,45 +13,99 @@ order: 5
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
       <center>
-        <img src="/assets/img/skills/python.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/sklearn.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/docker.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/neo4j.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/postgressql.png" width="100" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/streamlit.png" width="150" style="vertical-align:middle;margin:0px 0px">
+        <a href="https://www.python.org/" target="_blank">
+          <img src="/assets/img/skills/python.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://scikit-learn.org/" target="_blank">
+          <img src="/assets/img/skills/sklearn.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://www.docker.com/" target="_blank">
+          <img src="/assets/img/skills/docker.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://neo4j.com/" target="_blank">
+          <img src="/assets/img/skills/neo4j.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://www.postgresql.org/" target="_blank">
+          <img src="/assets/img/skills/postgressql.png" width="100" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://streamlit.io/" target="_blank">
+          <img src="/assets/img/skills/streamlit.png" width="150" style="vertical-align:middle;margin:0px 0px">
+        </a>
       </center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <center>
-        <img src="/assets/img/skills/databricks.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/tensorflow.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/git.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/spacy.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/mlflow.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/shap.png" width="100" style="vertical-align:middle;margin:0px 0px">
+        <a href="https://www.databricks.com/" target="_blank">
+          <img src="/assets/img/skills/databricks.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://www.tensorflow.org/" target="_blank">
+          <img src="/assets/img/skills/tensorflow.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://git-scm.com/" target="_blank">
+          <img src="/assets/img/skills/git.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://spacy.io/" target="_blank">
+          <img src="/assets/img/skills/spacy.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://mlflow.org/" target="_blank">
+          <img src="/assets/img/skills/mlflow.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://shap.readthedocs.io/en/latest/index.html" target="_blank">
+          <img src="/assets/img/skills/shap.png" width="100" style="vertical-align:middle;margin:0px 0px">
+        </a>
       </center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <center>
-        <img src="/assets/img/skills/pandas.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/pytorch.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/plotly.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/jupyter.png" width="100" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/latex.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/r.png" width="100" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/gitlab.png" width="150" style="vertical-align:middle;margin:0px 0px">
+        <a href="https://pandas.pydata.org/" target="_blank">
+          <img src="/assets/img/skills/pandas.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://pytorch.org/" target="_blank">
+          <img src="/assets/img/skills/pytorch.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://plotly.com/" target="_blank">
+          <img src="/assets/img/skills/plotly.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://jupyter.org/" target="_blank">
+          <img src="/assets/img/skills/jupyter.png" width="100" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://www.latex-project.org/" target="_blank">
+          <img src="/assets/img/skills/latex.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://www.r-project.org/" target="_blank">
+          <img src="/assets/img/skills/r.png" width="100" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://about.gitlab.com/" target="_blank">
+          <img src="/assets/img/skills/gitlab.png" width="150" style="vertical-align:middle;margin:0px 0px">
+        </a>
       </center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <center>
-        <img src="/assets/img/skills/numpy.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/transformers.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/spark.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/looker.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/matplotlib.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/flask.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/greatexpectations.png" width="150" style="vertical-align:middle;margin:20px 0px">
-        <img src="/assets/img/skills/selenium.png" width="150" style="vertical-align:middle;margin:0px 0px">
+        <a href="https://numpy.org/" target="_blank">
+          <img src="/assets/img/skills/numpy.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://huggingface.co/docs/transformers/index" target="_blank">
+          <img src="/assets/img/skills/transformers.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://spark.apache.org/" target="_blank">
+          <img src="/assets/img/skills/spark.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://www.looker.com/" target="_blank">
+          <img src="/assets/img/skills/looker.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://matplotlib.org/" target="_blank">
+          <img src="/assets/img/skills/matplotlib.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://flask.palletsprojects.com/" target="_blank">
+          <img src="/assets/img/skills/flask.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://greatexpectations.io/" target="_blank">
+          <img src="/assets/img/skills/greatexpectations.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
+        <a href="https://www.selenium.dev/" target="_blank">
+          <img src="/assets/img/skills/selenium.png" width="150" style="vertical-align:middle;margin:0px 0px">
+        </a>
       </center>
     </div>
   </div>
