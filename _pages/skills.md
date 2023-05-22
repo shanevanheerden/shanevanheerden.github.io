@@ -2,7 +2,7 @@
 layout: page
 permalink: /skills/
 title: 🎓 skills
-description: Here are some of my skills.
+description: Here are some of my skills I've gained over the years.
 nav: true
 order: 5
 ---
