@@ -72,9 +72,7 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   <tr>
     <td>1</td>
     <td>
-	    
-    `customer_id`
-	    
+    <code>customer_id</code> 
     </td>
     <td>Meta</td>
     <td>Primary key</td>
