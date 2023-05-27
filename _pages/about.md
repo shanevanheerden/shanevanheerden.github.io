@@ -17,7 +17,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-<p>
+<p align="justify">
 <br>
 Hi there and welcome to my personal website! My name is Shane and I believe in the potential for Artificial Intelligence to fundamentally change the world for the better. I am currently a Data Scientist at <a href='http://www.luno.com'>Luno</a>, a cryptocurrency exchange, where I use my expertise to lead the development of predictive models that help combat fraudulent activity on the platform.
 <br><br>
