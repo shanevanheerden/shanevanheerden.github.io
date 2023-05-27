@@ -58,7 +58,10 @@ SuperLender is a local digital lending company who prides themselves in deliveri
 
 ## 2. The data
 
-SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables 1, 2 and 3, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature ${\tt good\mbox{\_}bad\mbox{\_}flag}$ indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related *via* the ${\tt customerid}$ key.
+SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables 1, 2 and 3, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature ${\tt good\mbox{_}bad\mbox{_}flag}$ indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related *via* the ${\tt customerid}$ key.
+<div class="caption">
+    <em>Table 1:</em> The features, data types and descriptions of the performance dataset.
+</div>
 <table>
   <tr>
     <th>#</th>
@@ -128,7 +131,7 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
 </table>
 <div class="caption">
-    <em>Table 1:</em> The features, data types and descriptions of the performance dataset.
+    <em>Table 2:</em> The features, data types and descriptions of the previous loans dataset.
 </div>
 <table>
   <tr>
@@ -205,7 +208,7 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
 </table>
 <div class="caption">
-    <em>Table 2:</em> The features, data types and descriptions of the previous loans dataset.
+    <em>Table 3:</em> The features, data types and descriptions of the demographics dataset.
 </div>
 <table>
   <tr>
@@ -269,9 +272,6 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
     <td>Customer's highest level of education</td>
   </tr>
 </table>
-<div class="caption">
-    <em>Table 3:</em> The features, data types and descriptions of the demographics dataset.
-</div>
 
 ***
 
@@ -397,6 +397,9 @@ A total of eight classification learning models were selected for this predictiv
 
 After (approximately) optimal parameter settings had been determined, each learning model was evaluated according to the AUC, *Classification Accuracy* (CA), F1-score, precision and recall performance metrics in respect of the training set using the 10-fold cross validation splitting criterion. These results may be seen in Table 4 while the ROC for each learning model may be visualised in Figure~\ref{5.fig.roc}. The well-known stacking method was also used to ensamble all the learning models into a single classifier, where a LR model was employed as an appropriate aggregation model. A constant model which always predicts the target variable mode was also included to serve as a benchmark.
 
+<div class="caption">
+    <em>Table 4:</em> The performances achieved by the nine learning models and the constant model in respect of the training dataset.
+</div>
 <table>
   <tr>
     <th>Model</th>
@@ -487,9 +490,6 @@ After (approximately) optimal parameter settings had been determined, each learn
     <td>0.782</td>
   </tr>
 </table>
-<div class="caption">
-    <em>Table 4:</em> The performances achieved by the nine learning models and the constant model in respect of the training dataset.
-</div>
 
 {% include figure.html path="assets/img/blog/blog8.15.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
