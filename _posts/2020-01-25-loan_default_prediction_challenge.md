@@ -58,7 +58,7 @@ SuperLender is a local digital lending company who prides themselves in deliveri
 
 ## 2. The data
 
-SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables 1, 2 and 3, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature ${\tt good\mbox{_}bad\mbox{_}flag}$ indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related *via* the ${\tt customerid}$ key.
+SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables 1, 2 and 3, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature ${\tt good\mbox{_ }bad\mbox{_ }flag}$ indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related *via* the ${\tt customerid}$ key.
 <div class="caption">
     <em>Table 1:</em> The features, data types and descriptions of the performance dataset.
 </div>
@@ -315,15 +315,15 @@ As may be seen in Figure 2(a), a higher proportion of customers who take out sma
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(a)
+	<center>(a)</center>
 	{% include figure.html path="assets/img/blog/blog8.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(c)
+	<center>(c)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(b)
+	<center>(b)</center>
 	{% include figure.html path="assets/img/blog/blog8.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(d)
+	<center>(d)</center>
     </div>
 </div>
 <div class="caption">
@@ -334,46 +334,46 @@ Moreover, the target variable contains a significantly less customers that have 
 
 ### 4.2. Spatial analysis
 
-The highest concentration of SuperLender customers are located in the state of Lagos, as may be seen in Figure~\ref{4.fig.spatial}(a), while older customers are typically located in the Zamfara, Jigawa, Yobe and Taraba states, as illustrated in Figure~\ref{4.fig.spatial}(b). As may be seen in Figure~\ref{4.fig.spatial}(c), the highest average loan amounts are observed from customers living in the Kebbi, Yobe and Adamawa states while the largest proportion of customers who default on their loans are located in the Ogun, Lagos, Osun, Ekiti, Ondo, Edo and Nassarawa states, as illustrated in Figure~\ref{4.fig.spatial}(d).
+The highest concentration of SuperLender customers are located in the state of Lagos, as may be seen in Figure 3(a), while older customers are typically located in the Zamfara, Jigawa, Yobe and Taraba states, as illustrated in Figure 3(b). As may be seen in Figure 3(c), the highest average loan amounts are observed from customers living in the Kebbi, Yobe and Adamawa states while the largest proportion of customers who default on their loans are located in the Ogun, Lagos, Osun, Ekiti, Ondo, Edo and Nassarawa states, as illustrated in Figure 3(d).
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(a)
+	<center>(a)</center>
 	{% include figure.html path="assets/img/blog/blog8.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(c)
+	<center>(c)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(b)
+	<center>(b)</center>
 	{% include figure.html path="assets/img/blog/blog8.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(d)
+	<center>(d)</center>
     </div>
 </div>
 <div class="caption">
-    <em>Figure 3:</em> Choropleth plots showing (a)~the number of customers, (b)~the average age of customer, (c)~the average loan amount and (d)~the average proportion of loan defaults per county in Nigeria.
+    <em>Figure 3:</em> Choropleth plots showing (a) the number of customers, (b) the average age of customer, (c) the average loan amount and (d) the average proportion of loan defaults per county in Nigeria.
 </div>
 
 ### 4.3. Temporal analysis
 
-As may be seen in Figure~\ref{4.fig.temporal}(a), the total number of loans issued by SuperLender has drastically increased over the years. Moreover, the average number of customers defaulting on their loans has steadily decreased since May 2016, as illustrated in Figure~\ref{4.fig.temporal}(b). It is also interesting to note that the average amount that SuperLender lends, as shown in Figure~\ref{4.fig.temporal}(c), drastically increased in August 2016. This was accompanied by a sudden increase in the average interest charged on their loans, as may be seen in Figure~\ref{4.fig.temporal}(d). These observations suggest that SuperLender has improved their operations considerably since the end of 2016 and are continuing to grow as a digital lending company in Nigeria.
+As may be seen in Figure 4(a), the total number of loans issued by SuperLender has drastically increased over the years. Moreover, the average number of customers defaulting on their loans has steadily decreased since May 2016, as illustrated in Figure 4(b). It is also interesting to note that the average amount that SuperLender lends, as shown in Figure 4(c), drastically increased in August 2016. This was accompanied by a sudden increase in the average interest charged on their loans, as may be seen in Figure 4(d). These observations suggest that SuperLender has improved their operations considerably since the end of 2016 and are continuing to grow as a digital lending company in Nigeria.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(a)
+	<center>(a)</center>
 	{% include figure.html path="assets/img/blog/blog8.12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(c)
+	<center>(c)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.13.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(b)
+	<center>(b)</center>
 	{% include figure.html path="assets/img/blog/blog8.14.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	(d)
+	<center>(d)</center>
     </div>
 </div>
 <div class="caption">
-    <em>Figure 4:</em> Time series plots showing (a)~the number of loans issued by SuperLender, (b)~the average number of loan defaults, (c)~the average amount lended and (d)~the average interest per loan from March 2016 to June 2017.
+    <em>Figure 4:</em> Time series plots showing (a) the number of loans issued by SuperLender, (b) the average number of loan defaults, (c) the average amount lended and (d) the average interest per loan from March 2016 to June 2017.
 </div>
 
 ***
@@ -490,7 +490,6 @@ After (approximately) optimal parameter settings had been determined, each learn
     <td>0.782</td>
   </tr>
 </table>
-
 {% include figure.html path="assets/img/blog/blog8.15.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 5:</em> An ROC plot showing the performance of the nine learning models and the constant model considered for predicting whether a customer will default on their loan.
