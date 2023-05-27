@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 🏦 Loan Default Prediction Challenge
-description: Can you predict who will default on a loan?
+description: Who is going to default on their loan?
 date: 2020-01-25
 tags: CaseStudy
 giscus_comments: true
