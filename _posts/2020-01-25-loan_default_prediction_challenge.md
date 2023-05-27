@@ -58,7 +58,7 @@ SuperLender is a local digital lending company who prides themselves in deliveri
 
 ## 2. The data
 
-SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables 1, 2 and 3, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature ${\tt good}$\_${\tt bad}$\_${\tt flag}$ indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related *via* the ${\tt customerid}$ key.
+SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables 1, 2 and 3, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature `good_bad_flag` indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related *via* the `customerid` key.
 <div class="caption">
     <em>Table 1:</em> The features, data types and descriptions of the performance dataset.
 </div>
@@ -71,61 +71,61 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
   <tr>
     <td>1</td>
-    <td>${\tt customerid}</td>
+    <td>`customerid`</td>
     <td>Meta</td>
     <td>Primary key</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>${\tt systemloanid}</td>
+    <td>`systemloanid`</td>
     <td>Meta</td>
     <td>The id associated with the particular loan</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>${\tt loannumber}</td>
+    <td>`loannumber`</td>
     <td>Continuous</td>
     <td>The number of the loan</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>${\tt approveddate}</td>
+    <td>`approveddate`</td>
     <td>Timestamp</td>
     <td>Date that loan was approved</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>${\tt creationdate}</td>
+    <td>`creationdate`</td>
     <td>Timestamp</td>
     <td>Date that loan application was created</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>${\tt loanamount}</td>
+    <td>`loanamount`</td>
     <td>Continuous</td>
     <td>Loan value taken</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>${\tt totaldue}</td>
+    <td>`totaldue`</td>
     <td>Continuous</td>
     <td>Total repayment required to settle the loan</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>${\tt termdays}</td>
+    <td>`termdays`</td>
     <td>Continuous</td>
     <td>Term of loan</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>${\tt referredby}</td>
+    <td>`referredby`</td>
     <td>Meta</td>
     <td>The customerid of the referral customer</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>good_bad_flag</td>
+    <td>`good_bad_flag`</td>
     <td>Categorical</td>
     <td>Whether the customer settled their loan on time or not</td>
   </tr>
@@ -142,67 +142,67 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
   <tr>
     <td>1</td>
-    <td>${\tt customerid}</td>
+    <td>`customerid`</td>
     <td>Meta</td>
     <td>Primary key</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>${\tt systemloanid}</td>
+    <td>`systemloanid`</td>
     <td>Meta</td>
     <td>The id associated with the particular loan</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>${\tt loannumber}</td>
+    <td>`loannumber`</td>
     <td>Continuous</td>
     <td>The number of the loan</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>${\tt approveddate}</td>
+    <td>`approveddate`</td>
     <td>Timestamp</td>
     <td>Date that loan was approved</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>${\tt creationdate}</td>
+    <td>`creationdate`</td>
     <td>Timestamp</td>
     <td>Date that loan application was created</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>${\tt loanamount}</td>
+    <td>`loanamount`</td>
     <td>Continuous</td>
     <td>Loan value taken</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>${\tt totaldue}</td>
+    <td>`totaldue`</td>
     <td>Continuous</td>
     <td>Total repayment required to settle the loan</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>${\tt closeddate}</td>
+    <td>$`closeddate`</td>
     <td>Timestamp</td>
     <td>Date that the loan was settled</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>${\tt referredby}</td>
+    <td>`referredby`</td>
     <td>Meta</td>
     <td>The customerid of the referral customer</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>${\tt firstduedate}</td>
+    <td>`firstduedate`</td>
     <td>Timestamp</td>
     <td>Date of first payment due</td>
   </tr>
   <tr>
     <td>11</td>
-    <td>${\tt firstrepaiddate}</td>
+    <td>`firstrepaiddate`</td>
     <td>Timestamp</td>
     <td>Actual date that customer paid the first payment</td>
   </tr>
@@ -219,55 +219,55 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
   <tr>
     <td>1</td>
-    <td>${\tt customerid}</td>
+    <td>`customerid`</td>
     <td>Meta</td>
     <td>Primary key</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>${\tt birthdate}</td>
+    <td>`birthdate`</td>
     <td>Timestamp</td>
     <td>Date of birth of the customer</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>bank_account_type</td>
+    <td>`bank_account_type`</td>
     <td>Categorical</td>
     <td>Type of primary bank account</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>longitude_gps</td>
+    <td>`longitude_gps`</td>
     <td>Continuous</td>
     <td>Longitude of customer</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>latitude_gps</td>
+    <td>`latitude_gps`</td>
     <td>Continuous</td>
     <td>Latitude of customer</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>bank_name_clients</td>
+    <td>`bank_name_clients`</td>
     <td>Categorical</td>
     <td>Name of customer's bank</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>bank_branch_clients</td>
+    <td>`bank_branch_clients`</td>
     <td>Categorical</td>
     <td>Location of customer's branch</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>employment_status_clients</td>
+    <td>`employment_status_clients`</td>
     <td>Categorical</td>
     <td>Customer's type of employment</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>level_of_education_clients</td>
+    <td>`level_of_education_clients`</td>
     <td>Categorical</td>
     <td>Customer's highest level of education</td>
   </tr>
