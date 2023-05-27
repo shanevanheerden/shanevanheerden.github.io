@@ -344,16 +344,15 @@ In the demographics dataset, a new feature ${\tt age}$ is constructed indicating
 
 where ${\tt now}$ indicates the current time in years.
 
-\begin{sidewaysfigure}[!p]
-	\begin{center}\includegraphics[width=220mm]{fig/orange.png}\end{center}
-	\vspace{-0.5cm}
-	\caption{The data mining solution built in the Orange Data Mining Software.}\label{3.fig.orange}
-\end{sidewaysfigure}
-
 ### 3.2. Data mining architecture
 
 \subsection{Data mining architecture}\label{sec3.2}
 A data mining solution was built in the Orange Data Mining Software \cite{Demsar2013} using multiple pre-built {\em widgets}, and is illustrated in Figure~\ref{3.fig.orange}. The training and testing performance, previous loans and demographics data sets are first imported and categorised according to the data types specified in Tables~\ref{2.tbl.performance}, \ref{2.tbl.previous} and \ref{2.tbl.demographics}, respectively. Given the performance data, these datasets are first formatted and concatenated into a single dataset using Widgets~A1 and A2, respectively, and are passed to Widget~A3. The ${\tt interest\_per\_day}$ feature is then computed according to expression (\ref{3.eqn.interestperday}) using Widget~A3 and are passed to Widget~A4. The ${\tt termdays}$, ${\tt loannumber}$, ${\tt loanamount}$ and ${\tt interest\_per\_day}$, ${\tt good\_bad\_flag}$ and ${\tt customerid}$ features are then selected in Widget~A4 and are passed to Widget~C1.
+
+{% include figure.html path="assets/img/blog/blog8.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 1:</em> The data mining solution built in the Orange Data Mining Software.
+</div>
 
 Given the training and testing previous loans data, these datasets are first formatted and concatenated into a single dataset using Widgets~B1 and B2, respectively, and are passed to Widget~B3. The ${\tt default\_loan}$, ${\tt days\_over}$ and ${\tt interest\_per\_day}$ features are then computed according to expressions (\ref{3.eqn.defaultloan}), (\ref{3.eqn.daysover}) and (\ref{3.eqn.interestperday}), respectively, using Widget~B3 and are passed to Widget~B4. The ${\tt days\_over}$, ${\tt default\_loan}$, ${\tt loanamount}$ and ${\tt termdays}$, ${\tt interest\_per\_day}$ and ${\tt customerid}$ features are then selected in Widget~B4 and passed to Widget~B5. Widget~B5 is a Python script used to group the multiple previous loan records associated with each ${\tt customerid}$ into a single representative record which are then passed to Widget~B6. In this script, the ${\tt days\_over}$ and ${\tt defaulted\_loan}$ features are summed, while the ${\tt loanamount}$, ${\tt termdays}$ and ${\tt interest\_per\_day}$ features are averaged. In Widget~B6, the ${\tt days\_over}$, ${\tt defaulted\_loan}$, ${\tt loanamount}$, ${\tt termdays}$ and ${\tt interest\_per\_day}$ features are renamed to ${\tt prev\_days\_over}$, ${\tt prev\_defaulted\_loan}$, ${\tt prev\_loanamount}$, ${\tt prev\_termdays}$ and ${\tt prev\_interest\_per\_day}$, respectively, and are passed to Widget~C1.
 
@@ -373,49 +372,69 @@ This section is dedicated to exploring the data used and produced by the data mi
 
 As may be seen in Figure~\ref{4.fig.distribution}(a), a higher proportion of customers who take out smaller loans (less than $20\,000$ Nigerian naira) end up defaulting on their loan. A higher proportion of customers who are charged higher rates of interest per day are also more likely to default on their loan, as illustrated in Figure~\ref{4.fig.distribution}(b). It is also interesting to note that a higher proportion of retired, student and unemployed customers default on their loans, as may be seen in Figure~\ref{4.fig.distribution}(c). And finally, a low proportion of customers banking with Standard Bank and Wema Bank default on their loans while the opposite is true for customers banking with Sterling Bank or Skye Bank.
 
-\begin{figure}[!htb]
-	\centering
-	\subfloat[{Loan amount}]{{\includegraphics[width=78mm]{fig/loanamount_dist.png}}}
-	\qquad
-	\subfloat[{Interest on loan per day}]{{\includegraphics[width=78mm]{fig/interest_per_day_dist.png}}}
-	\qquad
-	\subfloat[{Employment status}]{{\includegraphics[width=78mm]{fig/employment_status_clients.png}}}
-	\qquad
-	\subfloat[{Bank name}]{{\includegraphics[width=78mm]{fig/bank_name_clients_dist.png}}}
-	\caption{Proportion bar plots showing (a)~the loan amount, (b)~the interest on loan per day, (c)~the employment status and (d)~the bank name of SuperLender customers.}\label{4.fig.distribution}
-\end{figure}
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog8.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(a)
+	{% include figure.html path="assets/img/blog/blog8.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(c)
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog8.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(b)
+	{% include figure.html path="assets/img/blog/blog8.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(d)
+    </div>
+</div>
+<div class="caption">
+    <em>Figure 2:</em> Proportion bar plots showing (a)~the loan amount, (b)~the interest on loan per day, (c)~the employment status and (d)~the bank name of SuperLender customers.
+</div>
 
 Moreover, the target variable contains a significantly less customers that have defaulted on their loans than those who have paid their loans. Due to this significantly disproportionate representation among target variable classes, the {\em Area Under the Curve} (AUC) (more specifically, the {\em Receiver Operating Characteristic} (ROC)) should be employed as an appropriate predictive modelling metric since it is robust against class imbalances.
 
 ### 4.2. Spatial analysis
 
-\begin{figure}[!b]
-	\centering
-	\subfloat[{Number of customers}]{{\includegraphics[width=78mm]{fig/count.png}}}
-	\qquad
-	\subfloat[{Average age of customer}]{{\includegraphics[width=78mm]{fig/age.png}}}
-	\qquad
-	\subfloat[{Average loan amounts}]{{\includegraphics[width=78mm]{fig/prev_loanamount.png}}}
-	\qquad
-	\subfloat[{Average proportion of loan defaults}]{{\includegraphics[width=78mm]{fig/prop_default_loan.png}}}
-	\caption{Choropleth plots showing (a)~the number of customers, (b)~the average age of customer, (c)~the average loan amount and (d)~the average proportion of loan defaults per county in Nigeria.}\label{4.fig.spatial}
-\end{figure}
 The highest concentration of SuperLender customers are located in the state of Lagos, as may be seen in Figure~\ref{4.fig.spatial}(a), while older customers are typically located in the Zamfara, Jigawa, Yobe and Taraba states, as illustrated in Figure~\ref{4.fig.spatial}(b). As may be seen in Figure~\ref{4.fig.spatial}(c), the highest average loan amounts are observed from customers living in the Kebbi, Yobe and Adamawa states while the largest proportion of customers who default on their loans are located in the Ogun, Lagos, Osun, Ekiti, Ondo, Edo and Nassarawa states, as illustrated in Figure~\ref{4.fig.spatial}(d).
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog8.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(a)
+	{% include figure.html path="assets/img/blog/blog8.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(c)
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog8.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(b)
+	{% include figure.html path="assets/img/blog/blog8.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(d)
+    </div>
+</div>
+<div class="caption">
+    <em>Figure 3:</em> Choropleth plots showing (a)~the number of customers, (b)~the average age of customer, (c)~the average loan amount and (d)~the average proportion of loan defaults per county in Nigeria.
+</div>
 
 ### 4.3. Temporal analysis
 
-\begin{figure}[!b]
-	\centering
-	\subfloat[{Number of loans issued}]{{\includegraphics[width=78mm]{fig/loan_count.png}}}
-	\qquad
-	\subfloat[{Average number of loan defaults}]{{\includegraphics[width=78mm]{fig/default_loan.png}}}
-	\qquad
-	\subfloat[{Average amount lended}]{{\includegraphics[width=78mm]{fig/loan_amount.png}}}
-	\qquad
-	\subfloat[{Average interest per loan}]{{\includegraphics[width=78mm]{fig/interest_per_day.png}}}
-	\caption{Time series plots showing (a)~the number of loans issued by SuperLender, (b)~the average number of loan defaults, (c)~the average amount lended and (d)~the average interest per loan from March 2016 to June 2017.}\label{4.fig.temporal}
-\end{figure}
 As may be seen in Figure~\ref{4.fig.temporal}(a), the total number of loans issued by SuperLender has drastically increased over the years. Moreover, the average number of customers defaulting on their loans has steadily decreased since May 2016, as illustrated in Figure~\ref{4.fig.temporal}(b). It is also interesting to note that the average amount that SuperLender lends, as shown in Figure~\ref{4.fig.temporal}(c), drastically increased in August 2016. This was accompanied by a sudden increase in the average interest charged on their loans, as may be seen in Figure~\ref{4.fig.temporal}(d). These observations suggest that SuperLender has improved their operations considerably since the end of 2016 and are continuing to grow as a digital lending company in Nigeria.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog8.11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(a)
+	{% include figure.html path="assets/img/blog/blog8.12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(c)
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/blog/blog8.13.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(b)
+	{% include figure.html path="assets/img/blog/blog8.14.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	(d)
+    </div>
+</div>
+<div class="caption">
+    <em>Figure 4:</em> Time series plots showing (a)~the number of loans issued by SuperLender, (b)~the average number of loan defaults, (c)~the average amount lended and (d)~the average interest per loan from March 2016 to June 2017.
+</div>
 
 ## 5. Predictive model results
 
@@ -530,30 +549,35 @@ After (approximately) optimal parameter settings had been determined, each learn
     <em>Table 4:</em> The performances achieved by the nine learning models and the constant model in respect of the training dataset.
 </div>
 
+{% include figure.html path="assets/img/blog/blog8.15.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 5:</em> An ROC plot showing the performance of the nine learning models and the constant model considered for predicting whether a customer will default on their loan.
+</div>
+
 As may be seen from the table, the best performing individual learning model was the LR model achieving an AUC performance of $0.687$, followed closely by the CT model with an AUC of $0.681$. The kNN was the performing learning model achieving an AUC of only $0.534$. The stack learning model ensamble managed to outperform each individual learning model, as expected. This learning model was then used to predict the testing set target variable. These predicted test results were then submitted to the Zindi Data Science Nigeria Challenge \cite{Zindi2020} where the proposed predictive model ranked tied 43\textsuperscript{rd} on the global rankings with a predictive accuracy score of $0.22$, as may be seen in Figure~\ref{5.fig.zindi}.
-\begin{figure}[!htb]
-	\begin{center}\includegraphics[width=160mm]{fig/zindi.png}\end{center}
-	\vspace{-0.5cm}
-	\caption{The global ranking of the stacked learning model on the Zindi Data Science Nigeria Challenge.}\label{5.fig.zindi}
-\end{figure}
+
+{% include figure.html path="assets/img/blog/blog8.16.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 6:</em> The global ranking of the stacked learning model on the Zindi Data Science Nigeria Challenge.
+</div>
 
 ### 5.3. Model interpretations
 
-Due to the inherent algorithmic structure, learning models can either be white-box or black-box in nature. In a white-box learning model, one can clearly follow the logical rules produced by the model when classifying a specified instance. The rule formulation of a black-box learning model, on the other hand, cannot be interpreted meaningfully by humans. The rule formulation of the LR learning model (a white-box learning model) may, for example, be represented in the form of a {\em nomogram}, as illustrated in Figure~\ref{5.fig.nomogram}. A nomogram is a diagram that visually represents the rule formulation of selected classifiers by offering an insight into how the values of multiple attributes impact the overall target class probabilities. This is achieved by representing each attribute as a scale, where each point on this scale represents a single value assumed by a feature and the length of a scale signifies the importance of these feature values when describing the value of the target attribute. Features are ranked in descending order on the left-hand axis according to a feature's absolute importance ({\em i.e.}\ the length of its scale) and the individual dashes ({\em i.e.}\ points) on each explanatory feature scale signifies the importance of the corresponding feature categories when predicting the value ${\tt bad}$ of the ${\tt good\_bad\_flag}$ target variable. In other words, according to the LR model, a dash that lies at the right-most end of a scale signifies an feature value that is the most telling of a customer that defaults on their loan. The inverse is also true: A dash that lies at the left-most end of a scale signifies a feature value which is the most telling of a customer who does not default on their loan.
-\begin{sidewaysfigure}[!p]
-	\begin{center}\includegraphics[width=220mm]{fig/nomogram.png}\end{center}
-	\vspace{-0.5cm}
-	\caption{The decision tree corresponding to the best performing CT learning model.}\label{5.fig.nomogram}
-\end{sidewaysfigure}
+Due to the inherent algorithmic structure, learning models can either be white-box or black-box in nature. In a white-box learning model, one can clearly follow the logical rules produced by the model when classifying a specified instance. The rule formulation of a black-box learning model, on the other hand, cannot be interpreted meaningfully by humans. The rule formulation of the LR learning model (a white-box learning model) may, for example, be represented in the form of a {\em nomogram}, as illustrated in Figure~\ref{5.fig.nomogram}. A nomogram is a diagram that visually represents the rule formulation of selected classifiers by offering an insight into how the values of multiple attributes impact the overall target class probabilities. This is achieved by representing each attribute as a scale, where each point on this scale represents a single value assumed by a feature and the length of a scale signifies the importance of these feature values when describing the value of the target attribute. Features are ranked in descending order on the left-hand axis according to a feature's absolute importance ({\em i.e.}\ the length of its scale) and the individual dashes ({\em i.e.}\ points) on each explanatory feature scale signifies the importance of the corresponding feature categories when predicting the value ${\tt bad}$ of the ${\tt good\_bad\_flag}$ target variable. In other words, according to the LR model, a dash that lies at the right-most end of a scale signifies an feature value that is the most telling of a customer that defaults on their loan. The inverse is also true: A dash that lies at the left-most end of a scale signifies a feature value which is the most telling of a customer who does not default on their loan
 
 From Figure~\ref{5.fig.nomogram}, one may conclude that the most informative feature for the LR learning model was ${\tt bank\_name\_clients}$, where customers who bank with {\tt Sterling Bank} or {\tt Skye Bank} are identified as the most likely to default on their current loan. This observation is in agreement with the distribution results observed in Figure~\ref{4.fig.distribution}(d). The second most informative feature is ${\tt termdays}$, which suggests that customers who take out a longer loan term are more likely to default on their current loan. The third most informative feature is ${\tt employment\_status\_clients}$ which suggests that ${\tt Retired}$ customers are more likely to default on their current loan. The fourth most informative feature is ${\tt loanamount}$, which suggests that customers who take out smaller loan amounts are more likely to default on their current loan. The fifth most informative feature is ${\tt prop\_default\_loan}$ and suggests that customers who have defaulted on a higher proportion of their previous loans are more likely to default on their current loan.
 
-\begin{sidewaysfigure}[!p]
-	\begin{center}\includegraphics[width=220mm]{fig/tree.png}\end{center}
-	\vspace{-0.5cm}
-	\caption{The decision tree corresponding to the best performing CT learning model.}\label{5.fig.tree}
-\end{sidewaysfigure}
+{% include figure.html path="assets/img/blog/blog8.17.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 7:</em> The nomogram corresponding to the best performing LR learning model.
+</div>
+
 The rule formulation of the CT learning may be seen in the form of a decision tree in Figure~\ref{5.fig.tree}. As may be seen in the figure, the CT selected to branch first on the ${\tt prop\_default\_loan}$ feature and suggests that customers who have previously defaulted on a larger proportion of their loans are more likely to default on their current loan. The second right-most CT branch then selected to branch on the ${\tt loanamount}$ feature and suggests that customers who take out loans less than or equal to $10\,000$ Nigerian naira.
+
+{% include figure.html path="assets/img/blog/blog8.18.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 8:</em> The decision tree corresponding to the best performing CT learning model.
+</div>
 
 %Features are ranked according to the maximum absolute deviation in SHAP value (indicated by the horizontal black bar) which may be viewed as a measure of importance for each feature. In essence, a red point represents a customer observation with a high feature value while a blue point represents a customer with a low feature value. These figures should, therefore, be interpreted as follows: If a customer observation lies to the left of the zero-line, the feature value of that observation had a positive relative impact on the defined target variable while, if it lies to the right of the zero-line, it had a negative relative impact on the defined target variable. As may be seen in Figure~\ref{}, the stack model trained to predict accident {\tt good\_bad\_flag} identified {\tt } as the most important feature. More specifically, a customer 
 
@@ -565,24 +589,20 @@ In this final concluding section, sensible recommendations are provided to Super
 
 Following the analysis conducted in this report, a set of recommendations may be provided to SuperLender. Customers are more likely to default on their loans if:
 
-\begin{enumerate}
-	\itemsep-2mm
-	\item they have defaulted on more than half of their previous loans,
-	\item they are either retired, a student or unemployed,
-	\item they are loaning smaller sums of money (less than $20\,000$ Nigerian naira),
-	\item they have requested a longer loan repayment term,
-	\item they currently bank with Sterling Bank or Skye Bank,
-	\item they are being charged higher interest on their loan per day, and/or
-	\item they are located in the Ogun, Lagos, Osun, Ekiti, Ondo, Edo and Nassarawa states.
-\end{enumerate}
+1. they have defaulted on more than half of their previous loans,
+2. they are either retired, a student or unemployed,
+3. they are loaning smaller sums of money (less than $20\,000$ Nigerian naira),
+4. they have requested a longer loan repayment term,
+5. they currently bank with Sterling Bank or Skye Bank,
+6. they are being charged higher interest on their loan per day, and/or
+7. they are located in the Ogun, Lagos, Osun, Ekiti, Ondo, Edo and Nassarawa states.
 
 Furthermore, SuperLender, as a whole, is continuing to grow as a digital lending company in Nigeria. It is, however, surprising that SuperLender does not have a significant number of customers in Abuja as well as in the northern Nigerian states, as previously seen in Figure~\ref{4.fig.spatial}(a). These regions contain higher population densities, as may be seen in Figure~\ref{6.fig.density}, and may provide SuperLender with opportunity for further growth.
 
-\begin{figure}[!htb]
-	\begin{center}\includegraphics[width=95mm]{fig/density.png}\end{center}
-	\vspace{-0.5cm}
-	\caption{The population density of the various Nigerian counties \cite{Population2020}.}\label{6.fig.density}
-\end{figure}
+{% include figure.html path="assets/img/blog/blog8.18.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 9:</em> The population density of the various Nigerian counties <d-cite key=""></d-cite>.
+</div>
 
 ### 6.2. Future work
 
