@@ -52,13 +52,13 @@ _styles: >
 
 ## 1. The problem
 
-SuperLender is a local digital lending company who prides themselves in delivering profitable and high-impact loan alternatives to the people of Nigeria. The company has approached Cape Town AI to develop an effective credit risk model to predict the odds that a returning customer will repay their loan. The assessment approach should be based on two main risk drivers of loan default prediction: (1) The willingness and (2) the ability of a customer to pay back their loan. In this report, a detailed description of the analysis conducted by Cape Town AI is provided, together with recommendations to SuperLender with regards to the types of customers who are more and less likely to default on their loans.
+SuperLender is a local digital lending company who prides themselves in delivering profitable and high-impact loan alternatives to the people of Nigeria. The company has approached Zindi to develop an effective credit risk model to predict the odds that a returning customer will repay their loan. The assessment approach should be based on two main risk drivers of loan default prediction: (1) The willingness and (2) the ability of a customer to pay back their loan. In this blog post, I'm going to provide you with a detailed description of the analysis conducted I conducted, together with the final recommendations I would provide to SuperLender with regards to the types of customers who are more and less likely to default on their loans.
 
 ***
 
 ## 2. The data
 
-SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables~\ref{2.tbl.performance}, \ref{2.tbl.previous} and \ref{2.tbl.demographics}, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature {\tt good\_bad\_flag} indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related {\em via} the {\tt customerid} key.
+SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables 1, 2 and 3, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature ${\tt good\_bad\_flag}$ indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related {\em via} the {\tt customerid} key.
 <table>
   <tr>
     <th>#</th>
@@ -286,7 +286,7 @@ Arguably, the most involved and important tasks in the data mining process is th
 In the previous loans dataset, the number of days a customer's loan was over/under the days stipulated by the loan's term is defined mathematically as
 
 \begin{equation}
-{\tt days\_}{\tt over\_}{\tt under}={\tt closedate}-({\tt approvedate}+{\tt termdays}).\label{daysoverunder}
+{\tt days\_ }{\tt over\_ }{\tt under}={\tt closedate}-({\tt approvedate}+{\tt termdays}).\label{daysoverunder}
 \end{equation}
 
 ### 3.2. Data mining architecture
