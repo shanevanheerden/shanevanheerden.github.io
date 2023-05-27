@@ -52,6 +52,7 @@ _styles: >
 
 ---
 
+<p align="justify">
 *This blog post was adapted from Sections 4.1, 4.2 and 4.3 in my [PhD dissertation](https://sunore.co.za/wp-content/uploads/2021/03/vanheerden_phd_2020.pdf).*
 
 {% include figure.html path="assets/img/blog/blog7.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -270,3 +271,4 @@ The ethical considerations associated with autonomous vehicles, for example, are
 ## 10. Wrapping up
 
 And that's it! In this blog post, I walked you through arguably the most well-known machine learning paradigm, supervised learning, as well as some considerations you probably want to bear in mind when framing a problem as a supervised learning problem. Join me in my [next blog post](https://shanevanheerden.github.io/blog/2018/generalised_linear_models/) where I'll go deep into a whole branch of statistical learning models, namely *Generalised Linear Models* (GLMs). See you there!
+</p>
