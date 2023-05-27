@@ -286,7 +286,7 @@ Arguably, the most involved and important tasks in the data mining process is th
 In the previous loans dataset, the number of days a customer's loan was over/under the days stipulated by the loan's term is defined mathematically as
 
 \begin{equation}
-{\tt days\_over\_under}={\tt closedate}-({\tt approvedate}+{\tt termdays}).\label{daysoverunder}
+{\tt days\_}{\tt over\_}{\tt under}={\tt closedate}-({\tt approvedate}+{\tt termdays}).\label{daysoverunder}
 \end{equation}
 
 ### 3.2. Data mining architecture
