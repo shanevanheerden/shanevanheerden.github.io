@@ -58,7 +58,7 @@ SuperLender is a local digital lending company who prides themselves in deliveri
 
 ## 2. The data
 
-SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables 1, 2 and 3, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature ${\tt good\mbox{_ }bad\mbox{_ }flag}$ indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related *via* the ${\tt customerid}$ key.
+SuperLender provided us with three separate sets of data namely: (1) Performance data, (2) previous loans data and (3) demographic data. A breakdown of the features, data types and descriptions for the performance, previous loans and demographics datasets are provided in Tables 1, 2 and 3, respectively. The performance dataset contains repeat loans taken by customers and contains a binary feature ${\tt goodbadflag}$ indicating whether the customer settled their loan on time or not --- this feature serves at the target variable. The previous loans dataset contains all previous loans that a customer in the performance dataset took out prior to the loan. And finally, the demographics dataset contains demographic information corresponding to each customer in the performance dataset. All three of the aforementioned datasets are related *via* the ${\tt customerid}$ key.
 <div class="caption">
     <em>Table 1:</em> The features, data types and descriptions of the performance dataset.
 </div>
@@ -71,55 +71,55 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
   <tr>
     <td>1</td>
-    <td>customerid</td>
+    <td>${\tt customerid}</td>
     <td>Meta</td>
     <td>Primary key</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>systemloanid</td>
+    <td>${\tt systemloanid}</td>
     <td>Meta</td>
     <td>The id associated with the particular loan</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>loannumber</td>
+    <td>${\tt loannumber}</td>
     <td>Continuous</td>
     <td>The number of the loan</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>approveddate</td>
+    <td>${\tt approveddate}</td>
     <td>Timestamp</td>
     <td>Date that loan was approved</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>creationdate</td>
+    <td>${\tt creationdate}</td>
     <td>Timestamp</td>
     <td>Date that loan application was created</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>loanamount</td>
+    <td>${\tt loanamount}</td>
     <td>Continuous</td>
     <td>Loan value taken</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>totaldue</td>
+    <td>${\tt totaldue}</td>
     <td>Continuous</td>
     <td>Total repayment required to settle the loan</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>termdays</td>
+    <td>${\tt termdays}</td>
     <td>Continuous</td>
     <td>Term of loan</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>referredby</td>
+    <td>${\tt referredby}</td>
     <td>Meta</td>
     <td>The customerid of the referral customer</td>
   </tr>
@@ -142,67 +142,67 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
   <tr>
     <td>1</td>
-    <td>customerid</td>
+    <td>${\tt customerid}</td>
     <td>Meta</td>
     <td>Primary key</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>systemloanid</td>
+    <td>${\tt systemloanid}</td>
     <td>Meta</td>
     <td>The id associated with the particular loan</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>loannumber</td>
+    <td>${\tt loannumber}</td>
     <td>Continuous</td>
     <td>The number of the loan</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>approveddate</td>
+    <td>${\tt approveddate}</td>
     <td>Timestamp</td>
     <td>Date that loan was approved</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>creationdate</td>
+    <td>${\tt creationdate}</td>
     <td>Timestamp</td>
     <td>Date that loan application was created</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>loanamount</td>
+    <td>${\tt loanamount}</td>
     <td>Continuous</td>
     <td>Loan value taken</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>totaldue</td>
+    <td>${\tt totaldue}</td>
     <td>Continuous</td>
     <td>Total repayment required to settle the loan</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>closeddate</td>
+    <td>${\tt closeddate}</td>
     <td>Timestamp</td>
     <td>Date that the loan was settled</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>referredby</td>
+    <td>${\tt referredby}</td>
     <td>Meta</td>
     <td>The customerid of the referral customer</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>firstduedate</td>
+    <td>${\tt firstduedate}</td>
     <td>Timestamp</td>
     <td>Date of first payment due</td>
   </tr>
   <tr>
     <td>11</td>
-    <td>firstrepaiddate</td>
+    <td>${\tt firstrepaiddate}</td>
     <td>Timestamp</td>
     <td>Actual date that customer paid the first payment</td>
   </tr>
@@ -219,13 +219,13 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
   <tr>
     <td>1</td>
-    <td>customerid</td>
+    <td>${\tt customerid}</td>
     <td>Meta</td>
     <td>Primary key</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>birthdate</td>
+    <td>${\tt birthdate}</td>
     <td>Timestamp</td>
     <td>Date of birth of the customer</td>
   </tr>
@@ -395,7 +395,7 @@ A total of eight classification learning models were selected for this predictiv
 
 ### 5.2. Model performances
 
-After (approximately) optimal parameter settings had been determined, each learning model was evaluated according to the AUC, *Classification Accuracy* (CA), F1-score, precision and recall performance metrics in respect of the training set using the 10-fold cross validation splitting criterion. These results may be seen in Table 4 while the ROC for each learning model may be visualised in Figure~\ref{5.fig.roc}. The well-known stacking method was also used to ensamble all the learning models into a single classifier, where a LR model was employed as an appropriate aggregation model. A constant model which always predicts the target variable mode was also included to serve as a benchmark.
+After (approximately) optimal parameter settings had been determined, each learning model was evaluated according to the AUC, *Classification Accuracy* (CA), F1-score, precision and recall performance metrics in respect of the training set using the 10-fold cross validation splitting criterion. These results may be seen in Table 4 while the ROC for each learning model may be visualised in Figure 5. The well-known stacking method was also used to ensamble all the learning models into a single classifier, where a LR model was employed as an appropriate aggregation model. A constant model which always predicts the target variable mode was also included to serve as a benchmark.
 
 <div class="caption">
     <em>Table 4:</em> The performances achieved by the nine learning models and the constant model in respect of the training dataset.
@@ -495,7 +495,7 @@ After (approximately) optimal parameter settings had been determined, each learn
     <em>Figure 5:</em> An ROC plot showing the performance of the nine learning models and the constant model considered for predicting whether a customer will default on their loan.
 </div>
 
-As may be seen from the table, the best performing individual learning model was the LR model achieving an AUC performance of $0.687$, followed closely by the CT model with an AUC of $0.681$. The kNN was the performing learning model achieving an AUC of only $0.534$. The stack learning model ensamble managed to outperform each individual learning model, as expected. This learning model was then used to predict the testing set target variable. These predicted test results were then submitted to the Zindi Data Science Nigeria Challenge <d-cite key="Zindi2020"></d-cite> where the proposed predictive model ranked tied 43\textsuperscript{rd} on the global rankings with a predictive accuracy score of $0.22$, as may be seen in Figure~\ref{5.fig.zindi}.
+As may be seen from the table, the best performing individual learning model was the LR model achieving an AUC performance of $0.687$, followed closely by the CT model with an AUC of $0.681$. The kNN was the performing learning model achieving an AUC of only $0.534$. The stack learning model ensamble managed to outperform each individual learning model, as expected. This learning model was then used to predict the testing set target variable. These predicted test results were then submitted to the Zindi Data Science Nigeria Challenge <d-cite key="Zindi2020"></d-cite> where the proposed predictive model ranked tied 43\textsuperscript{rd} on the global rankings with a predictive accuracy score of $0.22$, as may be seen in Figure 6.
 
 {% include figure.html path="assets/img/blog/blog8.16.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -504,7 +504,7 @@ As may be seen from the table, the best performing individual learning model was
 
 ### 5.3. Model interpretations
 
-Due to the inherent algorithmic structure, learning models can either be white-box or black-box in nature. In a white-box learning model, one can clearly follow the logical rules produced by the model when classifying a specified instance. The rule formulation of a black-box learning model, on the other hand, cannot be interpreted meaningfully by humans. The rule formulation of the LR learning model (a white-box learning model) may, for example, be represented in the form of a *nomogram*, as illustrated in Figure~\ref{5.fig.nomogram}. A nomogram is a diagram that visually represents the rule formulation of selected classifiers by offering an insight into how the values of multiple attributes impact the overall target class probabilities. This is achieved by representing each attribute as a scale, where each point on this scale represents a single value assumed by a feature and the length of a scale signifies the importance of these feature values when describing the value of the target attribute. Features are ranked in descending order on the left-hand axis according to a feature's absolute importance (*i.e.* the length of its scale) and the individual dashes (*i.e.* points) on each explanatory feature scale signifies the importance of the corresponding feature categories when predicting the value ${\tt bad}$ of the ${\tt good{\textunderscore}bad{\textunderscore}flag}$ target variable. In other words, according to the LR model, a dash that lies at the right-most end of a scale signifies an feature value that is the most telling of a customer that defaults on their loan. The inverse is also true: A dash that lies at the left-most end of a scale signifies a feature value which is the most telling of a customer who does not default on their loan. The inverse is also true: A dash that lies at the left-most end of a scale signifies a feature value which is the most telling of a customer who does not default on their loan.
+Due to the inherent algorithmic structure, learning models can either be white-box or black-box in nature. In a white-box learning model, one can clearly follow the logical rules produced by the model when classifying a specified instance. The rule formulation of a black-box learning model, on the other hand, cannot be interpreted meaningfully by humans. The rule formulation of the LR learning model (a white-box learning model) may, for example, be represented in the form of a *nomogram*, as illustrated in Figure 7. A nomogram is a diagram that visually represents the rule formulation of selected classifiers by offering an insight into how the values of multiple attributes impact the overall target class probabilities. This is achieved by representing each attribute as a scale, where each point on this scale represents a single value assumed by a feature and the length of a scale signifies the importance of these feature values when describing the value of the target attribute. Features are ranked in descending order on the left-hand axis according to a feature's absolute importance (*i.e.* the length of its scale) and the individual dashes (*i.e.* points) on each explanatory feature scale signifies the importance of the corresponding feature categories when predicting the value ${\tt bad}$ of the ${\tt good{\textunderscore}bad{\textunderscore}flag}$ target variable. In other words, according to the LR model, a dash that lies at the right-most end of a scale signifies an feature value that is the most telling of a customer that defaults on their loan. The inverse is also true: A dash that lies at the left-most end of a scale signifies a feature value which is the most telling of a customer who does not default on their loan. The inverse is also true: A dash that lies at the left-most end of a scale signifies a feature value which is the most telling of a customer who does not default on their loan.
 
 {% include figure.html path="assets/img/blog/blog8.17.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
