@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <h4>🏦 Loan Default Prediction Challenge</h4>
-description: Can you predict who will default on a loan?
+description: Who is going to default on their loan?
 img: assets/img/blog/blog8.1.jpg
 importance: 1
 category: competitions
