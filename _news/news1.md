@@ -7,7 +7,7 @@ related_posts: false
 ---
 
 <p align="justify">
-I am excited to be embarking on a new academic chapter in my life as I begin my Bachelor of Engineering in [Industrial Engineering](https://en.wikipedia.org/wiki/Industrial_engineering) at <a href='http://www.sun.ac.za/english'>Stellenbosch University</a>. As someone who has always been fascinated by how things work and how they can be improved, I am incredibly excited to dive into this new academic chapter.
+I am excited to be embarking on a new academic chapter in my life as I begin my Bachelor of Engineering in <a href='https://en.wikipedia.org/wiki/Industrial_engineering'>Industrial Engineering</a> at <a href='http://www.sun.ac.za/english'>Stellenbosch University</a>. As someone who has always been fascinated by how things work and how they can be improved, I am incredibly excited to dive into this new academic chapter.
 </p>
 <p align="justify">
 As an industrial engineer, I will be equipped with the skills to design, optimise, and improve complex systems in various industries. I am eager to explore the diverse range of applications for industrial engineering, from manufacturing and logistics to healthcare and finance.
