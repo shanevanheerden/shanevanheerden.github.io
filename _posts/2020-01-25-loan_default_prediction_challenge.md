@@ -71,63 +71,61 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
   <tr>
     <td>1</td>
-    <td>
-    <code>customer_id</code> 
-    </td>
+    <td><code>customer_id</code></td>
     <td>Meta</td>
     <td>Primary key</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>`systemloanid`</td>
+    <td><code>system_loan_id</code></td>
     <td>Meta</td>
-    <td>The id associated with the particular loan</td>
+    <td>The ID associated with the particular loan</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>`loannumber`</td>
+    <td><code>loan_number</code></td>
     <td>Continuous</td>
     <td>The number of the loan</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>`approveddate`</td>
+    <td><code>approved_date</code></td>
     <td>Timestamp</td>
     <td>Date that loan was approved</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>`creationdate`</td>
+    <td><code>creation_date</code></td>
     <td>Timestamp</td>
     <td>Date that loan application was created</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>`loanamount`</td>
+    <td><code>loan_amount</code></td>
     <td>Continuous</td>
     <td>Loan value taken</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>`totaldue`</td>
+    <td><code>total_due</code></td>
     <td>Continuous</td>
     <td>Total repayment required to settle the loan</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>`termdays`</td>
+    <td><code>term_days</code></td>
     <td>Continuous</td>
     <td>Term of loan</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>`referredby`</td>
+    <td><code>referred_by</code></td>
     <td>Meta</td>
-    <td>The customerid of the referral customer</td>
+    <td>The <code>customer_id</code> of the referral customer</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>`good_bad_flag`</td>
+    <td><code>good_bad_flag</code></td>
     <td>Categorical</td>
     <td>Whether the customer settled their loan on time or not</td>
   </tr>
@@ -144,67 +142,67 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
   <tr>
     <td>1</td>
-    <td>`customerid`</td>
+    <td><code>customer_id</code></td>
     <td>Meta</td>
     <td>Primary key</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>`systemloanid`</td>
+    <td><code>system_loan_id</code></td>
     <td>Meta</td>
-    <td>The id associated with the particular loan</td>
+    <td>The ID associated with the particular loan</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>`loannumber`</td>
+    <td><code>loan_number</code></td>
     <td>Continuous</td>
     <td>The number of the loan</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>`approveddate`</td>
+    <td><code>approved_date</code></td>
     <td>Timestamp</td>
     <td>Date that loan was approved</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>`creationdate`</td>
+    <td><code>creation_date</code></td>
     <td>Timestamp</td>
     <td>Date that loan application was created</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>`loanamount`</td>
+    <td><code>loan_amount</code></td>
     <td>Continuous</td>
     <td>Loan value taken</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>`totaldue`</td>
+    <td><code>total_due</code></td>
     <td>Continuous</td>
     <td>Total repayment required to settle the loan</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>$`closeddate`</td>
+    <td><code>closed_date</code></td>
     <td>Timestamp</td>
     <td>Date that the loan was settled</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>`referredby`</td>
+    <td><code>referred_by</code></td>
     <td>Meta</td>
-    <td>The customerid of the referral customer</td>
+    <td>The <code>customer_id</code> of the referral customer</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>`firstduedate`</td>
+    <td><code>first_due_date</code></td>
     <td>Timestamp</td>
     <td>Date of first payment due</td>
   </tr>
   <tr>
     <td>11</td>
-    <td>`firstrepaiddate`</td>
+    <td><code>first_repaid_date</code></td>
     <td>Timestamp</td>
     <td>Actual date that customer paid the first payment</td>
   </tr>
@@ -221,55 +219,55 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
   </tr>
   <tr>
     <td>1</td>
-    <td>`customerid`</td>
+    <td><code>customer_id</code></td>
     <td>Meta</td>
     <td>Primary key</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>`birthdate`</td>
+    <td><code>birth_date</code></td>
     <td>Timestamp</td>
     <td>Date of birth of the customer</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>`bank_account_type`</td>
+    <td><code>bank_account_type</code></td>
     <td>Categorical</td>
     <td>Type of primary bank account</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>`longitude_gps`</td>
+    <td><code>longitude_gps</code></td>
     <td>Continuous</td>
     <td>Longitude of customer</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>`latitude_gps`</td>
+    <td><code>latitude_gps</code></td>
     <td>Continuous</td>
     <td>Latitude of customer</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>`bank_name_clients`</td>
+    <td><code>bank_name_clients</code></td>
     <td>Categorical</td>
     <td>Name of customer's bank</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>`bank_branch_clients`</td>
+    <td><code>bank_branch_clients</code></td>
     <td>Categorical</td>
     <td>Location of customer's branch</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>`employment_status_clients`</td>
+    <td><code>employment_status_clients</code></td>
     <td>Categorical</td>
     <td>Customer's type of employment</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>`level_of_education_clients`</td>
+    <td><code>level_of_education_clients</code></td>
     <td>Categorical</td>
     <td>Customer's highest level of education</td>
   </tr>
@@ -287,7 +285,7 @@ This section contains a description of the methodology followed during this inve
 
 ### 3.2. Data mining architecture
 
-A data mining solution was built in the Orange Data Mining Software <d-cite key="Demsar2013"></d-cite> using multiple pre-built *widgets*, and is illustrated in Figure 1. The training and testing performance, previous loans and demographics data sets are first imported and categorised according to the data types specified in Tables 1, 2 and 3, respectively. Given the performance data, these datasets are first formatted and concatenated into a single dataset using Widgets A1 and A2, respectively, and are passed to Widget A3. The ${\tt interest{\textunderscore}per{\textunderscore}day}$ feature is then computed according to expression (\ref{3.eqn.interestperday}) using Widget A3 and are passed to Widget A4. The ${\tt termdays}$, ${\tt loannumber}$, ${\tt loanamount}$ and ${\tt interest{\textunderscore}per{\textunderscore}day}$, ${\tt good{\textunderscore}bad{\textunderscore}flag}$ and ${\tt customerid}$ features are then selected in Widget A4 and are passed to Widget C1.
+A data mining solution was built in the Orange Data Mining Software <d-cite key="Demsar2013"></d-cite> using multiple pre-built *widgets*, and is illustrated in Figure 1. The training and testing performance, previous loans and demographics data sets are first imported and categorised according to the data types specified in Tables 1, 2 and 3, respectively. Given the performance data, these datasets are first formatted and concatenated into a single dataset using Widgets A1 and A2, respectively, and are passed to Widget A3. The <code>interest_per_day</code> feature is then computed according to expression (\ref{3.eqn.interestperday}) using Widget A3 and are passed to Widget A4. The <code>termdays</code>, <code>loan_number</code>, <code>loan_amount</code> and <code>interest_per_day</code>, <code>good_bad_flag</code> and <code>customer_id</code> features are then selected in Widget A4 and are passed to Widget C1.
 
 {% include figure.html path="assets/img/blog/blog8.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
