@@ -281,68 +281,7 @@ This section contains a description of the methodology followed during this inve
 
 ### 3.1. Feature engineering
 
-Arguably, the most involved and important tasks in the data mining process is that of feature engineering which requires the data scientist to construct informative features based on one or more feature(s) currently present in the data \cite{Ng2012}. The features manually constructed for the purpose of predicting whether a SuperLender customer will default on their loan is described in this subsection.
 
-In the previous loans dataset, the number of days a customer's loan was over/under the days stipulated by the loan's term is defined mathematically as
-
-\begin{equation}
-{\tt days{\textunderscore}over{\textunderscore}under}={\tt closedate}-({\tt approvedate}+{\tt termdays}).\label{daysoverunder}
-\end{equation}
-
-The expression in (\ref{daysoverunder}) is used as a basis to construct the first new feature ${\tt default\textunderscore loan}$ in the previous loans dataset indicating whether the customer had defaulted on their loan, defined mathematically as
-
-\begin{align}
-{\tt default{\textunderscore}loan}=\left\{\begin{array}{ll}
-\vspace{2mm}0,&\mbox{if }{\tt days{\textunderscore}over{\textunderscore}under}\leq 0,\\
-1,&\mbox{otherwise},
-\end{array}\right.\label{3.eqn.defaultloan}
-\end{align}
-
-The expression in (\ref{3.eqn.defaultloan}) is also used to construct a second feature ${\tt days{\textunderscore}over}$ in the previous loans dataset indicating the number of days a customer took to pay the loan after the agreed term days, defined mathematically as
-
-\begin{equation}
-{\tt days\textunderscore over}={\tt default\textunderscore loan}\times{\tt days{\textunderscore}over{\textunderscore}under},\label{3.eqn.daysover}
-\end{equation}
-
-In the performance dataset, the result computed in (\ref{3.eqn.defaultloan}) is then used to construct a new feature ${\tt prev{\textunderscore}default{\textunderscore}loan}=\mbox{SUM}({\tt default{\textunderscore}loan})$ in the performance dataset indicating the total number of loans a customer has previously defaulted on. The result computed in (\ref{3.eqn.daysover}) is then used to construct a new feature ${\tt prev{\textunderscore}days{\textunderscore}over}= \mbox{SUM}({\tt days{\textunderscore}over})$ in the performance dataset indicating the total days a customer has exceeded their payment terms on past loans. A feature ${\tt prop{\textunderscore}default{\textunderscore}loan}$ is also constructed in the performance dataset indicating the proportion of loans a customer has previously defaulted on, defined mathematically as
-
-\begin{equation}
-{\tt prop{\textunderscore}default{\textunderscore}loan}=\frac{{\tt prev{\textunderscore}default{\textunderscore}loan}}{{\tt loan{\textunderscore}number}-1},\label{3.eqn.propdefaultloan}
-\end{equation}
-
-where ${\tt prev{\textunderscore}default{\textunderscore}loan}=\mbox{SUM}({\tt default{\textunderscore}loan})$ is a new feature indicating the total number of loans a customer has previously defaulted on and ${\tt loan{\textunderscore}number}$ is the loan number of the current loan. The interest rate charged to each customer is defined mathematically as
-
-\begin{equation}
-{\tt interest{\textunderscore}per{\textunderscore}day}=\frac{{\tt totaldue}-{\tt loanamount}}{{\tt termdays}}.\label{3.eqn.interestperday}
-\end{equation}
-
-The result computed in (\ref{3.eqn.interestperday}) is used as a basis to construct a new feature ${\tt prop{\textunderscore}interest{\textunderscore}per{\textunderscore}day}$ in the performance loans dataset indicating the proportion of customer's interest rate on their current and previous loans, defined mathematically as
-
-\begin{equation}
-{\tt prop{\textunderscore}interest{\textunderscore}per{\textunderscore}day}=\frac{{\tt interest{\textunderscore}per{\textunderscore}day}-{\tt prev{\textunderscore}interest{\textunderscore}per{\textunderscore}day}}{{\tt prev{\textunderscore}interest{\textunderscore}per{\textunderscore}day}},\label{3.eqn.propinterestperday}
-\end{equation}
-
-where ${\tt prev{\textunderscore}interest{\textunderscore}per{\textunderscore}day}=\mbox{AVG}({\tt interest{\textunderscore}per{\textunderscore}day})$ is a new feature indicating the average interest rate charged to a customer on their previous loans. In the same way, a new feature ${\tt prop{\textunderscore}term{\textunderscore}days}$ is constructed in the performance dataset indicating the proportion of customer's loan terms on their current and previous loans, defined mathematically as
-
-\begin{equation}
-{\tt prop{\textunderscore}term{\textunderscore}days}=\frac{{\tt term{\textunderscore}days}-{\tt prev{\textunderscore}term{\textunderscore}days}}{{\tt prev{\textunderscore}term{\textunderscore}days}},\label{3.eqn.proptermdays}
-\end{equation}
-
-where ${\tt prev{\textunderscore}term{\textunderscore}days}=\mbox{AVG}({\tt term{\textunderscore}days})$ is a new feature indicating the average term days offered to the customer on their previous loans. And finally, a new feature ${\tt prop{\textunderscore}loan{\textunderscore}amount}$ is constructed to indicate the proportion of customer's loan amount on their current and previous loans, defined mathematically as
-
-\begin{equation}
-{\tt prop{\textunderscore}loan{\textunderscore}amount}=\frac{{\tt loan{\textunderscore}amount}-{\tt prev{\textunderscore}loan{\textunderscore}amount}}{{\tt prev{\textunderscore}loan{\textunderscore}amount}},\label{3.eqn.proploanamount}
-\end{equation}
-
-where ${\tt prev{\textunderscore}loan{\textunderscore}amount}=\mbox{AVG}({\tt loan{\textunderscore}amount})$ is a new feature indicating a customer's average previous loan amounts.
-
-In the demographics dataset, a new feature ${\tt age}$ is constructed indicating the age of the customer in years, defined mathematically as
-
-\begin{equation}
-{\tt age}={\tt now}-{\tt birthdate},\label{3.eqn.age}
-\end{equation}
-
-where ${\tt now}$ indicates the current time in years.
 
 ### 3.2. Data mining architecture
 
