@@ -39,27 +39,31 @@ layout: default
           <div class="clearfix">
             {{ content }}
           </div>
-          <br>
+          
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
+            <br>
             <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">🗞️ latest news</a></h2>
             {%- include news.html limit=true %}
           {%- endif %}
-              
+
           <!-- Latest posts -->
           {% if page.latest_posts -%}
+            <br>
             <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">📝 recent posts</a></h2>
             {%- include latest_posts.html %}
           {%- endif %}
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}
+            <br>
             <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">📚 selected publications</a></h2>
             {%- include selected_papers.html %}
           {%- endif %}
-
+          
           <!-- Social -->
           {%- if page.social %}
+            <br>
             <div class="social">
               <div class="contact-icons">
                 {% include social.html %}
