@@ -18,7 +18,6 @@ The bi-objective optimization model that I developed formed the basis of a flexi
 <p align="justify">
 The competition was tough, with submissions from several institutions in South Africa. Although I did not win the prestigious <a href='https://www.orssa.org.za/honscomp'>Gerhard Geldenhuys Medal</a>, I am thrilled to have come in as the runner-up and grateful for the recognition of my hard work and dedication. Participating in this competition has been a wonderful learning experience and has allowed me to showcase my skills in Operations Research. I am grateful to my supervising lecturer for nominating my project and guiding me throughout my academic journey. I would also like to thank the ORSSA for organizing this competition and providing a platform for fourth-year students to showcase their work.
 </p>
-
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/news/2017comp1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -27,4 +26,4 @@ The competition was tough, with submissions from several institutions in South A
         {% include figure.html path="assets/img/news/2017comp2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-<iframe width="770" height="570.32" src="https://www.youtube.com/embed/S_QAAFVKKo0"></iframe>
+{% include video.html path="https://www.youtube.com/embed/S_QAAFVKKo0" class="img-fluid rounded z-depth-1" %}
