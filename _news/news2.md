@@ -6,11 +6,13 @@ inline: false
 related_posts: false
 ---
 
+<p align="justify">
 I am thrilled to share that I have been invited to join the prestigious [Golden Key International Honours Society](https://goldenkey.org/)! As the world's largest honour society affiliated with over 400 universities across the globe, Golden Key is a mission-driven organisation that is committed to recognising and connecting individuals who are dedicated to achieving academic excellence and making a positive impact in their communities.
 
 Joining Golden Key is a significant achievement for me, as it reflects my hard work, dedication, and commitment to academic excellence. It also offers me the opportunity to connect with like-minded individuals and to continue my personal and professional development.
 
 I am deeply grateful for this recognition of my achievements and look forward to continuing to pursue excellence in all areas of my life. Thank you, Golden Key, for this incredible honour!
+</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
