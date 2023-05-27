@@ -6,6 +6,7 @@ inline: false
 related_posts: false
 ---
 
+<p align="justify">
 I recently had the privilege of presenting my PhD research at the 48th Annual Conference of the *Operations Research Society of South Africa* (ORSSA), which was held at the stunning Vineyard Hotel in Cape Town (see programme [here](https://www.orssa.org.za/_files/ugd/568002_85cfbec5bd3a4c45bc35374cb671254d.pdf)). The conference program was diverse, and it featured presentations from different fields of study, including machine learning, supply chain, health care, and epidemiology.
 
 This conference was particularly special as it marked the 50th anniversary of ORSSA, and I was proud to be a co-author of the book unveiled at the conference titled *"Operations research in South Africa: The first 50 years"*. In my chapter of the book, I detailed the history of the Western Cape Chapter of ORSSA. Eighteen sessions of the conference program were dedicated to introducing the book's chapters, which offered a fascinating insight into the Society's rich history.
@@ -17,6 +18,7 @@ In my presentation, I proposed a modular framework for quantitatively describing
 Apart from the exciting scientific contributions, the ORSSA conference was known for its enjoyable social aspects, and this year was no exception. The conference program included several special social events, including a welcome function on registration day, a mid-conference mixer at Kirstenbosch Gardens' Moyo restaurant, and a banquet gala where top practitioners were awarded during the National Student Competition Medal ceremony, the recognition award ceremony, and the Tom Rozwadowski Medal ceremony.
 
 As I reflect on the experience, I am grateful for the opportunity to have presented my research at the conference and to have been a part of such a significant event in the history of ORSSA. The conference was productive, inspiring, and memorable, and I look forward to attending future conferences in the field.
+</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
