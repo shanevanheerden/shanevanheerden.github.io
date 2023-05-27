@@ -19,16 +19,10 @@ I packaged this model into a flexible decision support system that can recommend
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/news/dss_prize2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/news/dss_prize4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-</div>
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/news/dss_prize3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/news/dss_prize4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
         {% include figure.html path="assets/img/news/dss_prize5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
