@@ -316,12 +316,18 @@ As may be seen in Figure 2(a), a higher proportion of customers who take out sma
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 	<center>(a)</center>
-	{% include figure.html path="assets/img/blog/blog8.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(c)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 	<center>(b)</center>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+	{% include figure.html path="assets/img/blog/blog8.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	<center>(c)</center>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog8.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 	<center>(d)</center>
     </div>
