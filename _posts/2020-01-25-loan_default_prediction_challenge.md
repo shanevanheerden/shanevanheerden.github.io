@@ -346,12 +346,18 @@ The highest concentration of SuperLender customers are located in the state of L
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 	<center>(a)</center>
-	{% include figure.html path="assets/img/blog/blog8.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(c)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 	<center>(b)</center>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+	{% include figure.html path="assets/img/blog/blog8.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	<center>(c)</center>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog8.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 	<center>(d)</center>
     </div>
@@ -368,12 +374,18 @@ As may be seen in Figure 4(a), the total number of loans issued by SuperLender h
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 	<center>(a)</center>
-	{% include figure.html path="assets/img/blog/blog8.12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(c)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/blog/blog8.13.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 	<center>(b)</center>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+	{% include figure.html path="assets/img/blog/blog8.12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+	<center>(c)</center>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog8.14.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 	<center>(d)</center>
     </div>
