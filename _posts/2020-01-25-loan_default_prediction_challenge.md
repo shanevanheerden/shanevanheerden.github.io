@@ -291,6 +291,12 @@ In the previous loans dataset, the number of days a customer's loan was over/und
 
 The expression in (\ref{daysoverunder}) is used as a basis to construct the first new feature `default_loan` in the previous loans dataset indicating whether the customer had defaulted on their loan, defined mathematically as
 
+\begin{split}
+F = \{F_{x} \in  F_{c} &: (|S| > |C|) \\
+ &\quad \cap (\text{minPixels}  < |S| < \text{maxPixels}) \\
+ &\quad \cap (|S_{\text{conected}}| > |S| - \epsilon) \}
+\end{split}
+
 \begin{aligned}
 \mbox{default_loan}=\left\{\begin{array}{ll}
 \vspace{2mm}0,&\mbox{if days_over_under}\leq 0,\\
