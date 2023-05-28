@@ -293,7 +293,8 @@ The expression in (\ref{daysoverunder}) is used as a basis to construct the firs
 
 f(x)= 
 \begin{cases}
-    \frac{x^2-x}{x},& \text{if } x\geq 1\\
+    \frac{x^2-x}{x},& \text{if } x\geq 1 \\
+    
     0,              & \text{otherwise}
 \end{cases}
 
