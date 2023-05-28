@@ -286,7 +286,7 @@ Arguably, the most involved and important tasks in the data mining process is th
 In the previous loans dataset, the number of days a customer's loan was over/under the days stipulated by the loan's term is defined mathematically as
 
 \begin{equation}
-\mbox{`days_over_under`}=\mbox{`close_date`}-(\mbox{`approve_date`}+\mbox{`term_days`}).\label{daysoverunder}
+\mbox{\tt days_over_under}=\mbox{\tt close_date}-(\mbox{\tt approve_date}+\mbox{\tt term_days}).\label{daysoverunder}
 \end{equation}
 
 The expression in (\ref{daysoverunder}) is used as a basis to construct the first new feature `default_loan` in the previous loans dataset indicating whether the customer had defaulted on their loan, defined mathematically as
