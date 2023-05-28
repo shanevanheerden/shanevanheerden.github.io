@@ -286,11 +286,16 @@ Arguably, the most involved and important tasks in the data mining process is th
 In the previous loans dataset, the number of days a customer's loan was over/under the days stipulated by the loan's term is defined mathematically as
 
 \begin{equation}
-\mbox{\tttext{days_over_under}}=\mbox{\tt close_date}-(\mbox{\tt approve_date}+\mbox{\tt term_days}).\label{daysoverunder}
+\mbox{days_over_under}=\mbox{close_date}-(\mbox{approve_date}+\mbox{term_days}).\label{daysoverunder}
 \end{equation}
 
 The expression in (\ref{daysoverunder}) is used as a basis to construct the first new feature `default_loan` in the previous loans dataset indicating whether the customer had defaulted on their loan, defined mathematically as
 
+\begin{equation}
+\mbox{days_over}=\mbox{default_loan}\times\mbox{days_over_under},\label{3.eqn.daysover}
+\end{equation}
+
+In the performance dataset, the result computed in (\ref{3.eqn.defaultloan}) is then used to construct a new feature `prev_default_loan`$=\mbox{SUM}($`default_loan`$)$ in the performance dataset indicating the total number of loans a customer has previously defaulted on. The result computed in (\ref{3.eqn.daysover}) is then used to construct a new feature `prev_days_over`$=\mbox{SUM}($`days_over`$)$ in the performance dataset indicating the total days a customer has exceeded their payment terms on past loans. A feature `prop_default_loan` is also constructed in the performance dataset indicating the proportion of loans a customer has previously defaulted on, defined mathematically as
 
 ### 3.2. Data mining architecture
 
