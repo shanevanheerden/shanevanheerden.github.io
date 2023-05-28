@@ -293,8 +293,8 @@ The expression in (\ref{daysoverunder}) is used as a basis to construct the firs
 
 \begin{equation}
 \mbox{default_loan}=\left\{\begin{array}{ll}
-\vspace{2mm}0,&\mbox{if days_over_under}\leq 0,\\
-1,&\mbox{otherwise},
+\vspace{2mm}0,\mbox{if days_over_under}\leq 0,\\
+1,\mbox{otherwise},
 \end{array}\right.\label{3.eqn.defaultloan}
 \end{equation}
 
