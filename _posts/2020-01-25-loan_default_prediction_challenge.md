@@ -277,7 +277,7 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
 
 ## 3. Methodology
 
-This section contains a description of the methodology followed during this investigation. The section opens in 3.1 with a description of the features constructed in order to draw more information from the three sets of data. This is followed, in 3.2, by an elucidation of the data mining architecture constructed for the purpose of this analysis.
+This section contains a description of the methodology followed during this investigation. The section opens in §3.1 with a description of the features constructed in order to draw more information from the three sets of data. This is followed, in §3.2, by an elucidation of the data mining architecture constructed for the purpose of this analysis.
 
 ### 3.1. Feature engineering
 
@@ -364,7 +364,7 @@ The dataset is then partitioned into the training and testing dataset in Widgets
 
 ## 4. Data exploration
 
-This section is dedicated to exploring the data used and produced by the data mining architecture described in \S\ref{sec3.2}. Data distribution, spatial and temporal analyses are conducted in \S\ref{sec4.1}, \S\ref{sec4.2} and \S\ref{sec4.3}, respectively, in order to draw some preliminary insights from the data supplied from SuperLender which may better guide the predictive modelling component of this investigation.
+This section is dedicated to exploring the data used and produced by the data mining architecture described in §3.2. Data distribution, spatial and temporal analyses are conducted in §4.1, §4.2 and §4.3, respectively, in order to draw some preliminary insights from the data supplied from SuperLender which may better guide the predictive modelling component of this investigation.
 
 ### 4.1. Data distribution analysis
 
@@ -456,7 +456,7 @@ As may be seen in Figure 4(a), the total number of loans issued by SuperLender h
 
 ## 5. Predictive model results
 
-The purpose of this section is to describe the predictive modelling analysis conducted in this investigation. A description of the hyperparameter tuning procedure is first described in \S\ref{sec5.1}. This is followed, in \S\ref{sec5.2}, with a discussion of the predictive capabilities of the selected learning models. And finally, in \S\ref{sec5.3}, selected learning models are used to identify the most informative features for predicting whether a customer will default on their loan.
+The purpose of this section is to describe the predictive modelling analysis conducted in this investigation. A description of the hyperparameter tuning procedure is first described in §5.1. This is followed, in §5.2, with a discussion of the predictive capabilities of the selected learning models. And finally, in §5.3, selected learning models are used to identify the most informative features for predicting whether a customer will default on their loan.
 
 ### 5.1. Hyperparameter tuning
 
@@ -600,7 +600,7 @@ The rule formulation of the CT learning may be seen in the form of a decision tr
 
 ## 6. Conclusion
 
-In this final concluding section, sensible recommendations are provided to SuperLender in \S\ref{sec6.1} based on the investigations conducted in this report. The focus then shifts in \S\ref{sec6.2} to a discussion of possible additional sources of data which may enhance a learning model's predictive performance as well as possible future work which may be pursued to further improve the data mining procedure conducted in this report. This section concludes in \S\ref{sec6.3} with feedback from the author regarding the assessment.
+In this final concluding section, sensible recommendations are provided to SuperLender in §6.1 based on the investigations conducted in this report. The focus then shifts in §6.2 to a discussion of possible additional sources of data which may enhance a learning model's predictive performance as well as possible future work which may be pursued to further improve the data mining procedure conducted in this report. This section concludes in §6.3 with feedback from the author regarding the assessment.
 
 ### 6.1. Recommendations
 
