@@ -307,39 +307,39 @@ In the performance dataset, the result computed in (\ref{3.eqn.defaultloan}) is 
 \mbox{prop_default_loan}=\frac{\mbox{prev_default_loan}}{\mbox{loan_number}-1},\label{3.eqn.propdefaultloan}
 \end{equation}
 
-where $\mbox{prev_default_loan}=\mbox{SUM}(\mbox{default_loan})$ is a new feature indicating the total number of loans a customer has previously defaulted on and $\mbox{loan_number}$ is the loan number of the current loan. The interest rate charged to each customer is defined mathematically as
+where `prev_default_loan` $=$ SUM $($ `default_loan` $)$ is a new feature indicating the total number of loans a customer has previously defaulted on and $\mbox{loan_number}$ is the loan number of the current loan. The interest rate charged to each customer is defined mathematically as
 
 \begin{equation}
 \mbox{interest_per_day}=\frac{\mbox{total_due}-\mbox{loan_amount}}{\mbox{term_days}}.\label{3.eqn.interestperday}
 \end{equation}
 
-The result computed in (\ref{3.eqn.interestperday}) is used as a basis to construct a new feature $\mbox{prop_interest_per_day}$ in the performance loans dataset indicating the proportion of customer's interest rate on their current and previous loans, defined mathematically as
+The result computed in (\ref{3.eqn.interestperday}) is used as a basis to construct a new feature `prop_interest_per_day` in the performance loans dataset indicating the proportion of customer's interest rate on their current and previous loans, defined mathematically as
 
 \begin{equation}
 \mbox{prop_interest_per_day}=\frac{\mbox{interest_per_day}-\mbox{prev_interest_per_day}}{\mbox{prev_interest_per_day}},\label{3.eqn.propinterestperday}
 \end{equation}
 
-where $\mbox{prev_interest_per_day}=\mbox{AVG}(\mbox{interest_per_day})$ is a new feature indicating the average interest rate charged to a customer on their previous loans. In the same way, a new feature $\mbox{prop_term_days}$ is constructed in the performance dataset indicating the proportion of customer's loan terms on their current and previous loans, defined mathematically as
+where `prev_interest_per_day` $=$ AVG $($ `interest_per_day` $)$ is a new feature indicating the average interest rate charged to a customer on their previous loans. In the same way, a new feature `prop_term_days` is constructed in the performance dataset indicating the proportion of customer's loan terms on their current and previous loans, defined mathematically as
 
 \begin{equation}
 \mbox{prop_term_days}=\frac{\mbox{term_days}-\mbox{prev_term_days}}{\mbox{prev_term_days}},\label{3.eqn.proptermdays}
 \end{equation}
 
-where $\mbox{prev_term_days}=\mbox{AVG}(\mbox{term_days})$ is a new feature indicating the average term days offered to the customer on their previous loans. And finally, a new feature $\mbox{prop_loan_amount}$ is constructed to indicate the proportion of customer's loan amount on their current and previous loans, defined mathematically as
+where `prev_term_days` $=$ AVG $($ `term_days` $)$ is a new feature indicating the average term days offered to the customer on their previous loans. And finally, a new feature `prop_loan_amount` is constructed to indicate the proportion of customer's loan amount on their current and previous loans, defined mathematically as
 
 \begin{equation}
 \mbox{prop_loan_amount}=\frac{\mbox{loan_amount}-\mbox{prev_loan_amount}}{\mbox{prev_loan_amount}},\label{3.eqn.proploanamount}
 \end{equation}
 
-where $\mbox{prev_loan_amount}=\mbox{AVG}(\mbox{loan_amount})$ is a new feature indicating a customer's average previous loan amounts.
+where `prev_loan_amount`$=$ AVG $($ `loan_amount` $)$ is a new feature indicating a customer's average previous loan amounts.
 
-In the demographics dataset, a new feature ${\tt age}$ is constructed indicating the age of the customer in years, defined mathematically as
+In the demographics dataset, a new feature `age` is constructed indicating the age of the customer in years, defined mathematically as
 
 \begin{equation}
 \mbox{age}=\mbox{now}-\mbox{birthdate},\label{3.eqn.age}
 \end{equation}
 
-where ${\tt now}$ indicates the current time in years.
+where `now` indicates the current time in years.
 
 ### 3.2. Data mining architecture
 
