@@ -303,6 +303,44 @@ The expression in (\ref{3.eqn.defaultloan}) is also used to construct a second f
 
 In the performance dataset, the result computed in (\ref{3.eqn.defaultloan}) is then used to construct a new feature `prev_default_loan`$=\mbox{SUM}($`default_loan`$)$ in the performance dataset indicating the total number of loans a customer has previously defaulted on. The result computed in (\ref{3.eqn.daysover}) is then used to construct a new feature `prev_days_over`$=\mbox{SUM}($`days_over`$)$ in the performance dataset indicating the total days a customer has exceeded their payment terms on past loans. A feature `prop_default_loan` is also constructed in the performance dataset indicating the proportion of loans a customer has previously defaulted on, defined mathematically as
 
+\begin{equation}
+\mbox{prop_default_loan}=\frac{\mbox{prev_default_loan}}{\mbox{loan_number}-1},\label{3.eqn.propdefaultloan}
+\end{equation}
+
+where $\mbox{prev_default_loan}=\mbox{SUM}(\mbox{default_loan})$ is a new feature indicating the total number of loans a customer has previously defaulted on and $\mbox{loan_number}$ is the loan number of the current loan. The interest rate charged to each customer is defined mathematically as
+
+\begin{equation}
+\mbox{interest_per_day}=\frac{\mbox{total_due}-\mbox{loan_amount}}{\mbox{term_days}}.\label{3.eqn.interestperday}
+\end{equation}
+
+The result computed in (\ref{3.eqn.interestperday}) is used as a basis to construct a new feature $\mbox{prop_interest_per_day}$ in the performance loans dataset indicating the proportion of customer's interest rate on their current and previous loans, defined mathematically as
+
+\begin{equation}
+\mbox{prop_interest_per_day}=\frac{\mbox{interest_per_day}-\mbox{prev_interest_per_day}}{\mbox{prev_interest_per_day}},\label{3.eqn.propinterestperday}
+\end{equation}
+
+where $\mbox{prev_interest_per_day}=\mbox{AVG}(\mbox{interest_per_day})$ is a new feature indicating the average interest rate charged to a customer on their previous loans. In the same way, a new feature $\mbox{prop_term_days}$ is constructed in the performance dataset indicating the proportion of customer's loan terms on their current and previous loans, defined mathematically as
+
+\begin{equation}
+\mbox{prop_term_days}=\frac{\mbox{term_days}-\mbox{prev_term_days}}{\mbox{prev_term_days}},\label{3.eqn.proptermdays}
+\end{equation}
+
+where $\mbox{prev_term_days}=\mbox{AVG}(\mbox{term_days})$ is a new feature indicating the average term days offered to the customer on their previous loans. And finally, a new feature $\mbox{prop_loan_amount}$ is constructed to indicate the proportion of customer's loan amount on their current and previous loans, defined mathematically as
+
+\begin{equation}
+\mbox{prop_loan_amount}=\frac{\mbox{loan_amount}-\mbox{prev_loan_amount}}{\mbox{prev_loan_amount}},\label{3.eqn.proploanamount}
+\end{equation}
+
+where $\mbox{prev_loan_amount}=\mbox{AVG}(\mbox{loan_amount})$ is a new feature indicating a customer's average previous loan amounts.
+
+In the demographics dataset, a new feature ${\tt age}$ is constructed indicating the age of the customer in years, defined mathematically as
+
+\begin{equation}
+\mbox{age}=\mbox{now}-\mbox{birthdate},\label{3.eqn.age}
+\end{equation}
+
+where ${\tt now}$ indicates the current time in years.
+
 ### 3.2. Data mining architecture
 
 A data mining solution was built in the Orange Data Mining Software <d-cite key="Demsar2013"></d-cite> using multiple pre-built *widgets*, and is illustrated in Figure 1. The training and testing performance, previous loans and demographics data sets are first imported and categorised according to the data types specified in Tables 1, 2 and 3, respectively. Given the performance data, these datasets are first formatted and concatenated into a single dataset using Widgets A1 and A2, respectively, and are passed to Widget A3. The <code>interest_per_day</code> feature is then computed according to expression (\ref{3.eqn.interestperday}) using Widget A3 and are passed to Widget A4. The `term_days`, `loan_number`, `loan_amount` and `interest_per_day`, `good_bad_flag` and `customer_id` features are then selected in Widget A4 and are passed to Widget C1.
