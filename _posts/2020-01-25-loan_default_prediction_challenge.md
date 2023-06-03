@@ -277,7 +277,7 @@ SuperLender provided us with three separate sets of data namely: (1) Performance
 
 ## 3. Methodology
 
-This section contains a description of the methodology followed during this investigation. The section opens in \S\ref{sec3.1} with a description of the features constructed in order to draw more information from the three sets of data. This is followed, in \S\ref{sec3.2}, by an elucidation of the data mining architecture constructed for the purpose of this analysis.
+This section contains a description of the methodology followed during this investigation. The section opens in 3.1 with a description of the features constructed in order to draw more information from the three sets of data. This is followed, in 3.2, by an elucidation of the data mining architecture constructed for the purpose of this analysis.
 
 ### 3.1. Feature engineering
 
@@ -292,10 +292,7 @@ In the previous loans dataset, the number of days a customer's loan was over/und
 The expression in (\ref{daysoverunder}) is used as a basis to construct the first new feature `default_loan` in the previous loans dataset indicating whether the customer had defaulted on their loan, defined mathematically as
 
 \begin{equation}
-\mbox{default_loan}=\left\{\begin{array}{ll}
-\vspace{2mm}0,\mbox{if days_over_under}\leq 0,\\
-1,\mbox{otherwise},
-\end{array}\right.\label{3.eqn.defaultloan}
+\mbox{default_loan}=0\mbox{ if days_over_under}\leq 0\mbox{ otherwise}1.\label{3.eqn.defaultloan}
 \end{equation}
 
 The expression in (\ref{3.eqn.defaultloan}) is also used to construct a second feature `days_over` in the previous loans dataset indicating the number of days a customer took to pay the loan after the agreed term days, defined mathematically as
