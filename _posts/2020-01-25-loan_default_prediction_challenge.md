@@ -301,7 +301,7 @@ The expression in (\ref{3.eqn.defaultloan}) is also used to construct a second f
 \mbox{days_over}=\mbox{default_loan}\times\mbox{days_over_under},\label{3.eqn.daysover}
 \end{equation}
 
-In the performance dataset, the result computed in (\ref{3.eqn.defaultloan}) is then used to construct a new feature `prev_default_loan` $=\mbox{SUM}($ `default_loan` $)$ in the performance dataset indicating the total number of loans a customer has previously defaulted on. The result computed in (\ref{3.eqn.daysover}) is then used to construct a new feature `prev_days_over` $=\mbox{SUM}($ `days_over` $)$ in the performance dataset indicating the total days a customer has exceeded their payment terms on past loans. A feature `prop_default_loan` is also constructed in the performance dataset indicating the proportion of loans a customer has previously defaulted on, defined mathematically as
+In the performance dataset, the result computed in (\ref{3.eqn.defaultloan}) is then used to construct a new feature `prev_default_loan` $=$SUM$($ `default_loan` $)$ in the performance dataset indicating the total number of loans a customer has previously defaulted on. The result computed in (\ref{3.eqn.daysover}) is then used to construct a new feature `prev_days_over` $=$SUM$($ `days_over` $)$ in the performance dataset indicating the total days a customer has exceeded their payment terms on past loans. A feature `prop_default_loan` is also constructed in the performance dataset indicating the proportion of loans a customer has previously defaulted on, defined mathematically as
 
 \begin{equation}
 \mbox{prop_default_loan}=\frac{\mbox{prev_default_loan}}{\mbox{loan_number}-1},\label{3.eqn.propdefaultloan}
