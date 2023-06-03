@@ -50,9 +50,11 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog8.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
+I recently took part in the [Load Default Prediction Challenge](https://zindi.africa/competitions/data-science-nigeria-challenge-1-loan-default-prediction) on Zindi. In this blog post, I'm going to provide you with a detailed description of the analysis I conducted, together with the final recommendations I provided with regards to the types of customers who are more and less likely to default on their loans.
+
 ## 1. The problem
 
-SuperLender is a local digital lending company who prides themselves in delivering profitable and high-impact loan alternatives to the people of Nigeria. The company has approached the Zindi community to develop an effective credit risk model to predict the odds that a returning customer will repay their loan. More specifically, they recommended that the approach should be based on two main risk drivers of loan default prediction: (1) The willingness and (2) the ability of a customer to pay back their loan. In this blog post, I'm going to provide you with a detailed description of the analysis I conducted, together with the final recommendations I would provide to SuperLender with regards to the types of customers who are more and less likely to default on their loans.
+SuperLender is a local digital lending company who prides themselves in delivering profitable and high-impact loan alternatives to the people of Nigeria. The company has approached the Zindi community to develop an effective credit risk model to predict the odds that a returning customer will repay their loan. More specifically, they recommended that the approach should be based on two main risk drivers of loan default prediction: (1) The willingness and (2) the ability of a customer to pay back their loan.
 
 ***
 
