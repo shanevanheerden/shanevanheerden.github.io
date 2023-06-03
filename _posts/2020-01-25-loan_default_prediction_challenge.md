@@ -616,7 +616,7 @@ Following the analysis conducted in this report, a set of recommendations may be
 
 Furthermore, SuperLender, as a whole, is continuing to grow as a digital lending company in Nigeria. It is, however, surprising that SuperLender does not have a significant number of customers in Abuja as well as in the northern Nigerian states, as previously seen in Figure 3(a). These regions contain higher population densities, as may be seen in Figure 9, and may provide SuperLender with opportunity for further growth.
 
-{% include figure.html path="assets/img/blog/blog8.18.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog8.19.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 9:</em> The population density of the various Nigerian counties <d-cite key="Population2020"></d-cite>.
 </div>
