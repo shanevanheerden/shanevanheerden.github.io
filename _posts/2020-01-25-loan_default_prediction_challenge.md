@@ -292,7 +292,7 @@ In the previous loans dataset, the number of days a customer's loan was over/und
 The expression in (\ref{daysoverunder}) is used as a basis to construct the first new feature `default_loan` in the previous loans dataset indicating whether the customer had defaulted on their loan, defined mathematically as
 
 \begin{equation}
-\mbox{default_loan}=0\mbox{ if days_over_under}\leq 0\mbox{ otherwise}1.\label{3.eqn.defaultloan}
+\mbox{default_loan}=0 if\mbox{ days_over_under}\leq 0 otherwis 1.\label{3.eqn.defaultloan}
 \end{equation}
 
 The expression in (\ref{3.eqn.defaultloan}) is also used to construct a second feature `days_over` in the previous loans dataset indicating the number of days a customer took to pay the loan after the agreed term days, defined mathematically as
