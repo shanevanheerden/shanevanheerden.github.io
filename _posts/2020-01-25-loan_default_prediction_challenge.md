@@ -301,13 +301,13 @@ The expression in (\ref{3.eqn.defaultloan}) is also used to construct a second f
 \mbox{days_over}=\mbox{default_loan}\times\mbox{days_over_under},\label{3.eqn.daysover}
 \end{equation}
 
-In the performance dataset, the result computed in (\ref{3.eqn.defaultloan}) is then used to construct a new feature `prev_default_loan` $=${\tt SUM}$($ `default_loan` $)$ in the performance dataset indicating the total number of loans a customer has previously defaulted on. The result computed in (\ref{3.eqn.daysover}) is then used to construct a new feature `prev_days_over` $=${\tt SUM}$($ `days_over` $)$ in the performance dataset indicating the total days a customer has exceeded their payment terms on past loans. A feature `prop_default_loan` is also constructed in the performance dataset indicating the proportion of loans a customer has previously defaulted on, defined mathematically as
+In the performance dataset, the result computed in (\ref{3.eqn.defaultloan}) is then used to construct a new feature `prev_default_loan` $={\tt SUM}($ `default_loan` $)$ in the performance dataset indicating the total number of loans a customer has previously defaulted on. The result computed in (\ref{3.eqn.daysover}) is then used to construct a new feature `prev_days_over` $={\tt SUM}($ `days_over` $)$ in the performance dataset indicating the total days a customer has exceeded their payment terms on past loans. A feature `prop_default_loan` is also constructed in the performance dataset indicating the proportion of loans a customer has previously defaulted on, defined mathematically as
 
 \begin{equation}
 \mbox{prop_default_loan}=\frac{\mbox{prev_default_loan}}{\mbox{loan_number}-1},\label{3.eqn.propdefaultloan}
 \end{equation}
 
-where `prev_default_loan` $=${\tt SUM}$($ `default_loan` $)$ is a new feature indicating the total number of loans a customer has previously defaulted on and $\mbox{loan_number}$ is the loan number of the current loan. The interest rate charged to each customer is defined mathematically as
+where `prev_default_loan` $={\tt SUM}($ `default_loan` $)$ is a new feature indicating the total number of loans a customer has previously defaulted on and $\mbox{loan_number}$ is the loan number of the current loan. The interest rate charged to each customer is defined mathematically as
 
 \begin{equation}
 \mbox{interest_per_day}=\frac{\mbox{total_due}-\mbox{loan_amount}}{\mbox{term_days}}.\label{3.eqn.interestperday}
@@ -319,19 +319,19 @@ The result computed in (\ref{3.eqn.interestperday}) is used as a basis to constr
 \mbox{prop_interest_per_day}=\frac{\mbox{interest_per_day}-\mbox{prev_interest_per_day}}{\mbox{prev_interest_per_day}},\label{3.eqn.propinterestperday}
 \end{equation}
 
-where `prev_interest_per_day` $=${\tt AVG}$($ `interest_per_day` $)$ is a new feature indicating the average interest rate charged to a customer on their previous loans. In the same way, a new feature `prop_term_days` is constructed in the performance dataset indicating the proportion of customer's loan terms on their current and previous loans, defined mathematically as
+where `prev_interest_per_day` $={\tt AVG}($ `interest_per_day` $)$ is a new feature indicating the average interest rate charged to a customer on their previous loans. In the same way, a new feature `prop_term_days` is constructed in the performance dataset indicating the proportion of customer's loan terms on their current and previous loans, defined mathematically as
 
 \begin{equation}
 \mbox{prop_term_days}=\frac{\mbox{term_days}-\mbox{prev_term_days}}{\mbox{prev_term_days}},\label{3.eqn.proptermdays}
 \end{equation}
 
-where `prev_term_days` $=${\tt AVG}$($ `term_days` $)$ is a new feature indicating the average term days offered to the customer on their previous loans. And finally, a new feature `prop_loan_amount` is constructed to indicate the proportion of customer's loan amount on their current and previous loans, defined mathematically as
+where `prev_term_days` $={\tt AVG}($ `term_days` $)$ is a new feature indicating the average term days offered to the customer on their previous loans. And finally, a new feature `prop_loan_amount` is constructed to indicate the proportion of customer's loan amount on their current and previous loans, defined mathematically as
 
 \begin{equation}
 \mbox{prop_loan_amount}=\frac{\mbox{loan_amount}-\mbox{prev_loan_amount}}{\mbox{prev_loan_amount}},\label{3.eqn.proploanamount}
 \end{equation}
 
-where `prev_loan_amount`$=${\tt AVG}$($ `loan_amount` $)$ is a new feature indicating a customer's average previous loan amounts.
+where `prev_loan_amount`$={\tt AVG}($ `loan_amount` $)$ is a new feature indicating a customer's average previous loan amounts.
 
 In the demographics dataset, a new feature `age` is constructed indicating the age of the customer in years, defined mathematically as
 
