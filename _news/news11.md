@@ -8,7 +8,7 @@ related_posts: false
 
 {% include figure.html path="assets/img/news/indaba1.jpg" class="img-fluid rounded z-depth-1" %}
 <p align="justify">
-Attending the <a href='https://deeplearningindaba.com/2018/'><Deep Learning Indaba/a> at Stellenbosch University in South Africa was a truly transformative experience for me. From September 9th to 14th, 2018, I had the opportunity to immerse myself in the world of machine learning and artificial intelligence, and to learn from some of the most renowned experts in the field.
+Attending the <a href='https://deeplearningindaba.com/2018/'><Deep Learning Indaba</a> at Stellenbosch University in South Africa was a truly transformative experience for me. From September 9th to 14th, 2018, I had the opportunity to immerse myself in the world of machine learning and artificial intelligence, and to learn from some of the most renowned experts in the field.
 </p>
 <p align="justify">
 The Indaba, whose mission is to strengthen AI on the African continent, provided a platform for teaching, research, exchange, and debate around the latest developments in the field. Among the prestigious speakers at the event were <a href='https://research.google/people/jeff/'>Jeff Dean</a>, a senior researcher at Google, and <a href='https://www.davidsilver.uk/'>David Silver</a> the lead researcher on the <a href='https://www.deepmind.com/research/highlighted-research/alphago'>AlphaGo project</a> at DeepMind.
