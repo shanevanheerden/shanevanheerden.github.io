@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🌍 travelling
+title: 🌍 Travelling
 description: I love travelling to all corners of the world with my wife.
 img: assets/img/hobbies/travelling.jpg
 importance: 1
