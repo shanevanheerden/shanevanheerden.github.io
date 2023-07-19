@@ -27,7 +27,6 @@ After the intense examination, a sense of relief enveloped the room as my examin
 <p align="justify">
 Reflecting on that day, I am humbled by the support and encouragement I received from my mentors, peers, and loved ones. It was their unwavering belief in me that fueled my determination to achieve this milestone. My research journey has been challenging yet deeply fulfilling, and I am now thrilled to embrace the next chapter in my academic pursuit.
 </p>
-
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/news/masters1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
