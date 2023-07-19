@@ -17,3 +17,4 @@ Together, DataProphet and their game-changing technology are at the forefront of
 </p>
 
 {% include figure.html path="assets/img/news/dataprophet2.gif" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include video.html path="https://www.youtube.com/embed/-qSgRIf1S-g" class="img-fluid rounded z-depth-1" %}
