@@ -114,12 +114,12 @@ order: 5
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
       <a href="https://credentials.databricks.com/55fb7987-70cc-4296-802c-58a4924c76c2#gs.yqniy9" target="_blank">
-        <img src="/assets/img/certifications/lakehouse_fundamentals.png">
+        <img src="/assets/img/certifications/lakehouse_fundamentals.png" width="200">
       </a>
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <a href="https://credentials.databricks.com/67bb58e3-6b91-4334-b0a4-1a1208e786ef#gs.2x42a9" target="_blank">
-        <img src="/assets/img/certifications/generative_ai_fundamentals.png">
+        <img src="/assets/img/certifications/generative_ai_fundamentals.png" width="200">
       </a>
     </div>
     <div class="col-sm mt-3 mt-md-0">
