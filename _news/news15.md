@@ -7,7 +7,7 @@ related_posts: false
 ---
 
 <p align="justify">
-I recently had the privilege of presenting my PhD research at the 48th Annual Conference of the *Operations Research Society of South Africa* (ORSSA), which was held at the stunning Vineyard Hotel in Cape Town (see programme <a href='https://www.orssa.org.za/_files/ugd/568002_85cfbec5bd3a4c45bc35374cb671254d.pdf'>here</a>). The conference program was diverse, and it featured presentations from different fields of study, including machine learning, supply chain, health care, and epidemiology.
+I recently had the privilege of presenting my PhD research at the 48th Annual Conference of the <em>Operations Research Society of South Africa</em> (ORSSA), which was held at the stunning Vineyard Hotel in Cape Town (see programme <a href='https://www.orssa.org.za/_files/ugd/568002_85cfbec5bd3a4c45bc35374cb671254d.pdf'>here</a>). The conference program was diverse, and it featured presentations from different fields of study, including machine learning, supply chain, health care, and epidemiology.
 </p>
 <p align="justify">
 This conference was particularly special as it marked the 50th anniversary of ORSSA, and I was proud to be a co-author of the book unveiled at the conference titled <em>"Operations research in South Africa: The first 50 years"</em>. In my chapter of the book, I detailed the history of the Western Cape Chapter of ORSSA. Eighteen sessions of the conference program were dedicated to introducing the book's chapters, which offered a fascinating insight into the Society's rich history.
