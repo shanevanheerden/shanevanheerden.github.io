@@ -5,7 +5,7 @@ description: Senior Data Scientist at Luno
 date: 2023-08-28
 tags: Personal
 giscus_comments: true
-thumbnail: assets/img/blog/blog9.1.png
+thumbnail: assets/img/blog/blog9.1.jpg
 
 authors:
   - name: Shane van Heerden
@@ -51,7 +51,7 @@ _styles: >
 
 *This blog post was originally featured on the [Luno LinkedIn page](https://www.linkedin.com/company/lunoglobal).*
 
-{% include figure.html path="assets/img/blog/blog9.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog9.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ## 1. What is your name and role and Luno?
 
