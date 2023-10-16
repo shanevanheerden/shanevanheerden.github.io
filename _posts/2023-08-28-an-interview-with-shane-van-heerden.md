@@ -49,8 +49,6 @@ _styles: >
 
 ---
 
-*This blog post was originally featured on the [Luno LinkedIn page](https://www.linkedin.com/company/lunoglobal).*
-
 {% include figure.html path="assets/img/blog/blog9.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ## 1. What is your name and role and Luno?
