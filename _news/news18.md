@@ -18,3 +18,4 @@ related_posts: false
         {% include figure.html path="assets/img/news/capeai3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+{% include video.html path="https://www.youtube.com/embed/mw5ue74iseM" class="img-fluid rounded z-depth-1" %}
