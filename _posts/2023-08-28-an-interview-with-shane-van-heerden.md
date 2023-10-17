@@ -27,7 +27,7 @@ toc:
   - name: 4. What are the top three tasks you would complete day-to-day?
   - name: 5. What are the top skills you need to master to succeed in your role?
   - name: 6. What advice would you give to someone looking to develop into the position you are in?
-  - name: 7. What's been your highlight at Luno?
+  - name: 7. What has been your highlight at Luno?
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -102,6 +102,6 @@ Leaning very much on the the skills I previously mentioned, there are a few nugg
 
 ***
 
-## 7. What's been your highlight at Luno?
+## 7. What has been your highlight at Luno?
 
 The crypto landscape is constantly changing and filled with new challenges. Being in a company with the enthusiasm and willingness for innovation makes it so easy to get excited for work every morning. It may sound cliche, but this is why the people at Luno are an everyday highlight! I am truly grateful that I have the opportunity to learn from such incredibly talented colleagues that push me to become the best version of myself. Moreover, I've been fortunate enough to have an exceptional manager who not only fosters an environment where I can develop the skills I want to grow in but also trusts my opinions and views me as a partner in Data Science discovery.
