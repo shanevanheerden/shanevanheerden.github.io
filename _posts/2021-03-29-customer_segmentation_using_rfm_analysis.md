@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Customer Segmentation using RFM Analysis
+title: 🎭 Customer Segmentation using RFM Analysis
 description: Who are the most valuable customers?
 date: 2021-03-29
 tags: CaseStudy
