@@ -5,7 +5,7 @@ description: Mixing NLP with Neo4j
 date: 2021-08-26
 tags: CaseStudy
 giscus_comments: true
-thumbnail: assets/img/blog/blog11.1.jpg
+thumbnail: assets/img/blog/blog11.1.png
 
 authors:
   - name: Shane van Heerden
