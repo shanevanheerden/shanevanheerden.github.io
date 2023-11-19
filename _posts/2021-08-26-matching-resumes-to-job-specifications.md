@@ -113,6 +113,16 @@ In this blog post, I'll walk you through how I helped them solve this problem by
 
 ## 4. Productionising the solution
 
+{% include figure.html path="assets/img/blog/blog10.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 3: Solution architecture.</em> 
+</div>
+
+{% include figure.html path="assets/img/blog/blog10.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 4: Solution architecture.</em> 
+</div>
+
 
 ***
 
