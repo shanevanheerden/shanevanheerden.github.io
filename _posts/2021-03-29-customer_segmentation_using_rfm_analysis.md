@@ -88,7 +88,7 @@ _styles: >
     <em>Figure 1: Solution architecture.</em> 
 </div>
 
-{% include figure.html path="assets/img/blog/blog12.8.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog12.8.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 1: Solution architecture.</em> 
 </div>
@@ -97,7 +97,7 @@ _styles: >
 
 ## 4. Productionising the solution
 
-{% include figure.html path="assets/img/blog/blog10.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog12.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 3: Solution architecture.</em> 
 </div>
