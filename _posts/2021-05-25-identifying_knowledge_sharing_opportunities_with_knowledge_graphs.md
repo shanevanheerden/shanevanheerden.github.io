@@ -2,7 +2,7 @@
 layout: distill
 title: 🌌 Identifying Knowledge-sharing Opportunities with Knowledge Graphs
 description: Mixing NLP with Neo4j
-date: 2021-08-26
+date: 2021-05-25
 tags: CaseStudy
 giscus_comments: true
 thumbnail: assets/img/blog/blog11.1.png
