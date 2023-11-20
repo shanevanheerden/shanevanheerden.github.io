@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <h4>🎭 Customer Segmentation using RFM Analysis</h4>
-description: Mixing NLP with Neo4j
+description: Who are the most valuable customers?
 img: assets/img/blog/blog12.1.png
 importance: 4
 category: case studies
