@@ -5,6 +5,6 @@ description: In noisy Excell spreadsheets
 img: assets/img/blog/blog4.1.png
 importance: 3
 category: case studies
-redirect: https://shanevanheerden.github.io/blog/2021/part1_using_machine_learning_to_classify_personally_identifiable_data_fields_description/
+redirect: https://shanevanheerden.github.io/blog/2021/using_machine_learning_to_classify_personally_identifiable_data_fields_description/
 page_type: project
 ---
