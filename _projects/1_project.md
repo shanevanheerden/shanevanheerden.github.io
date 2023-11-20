@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <h4>🔍 Using Machine Learning to Classify Personally Identifiable Data Fields</h4>
-description: Part 1 - Rapid Machine Learning Development
+description: In noisy Excell spreadsheets
 img: assets/img/blog/blog4.1.png
 importance: 3
 category: case studies
