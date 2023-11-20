@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 🔍 Using Machine Learning to Classify Personally Identifiable Data Fields
-description: Part 1 - Rapid Machine Learning Development
+description: In noisy Excel spreadsheets
 date: 2021-02-16
 tags: CaseStudy
 giscus_comments: true
@@ -26,7 +26,8 @@ toc:
   - name: 3. Rapid development
   - name: 4. Defining the process flow
   - name: 5. Evaluating the systems performance
-  - name: 6. Wrapping up
+  - name: 6. Productionising the solution
+  - name: 7. Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -56,7 +57,7 @@ I always jump at the opportunity to tackle new and interesting challenges using 
 
 ## 1. The problem
 
-Recently, I was tasked with a new challenge by a client who provides services related to understanding consumer data. In order to strengthen their [*General Data Protection Regulation*](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) compliance and boost their clients' trust, they wanted a solution that could help them automatically identify sensitive fields in their clients' consumer data so that these could be encrypted appropriately. This was an important problem to tackle since all organisations and companies that handle data relating to EU citizens must comply with GDPR.
+Recently, I was tasked with a new challenge by a client who provides services related to secure sharing of consumer data. In order to strengthen their [*General Data Protection Regulation*](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) compliance and boost their clients' trust, they wanted a solution that could help them automatically identify sensitive fields in their clients' consumer data so that these could be encrypted appropriately. This was an important problem to tackle since all organisations and companies that handle data relating to EU citizens must comply with GDPR.
 
 This is a two-part blog post where I am going to walk you through how I helped them solve this problem with some clever engineering and the help of Machine Learning!
 
@@ -270,6 +271,30 @@ So, how well did my solution fare overall? Figure 6 shows the results of my eval
 
 ***
 
-## 6. Wrapping up
+## 6. Productionising the solution
+
+{% include figure.html path="assets/img/blog/blog4.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 7:</em> The file upload tab in the client's local data exchange platform.
+</div>
+
+{% include figure.html path="assets/img/blog/blog4.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 8:</em> The PII field selection tab in the client's local data exchange platform.
+</div>
+
+{% include figure.html path="assets/img/blog/blog4.11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 9:</em> The field mapping tab in the client's local data exchange platform.
+</div>
+
+{% include figure.html path="assets/img/blog/blog4.12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 10:</em> The solution architecture.
+</div>
+
+***
+
+## 7. Wrapping up
 
 And that's it for Part 1! In this post, I walked you through my approach for automatically identifying sensitive data fields. It goes to show that Machine Learning can be used to solve almost any problem. Stick around for Part 2 where I'll describe how I went about packaging this solution as a production-ready system for the client.
