@@ -17,4 +17,4 @@ Prescribe is a unique deep learning solution that optimises manufacturing proces
 Together, DataProphet and their game-changing technology are at the forefront of driving manufacturing advancements, unlocking the full potential of Industry 4.0. As I embark on this internship, I'm excited to contribute to their mission of delivering actionable insights and measurable impact, shaping the future of manufacturing one optimised production line at a time.
 </p>
 {% include figure.html path="assets/img/news/dataprophet2.gif" class="img-fluid rounded z-depth-1" zoomable=true %}
-{% include video.html path="assets/video/dataprophet.mp4" class="img-fluid rounded z-depth-1" %}
+{% include video.html path="assets/video/dataprophet.mp4" class="img-fluid rounded z-depth-1" controls=true %}
