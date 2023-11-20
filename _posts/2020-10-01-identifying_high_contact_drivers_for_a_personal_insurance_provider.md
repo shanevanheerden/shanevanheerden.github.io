@@ -57,7 +57,7 @@ _styles: >
 ## 2. Understanding the clients needs
 
 
-{% include figure.html path="assets/img/blog/blog13.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog13.2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 1: Solution architecture.</em> 
 </div>
@@ -110,41 +110,41 @@ _styles: >
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog13.11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(c)</center>
+	<center>(e)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog13.12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(d)</center>
+	<center>(f)</center>
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog13.13.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(c)</center>
+	<center>(g)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog13.14.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(d)</center>
+	<center>(h)</center>
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog13.15.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(c)</center>
+	<center>(i)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog13.16.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(d)</center>
+	<center>(j)</center>
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog13.17.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(c)</center>
+	<center>(k)</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
 	{% include figure.html path="assets/img/blog/blog13.18.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-	<center>(d)</center>
+	<center>(l)</center>
     </div>
 </div>
 <div class="caption">
