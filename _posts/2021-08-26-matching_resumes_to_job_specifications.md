@@ -129,6 +129,11 @@ In this blog post, I'll walk you through how I helped them solve this problem by
 
 ## 5. Project impact
 
+{% include figure.html path="assets/img/blog/blog10.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 5: Client feedback.</em> 
+</div>
+
 <div class="col-sm mt-3 mt-md-0">
     {% include video.html path="assets/video/jobcrystal.mp4" class="img-fluid rounded z-depth-1" controls=true %}
 </div>
