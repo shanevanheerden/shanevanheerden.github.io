@@ -70,27 +70,27 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog12.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1: Solution architecture.</em> 
+    <em>Figure 2: Solution architecture.</em> 
 </div>
 
 {% include figure.html path="assets/img/blog/blog12.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1: Solution architecture.</em> 
+    <em>Figure 3: Solution architecture.</em> 
 </div>
 
 {% include figure.html path="assets/img/blog/blog12.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1: Solution architecture.</em> 
+    <em>Figure 4: Solution architecture.</em> 
 </div>
 
 {% include figure.html path="assets/img/blog/blog12.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1: Solution architecture.</em> 
+    <em>Figure 5: Solution architecture.</em> 
 </div>
 
 {% include figure.html path="assets/img/blog/blog12.8.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1: Solution architecture.</em> 
+    <em>Figure 6: Solution architecture.</em> 
 </div>
 
 ***
@@ -99,10 +99,15 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog12.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 3: Solution architecture.</em> 
+    <em>Figure 7: Solution architecture.</em> 
 </div>
 
 ***
 
 ## 5. Wrapping up
+
+{% include figure.html path="assets/img/blog/blog12.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 8: Client feedback.</em> 
+</div>
 
