@@ -26,8 +26,12 @@ toc:
   - name: 3. Rapid development
   - name: 4. Defining the process flow
   - name: 5. Evaluating the systems performance
-  - name: 6. Productionising the solution
-  - name: 7. Wrapping up
+  - name: 6. Wrapping up
+  <!---
+  - name: 6. Understanding the clients platform
+  - name: 7. Productionising the solution
+  - name: 8. Wrapping up
+  --->
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -271,12 +275,16 @@ So, how well did my solution fare overall? Figure 6 shows the results of my eval
 
 ***
 
-## 6. Productionising the solution
+<!--- ## 6. Understanding the clients platform
+
+In the `Select Source` tab, users are required to upload the data source they are intending to exchange which would likely take the form of a structured data table usually in CSV or XLS format, as displayed in Figure 7. As previously described in §2, there was hardly ever a predictable column structure in these tables and, on occasion, they contained junk data, or were missing data, in some cells.
 
 {% include figure.html path="assets/img/blog/blog4.9.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 7:</em> The file upload tab in the client's local data exchange platform.
 </div>
+
+The user would then progress to the `Select Fields` tab where they are then required to select all columns which are deemed to be PII
 
 {% include figure.html path="assets/img/blog/blog4.10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -295,6 +303,12 @@ So, how well did my solution fare overall? Figure 6 shows the results of my eval
 
 ***
 
-## 7. Wrapping up
+## 7. Productionising the solution
 
-And that's it for Part 1! In this post, I walked you through my approach for automatically identifying sensitive data fields. It goes to show that Machine Learning can be used to solve almost any problem. Stick around for Part 2 where I'll describe how I went about packaging this solution as a production-ready system for the client.
+***
+
+--->
+
+## 6. Wrapping up
+
+And that's all! In this post, I walked you through my approach for automatically identifying sensitive data fields as well as how this solution was productionised in a real-world system. It goes to show that Machine Learning can be used to solve almost any problem.
