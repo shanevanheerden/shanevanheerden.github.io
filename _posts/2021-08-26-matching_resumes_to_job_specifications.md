@@ -77,50 +77,7 @@ Before developing the solution, I spent time understanding the specific needs of
 
 ## 3. The solution architecture
 
-To meet JobCrystal's requirements, we designed a system that consists of several components:
-
-Data Ingestion: The system ingests resumes and job specifications from various sources, including FTP servers, Dropbox folders, and APIs.
-
-Preprocessing: The ingested documents undergo preprocessing, which includes text cleaning, tokenization, and stemming.
-
-Named Entity Recognition (NER): The system extracts named entities from the documents, such as companies, skills, and education.
-
-Text Classification: The system classifies the documents into industry and job title categories.
-
-Document Representation: The system converts the documents into vector representations using Sentence Transformers.
-
-Unsupervised Ranking: The system ranks the documents based on their similarity to the uploaded resume or job specification using cosine similarity and UMAP.
-
-External Results Integration: The system integrates with external job boards, such as Hiretule, to provide additional candidate recommendations.
-
-User Interface: The system provides a user interface (UI) for recruiters to interact with the system, upload documents, and view recommendations.
-
-Our proposed solution encompassed a comprehensive architecture that leveraged NLP techniques to streamline the recruitment process. The system consisted of the following key components:
-
-To address this challenge, we developed a robust NLP-powered solution that automates the resume-to-job matching process. The solution comprises several key components:
-
-Data Ingestion: The system ingests resumes and job specifications from various sources, including FTP servers and Dropbox accounts.
-
-Preprocessing Pipelines: Incoming documents undergo a series of preprocessing steps, including named entity recognition, sentence embedding, and industry and job title classification.
-
-Data Storage: Preprocessed data is stored in an Elasticsearch database for efficient retrieval and analysis.
-
-Trained Models: Several BERT-based models are employed for text classification and named entity recognition, enabling the system to extract meaningful insights from the text data.
-
-User Interface: A user-friendly interface allows recruiters to easily upload resumes and job specifications, view matching results, and filter matches based on various criteria.
-
-AI Logic: The underlying AI logic powers the system's ability to identify relevant matches between resumes and job specifications. It considers factors such as industry, job title, skills, and experience.
-
-The solution architecture I developed is based on a microservices architecture. This architecture allows for scalability and flexibility. The solution is composed of the following microservices:
-
-Data Ingestion: This microservice is responsible for ingesting resumes and job openings from various sources, such as email, FTP, and Dropbox.
-Preprocessing: This microservice is responsible for preprocessing resumes and job openings to extract relevant information, such as skills, experience, and qualifications.
-Matching: This microservice is responsible for matching resumes to job openings based on the extracted information.
-User Interface: This microservice is responsible for providing a user interface for JobCrystal's recruiters to interact with the solution.
-
-Designing an effective solution architecture was fundamental to the success of this project. The system's backbone comprised multiple components working seamlessly together. From ingesting data through preprocessing pipelines to storing results in Elasticsearch, each step was meticulously crafted. Figure 1 illustrates the interconnectedness of these components, providing a visual representation of our solution's architecture.
-
-The solution architecture was designed with a focus on scalability, efficiency, and seamless integration into JobCrystal's existing infrastructure. Our system's backbone consists of various components working in tandem to deliver a robust and intelligent recruitment solution.
+The success of the project relied heavily on creating a well-designed solution architecture. The system's core comprises multiple components collaborating to provide a strong and intelligent recruitment solution. Each stage, from data ingestion to storing results in ElasticSearch, was crafted with emphasis on scalability, efficiency, and smooth integration into JobCrystal's current infrastructure. Figure 1 visually depicts the interconnected components, showcasing the architecture of the solution.
 
 {% include figure.html path="assets/img/blog/blog10.2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -128,6 +85,11 @@ The solution architecture was designed with a focus on scalability, efficiency, 
 </div>
 
 ### 3.1. Initialize
+
+The system initiates its processing by collecting data from JobCrystal's FTP server and Dropbox account, encompassing approximately 35 000 unlabeled documents and 3 000 labeled resumes associated with job specifications. This diverse dataset undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Metadata extraction steps follow, including industry and job title labels, crucial for subsequent model training. Additionally, the system executes several pipelines, such as updating Dropbox, Zindi, and FTP server metadata, constructing files for job titles, entity lists, and preprocessing Doc2vec/UMAP/HDBSCAN. These steps enhance data refinement, supporting various functionalities like BERT model training and unsupervised ranking.
+
+
+The system initiates the processing of diverse data collected from JobCrystal's FTP server and Dropbox account, encompassing approximately 35,000 unlabelled resumes and 3,000 labeled resumes associated with job specifications. This information undergoes an initialization step, extracting raw text stored in an Elasticsearch database with unique indices. Metadata, including industry and job title labels, is generated for subsequent model training. Further, five metadata extraction steps are executed, involving updating Dropbox, Zindi, and FTP server pipelines to construct metadata descriptions used in the initialization process. These steps encompass updating information related to file locations, industry, job title labels, and constructing sets of named entities uncovered by the NER model. Additionally, a pipeline is dedicated to fitting UMAP and HDBSCAN models for document vector representations, essential for later unsupervised ranking.
 
 The system ingested data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server held approximately 35,000 unlabeled resumes and job specifications, while Dropbox contributed around 3,000 labeled resumes associated with job specifications. All documents underwent an initialization step whereby raw text was extracted and stored in an Elasticsearch database. Further preprocessing steps included:
 
