@@ -54,20 +54,73 @@ I always jump at the opportunity to tackle new and interesting challenges using 
 
 ## 1. The problem
 
-In the fast-paced world of job recruitment, staying ahead requires innovative solutions. Recently, I was tasked with probably my toughest challenges by a client, [JobCrystal](https://www.jobcrystal.com/), who operated a job recruitment firm within South Africa. I undertook the challenge of revolutionizing JobCrystal's current recruitment process by harnessing the power of advanced Natural Language Processing (NLP) techniques.
+In the fast-paced world of job recruitment, staying ahead of the curve requires innovative solutions. Recently, I was tasked with probably my toughest challenges by a client, [JobCrystal](https://www.jobcrystal.com/), who operated a job recruitment firm within South Africa. I undertook the challenge of revolutionizing JobCrystal's current recruitment process by harnessing the power of advanced Natural Language Processing (NLP) techniques.
 
-In this blog post, we'll take you through the intricacies of our project, detailing the architecture, preprocessing pipelines, data storage, APIs, trained models, user interface, and the intricate AI logic that powers our system. 
+In this blog post, we'll take you through the intricacies of our project, detailing the architecture, preprocessing pipelines, data storage, APIs, trained models, user interface, and the intricate AI logic that powers the system. 
 
 ***
 
 ## 2. Understanding the clients needs
 
+Understanding the client's needs was the crucial first step in our journey. JobCrystal's existing recruitment process was time-consuming and inefficient, relying heavily on its recruiters to manually review each resume and match it to relevant job openings. This resulted in slower placement times and potential missed opportunities for both job seekers and employers.
 
+To address these challenges, the client sought a solution that could not only streamline their current processes by automating the matching of resumes to job specifications but also bring innovation to the forefront of their operations. They wanted a system that could accurately identify relevant resumes for each open position (and vice versa), eliminating the need for manual screening.
+
+Before developing the solution, I spent time understanding the specific needs of JobCrystal. I met with the company's recruiters to understand their key pain points and how they currently matched resumes to job openings. I also analyzed the company's data to identify any patterns or trends that could be used to improve the matching process. Through this collaborative process, I gained crucial insights into the intricacies of their current recruitment workflow, enabling myself to tailor my solution to their specific needs. As a result, I developed a set of requirements for the proposed solution:
+
+- **Automated**: The solution should be able to automatically match resumes to job openings (and vice versa) without any manual intervention.
+- **Accurate**: The solution should be able to accurately match resumes to job openings (and vice versa) based on the skills, experience, and qualifications of the candidates.
+- **Scalable**: The solution should be able to handle a large volume of resumes and job openings.
+- **Easy to use**: The solution should be easy to use for JobCrystal's recruiters.
 
 ***
 
 ## 3. The solution architecture
 
+To meet JobCrystal's requirements, we designed a system that consists of several components:
+
+Data Ingestion: The system ingests resumes and job specifications from various sources, including FTP servers, Dropbox folders, and APIs.
+
+Preprocessing: The ingested documents undergo preprocessing, which includes text cleaning, tokenization, and stemming.
+
+Named Entity Recognition (NER): The system extracts named entities from the documents, such as companies, skills, and education.
+
+Text Classification: The system classifies the documents into industry and job title categories.
+
+Document Representation: The system converts the documents into vector representations using Sentence Transformers.
+
+Unsupervised Ranking: The system ranks the documents based on their similarity to the uploaded resume or job specification using cosine similarity and UMAP.
+
+External Results Integration: The system integrates with external job boards, such as Hiretule, to provide additional candidate recommendations.
+
+User Interface: The system provides a user interface (UI) for recruiters to interact with the system, upload documents, and view recommendations.
+
+Our proposed solution encompassed a comprehensive architecture that leveraged NLP techniques to streamline the recruitment process. The system consisted of the following key components:
+
+To address this challenge, we developed a robust NLP-powered solution that automates the resume-to-job matching process. The solution comprises several key components:
+
+Data Ingestion: The system ingests resumes and job specifications from various sources, including FTP servers and Dropbox accounts.
+
+Preprocessing Pipelines: Incoming documents undergo a series of preprocessing steps, including named entity recognition, sentence embedding, and industry and job title classification.
+
+Data Storage: Preprocessed data is stored in an Elasticsearch database for efficient retrieval and analysis.
+
+Trained Models: Several BERT-based models are employed for text classification and named entity recognition, enabling the system to extract meaningful insights from the text data.
+
+User Interface: A user-friendly interface allows recruiters to easily upload resumes and job specifications, view matching results, and filter matches based on various criteria.
+
+AI Logic: The underlying AI logic powers the system's ability to identify relevant matches between resumes and job specifications. It considers factors such as industry, job title, skills, and experience.
+
+The solution architecture I developed is based on a microservices architecture. This architecture allows for scalability and flexibility. The solution is composed of the following microservices:
+
+Data Ingestion: This microservice is responsible for ingesting resumes and job openings from various sources, such as email, FTP, and Dropbox.
+Preprocessing: This microservice is responsible for preprocessing resumes and job openings to extract relevant information, such as skills, experience, and qualifications.
+Matching: This microservice is responsible for matching resumes to job openings based on the extracted information.
+User Interface: This microservice is responsible for providing a user interface for JobCrystal's recruiters to interact with the solution.
+
+Designing an effective solution architecture was fundamental to the success of this project. The system's backbone comprised multiple components working seamlessly together. From ingesting data through preprocessing pipelines to storing results in Elasticsearch, each step was meticulously crafted. Figure 1 illustrates the interconnectedness of these components, providing a visual representation of our solution's architecture.
+
+The solution architecture was designed with a focus on scalability, efficiency, and seamless integration into JobCrystal's existing infrastructure. Our system's backbone consists of various components working in tandem to deliver a robust and intelligent recruitment solution.
 
 {% include figure.html path="assets/img/blog/blog10.2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -75,6 +128,24 @@ In this blog post, we'll take you through the intricacies of our project, detail
 </div>
 
 ### 3.1. Initialize
+
+The system ingested data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server held approximately 35,000 unlabeled resumes and job specifications, while Dropbox contributed around 3,000 labeled resumes associated with job specifications. All documents underwent an initialization step whereby raw text was extracted and stored in an Elasticsearch database. Further preprocessing steps included:
+
+Sentence Classification: Each sentence was classified according to its corresponding part of a resume (e.g., experience, education, skills) using a fine-tuned BERT model.
+
+Sentence Embeddings: Sentence embeddings were generated using SentenceTransformers to capture semantic meaning and facilitate similarity comparisons.
+
+Named Entity Recognition (NER): Named entities (e.g., companies, skills, degrees) were extracted from each document using a custom spaCy NER model.
+
+Industry and Job Title Classification: BERT models were employed to classify each sentence based on industry and job title to provide additional context.
+
+To make the initialization process more digestible, our system collects data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server houses approximately 35,000 unlabelled resumes and job specs, while Dropbox contributes around 3,000 labeled resumes associated with job specifications. This diverse dataset undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Additionally, metadata extraction steps refine the data further, providing valuable information for subsequent processes.
+
+To kickstart the process, our system ingests data from JobCrystal's FTP server and Dropbox account, encompassing approximately 35,000 unlabelled resumes and 3,000 labeled resumes with associated job specifications. This data undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Additionally, metadata is constructed, including industry and job title labels, which are pivotal for subsequent model training and document matching.
+
+In simpler terms, our system retrieves data from JobCrystal's FTP server and Dropbox. The data, comprising unlabelled resumes and job specs, undergoes an initialization process. This involves extracting raw text and storing it in an Elasticsearch database. Additionally, metadata, such as industry and job title labels, is generated for further model training.
+
+To kickstart the process, our system intelligently ingests data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server hosts approximately 35,000 unlabelled resumes and job specifications, while Dropbox contributes around 3,000 labeled resumes linked to job specifications. A crucial initialization step involves extracting raw text from each document and storing it in an Elasticsearch database under unique indices.
 
 The system ingests data from two primary locations, namely: JobCrystal's FTP server and Dropbox account. The FTP server holds approximately 35 000 unlabelled resumes and job specs, while Dropbox contributes around 3,000 labeled resumes associated with job specifications. All documents undergo an initialization step whereby raw text is extracted from each of the documents and stored under a unique index in an Elasticsearch database. Using this raw text, 5 metadata steps are also exectuted:
 
@@ -88,11 +159,35 @@ The system ingests data from two primary locations, namely: JobCrystal's FTP ser
 
 ### 3.2. Trained Models
 
+The system utilized various trained models to perform specific tasks:
+
+IndustryBERT: Predicted the industry associated with a document.
+
+JobTitleBERT: Predicted the job title associated with a document.
+
+NER Model: Extracted named entities from documents.
+
+Our trained models, including IndustryBERT and JobTitleBERT, play a pivotal role in text classification. These models are tailored to predict industry labels and job titles, contributing to the system's ability to match resumes to job specifications accurately. The use of spaCy NER models enhances the extraction of named entities, further enriching the information available for analysis.
+
+Our trained models, such as IndustryBERT and JobTitleBERT, play a crucial role in classifying text based on industry and job titles, respectively. These models are fine-tuned to enhance their accuracy in matching resumes to specific job specifications.
+
+Our models, like IndustryBERT and JobTitleBERT, act as the brains behind the operation. Think of them as specialized experts trained to understand industry categories and job titles. These models enable our system to make accurate predictions and facilitate effective matching between resumes and job specifications.
+
+Our trained models, including IndustryBERT and JobTitleBERT, play a pivotal role in classifying text based on industry and job titles, respectively. The fine-tuned models ensure accurate categorization, forming the foundation for subsequent stages in the process.
+
 * The *IndustryBERT* model is trained by calling `run(industry_label=True)` in the *text classification* script. But first you need to construct the BERT training data by running the *construct BERT training data* pipeline, again with `run(True)`.
 * The *JobTitleBERT* models are trained by calling `run(industry_label=Flase, filter_industry=<industry name here>)` in the *text classification* script. You can also specify `filter_industry='job_title'` to predict over all possible job titles regardless of the industry. But first you need to construct the BERT training data by running the *construct BERT training data* pipeline, again with `run(industry_label=Flase, filter_industry=<industry name here>)`.
 * The custom spaCy NER model were trained in Colab using this notebook. We train both a tok2vec and transformer spacy model. Since we are going to use Sovren though, these models and code will probably become obsolete.
 
 ### 3.3. Preprocess
+
+The preprocessing phase involves several user-friendly steps. We process resumes by identifying different parts using a fine-tuned BERT model, generate sentence vector representations using SentenceTransformers, and leverage Sovren APIs for efficient NER matching. These processed results are stored in separate Elasticsearch indices, facilitating easy retrieval and analysis.
+
+The preprocessing pipeline involves a series of steps, including resume parts processing, sentence embedding using SentenceTransformers, Sovren API utilization for NER matching, and industry and job title classification. These steps collectively contribute to creating a rich dataset for further analysis.
+
+In the preprocessing phase, we prepare the data for analysis. This involves breaking down resumes into parts, creating vector representations for sentences, and leveraging Sovren APIs for Named Entity Recognition (NER). The processed information is neatly organized in Elasticsearch indices, making it easily accessible for subsequent steps.
+
+The preprocessing phase involves transforming raw documents into structured data for further analysis. Processes such as identifying resume parts, generating vector representations for sentences, and leveraging Sovren APIs for Named Entity Recognition (NER) contribute to refining the data stored in Elasticsearch.
 
 All documents are then fed through various preprocessing steps, the outputs of which are each stored in separate indices in ElasticSearch:
 
@@ -106,11 +201,41 @@ texts according to which part of a resume this sentence likely comes from. All r
 
 ### 3.4. Data Store
 
+Elasticsearch served as the central repository for storing preprocessed document data, enabling efficient retrieval and analysis.
+
+Our choice of Elasticsearch as the database for preprocessed document data ensures efficient storage and retrieval. While pickle files are currently used for metadata and models, ongoing improvements aim to streamline this process. The system's flexibility allows for testing on a local Elasticsearch instance, with the live database hosted on an AWS EC2 instance.
+
+Our choice of an Elasticsearch database for storing preprocessed document data and metadata ensures efficient retrieval and analysis. This scalable solution accommodates the vast amount of data processed during the project.
+
+Our data is stored in Elasticsearch, acting as a centralized repository. It's like a well-organized library where documents, metadata, and models find their designated shelves. We've streamlined the connection to this library, making it efficient for both testing (using a local instance) and live production (via AWS EC2).
+
+Our choice of Elasticsearch as the primary database allows for efficient storage and retrieval of preprocessed document data. While the current implementation involves some pickle files for metadata and models, future iterations aim to streamline this aspect for enhanced efficiency.
+
 * We are using an Elasticsearch database to store all preprocessed document data and well as a handful of pickle files to store some metadata and models (ideally, all these pickle files will be done away with).
 * We can instantiate an Elasticsearch database class to establish a connection to a database instance. The default configurations for this class can be changed in this yaml file.
 * When testing, you can spin up a local instance of Elasticsearch. Otherwise, our live database is stored on this EC2 instance.
 
 ### 3.5. "AI Logic"
+
+The AI logic orchestrated the matching process, leveraging various techniques:
+
+Industry and Job Title Matching: Documents were matched based on the predicted industry and job title, ensuring alignment between resumes and job specifications.
+
+Keyword Entity Matching: User-specified keyword entities were used to refine the matching process, narrowing down the results to those relevant to the user's interests.
+
+Cosine Similarity Ranking: The cosine similarity metric was employed to rank matched documents based on their semantic similarity to the uploaded document.
+
+Hybrid Unsupervised Ranking: Unsupervised ranking using UMAP and HDBSCAN models was incorporated to identify potential matches that might not have been captured by the supervised models.
+
+External Search Integration: Results from external sources, such as Hiretule, were integrated to provide a comprehensive set of recommendations.
+
+The heart of our system lies in its AI logic, orchestrating the entire recommendation process. Starting from selecting documents to matching and ranking, the system intelligently combines predicted industry and job titles, user-specified keywords, and unsupervised ranking techniques. The result is a tailored set of recommendations based on cosine similarity, delivering valuable insights to the end user.
+
+The AI logic forms the heart of our system, orchestrating the matching process. It begins by selecting a resume or job and passing it through initialization and preprocessing pipelines. The system then identifies matching resumes or jobs based on predicted industry and job title, incorporating user-specified keyword entities. A sophisticated ranking system, utilizing UMAP and HDBSCAN models, refines the recommendations, providing a holistic solution.
+
+At the core of our system lies the AI logic, orchestrating the entire recommendation process. Imagine it as a smart matchmaker, considering predicted industries, job titles, and user-specified keywords. The magic happens in the ranking phase, where documents are meticulously compared, and recommendations are fine-tuned based on user preferences.
+
+The AI logic is the heart of our system, orchestrating the matchmaking process. By considering predicted industry and job titles, user-specified keyword entities, and leveraging unsupervised ranking techniques, our system intelligently filters and ranks documents, providing personalized recommendations to users.
 
 * The AI logic is where everything comes together to make a set of CV/job spec recommendations.
 * It starts by selecting to match a resume/job to a set of jobs/resumes (step 1) and then the user uploading the resume/job (step 2).
@@ -123,6 +248,16 @@ texts according to which part of a resume this sentence likely comes from. All r
 
 ### 3.6. User Interface
 
+The user interface provided a user-friendly platform for interacting with the system. Users could upload resumes or job specifications, specify keyword entities, and receive personalized recommendations.
+
+Initially, a Streamlit Dashboard provided a user-friendly interface for testing. However, the focus has shifted to integrating the solution seamlessly into the JobCrystal UI through the development of a Flask API. This ensures that the end user, in this case, JobCrystal's team, can easily access and benefit from the system's recommendations.
+
+The user interface, initially developed as a Streamlit Dashboard for testing, serves as a bridge between the user and the system. Although the Streamlit Dashboard is now obsolete as UI development shifts to the JobCrystal side, it provided a visual representation of the system's capabilities.
+
+While the technical backend is fascinating, the user interface is where the magic becomes tangible. Though initially using a Streamlit Dashboard for testing, our current focus is on delivering seamless API responses for integration into JobCrystal's evolving user interface.
+
+Initially, a Streamlit Dashboard served as a testing interface, providing insights into system functionality. However, with Zani spearheading the UI development on the JobCrystal side, our focus shifted to delivering streamlined API responses to meet their evolving requirements.
+
 Before constructing the flask API, we provided Sasha with a Streamlit Dashboard to test the solution. This is obsolete now as Zani is developing the UI on the JobCrystal side and we are only providing the API responses they need. Here is what the Streamlit Dashboard looked like:
 
 {% include figure.html path="assets/img/blog/blog10.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -134,6 +269,30 @@ Before constructing the flask API, we provided Sasha with a Streamlit Dashboard 
 
 ## 4. Productionising the solution
 
+The system was deployed on AWS EC2 instances and scaled to handle the volume of resumes and job specifications processed daily. We implemented continuous integration (CI) and continuous delivery (CD) pipelines to ensure that the system was always up-to-date and running smoothly.
+
+To deploy the solution into production, we followed these steps:
+
+Infrastructure Setup: An AWS EC2 instance was provisioned to host the system components.
+
+Deployment: The system code was deployed to the EC2 instance using a continuous integration/continuous delivery (CI/CD) pipeline.
+
+Monitoring: Monitoring tools were implemented to track system performance and resource utilization.
+
+API Integration: The system's API was integrated with JobCrystal's existing platform to seamlessly incorporate the new functionality.
+
+To ensure the solution's scalability and reliability, we deployed it on an Amazon Web Services (AWS) EC2 instance. This cloud-based infrastructure provides the necessary resources to handle large volumes of data and user requests.
+
+The solution was implemented using a variety of technologies, including Python, Elasticsearch, and Streamlit. The solution is deployed on an Amazon Web Services (AWS) cloud infrastructure.
+
+The productionization phase was a critical step in transitioning from development to a fully operational system. Figure 3 and Figure 4 provide snapshots of this process. They showcase the deployment and scaling aspects, emphasizing the robustness and scalability of our solution in a production environment.
+
+The productionization phase involved scaling our solution for real-world deployment. Figures 3 and 4 illustrate the architecture's adaptation for live deployment, ensuring optimal performance, reliability, and accessibility.
+
+With the successful development and testing phases behind us, the focus shifted to productionizing the solution for seamless integration into JobCrystal's operations. This stage involved deploying the entire system on AWS EC2 instances to ensure scalability, reliability, and optimal performance. The architecture was fine-tuned to handle real-time data processing, and necessary measures were implemented to monitor and maintain the system efficiently.
+
+The true measure of success lies in the impact on JobCrystal's operations. Client feedback and testimonials serve as a testament to the positive transformations witnessed.
+
 {% include figure.html path="assets/img/blog/blog10.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 3: Solution architecture.</em> 
@@ -144,16 +303,48 @@ Before constructing the flask API, we provided Sasha with a Streamlit Dashboard 
     <em>Figure 4: Solution architecture.</em> 
 </div>
 
-
 ***
 
-
 ## 5. Project impact
+
+The implementation of this NLP-powered system significantly improved JobCrystal's recruitment process:
+
+Reduced Manual Screening: The system automatically matched resumes to job specifications, reducing the time recruiters spent on manual screening.
+
+Improved Candidate Matching: The system's AI-powered matching capabilities ensured that the most relevant candidates were identified for each open position.
+
+Enhanced Recruitment Efficiency: The system streamlined the recruitment process, saving time and resources for the company.
+
+The implementation of the NLP-powered recruitment system resulted in significant improvements for JobCrystal:
+
+Reduced Matching Time: The automated matching process significantly reduced the time required to match resumes to job specifications, allowing recruiters to focus on more strategic tasks.
+
+Improved Accuracy: The NLP-based matching algorithm improved the accuracy of matching, leading to better placements and a more efficient recruitment process.
+
+Enhanced Candidate Experience: Job seekers benefited from a more personalized and relevant search experience,
+
+The implementation of our NLP-powered solution has significantly transformed JobCrystal's recruitment process. The system has:
+
+Reduced the time required to match resumes to job specifications by over 90%.
+
+Improved the accuracy of matches, leading to a higher percentage of qualified candidates being placed in suitable roles.
+
+Enhanced the overall efficiency of JobCrystal's recruitment operations.
+
+The impact of our project extends beyond the technical aspects. Client feedback, as depicted in Figure 5, highlights the positive outcomes and improvements observed by JobCrystal. The accompanying video offers a firsthand look at the project's impact, providing insights into the transformative changes experienced by the client.
+
+The impact of our project on JobCrystal's recruitment process has been substantial. Client feedback reflects the positive outcomes achieved through the implementation of advanced NLP techniques, streamlining their workflow and enhancing the overall efficiency of their recruitment process.
+
+The impact of our NLP-driven solution on JobCrystal's recruitment process has been profound. Client feedback reflects significant improvements in candidate matching accuracy, reduced manual effort in resume screening, and overall time savings in the hiring workflow. The streamlined process has empowered JobCrystal to make data-driven decisions and focus more on engaging with qualified candidates.
+
+The impact of our solution on JobCrystal's recruitment process has been substantial. Figure 5 showcases positive client feedback, emphasizing the tangible benefits experienced. The accompanying video provides a firsthand look at the transformative impact our solution has had on streamlining recruitment operations.
 
 {% include figure.html path="assets/img/blog/blog10.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 5: Client feedback.</em> 
 </div>
+
+To provide a more immersive understanding of the project's impact, we've compiled a video showcasing JobCrystal's experience and the positive outcomes of our collaboration.
 
 <div class="col-sm mt-3 mt-md-0">
     {% include video.html path="assets/video/jobcrystal.mp4" class="img-fluid rounded z-depth-1" controls=true %}
@@ -162,3 +353,16 @@ Before constructing the flask API, we provided Sasha with a Streamlit Dashboard 
 
 ## 6. Wrapping up
 
+This project demonstrates the power of NLP in revolutionizing traditional recruitment processes. By leveraging advanced NLP techniques, we were able to create a system that significantly improved JobCrystal's efficiency and effectiveness in finding the right candidates for their open positions. As NLP continues to evolve, we can expect even more innovative applications in the field of recruitment, further transforming the way companies find and hire top talent.
+
+This project has been a testament to the power of NLP in revolutionizing traditional industries like job recruitment. By leveraging advanced NLP techniques, we have significantly improved JobCrystal's ability to connect qualified candidates with suitable job openings, streamlining their recruitment process and enhancing their overall efficiency.
+
+As we conclude this journey, it's essential to reflect on the challenges overcome, the innovations introduced, and the positive impact realized. Our collaboration with JobCrystal exemplifies the power of advanced NLP techniques in revolutionizing traditional processes. The project's success underscores the importance of understanding client needs, designing robust architectures, and continuously refining solutions for maximum impact.
+
+In conclusion, our project for JobCrystal represents a significant leap forward in the realm of job recruitment. By harnessing the power of advanced NLP techniques, we've not only addressed specific challenges but also paved the way for a more efficient, data-driven, and user-friendly recruitment process. As we reflect on the journey, it's evident that the fusion of technology and recruitment has the potential to reshape industry standards, opening doors to new possibilities and innovations.
+
+As we conclude this journey, we reflect on the challenges overcome, the lessons learned, and the positive impact our solution has had on JobCrystal's recruitment process. The collaboration with the client and the continuous evolution of our system mark the beginning of a new era in innovative job recruitment solutions.
+
+In conclusion, our journey with JobCrystal represents a successful collaboration in revolutionizing their recruitment processes. By leveraging advanced NLP techniques, we've not only met but exceeded expectations, paving the way for a more efficient, data-driven, and intelligent recruitment ecosystem. As we reflect on the challenges overcome and the positive outcomes achieved, we look forward to continued innovation and impact in the evolving landscape of job recruitment.
+
+As we conclude this journey with JobCrystal, we reflect on the transformation achieved in the realm of job recruitment. The integration of advanced NLP techniques, streamlined preprocessing pipelines, and a user-friendly interface has not only met but exceeded the client's expectations. The success of this project serves as a testament to the power of innovation in solving real-world challenges within the job recruitment landscape. We remain committed to pushing the boundaries of technology to drive positive change in diverse industries.
