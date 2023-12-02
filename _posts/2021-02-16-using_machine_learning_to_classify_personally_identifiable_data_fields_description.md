@@ -27,11 +27,6 @@ toc:
   - name: 4. Defining the process flow
   - name: 5. Evaluating the systems performance
   - name: 6. Wrapping up
-  <!---
-  - name: 6. Understanding the clients platform
-  - name: 7. Productionising the solution
-  - name: 8. Wrapping up
-  --->
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
