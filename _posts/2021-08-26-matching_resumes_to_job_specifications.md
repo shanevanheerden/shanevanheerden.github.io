@@ -86,6 +86,8 @@ The success of the project relied heavily on creating a well-designed solution a
 
 ### 3.1. Initialize
 
+To kickstart the process, the system ingests data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server contains approximately 35 000 unlabelled documents, while Dropbox contributes around 3 000 labeled resumes associated with job specifications.
+
 The system initiates its processing by collecting data from JobCrystal's FTP server and Dropbox account, encompassing approximately 35 000 unlabeled documents and 3 000 labeled resumes associated with job specifications. This diverse dataset undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Metadata extraction steps follow, including industry and job title labels, crucial for subsequent model training. Additionally, the system executes several pipelines, such as updating Dropbox, Zindi, and FTP server metadata, constructing files for job titles, entity lists, and preprocessing Doc2vec/UMAP/HDBSCAN. These steps enhance data refinement, supporting various functionalities like BERT model training and unsupervised ranking.
 
 
@@ -103,7 +105,7 @@ Industry and Job Title Classification: BERT models were employed to classify eac
 
 To make the initialization process more digestible, our system collects data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server houses approximately 35,000 unlabelled resumes and job specs, while Dropbox contributes around 3,000 labeled resumes associated with job specifications. This diverse dataset undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Additionally, metadata extraction steps refine the data further, providing valuable information for subsequent processes.
 
-To kickstart the process, our system ingests data from JobCrystal's FTP server and Dropbox account, encompassing approximately 35,000 unlabelled resumes and 3,000 labeled resumes with associated job specifications. This data undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Additionally, metadata is constructed, including industry and job title labels, which are pivotal for subsequent model training and document matching.
+To kickstart the process, the system ingests data from JobCrystal's FTP server and Dropbox account, encompassing approximately 35,000 unlabelled resumes and 3,000 labeled resumes with associated job specifications. This data undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Additionally, metadata is constructed, including industry and job title labels, which are pivotal for subsequent model training and document matching.
 
 In simpler terms, our system retrieves data from JobCrystal's FTP server and Dropbox. The data, comprising unlabelled resumes and job specs, undergoes an initialization process. This involves extracting raw text and storing it in an Elasticsearch database. Additionally, metadata, such as industry and job title labels, is generated for further model training.
 
