@@ -81,7 +81,7 @@ The success of the project relied heavily on creating a well-designed solution a
 
 {% include figure.html path="assets/img/blog/blog10.2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 1: Solution architecture.</em> 
+    <em>Figure 1: The architecture of the proposed solution.</em> 
 </div>
 
 ### 3.1. Initialize
@@ -90,25 +90,9 @@ To kickstart the process, the system ingests data from two primary sources: The 
 
 ### 3.2. Trained Models
 
-The system utilized various trained models to perform specific tasks:
+The system utilized various trained models to perform specific tasks associated with document preprocessing and unsupervised ranking. Two *Bidirectional Encoder Representations from Transformers* (BERT) models are finetuned in order to predict, given the raw resume text, a candidate's industry as well as their current job title. The fine-tuned models ensure accurate categorization, forming the foundation for subsequent stages in the process.
 
-IndustryBERT: Predicted the industry associated with a document.
-
-JobTitleBERT: Predicted the job title associated with a document.
-
-NER Model: Extracted named entities from documents.
-
-Our trained models, including IndustryBERT and JobTitleBERT, play a pivotal role in text classification. These models are tailored to predict industry labels and job titles, contributing to the system's ability to match resumes to job specifications accurately. The use of spaCy NER models enhances the extraction of named entities, further enriching the information available for analysis.
-
-Our trained models, such as IndustryBERT and JobTitleBERT, play a crucial role in classifying text based on industry and job titles, respectively. These models are fine-tuned to enhance their accuracy in matching resumes to specific job specifications.
-
-Our models, like IndustryBERT and JobTitleBERT, act as the brains behind the operation. Think of them as specialized experts trained to understand industry categories and job titles. These models enable our system to make accurate predictions and facilitate effective matching between resumes and job specifications.
-
-Our trained models, including IndustryBERT and JobTitleBERT, play a pivotal role in classifying text based on industry and job titles, respectively. The fine-tuned models ensure accurate categorization, forming the foundation for subsequent stages in the process.
-
-* The *IndustryBERT* model is trained by calling `run(industry_label=True)` in the *text classification* script. But first you need to construct the BERT training data by running the *construct BERT training data* pipeline, again with `run(True)`.
-* The *JobTitleBERT* models are trained by calling `run(industry_label=Flase, filter_industry=<industry name here>)` in the *text classification* script. You can also specify `filter_industry='job_title'` to predict over all possible job titles regardless of the industry. But first you need to construct the BERT training data by running the *construct BERT training data* pipeline, again with `run(industry_label=Flase, filter_industry=<industry name here>)`.
-* The custom spaCy NER model were trained in Colab using this notebook. We train both a tok2vec and transformer spacy model. Since we are going to use Sovren though, these models and code will probably become obsolete.
+A transformer-based spaCy *Named Entity Recognition* (NER) model is also trained at this stage to extract key information like key skills, location, degrees and college names which may be used for downstream filtering. Additionally, UMAP and HDBSCAN models are fitted to facilitate document vector representations which is an essential component in the subsequent unsupervised ranking step.
 
 ### 3.3. Preprocess
 
