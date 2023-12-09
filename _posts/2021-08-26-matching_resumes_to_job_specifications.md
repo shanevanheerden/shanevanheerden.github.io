@@ -92,7 +92,7 @@ To kickstart the process, the system ingests data from two primary sources: The 
 
 The system utilized various trained models to perform specific tasks associated with document preprocessing and unsupervised ranking. Two *Bidirectional Encoder Representations from Transformers* (BERT) models are finetuned in order to predict, given the raw resume text, a candidate's industry as well as their current job title. The fine-tuned models ensure accurate categorization, forming the foundation for subsequent stages in the process.
 
-A transformer-based spaCy *Named Entity Recognition* (NER) model is also trained at this stage to extract key information like key skills, location, degrees and college names which may be used for downstream filtering. Additionally, UMAP and HDBSCAN models are fitted to facilitate document vector representations which is an essential component in the subsequent unsupervised ranking step.
+A transformer-based spaCy *Named Entity Recognition* (NER) model is also trained at this stage to extract key information like key skills, location, degrees and college names which may be used for downstream filtering. Additionally, *Uniform Manifold Approximation and Projection* (UMAP) and *Hierarchical Density-Based Spatial Clustering of Applications with Noise* (HDBSCAN) models are fitted to facilitate document vector representations which is an essential component in the subsequent unsupervised ranking step.
 
 ### 3.3. Preprocess
 
