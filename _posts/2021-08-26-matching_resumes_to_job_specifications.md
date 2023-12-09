@@ -54,19 +54,19 @@ I always jump at the opportunity to tackle new and interesting challenges using 
 
 ## 1. The problem
 
-In the fast-paced world of job recruitment, staying ahead of the curve requires innovative solutions. Recently, I was tasked with probably my toughest challenges by a client, [JobCrystal](https://www.jobcrystal.com/), who operated a job recruitment firm within South Africa. I undertook the challenge of revolutionizing JobCrystal's current recruitment process by harnessing the power of advanced Natural Language Processing (NLP) techniques.
+In the fast-paced world of job recruitment, staying ahead of the curve requires innovative solutions. Recently, I was tasked with probably my toughest challenges by a client who operates a job recruitment firm within South Africa. I undertook the challenge of revolutionizing JobCrystal's current recruitment process by harnessing the power of advanced Natural Language Processing (NLP) techniques.
 
-In this blog post, we'll take you through the intricacies of our project, detailing the architecture, preprocessing pipelines, data storage, APIs, trained models, user interface, and the intricate AI logic that powers the system. 
+In this blog post, I'll take you through the intricacies of the project, detailing the architecture, preprocessing pipelines, data storage, APIs, trained models, user interface, and the intricate AI logic that powers the system. 
 
 ***
 
 ## 2. Understanding the clients needs
 
-Understanding the client's needs was the crucial first step in our journey. JobCrystal's existing recruitment process was time-consuming and inefficient, relying heavily on its recruiters to manually review each resume and match it to relevant job openings. This resulted in slower placement times and potential missed opportunities for both job seekers and employers.
+Understanding the client's needs was the crucial first step in the journey. The client's existing recruitment process was time-consuming and inefficient, relying heavily on its recruiters to manually review each resume and match it to relevant job openings. This resulted in slower placement times and potential missed opportunities for both job seekers and employers.
 
 To address these challenges, the client sought a solution that could not only streamline their current processes by automating the matching of resumes to job specifications but also bring innovation to the forefront of their operations. They wanted a system that could accurately identify relevant resumes for each open position (and vice versa), eliminating the need for manual screening.
 
-Before developing the solution, I spent time understanding the specific needs of JobCrystal. I met with the company's recruiters to understand their key pain points and how they currently matched resumes to job openings. I also analyzed the company's data to identify any patterns or trends that could be used to improve the matching process. Through this collaborative process, I gained crucial insights into the intricacies of their current recruitment workflow, enabling myself to tailor my solution to their specific needs. As a result, I developed a set of requirements for the proposed solution:
+Before developing the solution, I spent time understanding the specific needs of the client. I met with the company's recruiters to understand their key pain points and how they currently matched resumes to job openings. I also analyzed the company's data to identify any patterns or trends that could be used to improve the matching process. Through this collaborative process, I gained crucial insights into the intricacies of their current recruitment workflow, enabling myself to tailor my solution to their specific needs. As a result, I developed a set of requirements for the proposed solution:
 
 - **Automated**: The solution should be able to automatically match resumes to job openings (and vice versa) without any manual intervention.
 - **Accurate**: The solution should be able to accurately match resumes to job openings (and vice versa) based on the skills, experience, and qualifications of the candidates.
@@ -77,7 +77,7 @@ Before developing the solution, I spent time understanding the specific needs of
 
 ## 3. The solution architecture
 
-The success of the project relied heavily on creating a well-designed solution architecture. The system's core comprises multiple components collaborating to provide a strong and intelligent recruitment solution. Each stage, from data ingestion to storing results in ElasticSearch, was crafted with emphasis on scalability, efficiency, and smooth integration into JobCrystal's current infrastructure. Figure 1 visually depicts the interconnected components, showcasing the architecture of the solution.
+The success of the project relied heavily on creating a well-designed solution architecture. The system's core comprises multiple components collaborating to provide a strong and intelligent recruitment solution. Each stage, from data ingestion to storing results in ElasticSearch, was crafted with emphasis on scalability, efficiency, and smooth integration into the client's current infrastructure. Figure 1 visually depicts the interconnected components, showcasing the architecture of the solution.
 
 {% include figure.html path="assets/img/blog/blog10.2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -86,40 +86,7 @@ The success of the project relied heavily on creating a well-designed solution a
 
 ### 3.1. Initialize
 
-To kickstart the process, the system ingests data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server contains approximately 35 000 unlabelled documents, while Dropbox contributes around 3 000 labeled resumes associated with job specifications.
-
-The system initiates its processing by collecting data from JobCrystal's FTP server and Dropbox account, encompassing approximately 35 000 unlabeled documents and 3 000 labeled resumes associated with job specifications. This diverse dataset undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Metadata extraction steps follow, including industry and job title labels, crucial for subsequent model training. Additionally, the system executes several pipelines, such as updating Dropbox, Zindi, and FTP server metadata, constructing files for job titles, entity lists, and preprocessing Doc2vec/UMAP/HDBSCAN. These steps enhance data refinement, supporting various functionalities like BERT model training and unsupervised ranking.
-
-
-The system initiates the processing of diverse data collected from JobCrystal's FTP server and Dropbox account, encompassing approximately 35,000 unlabelled resumes and 3,000 labeled resumes associated with job specifications. This information undergoes an initialization step, extracting raw text stored in an Elasticsearch database with unique indices. Metadata, including industry and job title labels, is generated for subsequent model training. Further, five metadata extraction steps are executed, involving updating Dropbox, Zindi, and FTP server pipelines to construct metadata descriptions used in the initialization process. These steps encompass updating information related to file locations, industry, job title labels, and constructing sets of named entities uncovered by the NER model. Additionally, a pipeline is dedicated to fitting UMAP and HDBSCAN models for document vector representations, essential for later unsupervised ranking.
-
-The system ingested data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server held approximately 35,000 unlabeled resumes and job specifications, while Dropbox contributed around 3,000 labeled resumes associated with job specifications. All documents underwent an initialization step whereby raw text was extracted and stored in an Elasticsearch database. Further preprocessing steps included:
-
-Sentence Classification: Each sentence was classified according to its corresponding part of a resume (e.g., experience, education, skills) using a fine-tuned BERT model.
-
-Sentence Embeddings: Sentence embeddings were generated using SentenceTransformers to capture semantic meaning and facilitate similarity comparisons.
-
-Named Entity Recognition (NER): Named entities (e.g., companies, skills, degrees) were extracted from each document using a custom spaCy NER model.
-
-Industry and Job Title Classification: BERT models were employed to classify each sentence based on industry and job title to provide additional context.
-
-To make the initialization process more digestible, our system collects data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server houses approximately 35,000 unlabelled resumes and job specs, while Dropbox contributes around 3,000 labeled resumes associated with job specifications. This diverse dataset undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Additionally, metadata extraction steps refine the data further, providing valuable information for subsequent processes.
-
-To kickstart the process, the system ingests data from JobCrystal's FTP server and Dropbox account, encompassing approximately 35,000 unlabelled resumes and 3,000 labeled resumes with associated job specifications. This data undergoes an initialization step, extracting raw text and storing it in an Elasticsearch database. Additionally, metadata is constructed, including industry and job title labels, which are pivotal for subsequent model training and document matching.
-
-In simpler terms, our system retrieves data from JobCrystal's FTP server and Dropbox. The data, comprising unlabelled resumes and job specs, undergoes an initialization process. This involves extracting raw text and storing it in an Elasticsearch database. Additionally, metadata, such as industry and job title labels, is generated for further model training.
-
-To kickstart the process, our system intelligently ingests data from two primary sources: JobCrystal's FTP server and Dropbox account. The FTP server hosts approximately 35,000 unlabelled resumes and job specifications, while Dropbox contributes around 3,000 labeled resumes linked to job specifications. A crucial initialization step involves extracting raw text from each document and storing it in an Elasticsearch database under unique indices.
-
-The system ingests data from two primary locations, namely: JobCrystal's FTP server and Dropbox account. The FTP server holds approximately 35 000 unlabelled resumes and job specs, while Dropbox contributes around 3,000 labeled resumes associated with job specifications. All documents undergo an initialization step whereby raw text is extracted from each of the documents and stored under a unique index in an Elasticsearch database. Using this raw text, 5 metadata steps are also exectuted:
-
-1. The purpose of the *Update Dropbox* pipeline is to fetch and construct a metadata description of all files in the *Place roles* Dropbox folder. The output is the `dropbox_sample_data_dir_cache.csv` file written to the `data` folder. These files have industry and job title labels and are used for the BERT model training.
-2. The purpose of the *Update Zindi* pipeline is to fetch and construct a metadata description of all files in the *Zindi CVs* and *Zindi job specs* Dropbox folders. The output is the `zindi_sample_data_dir_cache.csv` file written to the `data` folder. These files have industry and job title labels and are used for the BERT model training. This metadata is what's used as input in the *Initialisation* pipline to fetch these files.
-3. The purpose of the *Update FTP Server* pipeline is to fetch and construct a metadata description of all files on the JobCrystal staging server. The output is the `ftp_server_data_dir_cache.csv` file written to the `data` folder. This metadata is what's used as input in the *Initialisation* pipline to fetch these files.
-4. The purpose of the *Update FTP server pipeline* is to fetch and construct a metadata description of all files on the JobCrystal staging server. The output is the `prod_server_data_dir_cache.csv` file written to the `data` folder. This metadata is what's used as input in the *Initialisation* pipline to fetch these files.
-* The purpose of the *Update Job Title Metadata* pipeline is to construct the `job_to_labels.pkl` and `labels_to_job.pkl` files in the `data` folder. These are based on JocCrystal's *JobTitleAlternatives.csv file* where one job may be associated with many labels and a label may be associated with many job titles.
-* The purpose of the *Update Entity Lists* pipeline is to construct a set of all named entities uncovered by the NER model (for each entity class) and output the `all_colleges.pkl`, `all_companies.pkl`, `all_degrees.pkl` and `all_skills.pkl` files. This metadata is what was used in the keyword filter dropdown lists (Step 4 in the UI) and now the `filter_options` GET request.
-* The *Preprocess Doc2vec/UMAP/HDBSCAN* pipeline is to fit a UMAP reducer model to the document vector representations, as well as an HDBSCAN clustering model to the reduced embedding space. These models are necessary later on when doing the unsupervised ranking and thus need to be fitted on all of the data now.
+To kickstart the process, the system ingests data from two primary sources: The client's FTP server and Dropbox account. The FTP server contains approximately 35 000 unlabelled documents, while Dropbox contributes around 3 000 labeled resumes associated with job specifications. This data undergoes an initialization step, whereby raw text is extracted from the documents and stored in an Elasticsearch database. Additionally, five metadata extraction steps are executed at this stage which encompass updating information related to file locations, industry and job title labels, and constructing sets of named entities.
 
 ### 3.2. Trained Models
 
