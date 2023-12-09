@@ -22,4 +22,5 @@ I'm still buzzing with excitement after the 2023 Luno Summit! Not only did I get
 
 Receiving this award is a truly a highlight of my Luno career. To be recognized by my peers in a company of 600+ amazing people, especially for embodying the very essence of Moontality, our company culture, is truly humbling. I'm incredibly grateful for the opportunity to work alongside such talented and passionate individuals, who constantly inspire me to push myself to be the best version of myself.
 
+{% include figure.html path="assets/img/news/lunaut_of_the_year.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 {% include video.html path="assets/video/lunaut_of_the_year.mp4" class="img-fluid rounded z-depth-1" controls=true %}
