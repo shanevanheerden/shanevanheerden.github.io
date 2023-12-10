@@ -84,42 +84,30 @@ The success of the project relied heavily on creating a well-designed solution a
     <em>Figure 1: The architecture of the proposed solution.</em> 
 </div>
 
-### 3.1. Initialize
+### 3.1. Data initialisation
 
 To kickstart the process, the system ingests data from two primary sources: The client's FTP server and Dropbox account. The FTP server contains approximately 35 000 unlabelled documents, while Dropbox contributes around 3 000 labeled resumes associated with job specifications. This data undergoes an initialization step, whereby raw text is extracted from the documents and stored as separate sentences in an Elasticsearch database. Additionally, five metadata extraction steps are executed at this stage which encompass updating information related to file locations, industry and job title labels, and constructing sets of named entities.
 
-### 3.2. Trained Models
+### 3.2. Training the models
 
 The system utilized various trained models to perform specific tasks associated with document preprocessing and unsupervised ranking. Two *Bidirectional Encoder Representations from Transformers* (BERT) models are finetuned in order to predict, given the raw resume text, a candidate's industry and associated job title, giving rise to the *IndustryBERT* and *JobTitleBERT* models, respectively. The fine-tuned models ensure accurate categorization, forming the foundation for subsequent stages in the process.
 
 A transformer-based spaCy *Named Entity Recognition* (NER) model is also trained at this stage to extract key information like key skills, location, degrees and college names which may be used for downstream filtering. Additionally, *Uniform Manifold Approximation and Projection* (UMAP) and *Hierarchical Density-Based Spatial Clustering of Applications with Noise* (HDBSCAN) models are fitted to facilitate document vector representations which is an essential component in the subsequent unsupervised ranking step.
 
-### 3.3. Preprocess
+### 3.3. Preprocessing the data
 
-All sentences comprising the raw resume text are then fed through various preprocessing steps, the outputs of which are each stored in separate indices in ElasticSearch. During this phase, the finetuned industry and job title BERT models as well as the custom NER model are leveraged, together with two pre-trained BERT-based models. More specifically:
+All sentences comprising the raw resume text are then fed through various preprocessing steps, the outputs of which are each stored in separate indices in Elasticsearch. During this phase, the finetuned industry and job title BERT models as well as the custom NER model are leveraged, together with two pre-trained BERT-based models. More specifically:
 
 - Each resume sentence is classified according to the most likely industry and associated job title using the IndustryBERT and JobTitleBERT models.
 - Resume-specific named entities are extracted from the resume using the custom spaCy NER model.
 - Each resume sentence is converted to a vector representation using the well-known [SentenceTransformers](https://github.com/UKPLab/sentence-transformers) package.
 - Each resume sentence is classified according to what part of a resume the sentence likely describes (e.g. experience, education, skills, certifications, awards, hobbies, references, etc.) using [a pretrained model](https://huggingface.co/manishiitg/distilbert-resume-parts-classify).
 
-### 3.4. Data Store
+### 3.4. Data storage
 
-Elasticsearch served as the central repository for storing preprocessed document data, enabling efficient retrieval and analysis.
+Elasticsearch served as the central repository for storing preprocessed document data. Furthermore, the ability to execute database queries according to the [cosine similarity measure](https://en.wikipedia.org/wiki/Cosine_similarity) makes it an extremely efficient database for enabling efficient document retrieval. A dedicated AWS EC2 instance is used to host the Elasticsearch instance.
 
-Our choice of Elasticsearch as the database for preprocessed document data ensures efficient storage and retrieval. While pickle files are currently used for metadata and models, ongoing improvements aim to streamline this process. The system's flexibility allows for testing on a local Elasticsearch instance, with the live database hosted on an AWS EC2 instance.
-
-Our choice of an Elasticsearch database for storing preprocessed document data and metadata ensures efficient retrieval and analysis. This scalable solution accommodates the vast amount of data processed during the project.
-
-Our data is stored in Elasticsearch, acting as a centralized repository. It's like a well-organized library where documents, metadata, and models find their designated shelves. We've streamlined the connection to this library, making it efficient for both testing (using a local instance) and live production (via AWS EC2).
-
-Our choice of Elasticsearch as the primary database allows for efficient storage and retrieval of preprocessed document data. While the current implementation involves some pickle files for metadata and models, future iterations aim to streamline this aspect for enhanced efficiency.
-
-* We are using an Elasticsearch database to store all preprocessed document data and well as a handful of pickle files to store some metadata and models (ideally, all these pickle files will be done away with).
-* We can instantiate an Elasticsearch database class to establish a connection to a database instance. The default configurations for this class can be changed in this yaml file.
-* When testing, you can spin up a local instance of Elasticsearch. Otherwise, our live database is stored on this EC2 instance.
-
-### 3.5. "AI Logic"
+### 3.5. The "AI logic"
 
 The AI logic orchestrated the matching process, leveraging various techniques:
 
@@ -150,7 +138,7 @@ The AI logic is the heart of our system, orchestrating the matchmaking process. 
 * [INCOMPLETE] Additionally, the "external" results of Hiretule can be appended with the "internal" documents uncovered by our system. The inputs to Hiretule are the named entities uncovered by Sovren, if Hiretule goes ahead...
 * These final results are then returned to the user.
 
-### 3.6. User Interface
+### 3.6. User interface
 
 The user interface provided a user-friendly platform for interacting with the system. Users could upload resumes or job specifications, specify keyword entities, and receive personalized recommendations.
 
