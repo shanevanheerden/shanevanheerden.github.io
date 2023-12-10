@@ -86,33 +86,22 @@ The success of the project relied heavily on creating a well-designed solution a
 
 ### 3.1. Initialize
 
-To kickstart the process, the system ingests data from two primary sources: The client's FTP server and Dropbox account. The FTP server contains approximately 35 000 unlabelled documents, while Dropbox contributes around 3 000 labeled resumes associated with job specifications. This data undergoes an initialization step, whereby raw text is extracted from the documents and stored in an Elasticsearch database. Additionally, five metadata extraction steps are executed at this stage which encompass updating information related to file locations, industry and job title labels, and constructing sets of named entities.
+To kickstart the process, the system ingests data from two primary sources: The client's FTP server and Dropbox account. The FTP server contains approximately 35 000 unlabelled documents, while Dropbox contributes around 3 000 labeled resumes associated with job specifications. This data undergoes an initialization step, whereby raw text is extracted from the documents and stored as separate sentences in an Elasticsearch database. Additionally, five metadata extraction steps are executed at this stage which encompass updating information related to file locations, industry and job title labels, and constructing sets of named entities.
 
 ### 3.2. Trained Models
 
-The system utilized various trained models to perform specific tasks associated with document preprocessing and unsupervised ranking. Two *Bidirectional Encoder Representations from Transformers* (BERT) models are finetuned in order to predict, given the raw resume text, a candidate's industry as well as their current job title. The fine-tuned models ensure accurate categorization, forming the foundation for subsequent stages in the process.
+The system utilized various trained models to perform specific tasks associated with document preprocessing and unsupervised ranking. Two *Bidirectional Encoder Representations from Transformers* (BERT) models are finetuned in order to predict, given the raw resume text, a candidate's industry and associated job title, giving rise to the *IndustryBERT* and *JobTitleBERT* models, respectively. The fine-tuned models ensure accurate categorization, forming the foundation for subsequent stages in the process.
 
 A transformer-based spaCy *Named Entity Recognition* (NER) model is also trained at this stage to extract key information like key skills, location, degrees and college names which may be used for downstream filtering. Additionally, *Uniform Manifold Approximation and Projection* (UMAP) and *Hierarchical Density-Based Spatial Clustering of Applications with Noise* (HDBSCAN) models are fitted to facilitate document vector representations which is an essential component in the subsequent unsupervised ranking step.
 
 ### 3.3. Preprocess
 
-The preprocessing phase involves several user-friendly steps. We process resumes by identifying different parts using a fine-tuned BERT model, generate sentence vector representations using SentenceTransformers, and leverage Sovren APIs for efficient NER matching. These processed results are stored in separate Elasticsearch indices, facilitating easy retrieval and analysis.
+All sentences comprising the raw resume text are then fed through various preprocessing steps, the outputs of which are each stored in separate indices in ElasticSearch. During this phase, the finetuned industry and job title BERT models as well as the custom NER model are leveraged, together with two pre-trained BERT-based models. More specifically:
 
-The preprocessing pipeline involves a series of steps, including resume parts processing, sentence embedding using SentenceTransformers, Sovren API utilization for NER matching, and industry and job title classification. These steps collectively contribute to creating a rich dataset for further analysis.
-
-In the preprocessing phase, we prepare the data for analysis. This involves breaking down resumes into parts, creating vector representations for sentences, and leveraging Sovren APIs for Named Entity Recognition (NER). The processed information is neatly organized in Elasticsearch indices, making it easily accessible for subsequent steps.
-
-The preprocessing phase involves transforming raw documents into structured data for further analysis. Processes such as identifying resume parts, generating vector representations for sentences, and leveraging Sovren APIs for Named Entity Recognition (NER) contribute to refining the data stored in Elasticsearch.
-
-All documents are then fed through various preprocessing steps, the outputs of which are each stored in separate indices in ElasticSearch:
-
-1. During the *Process Resume Parts* pipeline, each sentence of a document is fed through [a BERT model](https://huggingface.co/manishiitg/distilbert-resume-parts-classify) that had been finetuned for classifying
-texts according to which part of a resume this sentence likely comes from. All results are stored under the `resume_parts` index in ElasticSearch.
-2. The *Process SentenceBERT* pipeline should save, for each sentence, a vector representation using the [SentenceTransformers](https://github.com/UKPLab/sentence-transformers) package.
-3. The *Process Sovren* pipeline should wrap both the resume and job spec [Sovren APIs](https://www.sovren.com/technical-specs/latest/rest-api/overview/). As mentioned, we are going to be using [Sovren](https://www.sovren.com/) to do the NER matching. They have been around for 25 years and their software is waaaay more mature than we could ever hope to build. Ideally, this would replace our current NER pipeline.
-4. During the *Process NERs* pipeline, named entities are extracted from a document using a custom spaCy tok2vec and transformer NER models trained on [this dataset](https://github.com/DataTurks-Engg/Entity-Recognition-In-Resumes-SpaCy). All results are stored under the `ner` index in ElasticSearch. The performance of these models are pretty poor. We try and hybridise these models with the [pyresparser](https://github.com/OmkarPathak/pyresparser) package which provides some more specialised regex. This is really the best we can do with off-the-shelf open-source resources... hence why Sovren will be a game changer.
-5. During the *Process Industry* pipeline, our own BERT model that has been finetuned to classify text according to a job industries is applied to each sentence. All results are stored under the `industry` index in ElasticSearch.
-6. During the *Process Job Title* pipeline, our own BERT model that has been finetuned to classify text according to a job titles is applied to each sentence. All results are stored under the `job_title` index in ElasticSearch.
+- Each resume sentence is classified according to the most likely industry and associated job title using the IndustryBERT and JobTitleBERT models.
+- Resume-specific named entities are extracted from the resume using the custom spaCy NER model.
+- Each resume sentence is converted to a vector representation using the well-known [SentenceTransformers](https://github.com/UKPLab/sentence-transformers) package.
+- Each resume sentence is classified according to what part of a resume the sentence likely describes (e.g. experience, education, skills, certifications, awards, hobbies, references, etc.) using [a pretrained model](https://huggingface.co/manishiitg/distilbert-resume-parts-classify).
 
 ### 3.4. Data Store
 
