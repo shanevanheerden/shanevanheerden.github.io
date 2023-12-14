@@ -109,7 +109,7 @@ Elasticsearch served as the central repository for storing preprocessed document
 
 ### 3.5. The "AI logic"
 
-The AI logic is the heart of the system, orchestrating the matchmaking process. By considering predicted industry and job titles, user-specified keyword entities, and leveraging unsupervised ranking techniques, our system intelligently filters and ranks documents, providing personalized recommendations to users. This is accomplished through 5 sequential steps facilitated by a [Streamlit](https://streamlit.io/) user interface dispalyed in Figure 2:
+The AI logic is the heart of the system, orchestrating the matchmaking process. By considering predicted industry and job titles, user-specified keyword entities, and leveraging unsupervised ranking techniques, our system intelligently filters and ranks documents, providing personalized recommendations to users. This is accomplished through 5 sequential steps facilitated by a [Streamlit](https://streamlit.io/) user interface dispalyed in Figure 2.
 
 {% include figure.html path="assets/img/blog/blog10.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -120,6 +120,8 @@ The AI logic is the heart of the system, orchestrating the matchmaking process. 
 - **Step 2.** The user may then upload the resume to the system in their PDF or DOCX format. Uploading a resume triggers the initialisation and prepocessing procedures described in §3.1 and §3.3, the results of which are also stored in the Elasticsearch database. During this step, the industry and corresponding job title of the candidate are predicted using the IndustryBERT and JobTitleBERT models desribed in §3.2, respectively.
 - **Step 3.** The predicted industry and corresponding job title of the candidate are then surfaced to the user as a confirmation. If an errorous prediction was made by the model, the user has the opportunity to correct the classification at this stage. This step is important since the candidate's suitability will only be assessed according to those job specifications matching the candidate's industry and job title.
 - **Step 4** In some cases, the user may wish to further filter out the suitability of the candidate to a job specification unless specific entities are not present in both documents. More specifically, the user may specify in this step that specific skills, degrees, colleges and/or histroic company names must be present in both documents. This is accomplished by utilising our custom spaCy NER model described in §3.2.
+- **Step 5**: The combination of all information obtained in Steps 1-4 culminate in this final step. All job specifications which assume the same industry and job titles confirmed by the user in Step 3, as well as any entities specified by the user in Step 4, are queried from the Elasticsearch database as potential candidated. All candidate job specifications then undergo an unsupervised ranking procedure according to the similarity to the uploaded resume. Two unsupervised ranking algorithms where proposed and experimented with during this phase:
+    - The first algorithm relies on Elasticsearch's [text similarity functionality](https://www.elastic.co/search-labs/blog/articles/text-similarity-search-with-vectors-in-elasticsearch) whereby the [cosign similarity metric](https://en.wikipedia.org/wiki/Cosine_similarity) is computed
 
 The AI logic orchestrated the matching process, leveraging various techniques:
 
