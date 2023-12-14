@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: 📄 Matching Resumes to Job Specifications (and vice versa)
+title: 📄 Matching Resumes to Job Specifications
 description: Using NLP, Python, ElasticSearch and Streamlit
 date: 2021-08-26
 tags: CaseStudy
@@ -109,6 +109,18 @@ Elasticsearch served as the central repository for storing preprocessed document
 
 ### 3.5. The "AI logic"
 
+The AI logic is the heart of the system, orchestrating the matchmaking process. By considering predicted industry and job titles, user-specified keyword entities, and leveraging unsupervised ranking techniques, our system intelligently filters and ranks documents, providing personalized recommendations to users. This is accomplished through 5 sequential steps facilitated by a [Streamlit](https://streamlit.io/) user interface dispalyed in Figure 2:
+
+{% include figure.html path="assets/img/blog/blog10.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<div class="caption">
+    <em>Figure 2: The graphic user interface of the resume-job matching solution.</em> 
+</div>
+
+- **Step 1.** The first step requires the user to select whether they are wanting to match a resume to a job specification.
+- **Step 2.** The user may then upload the resume to the system in their PDF or DOCX format. Uploading a resume triggers the initialisation and prepocessing procedures described in §3.1 and §3.3, the results of which are also stored in the Elasticsearch database. During this step, the industry and corresponding job title of the candidate are predicted using the IndustryBERT and JobTitleBERT models desribed in §3.2, respectively.
+- **Step 3.** The predicted industry and corresponding job title of the candidate are then surfaced to the user as a confirmation. If an errorous prediction was made by the model, the user has the opportunity to correct the classification at this stage. This step is important since the candidate's suitability will only be assessed according to those job specifications matching the candidate's industry and job title.
+- **Step 4** In some cases, the user may wish to further filter out the suitability of the candidate to a job specification unless specific entities are not present in both documents. More specifically, the user may specify in this step that specific skills, degrees, colleges and/or histroic company names must be present in both documents. This is accomplished by utilising our custom spaCy NER model described in §3.2.
+
 The AI logic orchestrated the matching process, leveraging various techniques:
 
 Industry and Job Title Matching: Documents were matched based on the predicted industry and job title, ensuring alignment between resumes and job specifications.
@@ -152,10 +164,7 @@ Initially, a Streamlit Dashboard served as a testing interface, providing insigh
 
 Before constructing the flask API, we provided Sasha with a Streamlit Dashboard to test the solution. This is obsolete now as Zani is developing the UI on the JobCrystal side and we are only providing the API responses they need. Here is what the Streamlit Dashboard looked like:
 
-{% include figure.html path="assets/img/blog/blog10.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-<div class="caption">
-    <em>Figure 2: Solution architecture.</em> 
-</div>
+
 
 ***
 
