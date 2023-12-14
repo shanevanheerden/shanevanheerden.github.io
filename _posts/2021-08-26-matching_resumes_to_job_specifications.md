@@ -113,45 +113,16 @@ The AI logic is the heart of the system, orchestrating the matchmaking process. 
 
 {% include figure.html path="assets/img/blog/blog10.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 2: The graphic user interface of the resume-job matching solution.</em> 
+    <em>Figure 2: The graphic user interface for the resume-job matching solution.</em> 
 </div>
 
 - **Step 1.** The first step requires the user to select whether they are wanting to match a resume to a job specification.
 - **Step 2.** The user may then upload the resume to the system in their PDF or DOCX format. Uploading a resume triggers the initialisation and prepocessing procedures described in §3.1 and §3.3, the results of which are also stored in the Elasticsearch database. During this step, the industry and corresponding job title of the candidate are predicted using the IndustryBERT and JobTitleBERT models desribed in §3.2, respectively.
 - **Step 3.** The predicted industry and corresponding job title of the candidate are then surfaced to the user as a confirmation. If an errorous prediction was made by the model, the user has the opportunity to correct the classification at this stage. This step is important since the candidate's suitability will only be assessed according to those job specifications matching the candidate's industry and job title.
 - **Step 4** In some cases, the user may wish to further filter out the suitability of the candidate to a job specification unless specific entities are not present in both documents. More specifically, the user may specify in this step that specific skills, degrees, colleges and/or histroic company names must be present in both documents. This is accomplished by utilising our custom spaCy NER model described in §3.2.
-- **Step 5**: The combination of all information obtained in Steps 1-4 culminate in this final step. All job specifications which assume the same industry and job titles as the resume confirmed by the user in Step 3, as well as any entities specified by the user in Step 4, are queried from the Elasticsearch database as potential candidates. All candidate job specifications then undergo an unsupervised ranking procedure according to the similarity to the uploaded resume. Two unsupervised ranking algorithms where proposed and evaluated according to preference-based assessments by a job recruitment expert.
+- **Step 5**: The combination of all information obtained in Steps 1-4 culminate in this final step. All job specifications which assume the same industry and job titles as the resume confirmed by the user in Step 3, as well as any entities specified by the user in Step 4, are queried from the Elasticsearch database as potential candidates. All candidate job specifications then undergo an unsupervised ranking procedure according to the similarity to the uploaded resume. Two unsupervised ranking algorithms where proposed and evaluated according to preference-based assessments by a job recruitment expert:
     - The first algorithm relies on ordering all candidate job specifications by utilising Elasticsearch's [text similarity functionality](https://www.elastic.co/search-labs/blog/articles/text-similarity-search-with-vectors-in-elasticsearch). More specifically, job specifications are ordered according to the [cosign similarity](https://en.wikipedia.org/wiki/Cosine_similarity) between the text vector representations of the job specifications according to the resume's vector representation.
-    - The second alternative
-
-The AI logic orchestrated the matching process, leveraging various techniques:
-
-Industry and Job Title Matching: Documents were matched based on the predicted industry and job title, ensuring alignment between resumes and job specifications.
-
-Keyword Entity Matching: User-specified keyword entities were used to refine the matching process, narrowing down the results to those relevant to the user's interests.
-
-Cosine Similarity Ranking: The cosine similarity metric was employed to rank matched documents based on their semantic similarity to the uploaded document.
-
-Hybrid Unsupervised Ranking: Unsupervised ranking using UMAP and HDBSCAN models was incorporated to identify potential matches that might not have been captured by the supervised models.
-
-External Search Integration: Results from external sources, such as Hiretule, were integrated to provide a comprehensive set of recommendations.
-
-The heart of our system lies in its AI logic, orchestrating the entire recommendation process. Starting from selecting documents to matching and ranking, the system intelligently combines predicted industry and job titles, user-specified keywords, and unsupervised ranking techniques. The result is a tailored set of recommendations based on cosine similarity, delivering valuable insights to the end user.
-
-The AI logic forms the heart of our system, orchestrating the matching process. It begins by selecting a resume or job and passing it through initialization and preprocessing pipelines. The system then identifies matching resumes or jobs based on predicted industry and job title, incorporating user-specified keyword entities. A sophisticated ranking system, utilizing UMAP and HDBSCAN models, refines the recommendations, providing a holistic solution.
-
-At the core of our system lies the AI logic, orchestrating the entire recommendation process. Imagine it as a smart matchmaker, considering predicted industries, job titles, and user-specified keywords. The magic happens in the ranking phase, where documents are meticulously compared, and recommendations are fine-tuned based on user preferences.
-
-The AI logic is the heart of our system, orchestrating the matchmaking process. By considering predicted industry and job titles, user-specified keyword entities, and leveraging unsupervised ranking techniques, our system intelligently filters and ranks documents, providing personalized recommendations to users.
-
-* The AI logic is where everything comes together to make a set of CV/job spec recommendations.
-* It starts by selecting to match a resume/job to a set of jobs/resumes (step 1) and then the user uploading the resume/job (step 2).
-* This document is then passed through the `init` and all the preprocessing pipelines.
-* The magic now happens by querying all resumes/jobs that have the same predicted industry and job title confirmed by the user (step 3), as well as any keyword entities specified by the user (step 4), as the document uploaded by the user.
-* We rank the document subset by the cosine similarity between the source and matched documents.
-* We then perform a hybrid unsupervised ranking using the fitted UMAP and HDBSCAN models.
-* [INCOMPLETE] Additionally, the "external" results of Hiretule can be appended with the "internal" documents uncovered by our system. The inputs to Hiretule are the named entities uncovered by Sovren, if Hiretule goes ahead...
-* These final results are then returned to the user.
+    - The second algorithm
 
 ### 3.6. User interface
 
