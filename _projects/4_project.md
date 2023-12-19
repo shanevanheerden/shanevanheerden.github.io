@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <h4>🌌 Identifying Knowledge-sharing Opportunities with Knowledge Graphs</h4>
-description: Mixing NLP with Neo4j
+description: How I used NLP and knowledgegraphs to increase collaboration in the workplace
 img: assets/img/blog/blog11.1.png
 importance: 2
 category: case studies
