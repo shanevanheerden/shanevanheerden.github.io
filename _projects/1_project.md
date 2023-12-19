@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <h4>🔍 Using Machine Learning to Classify Personally Identifiable Data Fields</h4>
-description: I developed a solution which increased a client's data labelling process efficiency by 100-fold
+description: How I developed a solution to increase a client's data labelling process efficiency by 100-fold
 img: assets/img/blog/blog4.1.png
 importance: 3
 category: case studies
