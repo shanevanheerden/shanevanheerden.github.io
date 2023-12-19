@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 🧠 Neural Language Models
-description: Natural Language Processing Series
+description: Part 3 - Natural Language Processing Series
 date: 2020-11-12
 tags: NLP
 giscus_comments: true
