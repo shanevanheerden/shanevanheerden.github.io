@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 🔍 Using Machine Learning to Classify Personally Identifiable Data Fields
-description: In noisy Excel spreadsheets
+description: How I developed a solution to increase a client's data labelling process efficiency by 100-fold
 date: 2021-02-16
 tags: CaseStudy
 giscus_comments: true
