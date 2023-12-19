@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 🌲 Decision Tree Learning
-description: Classic Machine Learning Algorithms Series
+description: Part 3 - Classic Machine Learning Algorithms Series
 date: 2018-11-11
 tags: ClassicAlgorithms
 giscus_comments: true
