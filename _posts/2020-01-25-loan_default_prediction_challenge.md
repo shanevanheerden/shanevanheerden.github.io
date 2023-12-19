@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 🏦 Loan Default Prediction Challenge
-description: I developed a machine learning model that could accurately predict who would default on their loan.
+description: How I developed a machine learning model that could accurately predict who would default on their loan
 date: 2020-01-25
 tags: CaseStudy
 giscus_comments: true
