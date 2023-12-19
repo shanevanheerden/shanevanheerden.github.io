@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 🎓 An Overview of Supervised Machine Learning
-description: Classic Machine Learning Algorithms Series
+description: Part 1 - Classic Machine Learning Algorithms Series
 date: 2018-09-25
 tags: ClassicAlgorithms
 giscus_comments: true
