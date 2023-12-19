@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 🕰️ A Brief History of Natural Language Processing
-description: Natural Language Processing Series
+description: Part 1 - Natural Language Processing Series
 date: 2020-10-07
 tags: NLP
 giscus_comments: true
