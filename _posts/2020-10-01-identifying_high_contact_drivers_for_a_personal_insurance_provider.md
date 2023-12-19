@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 📧 Identifying High Contact Drivers for a Personal Insurance Provider
-description: How I advised a client on decreasing the human workload associated with answering customer questions
+description: How I advised a client in reducing the human workload involved with answering customer queries
 date: 2020-10-01
 tags: CaseStudy
 giscus_comments: true
