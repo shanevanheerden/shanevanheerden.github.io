@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 📄 Matching Resumes to Job Specifications
-description: Using NLP, Python, ElasticSearch and Streamlit
+description: How I used NLP to help efficiently place prospective candidates
 date: 2021-08-26
 tags: CaseStudy
 giscus_comments: true
