@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 🌌 Identifying Knowledge-sharing Opportunities with Knowledge Graphs
-description: Mixing NLP with Neo4j
+description: How I used NLP and knowledgegraphs to increase collaboration in the workplace
 date: 2021-05-25
 tags: CaseStudy
 giscus_comments: true
