@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: 📊 Word Embeddings
-description: Natural Language Processing Series
+description: Part 2 - Natural Language Processing Series
 date: 2020-10-12
 tags: NLP
 giscus_comments: true
