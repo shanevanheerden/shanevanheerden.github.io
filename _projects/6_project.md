@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <h4>📧 Identifying High Contact Drivers for a Personal Insurance Provider</h4>
-description: How I advised a client on decreasing the human workload associated with answering customer questions
+description: How I advised a client in reducing the human workload involved with answering customer queries
 img: assets/img/blog/blog13.1.png
 importance: 5
 category: case studies
