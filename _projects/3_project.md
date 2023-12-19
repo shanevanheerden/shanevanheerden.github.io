@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <h4>📄 Matching Resumes to Job Specifications</h4>
-description: Using NLP to better place prospective candidates 
+description: Using NLP to efficiently place prospective candidates 
 img: assets/img/blog/blog10.1.jpg
 importance: 1
 category: case studies
