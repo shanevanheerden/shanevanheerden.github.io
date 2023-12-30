@@ -7,19 +7,14 @@ importance: 1
 page_type: hobby
 ---
 
+<h2 class="category">🇮🇹 italy</h2>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hobbies/travelling1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-        {% include figure.html path="assets/img/hobbies/travelling3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-        {% include figure.html path="assets/img/hobbies/travelling5.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-        {% include figure.html path="assets/img/hobbies/travelling7.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-        {% include figure.html path="assets/img/hobbies/travelling9.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/travelling/rome_it.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/travelling/florence_it.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hobbies/travelling2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-        {% include figure.html path="assets/img/hobbies/travelling4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-        {% include figure.html path="assets/img/hobbies/travelling6.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-        {% include figure.html path="assets/img/hobbies/travelling8.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-        {% include figure.html path="assets/img/hobbies/travelling10.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/travelling/pisa_it.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/travelling/siena_it.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
