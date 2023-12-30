@@ -129,7 +129,7 @@ page_type: hobby
             <center>Bangkok</center>
         </div>
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path="assets/img/hobbies/travelling/changmai_th.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            {% include figure.html path="assets/img/hobbies/travelling/chiangmai_th.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
             <center>Chang Mai</center>
         </div>
         <div class="col-sm mt-3 mt-md-0">
