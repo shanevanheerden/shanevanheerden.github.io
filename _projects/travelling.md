@@ -51,16 +51,16 @@ page_type: hobby
     <div class="row mt-3">
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/newyork_ny.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-            <center>New York</center>
+            <center>New York (NY)</center>
         </div>
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/boston_ma.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-            <center>Boston</center>
+            <center>Boston (MA)</center>
         </div>
         <div class="col-sm mt-3 mt-md-0">
             <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/disney_fl.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-            <center>Boston</center>
+            <center>Disneyworld (FL)</center>
         </div>
         </div>
     </div>
@@ -83,7 +83,7 @@ page_type: hobby
     <div class="row mt-3">
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/london_uk.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-            <center>Paris</center>
+            <center>London</center>
         </div>
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/islay_uk.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -130,7 +130,7 @@ page_type: hobby
         </div>
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/chiangmai_th.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-            <center>Chang Mai</center>
+            <center>Chiang Mai</center>
         </div>
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/krabi_th.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
