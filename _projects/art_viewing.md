@@ -41,7 +41,7 @@ page_type: hobby
         <center>Art</center>
         {% include figure.html path="assets/img/hobbies/art_viewing/portrait_of_henry_viii.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center><a href='https://en.wikipedia.org/wiki/Portrait_of_Henry_VIII'>Portrait of Henry VIII</a> — Hans Holbein the Younger (1540)</center>
-        {% include figure.html path="assets/img/hobbies/art_viewing/pietà.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/art_viewing/pieta.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center>Art</center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
@@ -55,7 +55,7 @@ page_type: hobby
         <center><a href='https://en.wikipedia.org/wiki/Judith_Beheading_Holofernes_(Caravaggio)'>Judith Beheading Holofernes</a> — Caravaggio  (1598–1599 / 1602)</center>
         {% include figure.html path="assets/img/hobbies/art_viewing/apollo_and_daphne.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center><a href='https://en.wikipedia.org/wiki/Apollo_and_Daphne_(Bernini)'>Apollo And Daphne</a> — Bernini  (1622–1625)</center>
-        {% include figure.html path="assets/img/hobbies/art_viewing/laocoön_and_his_sons.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/art_viewing/laocoon_and_his_sons.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center><a href='https://en.wikipedia.org/wiki/Laoco%C3%B6n_and_His_Sons'>Laocoön and His Sons</a> — Agesander, Athenodoros and Polydorus (200 BC–70 AD)</center>
         {% include figure.html path="assets/img/hobbies/art_viewing/ognissanti_madonna.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center><a href='https://en.wikipedia.org/wiki/Ognissanti_Madonna'>Ognissanti Madonna</a> — Unknown (1310)</center>
