@@ -38,7 +38,7 @@ page_type: hobby
         {% include figure.html path="assets/img/hobbies/art_viewing/sacred_and_profane_love.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center><a href='https://en.wikipedia.org/wiki/Sacred_and_Profane_Love'>Sacred and Profane Love</a> — Titian (1514)<br></center>
         {% include figure.html path="assets/img/hobbies/art_viewing/narcissus.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-        <center>Art</center>
+        <center><a href='https://en.wikipedia.org/wiki/Narcissus_(Caravaggio)'>Narcissus</a> — Caravaggio  (1597–1599)</center>
         {% include figure.html path="assets/img/hobbies/art_viewing/portrait_of_henry_viii.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center><a href='https://en.wikipedia.org/wiki/Portrait_of_Henry_VIII'>Portrait of Henry VIII</a> — Hans Holbein the Younger (1540)<br></center>
         {% include figure.html path="assets/img/hobbies/art_viewing/pieta.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
