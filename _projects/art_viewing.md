@@ -3,7 +3,7 @@ layout: page
 title: 🖼️ art viewing
 description: I enjoy pilgraming to famous art works with my wife.
 img: assets/img/hobbies/art_viewing.jpg
-importance: 1
+importance: 2
 page_type: hobby
 ---
 
