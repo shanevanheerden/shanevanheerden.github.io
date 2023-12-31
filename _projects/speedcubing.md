@@ -15,18 +15,18 @@ Speedcubing requires a lot of practice and patience, but it's a rewarding and ch
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hobbies/speedcubing1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/speedcubing/speedcubing1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hobbies/speedcubing2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/speedcubing/speedcubing2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hobbies/speedcubing3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/speedcubing/speedcubing3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hobbies/speedcubing4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/speedcubing/speedcubing4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <iframe width="770" height="570.32" src="https://www.youtube.com/embed/bEc4CI63Puo"></iframe>
