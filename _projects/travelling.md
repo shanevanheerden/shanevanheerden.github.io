@@ -7,6 +7,7 @@ importance: 1
 page_type: hobby
 ---
 
+Here are some of the places I have visited over the years:
 <div class="projects">
     <h2 class="category">🇵🇹 portugal</h2>
     <div class="row mt-3">
