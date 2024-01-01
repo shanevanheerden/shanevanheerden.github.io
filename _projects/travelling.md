@@ -167,6 +167,8 @@ Here are some of the places I have visited over the years:
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/bangkok_th.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
             <center>Bangkok</center>
+            {% include figure.html path="assets/img/hobbies/travelling/jamesbondisland_th.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>James Bond Island</center>
         </div>
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/chiangmai_th.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
