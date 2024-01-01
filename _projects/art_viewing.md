@@ -7,7 +7,7 @@ importance: 2
 page_type: hobby
 ---
 
-Here are some of the famous artworks we have viewed over the years: 
+Here are some of the famous artworks I have viewed over the years: 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
