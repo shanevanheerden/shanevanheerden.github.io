@@ -123,6 +123,45 @@ Here are some of the places I have visited over the years:
             <center>Siena</center>
         </div>
     </div>
+    <h2 class="category">🇸🇪 sweden</h2>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.html path="assets/img/hobbies/travelling/stockholm_se.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>Stockholm</center>
+            {% include figure.html path="assets/img/hobbies/travelling/gothenburg_se.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>Gothenburg</center>
+        </div>
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.html path="assets/img/hobbies/travelling/jonkoping_se.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>Jönköping</center>
+        </div>
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.html path="assets/img/hobbies/travelling/malmo_se.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>Malmö</center>
+        </div>
+    </div>
+    <h2 class="category">🇩🇰 denmark</h2>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.html path="assets/img/hobbies/travelling/copenhagen_dk.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>Copenhagen</center>
+        </div>
+        <div class="col-sm mt-3 mt-md-0">
+        </div>
+        <div class="col-sm mt-3 mt-md-0">
+        </div>
+    </div>
+    <h2 class="category">🇳🇴 norway</h2>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.html path="assets/img/hobbies/travelling/oslo_no.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>Oslo</center>
+        </div>
+        <div class="col-sm mt-3 mt-md-0">
+        </div>
+        <div class="col-sm mt-3 mt-md-0">
+        </div>
+    </div>
     <h2 class="category">🇹🇭 thailand</h2>
     <div class="row mt-3">
         <div class="col-sm mt-3 mt-md-0">
@@ -136,6 +175,19 @@ Here are some of the places I have visited over the years:
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/krabi_th.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
             <center>Krabi</center>
+        </div>
+    </div>
+    <h2 class="category">🇦🇺 australia</h2>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.html path="assets/img/hobbies/travelling/sydney_au.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>Sydney</center>
+        </div>
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.html path="assets/img/hobbies/travelling/coolangatta_au.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>Coolangatta</center>
+        </div>
+        <div class="col-sm mt-3 mt-md-0">
         </div>
     </div>
 </div>
