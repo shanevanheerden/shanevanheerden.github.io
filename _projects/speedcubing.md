@@ -3,7 +3,7 @@ layout: page
 title: 🧊 speedcubing
 description: Another one of my passions is Speedcubing — the exhilarating sport of solving a Rubik's Cube as quickly as possible.
 img: assets/img/hobbies/speedcubing.gif
-importance: 3
+importance: 4
 page_type: hobby
 ---
 
