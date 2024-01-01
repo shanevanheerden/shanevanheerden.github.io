@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 🧇 waffles
-description: I'm a dog dad to my handsome golden retriever, Waffles.
+description: I'm a dog dad to my handsome golden retriever boy, Waffles.
 img: assets/img/hobbies/waffles.jpg
 importance: 3
 page_type: hobby
