@@ -70,6 +70,8 @@ Here are some of the places I have visited over the years:
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/dublin_ie.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
             <center>Dublin</center>
+            {% include figure.html path="assets/img/hobbies/travelling/cliffsofmoher_ie.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+            <center>Cliffs of Moher</center>
         </div>
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.html path="assets/img/hobbies/travelling/cork_ie.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
