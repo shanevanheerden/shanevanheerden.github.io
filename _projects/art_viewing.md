@@ -7,6 +7,8 @@ importance: 2
 page_type: hobby
 ---
 
+Here are some of the famous artworks we have viewed over the years: 
+
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/hobbies/art_viewing/mona_lisa.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
