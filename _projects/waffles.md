@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🧇 Waffles
+title: 🧇 waffles
 description: I enjoy playing with my dog, Waffles
 img: assets/img/hobbies/waffles.jpg
 importance: 3
