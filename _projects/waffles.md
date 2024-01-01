@@ -7,7 +7,7 @@ importance: 3
 page_type: hobby
 ---
 
-Here are some of the Waffles wall of fame photos:
+Here are the photos that made it onto the Waffles wall of fame:
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/hobbies/waffles/waffles1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
