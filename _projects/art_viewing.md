@@ -15,7 +15,7 @@ Here are some of the famous artworks I have viewed over the years:
         <center><a href='https://en.wikipedia.org/wiki/Mona_Lisa'>Mona Lisa</a> — Leonardo Da Vinci<br>(c. 1503–1506)</center><br>
         {% include figure.html path="assets/img/hobbies/art_viewing/david.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center><a href='https://en.wikipedia.org/wiki/David_(Michelangelo)'>David</a> — Michelangelo<br>(c. 1501–1504)</center><br>
-        {% include figure.html path="assets/img/hobbies/art_viewing/the_school_of_athens.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/hobbies/art_viewing/annunciation.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center><a href='https://en.wikipedia.org/wiki/Annunciation_(Leonardo)'>Annunciation</a> — Leonardo da Vinci<br>(c. 1472–1476)</center><br>
         {% include figure.html path="assets/img/hobbies/art_viewing/venus_de_milo.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         <center><a href='https://en.wikipedia.org/wiki/Venus_de_Milo'>Venus De Milo</a> — Alexandros Of Antioch<br>(c. 150 BC–50 BC)</center><br>
