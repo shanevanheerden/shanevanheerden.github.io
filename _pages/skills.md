@@ -113,7 +113,7 @@ order: 5
   Here is a list of my accreditations.
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-      <a href="https://credentials.databricks.com/55fb7987-70cc-4296-802c-58a4924c76c2#gs.yqniy9" target="_blank">
+      <a href="https://credentials.databricks.com/2ffdc823-6bfb-45c4-b0c6-39c0dcdd225e#gs.2sd6ja" target="_blank">
         <img src="/assets/img/certifications/lakehouse_fundamentals.png" width="200">
       </a>
     </div>
