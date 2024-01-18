@@ -1,38 +1,56 @@
 [
     {
+        "name": "Databricks Certified Machine Learning Associate",
+        "platform": "Databricks",
+        "date": "2 August 2023",
+        "hours": "~6",
+        "skills": "Lakehouse, Delta Lake, Machine Learning, Apache Spark, Hyperopt, Spark ML, Feature Store, Model Registry, MLflow",
+        "credential": "<a href=\"https://credentials.databricks.com/67bb58e3-6b91-4334-b0a4-1a1208e786ef#gs.2x42a9\" target=\"_blank\">link</a>",
+        "certificate": "<a href=\"/assets/pdf/courses/scalable_machine_learning_with_apache_spark.pdf\" target=\"_blank\">pdf</a>"
+    },
+    {
+        "name": "Databricks Accredited Lakehouse Fundamentals",
+        "platform": "Databricks",
+        "date": "8 January 2024",
+        "hours": "~1",
+        "skills": "Databricks, Lakehouse, Databricks Machine Learning, Databricks SQL, Delta Lake, Security",
+        "credential": "<a href=\"https://credentials.databricks.com/2ffdc823-6bfb-45c4-b0c6-39c0dcdd225e#gs.3rkl0r\" target=\"_blank\">link</a>",
+        "certificate": "<a href=\"/assets/pdf/courses/databricks_accredited_lakehouse_fundamentals2.pdf\" target=\"_blank\">pdf</a>"
+    },
+    {
         "name": "Databricks Accredited Generative AI Fundamentals",
         "platform": "Databricks",
         "date": "16 July 2023",
-        "hours": "N/A",
-        "skills": "Generative artificial intelligence (AI)",
+        "hours": "~1",
+        "skills": "Generative Artificial Intelligence (AI)",
         "credential": "<a href=\"https://credentials.databricks.com/67bb58e3-6b91-4334-b0a4-1a1208e786ef#gs.2x42a9\" target=\"_blank\">link</a>",
-        "certificate": "<a href=\"/assets/pdf/databricks_generative_ai_fundamentals.pdf\" target=\"_blank\">pdf</a>"
+        "certificate": "<a href=\"/assets/pdf/courses/databricks_generative_ai_fundamentals.pdf\" target=\"_blank\">pdf</a>"
     },
     {
         "name": "Databricks Accredited Lakehouse Fundamentals",
         "platform": "Databricks",
         "date": "12 June 2022",
-        "hours": "N/A",
-        "skills": "Databricks, Lakehouse, Databricks machine learning, Databricks SQL, Delta lake, Security",
+        "hours": "~1",
+        "skills": "Databricks, Lakehouse, Databricks Machine Learning, Databricks SQL, Delta Lake, Security",
         "credential": "<a href=\"https://credentials.databricks.com/55fb7987-70cc-4296-802c-58a4924c76c2#gs.yqniy9\" target=\"_blank\">link</a>",
-        "certificate": "<a href=\"/assets/pdf/databricks_accredited_lakehouse_fundamentals.pdf\" target=\"_blank\">pdf</a>"
+        "certificate": "<a href=\"/assets/pdf/courses/databricks_accredited_lakehouse_fundamentals.pdf\" target=\"_blank\">pdf</a>"
     },
     {
         "name": "Algorithmic Trading: Backtest, Optimize & Automate in Python",
         "platform": "Udemy",
         "date": "8 May 2021",
         "hours": "10",
-        "skills": "Algorithmic trading, Backtesting, Python",
+        "skills": "Algorithmic Trading, Backtesting, Python",
         "credential": "<a href=\"https://www.udemy.com/certificate/UC-3273eaea-bc15-4603-be42-b719634dce8a/\" target=\"_blank\">link</a>",
-        "certificate": "<a href=\"/assets/pdf/algorithmic_trading.pdf\" target=\"_blank\">pdf</a>"
+        "certificate": "<a href=\"/assets/pdf/courses/algorithmic_trading.pdf\" target=\"_blank\">pdf</a>"
     },
     {
         "name": "Fundamentals of GIS",
         "platform": "Coursera",
         "date": "31 July 2017",
         "hours": "~30",
-        "skills": "Spatial analysis, Data analysis, Data visualization, ArcGIS (software)",
+        "skills": "Spatial Analysis, Data Analysis, Data Visualization, ArcGIS (software)",
         "credential": "<a href=\"https://www.coursera.org/account/accomplishments/verify/5ATT49R8HFMD\" target=\"_blank\">link</a>",
-        "certificate": "<a href=\"/assets/pdf/fundamentals_of_gis.pdf\" target=\"_blank\">pdf</a>"
+        "certificate": "<a href=\"/assets/pdf/courses/fundamentals_of_gis.pdf\" target=\"_blank\">pdf</a>"
     }
 ]
