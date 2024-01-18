@@ -123,6 +123,9 @@ order: 5
       </a>
     </div>
     <div class="col-sm mt-3 mt-md-0">
+      <a href="[https://credentials.databricks.com/67bb58e3-6b91-4334-b0a4-1a1208e786ef#gs.2x42a9](https://credentials.databricks.com/01fa2c3b-c4c7-440c-a9e1-47d4065e2018#gs.3rlg6q)" target="_blank">
+        <img src="/assets/img/certifications/machine_learning_associate.png" width="200">
+      </a>
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>
