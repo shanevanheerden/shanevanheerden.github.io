@@ -26,4 +26,4 @@ The competition was tough, with submissions from several institutions in South A
         {% include figure.html path="assets/img/news/2017comp2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-{% include video.html path="https://www.youtube.com/embed/S_QAAFVKKo0" class="img-fluid rounded z-depth-1" %}
+<iframe width="770" height="570.32" src="https://www.youtube.com/embed/S_QAAFVKKo0"></iframe>
