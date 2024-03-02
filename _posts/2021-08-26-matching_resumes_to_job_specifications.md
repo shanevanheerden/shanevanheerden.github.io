@@ -24,9 +24,7 @@ toc:
   - name: 1. The problem
   - name: 2. Understanding the clients needs
   - name: 3. The solution architecture
-  - name: 4. Productionising the solution
-  - name: 5. Project impact
-  - name: 6. Wrapping up
+  - name: 4. Wrapping up
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -109,7 +107,7 @@ Elasticsearch served as the central repository for storing preprocessed document
 
 ### 3.5. The "AI logic"
 
-The AI logic is the heart of the system, orchestrating the matchmaking process. By considering predicted industry and job titles, user-specified keyword entities, and leveraging unsupervised ranking techniques, our system intelligently filters and ranks documents, providing personalized recommendations to users. This is accomplished through 5 sequential steps facilitated by a [Streamlit](https://streamlit.io/) user interface dispalyed in Figure 2.
+The AI logic is the heart of the system, orchestrating the matchmaking process. By considering predicted industry and job titles, user-specified keyword entities, and leveraging unsupervised ranking techniques, our system intelligently filters and ranks documents, providing personalized recommendations to users. This is accomplished through 5 sequential steps facilitated by a [Streamlit](https://streamlit.io/) user interface displayed in Figure 2.
 
 {% include figure.html path="assets/img/blog/blog10.3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
@@ -124,29 +122,20 @@ The AI logic is the heart of the system, orchestrating the matchmaking process. 
     - The first algorithm relies on ordering all candidate job specifications by utilising Elasticsearch's [text similarity functionality](https://www.elastic.co/search-labs/blog/articles/text-similarity-search-with-vectors-in-elasticsearch). More specifically, job specifications are ordered according to the [cosign similarity](https://en.wikipedia.org/wiki/Cosine_similarity) between the text vector representations of the job specifications according to the resume's vector representation.
     - The second algorithm takes inspiration from the recently proposed [Top2Vec approach](https://arxiv.org/pdf/2008.09470.pdf) and utilises the pre-fitted UMAP and HDBSCAN models described in §3.2. First, the spaCy document vector representation of the resume is reduced from 300 to 80 dimensions using the UMAP model. This is done since UMAP has been shown to be an effective preprocessing step to boost the performance of density based clustering methods. This reduced vector representation then acts as input to the HDBSCAN model which produces a cluster prediction. The most appropriate job specifications to recommend are those which share the same cluster as the resume.
 
-### 3.6. User interface
+The effectiveness of the resume matching system was extensively evaluated by the client using the Streamlit user interface.
 
-The user interface provided a user-friendly platform for interacting with the system. Users could upload resumes or job specifications, specify keyword entities, and receive personalized recommendations.
-
-Initially, a Streamlit Dashboard provided a user-friendly interface for testing. However, the focus has shifted to integrating the solution seamlessly into the JobCrystal UI through the development of a Flask API. This ensures that the end user, in this case, JobCrystal's team, can easily access and benefit from the system's recommendations.
-
-The user interface, initially developed as a Streamlit Dashboard for testing, serves as a bridge between the user and the system. Although the Streamlit Dashboard is now obsolete as UI development shifts to the JobCrystal side, it provided a visual representation of the system's capabilities.
-
-While the technical backend is fascinating, the user interface is where the magic becomes tangible. Though initially using a Streamlit Dashboard for testing, our current focus is on delivering seamless API responses for integration into JobCrystal's evolving user interface.
-
-Initially, a Streamlit Dashboard served as a testing interface, providing insights into system functionality. However, with Zani spearheading the UI development on the JobCrystal side, our focus shifted to delivering streamlined API responses to meet their evolving requirements.
-
-Before constructing the flask API, we provided Sasha with a Streamlit Dashboard to test the solution. This is obsolete now as Zani is developing the UI on the JobCrystal side and we are only providing the API responses they need. Here is what the Streamlit Dashboard looked like:
-
-
+> After thoughrough evaluation of the system, the client was impressed with the overall quality of the recommendations and I proceeded to productionising the solution.
 
 ***
 
+<!-- 
 ## 4. Productionising the solution
 
-The system was deployed on AWS EC2 instances and scaled to handle the volume of resumes and job specifications processed daily. We implemented continuous integration (CI) and continuous delivery (CD) pipelines to ensure that the system was always up-to-date and running smoothly.
+ the focus has shifted to integrating the solution seamlessly into the JobCrystal UI through the development of a Flask API. This ensures that the end user, in this case, JobCrystal's team, can easily access and benefit from the system's recommendations.
 
-To deploy the solution into production, we followed these steps:
+The system was deployed on AWS EC2 instances and scaled to handle the volume of resumes and job specifications processed daily. I implemented continuous integration (CI) and continuous delivery (CD) pipelines to ensure that the system was always up-to-date and running smoothly.
+
+To deploy the solution into production, I followed these steps:
 
 Infrastructure Setup: An AWS EC2 instance was provisioned to host the system components.
 
@@ -180,64 +169,19 @@ The true measure of success lies in the impact on JobCrystal's operations. Clien
 
 ***
 
-## 5. Project impact
+-->
 
-The implementation of this NLP-powered system significantly improved JobCrystal's recruitment process:
+## 4. Wrapping up
 
-Reduced Manual Screening: The system automatically matched resumes to job specifications, reducing the time recruiters spent on manual screening.
-
-Improved Candidate Matching: The system's AI-powered matching capabilities ensured that the most relevant candidates were identified for each open position.
-
-Enhanced Recruitment Efficiency: The system streamlined the recruitment process, saving time and resources for the company.
-
-The implementation of the NLP-powered recruitment system resulted in significant improvements for JobCrystal:
-
-Reduced Matching Time: The automated matching process significantly reduced the time required to match resumes to job specifications, allowing recruiters to focus on more strategic tasks.
-
-Improved Accuracy: The NLP-based matching algorithm improved the accuracy of matching, leading to better placements and a more efficient recruitment process.
-
-Enhanced Candidate Experience: Job seekers benefited from a more personalized and relevant search experience,
-
-The implementation of our NLP-powered solution has significantly transformed JobCrystal's recruitment process. The system has:
-
-Reduced the time required to match resumes to job specifications by over 90%.
-
-Improved the accuracy of matches, leading to a higher percentage of qualified candidates being placed in suitable roles.
-
-Enhanced the overall efficiency of JobCrystal's recruitment operations.
-
-The impact of our project extends beyond the technical aspects. Client feedback, as depicted in Figure 5, highlights the positive outcomes and improvements observed by JobCrystal. The accompanying video offers a firsthand look at the project's impact, providing insights into the transformative changes experienced by the client.
-
-The impact of our project on JobCrystal's recruitment process has been substantial. Client feedback reflects the positive outcomes achieved through the implementation of advanced NLP techniques, streamlining their workflow and enhancing the overall efficiency of their recruitment process.
-
-The impact of our NLP-driven solution on JobCrystal's recruitment process has been profound. Client feedback reflects significant improvements in candidate matching accuracy, reduced manual effort in resume screening, and overall time savings in the hiring workflow. The streamlined process has empowered JobCrystal to make data-driven decisions and focus more on engaging with qualified candidates.
-
-The impact of our solution on JobCrystal's recruitment process has been substantial. Figure 5 showcases positive client feedback, emphasizing the tangible benefits experienced. The accompanying video provides a firsthand look at the transformative impact our solution has had on streamlining recruitment operations.
+By leveraging advanced NLP techniques, I was able to create a system that significantly improved the client's efficiency and effectiveness in finding the right candidates for their open positions, as confirmed by the positive client feedback in Figure 3. The client was so impressed with the solution that they decided to reposition their business offering around this new AI-based recruitment matching system, as shown in the accompanying video below.
 
 {% include figure.html path="assets/img/blog/blog10.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
-    <em>Figure 5: Client feedback.</em> 
+    <em>Figure 3: Client feedback.</em> 
 </div>
-
-To provide a more immersive understanding of the project's impact, we've compiled a video showcasing JobCrystal's experience and the positive outcomes of our collaboration.
 
 <div class="col-sm mt-3 mt-md-0">
     {% include video.html path="assets/video/jobcrystal.mp4" class="img-fluid rounded z-depth-1" controls=true %}
 </div>
 
-
-## 6. Wrapping up
-
-This project demonstrates the power of NLP in revolutionizing traditional recruitment processes. By leveraging advanced NLP techniques, we were able to create a system that significantly improved JobCrystal's efficiency and effectiveness in finding the right candidates for their open positions. As NLP continues to evolve, we can expect even more innovative applications in the field of recruitment, further transforming the way companies find and hire top talent.
-
-This project has been a testament to the power of NLP in revolutionizing traditional industries like job recruitment. By leveraging advanced NLP techniques, we have significantly improved JobCrystal's ability to connect qualified candidates with suitable job openings, streamlining their recruitment process and enhancing their overall efficiency.
-
-As we conclude this journey, it's essential to reflect on the challenges overcome, the innovations introduced, and the positive impact realized. Our collaboration with JobCrystal exemplifies the power of advanced NLP techniques in revolutionizing traditional processes. The project's success underscores the importance of understanding client needs, designing robust architectures, and continuously refining solutions for maximum impact.
-
-In conclusion, our project for JobCrystal represents a significant leap forward in the realm of job recruitment. By harnessing the power of advanced NLP techniques, we've not only addressed specific challenges but also paved the way for a more efficient, data-driven, and user-friendly recruitment process. As we reflect on the journey, it's evident that the fusion of technology and recruitment has the potential to reshape industry standards, opening doors to new possibilities and innovations.
-
-As we conclude this journey, we reflect on the challenges overcome, the lessons learned, and the positive impact our solution has had on JobCrystal's recruitment process. The collaboration with the client and the continuous evolution of our system mark the beginning of a new era in innovative job recruitment solutions.
-
-In conclusion, our journey with JobCrystal represents a successful collaboration in revolutionizing their recruitment processes. By leveraging advanced NLP techniques, we've not only met but exceeded expectations, paving the way for a more efficient, data-driven, and intelligent recruitment ecosystem. As we reflect on the challenges overcome and the positive outcomes achieved, we look forward to continued innovation and impact in the evolving landscape of job recruitment.
-
-As we conclude this journey with JobCrystal, we reflect on the transformation achieved in the realm of job recruitment. The integration of advanced NLP techniques, streamlined preprocessing pipelines, and a user-friendly interface has not only met but exceeded the client's expectations. The success of this project serves as a testament to the power of innovation in solving real-world challenges within the job recruitment landscape. We remain committed to pushing the boundaries of technology to drive positive change in diverse industries.
+As NLP continues to evolve, I can only expect even more innovative applications in the field of recruitment, further transforming the way companies find and hire top talent. It's projects like this that futher cement my belief that Data Science and Machine Learning has the power to revolutionise almost every industry.
