@@ -128,49 +128,6 @@ The effectiveness of the resume matching system was extensively evaluated by the
 
 ***
 
-<!-- 
-## 4. Productionising the solution
-
- the focus has shifted to integrating the solution seamlessly into the JobCrystal UI through the development of a Flask API. This ensures that the end user, in this case, JobCrystal's team, can easily access and benefit from the system's recommendations.
-
-The system was deployed on AWS EC2 instances and scaled to handle the volume of resumes and job specifications processed daily. I implemented continuous integration (CI) and continuous delivery (CD) pipelines to ensure that the system was always up-to-date and running smoothly.
-
-To deploy the solution into production, I followed these steps:
-
-Infrastructure Setup: An AWS EC2 instance was provisioned to host the system components.
-
-Deployment: The system code was deployed to the EC2 instance using a continuous integration/continuous delivery (CI/CD) pipeline.
-
-Monitoring: Monitoring tools were implemented to track system performance and resource utilization.
-
-API Integration: The system's API was integrated with JobCrystal's existing platform to seamlessly incorporate the new functionality.
-
-To ensure the solution's scalability and reliability, we deployed it on an Amazon Web Services (AWS) EC2 instance. This cloud-based infrastructure provides the necessary resources to handle large volumes of data and user requests.
-
-The solution was implemented using a variety of technologies, including Python, Elasticsearch, and Streamlit. The solution is deployed on an Amazon Web Services (AWS) cloud infrastructure.
-
-The productionization phase was a critical step in transitioning from development to a fully operational system. Figure 3 and Figure 4 provide snapshots of this process. They showcase the deployment and scaling aspects, emphasizing the robustness and scalability of our solution in a production environment.
-
-The productionization phase involved scaling our solution for real-world deployment. Figures 3 and 4 illustrate the architecture's adaptation for live deployment, ensuring optimal performance, reliability, and accessibility.
-
-With the successful development and testing phases behind us, the focus shifted to productionizing the solution for seamless integration into JobCrystal's operations. This stage involved deploying the entire system on AWS EC2 instances to ensure scalability, reliability, and optimal performance. The architecture was fine-tuned to handle real-time data processing, and necessary measures were implemented to monitor and maintain the system efficiently.
-
-The true measure of success lies in the impact on JobCrystal's operations. Client feedback and testimonials serve as a testament to the positive transformations witnessed.
-
-{% include figure.html path="assets/img/blog/blog10.4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-<div class="caption">
-    <em>Figure 3: Solution architecture.</em> 
-</div>
-
-{% include figure.html path="assets/img/blog/blog10.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-<div class="caption">
-    <em>Figure 4: Solution architecture.</em> 
-</div>
-
-***
-
--->
-
 ## 4. Wrapping up
 
 By leveraging advanced NLP techniques, I was able to create a system that significantly improved the client's efficiency and effectiveness in finding the right candidates for their open positions, as confirmed by the positive client feedback in Figure 3. The client was so impressed with the solution that they decided to reposition their business offering around this new AI-based recruitment matching system, as shown in the accompanying video below.
