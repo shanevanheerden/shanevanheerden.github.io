@@ -11,17 +11,23 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Luno
-      institution: Senior Data Scientist (<a href="https://shanevanheerden.github.io/news/news19/">cf.</a>)
-      year: Sep 2021 – Present
+     - title: Luno
+      institution: Senior Data Scientist (<a href="https://shanevanheerden.github.io/news/news20/">cf.</a>)
+      year: Jul 2023 – Present
       description:
-        - "Led key company project to develop real-time customer Anti-Money Laundering risk scores. Responsibilities included operationalising risk score models in Databricks using Py-Spark and MLFlow, engaging with Compliance stakeholders to construct risk indicators and advising on model parameter choices. <b>Impact<\b>: Prevented potential regulatory fines up to R100 million."
-        - "Built declarative feature engineering infrastructure to service all Machine Learning models in Databricks. <b>Impact<\b>: 10x reduction in feature creation and operationalisation time as well as improved standardisation, scalability and data lineage alerting."
-        - "Led key company project for defining and tracking how customers move through various lifecycle statuses. Responsibilities included designing PySpark-based reverse ETL pipeline and monitoring reliability of upstream data dependencies. <b>Impact<\b>: Critical component of a wider initiative to protecting $30 million in revenue and generating $1 million more."
-        - "Data Lead for CRM migration from Kustomer to Zendesk. Responsibilities included identifying critical data sources, coordinating with Engineers, and advising on new data architecture while considering cost and API rate limit constraints. <b>Impact<\b>: Part of initiative to scale Customer Success operations to handle a customer-base of 100 million customers."
-        - "Led project to produce accurate inbound customer message forecasts for workforce hiring and scheduling optimisation. Responsibilities included exploring correlation between Bitcoin spending behaviour and messages volumes, and benchmarked predictive performance of ARIMA and Prophet forecasting models. <b>Impact<\b>: 62% improvement in forecast accuracy."
+        - "Led key company project to develop real-time customer Anti-Money Laundering risk scores. Responsibilities included operationalising risk score models in Databricks using PySpark and MLFlow, engaging with Compliance stakeholders to construct risk indicators and advising on model parameter choices. <b>Impact</b>: Prevented potential regulatory fines up to R100 million."
+        - "Built declarative feature engineering infrastructure to service all Machine Learning models in Databricks. <b>Impact</b>: Around 10x reduction in feature creation and operationalisation time as well as improved standardisation, scalability and data lineage alerting."
         - "Won 2023 Lunaut of the Year in a company of 600+ people. (<a href='https://shanevanheerden.github.io/news/news21/'>cf.</a>)"
-        - "Completed an advanced Data Science training program offered by Google's ML@CapitalG Team where I was exposed to deep learning topics in Sequence Modelling and Reinforcement Learning."
+    - title: Luno
+      institution: Data Scientist (<a href="https://shanevanheerden.github.io/news/news19/">cf.</a>)
+      year: Sep 2021 – Jun 2023
+      description:
+        - "Led key company project for defining and tracking how customers move through various lifecycle statuses. Responsibilities included designing PySpark-based reverse ETL pipeline and monitoring reliability of upstream data dependencies. <b>Impact</b>: Critical component of a wider initiative to protecting $30 million in revenue and generating $1 million more."
+        - "Data Lead for CRM migration from Kustomer to Zendesk. Responsibilities included identifying critical data sources, coordinating with Engineers, and advising on new data architecture while considering cost and API rate limit constraints. <b>Impact</b>: Part of initiative to scale Customer Success operations to handle a customer-base of 100 million customers."
+        - "Led project to produce accurate inbound customer message forecasts for workforce hiring and scheduling optimisation. Involved exploring correlation between Bitcoin spending behaviour and messages volumes, and benchmarked predictive performance of ARIMA and Prophet forecasting models. <b>Impact</b>: 62% improvement in forecast accuracy."
+        - "Led project for Customer Success Workforce Team focussing to automating various productivity reports. Involved developing a PySpark-based data pipeline in Databricks, and displayed the productivity metrics to 20 Customer Success Team Leaders via Looker dashboards. <b>Impact</b>: Around 750 workforce hours saved per year."
+        - "Led a project tasked with identifying when the number of inbound customer conversations exceeded the available Customer Service capacity. Involved developing a set of indicator metrics and constructing a backlog monitoring dashboard using Looker. <b>Impact</b>: Better visibility and readiness for Customer Success to react to sudden demand spikes due to Bitcoin volatility."
+        - "Completed an advanced Data Science training program offered by Google's ML@CapitalG Team. Exposed to deep learning topics in Sequence Modelling and Reinforcement Learning."
     - title: Cape AI
       institution: Machine Learning Engineer (<a href="https://shanevanheerden.github.io/news/news18/">cf.</a>)
       year: Mar 2020 – Aug 2021
