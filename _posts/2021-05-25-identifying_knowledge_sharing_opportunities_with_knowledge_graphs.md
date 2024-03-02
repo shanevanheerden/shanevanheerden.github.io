@@ -49,6 +49,8 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog11.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
+# 🚧 WORK IN PROGRESS 🚧
+
 ## 1. The opportunity
 
 <div class="col-sm mt-3 mt-md-0">
