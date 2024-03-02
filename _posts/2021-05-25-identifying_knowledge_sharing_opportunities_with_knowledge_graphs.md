@@ -47,9 +47,9 @@ _styles: >
 
 ---
 
-{% include figure.html path="assets/img/blog/blog11.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-
 # 🚧 WORK IN PROGRESS 🚧
+
+{% include figure.html path="assets/img/blog/blog11.1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ## 1. The opportunity
 
