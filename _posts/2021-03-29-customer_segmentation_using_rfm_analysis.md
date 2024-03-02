@@ -47,7 +47,7 @@ _styles: >
 
 ---
 
-# 🚧 WORK IN PROGRESS 🚧
+# 🚧 <b>WORK IN PROGRESS</b> 🚧
 
 {% include figure.html path="assets/img/blog/blog12.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
