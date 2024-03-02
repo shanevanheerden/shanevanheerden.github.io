@@ -75,7 +75,7 @@ Before developing the solution, I spent time understanding the specific needs of
 
 ## 3. The solution architecture
 
-The success of the project relied heavily on creating a well-designed solution architecture. The system's core comprises multiple components collaborating to provide a strong and intelligent recruitment solution. Each stage, from data ingestion to storing results in ElasticSearch, was crafted with emphasis on scalability, efficiency, and smooth integration into the client's current infrastructure. Figure 1 visually depicts the interconnected components, showcasing the architecture of the solution.
+The success of the project relied heavily on creating a well-designed solution architecture. The system's core comprises multiple components collaborating to provide a strong and intelligent recruitment solution. Each stage, from data ingestion to storing results in ElasticSearch, was crafted with emphasis on scalability, efficiency, and smooth integration into the client's current infrastructure. Figure 1 visually depicts the interconnected components, showcasing a rough architecture of the solution.
 
 {% include figure.html path="assets/img/blog/blog10.2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
