@@ -16,7 +16,7 @@
       year: Jul 2023 – Present
       description:
         - "Led key company project to develop real-time customer Anti-Money Laundering risk scores. Responsibilities included operationalising risk score models in Databricks using PySpark and MLFlow, engaging with Compliance stakeholders to construct risk indicators and advising on model parameter choices. <b>Impact</b>: Prevented potential regulatory fines up to R100 million."
-        - "Built declarative feature engineering infrastructure to service all Machine Learning models in Databricks. <b>Impact</b>: Around 10x reduction in feature creation and operationalisation time as well as improved standardisation, scalability and data lineage alerting."
+        - "Built declarative feature engineering infrastructure to service all ML models in Databricks. <b>Impact</b>: Around 10x reduction in feature creation and operationalisation time as well as improved standardisation, scalability and data lineage alerting."
         - "Won 2023 Lunaut of the Year in a company of 600+ people. (<a href='https://shanevanheerden.github.io/news/news21/'>cf.</a>)"
     - title: Luno
       institution: Data Scientist (<a href="https://shanevanheerden.github.io/news/news19/">cf.</a>)
