@@ -12,7 +12,7 @@
   type: time_table
   contents:
     - title: Luno
-      institution: Data Scientist (<a href="https://shanevanheerden.github.io/news/news19/">cf.</a>)
+      institution: Senior Data Scientist (<a href="https://shanevanheerden.github.io/news/news19/">cf.</a>)
       year: Sep 2021 – Present
       description:
         - "Led key company project to develop real-time customer Anti-Money Laundering risk scores. Responsibilities included operationalising risk score models in Databricks using Py-Spark and MLFlow, engaging with Compliance stakeholders to construct risk indicators and advising on model parameter choices. <b>Impact<\b>: Prevented potential regulatory fines up to R100 million."
