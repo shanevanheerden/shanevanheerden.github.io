@@ -52,7 +52,7 @@ I always jump at the opportunity to tackle new and interesting challenges using 
 
 ## 1. The problem
 
-In the fast-paced world of job recruitment, staying ahead of the curve requires innovative solutions. Recently, I was tasked with probably my toughest challenges by a client who operates a job recruitment firm within South Africa. I undertook the challenge of revolutionizing JobCrystal's current recruitment process by harnessing the power of advanced Natural Language Processing (NLP) techniques.
+In the fast-paced world of job recruitment, staying ahead of the curve requires innovative solutions. Recently, I was tasked with probably my toughest challenges by a client who operates a job recruitment firm within South Africa. I undertook the challenge of revolutionizing the client's current recruitment process by harnessing the power of advanced Natural Language Processing (NLP) techniques.
 
 In this blog post, I'll take you through the intricacies of the project, detailing the architecture, preprocessing pipelines, data storage, APIs, trained models, user interface, and the intricate AI logic that powers the system. 
 
