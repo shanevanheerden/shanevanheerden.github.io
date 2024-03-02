@@ -270,7 +270,9 @@ So, how well did my solution fare overall? Figure 6 shows the results of my eval
 
 ***
 
-<!--- ## 6. Understanding the clients platform
+<!---
+
+## 6. Understanding the clients platform
 
 In the `Select Source` tab, users are required to upload the data source they are intending to exchange which would likely take the form of a structured data table usually in CSV or XLS format, as displayed in Figure 7. As previously described in §2, there was hardly ever a predictable column structure in these tables and, on occasion, they contained junk data, or were missing data, in some cells.
 
