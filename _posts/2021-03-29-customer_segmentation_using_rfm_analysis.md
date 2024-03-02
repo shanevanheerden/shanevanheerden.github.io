@@ -49,6 +49,8 @@ _styles: >
 
 {% include figure.html path="assets/img/blog/blog12.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
+# 🚧 WORK IN PROGRESS 🚧
+
 ## 1. The problem
 
 
