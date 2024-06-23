@@ -57,6 +57,9 @@ order: 5
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <center>
+        <a href="https://www.unitycatalog.io/" target="_blank">
+          <img src="/assets/img/skills/unity_catalog.png" width="150" style="vertical-align:middle;margin:20px 0px">
+        </a>
         <a href="https://pandas.pydata.org/" target="_blank">
           <img src="/assets/img/skills/pandas.png" width="150" style="vertical-align:middle;margin:20px 0px">
         </a>
