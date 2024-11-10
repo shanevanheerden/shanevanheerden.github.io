@@ -31,6 +31,9 @@ order: 5
         <a href="https://streamlit.io/" target="_blank">
           <img src="/assets/img/skills/streamlit.png" width="150" style="vertical-align:middle;margin:0px 0px">
         </a>
+        <a href="https://github.com/hyperopt/hyperopt" target="_blank">
+          <img src="/assets/img/skills/hyperopt.png" width="150" style="vertical-align:middle;margin:0px 0px">
+        </a>
       </center>
     </div>
     <div class="col-sm mt-3 mt-md-0">
