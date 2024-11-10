@@ -57,7 +57,7 @@ order: 5
           <img src="/assets/img/skills/shap.png" width="100" style="vertical-align:middle;margin:0px 0px">
         </a>
         <a href="https://facebook.github.io/prophet/" target="_blank">
-          <img src="/assets/img/skills/prophet.png" width="100" style="vertical-align:middle;margin:0px 0px">
+          <img src="/assets/img/skills/prophet.png" width="150" style="vertical-align:middle;margin:0px 0px">
         </a>
       </center>
     </div>
