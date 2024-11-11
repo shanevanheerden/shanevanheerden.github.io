@@ -2,7 +2,7 @@
 layout: distill
 title: 🚀 Jetpack: A Declarative Framework for Scaling Feature Engineering in Databricks
 description: How I reduced feature creation and operationalisation time by 10x 
-date: 2023-09-06
+date: 2024-09-06
 tags: CaseStudy
 giscus_comments: true
 thumbnail: assets/img/blog/blog12.1.jpg
