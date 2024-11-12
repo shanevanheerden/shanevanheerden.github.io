@@ -72,7 +72,7 @@ Feature engineering is a critical step in machine learning pipelines, where raw 
 - **Fragility:** Changes to feature definitions or dependencies can break downstream models.
 - **Scalability:** Feature computation and management become cumbersome as feature stores grow.
 
-{% include figure.html path="assets/img/blog/blog12.3.png" class="img-fluid rounded z-depth-1" zoomable=true %} <center>(a)</center>
+{% include figure.html path="assets/img/blog/blog12.3.png" class="img-fluid rounded z-depth-1" zoomable=true %} <center>(a)</center><br>
 {% include figure.html path="assets/img/blog/blog12.4.png" class="img-fluid rounded z-depth-1" zoomable=true %} <center>(b)</center>
 <div class="caption">
     <em>Figure 2: Data flow of ML systems (a) without and (b) with a feature store.</em> 
@@ -80,7 +80,7 @@ Feature engineering is a critical step in machine learning pipelines, where raw 
 
 To address these challenges, we've introduced a declarative framework for facilitating feature engineering at Luno, which we’ve named **Jetpack**.
 
-{% include figure.html path="assets/img/blog/blog12.5.png" class="img-fluid rounded z-depth-1" zoomable=true %} <center>(b)</center>
+{% include figure.html path="assets/img/blog/blog12.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 3: The custom feature engineering infrastructure developed at major tech companies.</em> 
 </div>
@@ -121,7 +121,7 @@ Three main categories of information are required when defining a feature, namel
 
 An example of a feature configuration file is shown below. In this example, we want to create a series of features that count the number of broker buys and sells for a customer over multiple time windows. Take some time to read through the comments in the example config file to get a better idea of the information needed to define this feature.
 
-```yaml
+```YAML
 # Upstream
 dependencies:  # Add all upstream table dependencies used in the 'sql' feature definition below must be defined here. You can add other table dependency by extending this list.
   - table: base.bitx.vw_users  # This is the table in catalog.schema.table format.
