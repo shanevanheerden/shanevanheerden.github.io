@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: 🚀 An Interview with Shane van Heerden
+title: 👨🏼‍💻 An Interview with Shane van Heerden
 description: Life in the shoes of a Senior Data Scientist at Luno
 date: 2023-08-28
 tags: Personal
