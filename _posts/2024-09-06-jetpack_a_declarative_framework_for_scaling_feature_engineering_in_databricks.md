@@ -49,11 +49,11 @@ _styles: >
 
 # 🚧 <b>WORK IN PROGRESS</b> 🚧
 
-{% include figure.html path="assets/img/blog/blog12.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog14.1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ## 1. Introduction
 
-{% include figure.html path="assets/img/blog/blog12.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog14.2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 1: The components needed to put an ML system into production.</em> 
 </div>
@@ -72,15 +72,15 @@ Feature engineering is a critical step in machine learning pipelines, where raw 
 - **Fragility:** Changes to feature definitions or dependencies can break downstream models.
 - **Scalability:** Feature computation and management become cumbersome as feature stores grow.
 
-{% include figure.html path="assets/img/blog/blog12.3.png" class="img-fluid rounded z-depth-1" zoomable=true %} <center>(a)</center><br>
-{% include figure.html path="assets/img/blog/blog12.4.png" class="img-fluid rounded z-depth-1" zoomable=true %} <center>(b)</center>
+{% include figure.html path="assets/img/blog/blog14.3.png" class="img-fluid rounded z-depth-1" zoomable=true %} <center>(a)</center><br>
+{% include figure.html path="assets/img/blog/blog14.4.png" class="img-fluid rounded z-depth-1" zoomable=true %} <center>(b)</center>
 <div class="caption">
     <em>Figure 2: Data flow of ML systems (a) without and (b) with a feature store.</em> 
 </div>
 
 To address these challenges, we've introduced a declarative framework for facilitating feature engineering at Luno, which we’ve named **Jetpack**.
 
-{% include figure.html path="assets/img/blog/blog12.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog14.5.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 3: The custom feature engineering infrastructure developed at major tech companies.</em> 
 </div>
@@ -108,7 +108,7 @@ This approach is largely inspired by [Doordash’s approach](https://www.infoq.c
 
 On a high level and with reference to Figure 4, all features are constructed from upstream silver and/or gold tables, or even existing feature store tables. The definition of the feature together with the orchestration details are specified as a simplified YAML config files. The actual orchestration of features is facilitated by the Jetpack system which periodically writes feature values to downstream feature store tables.
 
-{% include figure.html path="assets/img/blog/blog12.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog14.6.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 4: The high-level jetpack architecture.</em> 
 </div>
@@ -176,7 +176,7 @@ Since one may specify dependencies between features (using the `depends_on` feat
 
 In a computational batch, the `sql` logic defining the feature’s value is computed using the `spark.sql()` method, where all upstream `dependiencies` are passed as keyword arguments to reduce the number of read operations if there are shared table dependencies between features in the batch. The individual feature results are then combined using an outer join and subsequently merged into the appropriate feature store.
 
-{% include figure.html path="assets/img/blog/blog12.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/img/blog/blog14.7.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="caption">
     <em>Figure 5: A visual depiction of the feature orchestration and computation process facilitated by the Jetpack framework.</em> 
 </div>
