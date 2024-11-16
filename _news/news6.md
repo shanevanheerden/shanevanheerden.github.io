@@ -7,13 +7,13 @@ related_posts: false
 ---
 
 <p align="justify">
-I am excited to announce that I have graduated from Stellenbosch University with a BEng degree in Industrial Engineering. This is a major milestone in my academic and professional journey, and I am grateful for the opportunity to have studied at such a prestigious institution.
+I'm thrilled to share that I've completed my BEng Industrial Engineering degree at Stellenbosch University! It's been an incredible journey that's taught me so much more than just technical skills.
 </p>
 <p align="justify">
-As an Industrial Engineer, I have learned how to analyze and design complex systems, as well as how to problem-solve and communicate effectively. These skills will serve me well as I embark on my career and work to improve systems, processes, and organizations.
+These past few years have equipped me with a unique way of seeing and improving complex systems, whether that's streamlining a manufacturing process or finding creative solutions to business challenges. What I love about industrial engineering is how it combines analytical thinking with practical problem-solving – skills I can't wait to put to use in the real world.
 </p>
 <p align="justify">
-Looking back on my time at Stellenbosch University, I am grateful for the experiences and growth that I have had. As I embark on my career, I will continue to be open to new opportunities and challenges and strive to learn and grow even more.
+Looking back, I couldn't have chosen a better place to study. The experiences I've had and the people I've met have shaped me in ways I never expected. And, while it's bittersweet to be leaving, I'm excited to be entering the working world and seeing what new challenges await!
 </p> 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
