@@ -5,7 +5,7 @@ description: How I reduced feature creation and operationalisation time by 10x
 date: 2024-09-06
 tags: CaseStudy
 giscus_comments: true
-thumbnail: assets/img/blog/blog12.1.jpg
+thumbnail: assets/img/blog/blog14.1.jpg
 
 authors:
   - name: Shane van Heerden
