@@ -7,12 +7,12 @@ related_posts: false
 ---
 
 <p align="justify">
-I am delighted to announce that I have been elected as the Western Cape Chapter Chairperson of the <a href='https://www.orssa.org.za/'>Operations Research Society of South Africa</a> (ORSSA). As the new chairperson, I am excited to take on this responsibility and to promote the wider knowledge of OR techniques and practices in the Western Cape.
+I'm thrilled to share some news – I've just been elected to lead the Western Cape Chapter of <a href='https://www.orssa.org.za/'>Operations Research Society of South Africa</a> (ORSSA). It's an honor to step into this role and help grow our OR community in the region.
 </p>
 <p align="justify">
-Over the next year, I will be organising a series of colloquiums, workshops, and meet-ups designed to bring together practitioners and enthusiasts in the field of OR. These events will provide an opportunity for sharing knowledge, discussing new ideas, and building networks within the OR community.
+We've got big plans for the coming year, including regular meetups, workshops, and informal gatherings where OR practitioners and enthusiasts can connect, share ideas, and learn from each other. I'm particularly keen to create spaces where we can all benefit from each other's experiences and insights.
 </p>
 <p align="justify">
-I am excited about the opportunity to serve in this role and look forward to working with ORSSA members and partners to achieve our shared vision of advancing the field of Operations Research in South Africa. Stay tuned for updates on upcoming events and initiatives on our <a href='https://www.orssa.org.za/western-cape-chapter-activities'>Western Cape ORSSA Chapter Activities page</a>!
+This is an exciting new chapter (pun intended!) and I'm looking forward to working with all of you to strengthen OR practices across South Africa. Keep an eye on our <a href='https://www.orssa.org.za/western-cape-chapter-activities'>Chapter Activities page</a> for upcoming events – hope to see many of you there!
 </p>
 {% include figure.html path="assets/img/news/orssa_wc1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
