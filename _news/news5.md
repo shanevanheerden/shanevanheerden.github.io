@@ -7,13 +7,13 @@ related_posts: false
 ---
 
 <p align="justify">
-I am thrilled to announce that <a href='https://sunore.co.za/wp-content/uploads/2017/02/SA_vanHeerden.pdf'>my final-year project</a> has been awarded the Best Decision Support System prize at my graduation function. My project, titled <em>"The Placement of Stock Keeping Units in a Retail Distribution Centre"</em>, focused on the challenge of efficiently managing the storage and consolidation of finished goods within a <em>distribution center</em> (DC), with a particular emphasis on the retail problem of <em>slotting</em>.
+I'm excited to share that <a href='https://sunore.co.za/wp-content/uploads/2017/02/SA_vanHeerden.pdf'>my final-year project</a> won the Best Decision Support System award at my graduation function! My project looked at how to better organize stock in retail distribution centers — specifically, the tricky task of deciding where different products should be stored (what we call "slotting" in the industry).
 </p>
 <p align="justify">
-In order to optimize the slotting process and balance conflicting objectives of minimizing travel distance for stock pickers while also minimizing aisle congestion, I established a mathematical framework and constructed a bi-objective optimization model. Through the use of a multi-objective simulated annealing approach, my model was able to provide high-quality solutions that embody trade-offs between these objectives.
+The tricky part was balancing two competing goals: making sure stock pickers don't have to walk too far, while also preventing bottlenecks in the aisles.  I developed a mathematical model using something called bi-objective optimization, which helped find solutions that strike a good balance between these goals and suggest optimized storage layouts.
 </p>
 <p align="justify">
-I packaged this model into a flexible decision support system that can recommend high-quality stock setups for real-life DCs. I am proud to have applied this system to a special case study using real-life data and compared its recommendation with the actual stock setup implemented at the retail DC under consideration. I am incredibly grateful for this recognition, and I look forward to continuing to apply my skills and knowledge to tackle complex business challenges in the future.
+I turned this into a practical tool that warehouse managers can use to figure out better product arrangements. To test it out, I worked with real data from an actual retail distribution center and compared my system's recommendations to their current setup. I'm really honored to receive this recognition, and I'm keen to tackle more of these complex business problems in my career ahead!
 </p>
 {% include figure.html path="assets/img/news/dss_prize1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 <div class="row mt-3">
