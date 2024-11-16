@@ -7,7 +7,7 @@ related_posts: false
 ---
 
 <p align="justify">
-    I'm excited to share some news - I've been invited to join <a href='https://goldenkey.org/'>Golden Key International Honours Society</a>! It's a global academic community that brings together high-achieving students from over 400 universities worldwide.
+    I'm excited to share some news — I've been invited to join <a href='https://goldenkey.org/'>Golden Key International Honours Society</a>! It's a global academic community that brings together high-achieving students from over 400 universities worldwide.
 </p>
 <p align="justify">
 This invitation means a lot to me. It's not just recognition of my academic work, but also a chance to connect with other driven students who care about making a difference.
