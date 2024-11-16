@@ -13,7 +13,7 @@ I'm thrilled to share that I've completed my BEng Industrial Engineering degree 
 These past few years have equipped me with a unique way of seeing and improving complex systems, whether that's streamlining a manufacturing process or finding creative solutions to business challenges. What I love about industrial engineering is how it combines analytical thinking with practical problem-solving – skills I can't wait to put to use in the real world.
 </p>
 <p align="justify">
-Looking back, I couldn't have chosen a better place to study. The experiences I've had and the people I've met have shaped me in ways I never expected. And, while it's bittersweet to be leaving, I'm excited to be entering the working world and seeing what new challenges await!
+Looking back, I couldn't have chosen a better place to study. The experiences I've had and the people I've met have shaped me in ways I never expected.
 </p> 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
