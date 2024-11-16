@@ -7,13 +7,13 @@ related_posts: false
 ---
 
 <p align="justify">
-I am excited to be embarking on a new academic chapter in my life as I begin my Bachelor of Engineering in <a href='https://en.wikipedia.org/wiki/Industrial_engineering'>Industrial Engineering</a> at <a href='http://www.sun.ac.za/english'>Stellenbosch University</a>. As someone who has always been fascinated by how things work and how they can be improved, I am incredibly excited to dive into this new academic chapter.
+Starting my <a href='https://en.wikipedia.org/wiki/Industrial_engineering'>Industrial Engineering</a> degree at <a href='http://www.sun.ac.za/english'>Stellenbosch University</a> feels like a perfect fit for me. I've always been the type of person who looks at a process or system and thinks <em>"there must be a better way to do this"</em> – which is probably why this field speaks to me so much.
 </p>
 <p align="justify">
-As an industrial engineer, I will be equipped with the skills to design, optimise, and improve complex systems in various industries. I am eager to explore the diverse range of applications for industrial engineering, from manufacturing and logistics to healthcare and finance.
+What really draws me to industrial engineering is how versatile it is. Whether it's streamlining a factory floor, improving hospital patient flow, or optimizing supply chains, I'll be learning to solve real-world problems that make a difference. And honestly, I can't think of a better place to study this surrounded by mountains and vinyards.
 </p>
 <p align="justify">
-More than just learning technical skills, I am excited to develop critical thinking, communication, and leadership abilities that will serve me well in my future career. I cannot wait to see where this journey takes me, and I am grateful for the opportunity to pursue my passion at such a prestigious institution.
+Beyond the technical stuff, I'm looking forward to growing as a person and developing the kind of thinking that helps tackle complex challenges. I can't wait to get started!
 </p>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
