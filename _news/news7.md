@@ -8,16 +8,16 @@ related_posts: false
 
 {% include figure.html path="assets/img/news/sunore1.png" class="img-fluid rounded z-depth-1" %}
 <p align="justify">
-I am thrilled to announce that I have recently joined the <a href='https://sunore.co.za/'>Stellenbosch Unit for Operations Research in Engineering</a> (SUnORE) to pursue my master's degree. SUnORE is a leading research group situated within the Department of Industrial Engineering at Stellenbosch University, and it has an impressive reputation for conducting both fundamental and applied research in the fields of operations research, data science, and machine learning.
+I'm excited to share that I've just started my master's degree at the <a href='https://sunore.co.za/'>Stellenbosch Unit for Operations Research in Engineering</a> (SUnORE). Based in Stellenbosch University's Industrial Engineering Department, SUnORE is doing fascinating work at the intersection of operations research, data science, and machine learning.
 </p>
 <p align="justify">
-I am excited to be part of such a dynamic and innovative group that is committed to achieving excellence in all its activities. SUnORE's vision of <em>"Analysis in support of effective decisions"</em> and its mission of being <em>"an inclusive environment for the training, development, and inspiration of innovative, yet responsible, scientific young minds"</em> align perfectly with my personal goals and aspirations.
+What drew me to SUnORE was their commitment to both academic excellence and real-world impact. Their motto <em>"Analysis in support of effective decisions"</em>em resonates strongly with me, as does their focus on nurturing young researchers in an inclusive environment.
 </p>
 <p align="justify">
-My research will focus on understanding and reducing the risk of road accidents, which are a major cause of death worldwide. I'm developing a framework that uses machine learning to analyze data on past accidents, including information on the road, vehicles, and casulaties involved, to identify the factors that contribute to higher accident risk. By processing this data in a structured way, we can create more accurate predictions about where accidents are likely to occur and how severe they are likely to be. This will help governments design safer roads and implement measures to prevent accidents. I will be applying this framework to real-world case studies using road accident data from the United Kingdom.
+For my research, I'm tackling the global challenge of road safety. I'm building a machine learning framework that digs into accident data - everything from road conditions to vehicle types to injury patterns - to better understand what makes some situations more dangerous than others. By analyzing this data systematically, we can help predict high-risk areas and potential accident severity. The end goal is to give governments practical insights for designing safer roads and preventing accidents before they happen. I'll be testing this approach using road accident data from the UK.
 </p>
 <p align="justify">
-Overall, I am thrilled to have the opportunity to work with such a talented and dedicated team at SUnORE and to be a part of a broader scientific community that is committed to pushing the boundaries of knowledge and innovation. I am confident that this experience will be a pivotal moment in my academic journey and will provide me with the skills and knowledge I need to make a positive impact in the world.
+I feel fortunate to be working alongside such talented researchers at SUnORE. It's still early days, but I can already tell this experience will shape my future in ways I couldn't have imagined.
 </p>
     
 <div class="row mt-3">
