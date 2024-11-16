@@ -7,16 +7,16 @@ related_posts: false
 ---
 
 <p align="justify">
-I am excited to share that I recently participated in the ORSSA Fourth-year National Student Competition and came in as the runner-up! The competition is organized annually by the <em>Operations Research Society of South Africa</em> (ORSSA) to encourage the use of <em>Operations Research</em> (OR) in higher education and to market ORSSA among students and staff at South African universities.
+I am excited to share that I just took second place in the ORSSA National Student Competition! It's a yearly contest run by the Operations Research Society of South Africa (ORSSA), aimed at promoting OR work among university students across the country.
 </p>
 <p align="justify">
-I presented my final year project, which focused on solving the retail problem of <em>slotting</em>, and developed a mathematical framework for evaluating the effectiveness of a given stock setup in a <em>distribution center</em> (DC) section. My project aimed to identify multiple stock setups that achieve acceptable trade-offs between minimizing the expected total distance travelled by stock pickers during order consolidation and the resulting level of congestion they experience between aisle racking.
+My entry was based on my final year undergraduate project, where I tackled the challenging retail problem of optimize stock placement in distribution centers (commonly called <em>slotting</em>). I developed a mathematical model to evaluate different stock arrangements, looking at two key factors: minimizing the distance stock pickers need to walk when assembling orders, while also reducing bottlenecks and congestion between the aisles.
 </p>
 <p align="justify">
-The bi-objective optimization model that I developed formed the basis of a flexible <em>decision support system*</em> (DSS) for inventory managers to discover high-quality stock assignment trade-off solutions. I applied this DSS to a special case study involving data from a real DC and compared the desirability of the recommended stock configurations with that currently implemented within the DC.
+The output of my work was a decision support tool that helps inventory managers find the sweet spot between these competing goals. What made it particularly interesting was testing it with real data from an actual distribution center, which let me compare the layouts recommended by my system against their current setup.
 </p>
 <p align="justify">
-The competition was tough, with submissions from several institutions in South Africa. Although I did not win the prestigious <a href='https://www.orssa.org.za/honscomp'>Gerhard Geldenhuys Medal</a>, I am thrilled to have come in as the runner-up and grateful for the recognition of my hard work and dedication. Participating in this competition has been a wonderful learning experience and has allowed me to showcase my skills in Operations Research. I am grateful to my supervising lecturer for nominating my project and guiding me throughout my academic journey. I would also like to thank the ORSSA for organizing this competition and providing a platform for fourth-year students to showcase their work.
+The competition was tough, with submissions from several institutions in South Africa. Although I did not win the <a href='https://www.orssa.org.za/honscomp'>Gerhard Geldenhuys Medal</a>, I am thrilled to have come in as the runner-up and grateful for the recognition. I owe a huge thanks to my supervising lecturer who nominated my project and guided me throughout as well as to ORSSA for giving fourth-year students like me a platform to showcase our work.
 </p>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
