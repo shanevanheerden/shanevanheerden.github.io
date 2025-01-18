@@ -1,30 +1,39 @@
 [
     {
+        "name": "Machine Learning in Production",
+        "platform": "Databricks",
+        "date": "14 Jan 2025",
+        "hours": "~6",
+        "skills": "Lakehouse, Delta Lake, Machine Learning, Apache Spark, Hyperopt, Spark ML, Feature Store, Model Registry, MLflow",
+        "credential": "",
+        "certificate": "<a href=\"/assets/pdf/courses/machine_learning_in_production.pdf\" target=\"_blank\">pdf</a>"
+    },
+    {
         "name": "Databricks Certified Machine Learning Associate",
         "platform": "Databricks",
         "date": "16 Jan 2024",
         "hours": "~6",
         "skills": "Lakehouse, Delta Lake, Machine Learning, Apache Spark, Hyperopt, Spark ML, Feature Store, Model Registry, MLflow",
-        "credential": "<a href=\"https://credentials.databricks.com/67bb58e3-6b91-4334-b0a4-1a1208e786ef#gs.2x42a9\" target=\"_blank\">link</a>",
+        "credential": "",
         "certificate": "<a href=\"/assets/pdf/courses/scalable_machine_learning_with_apache_spark.pdf\" target=\"_blank\">pdf</a>"
     },
     {
-        "name": "Databricks Accredited Lakehouse Fundamentals",
+        "name": "Fundamentals of the Databricks Lakehouse Platform",
         "platform": "Databricks",
         "date": "8 January 2024",
         "hours": "~1",
         "skills": "Databricks, Lakehouse, Databricks Machine Learning, Databricks SQL, Delta Lake, Security",
-        "credential": "<a href=\"https://credentials.databricks.com/2ffdc823-6bfb-45c4-b0c6-39c0dcdd225e#gs.3rkl0r\" target=\"_blank\">link</a>",
-        "certificate": "<a href=\"/assets/pdf/courses/databricks_accredited_lakehouse_fundamentals2.pdf\" target=\"_blank\">pdf</a>"
+        "credential": "",
+        "certificate": "<a href=\"/assets/pdf/courses/fundamentals_of_the_databricks_lakehouse_platform.pdf\" target=\"_blank\">pdf</a>"
     },
     {
-        "name": "Databricks Accredited Generative AI Fundamentals",
+        "name": "Generative AI Fundamentals",
         "platform": "Databricks",
         "date": "16 July 2023",
         "hours": "~1",
-        "skills": "Generative Artificial Intelligence (AI)",
-        "credential": "<a href=\"https://credentials.databricks.com/67bb58e3-6b91-4334-b0a4-1a1208e786ef#gs.2x42a9\" target=\"_blank\">link</a>",
-        "certificate": "<a href=\"/assets/pdf/courses/databricks_generative_ai_fundamentals.pdf\" target=\"_blank\">pdf</a>"
+        "skills": "Generative Artificial Intelligence (GenAI)",
+        "credential": "",
+        "certificate": "<a href=\"/assets/pdf/courses/generative_ai_fundamentals.pdf\" target=\"_blank\">pdf</a>"
     },
     {
         "name": "Databricks Accredited Lakehouse Fundamentals",
