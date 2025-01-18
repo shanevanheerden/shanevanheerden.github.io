@@ -8,32 +8,6 @@ order: 5
 ---
 
 <div class="projects">
-<h2 class="category">certifications</h2>
-  Here is a list of my certifications.
-  <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-      <a href="https://credentials.databricks.com/2ffdc823-6bfb-45c4-b0c6-39c0dcdd225e#gs.2sd6ja" target="_blank">
-        <img src="/assets/img/certifications/lakehouse_fundamentals.png" width="200">
-      </a>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-      <a href="https://credentials.databricks.com/67bb58e3-6b91-4334-b0a4-1a1208e786ef#gs.2x42a9" target="_blank">
-        <img src="/assets/img/certifications/generative_ai_fundamentals.png" width="200">
-      </a>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-      <a href="https://credentials.databricks.com/01fa2c3b-c4c7-440c-a9e1-47d4065e2018#gs.3rlg6q" target="_blank">
-        <img src="/assets/img/certifications/databricks_machine_learning_associate.png" width="200">
-      </a>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-      <a href="https://credentials.databricks.com/f26f68ec-27bc-49b2-808f-5081abdbadb3#acc.EP6oU8FI" target="_blank">
-        <img src="/assets/img/certifications/databricks_machine_learning_professional.png" width="200">
-      </a>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-    </div>
-  </div>
 <h2 class="category">tools</h2>
   Here are some of the tools I'm proficient in.
   <div class="row mt-3">
@@ -142,6 +116,32 @@ order: 5
           <img src="/assets/img/skills/selenium.png" width="150" style="vertical-align:middle;margin:0px 0px">
         </a>
       </center>
+    </div>
+  </div>
+<h2 class="category">certifications</h2>
+  Here is a list of my certifications.
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+      <a href="https://credentials.databricks.com/2ffdc823-6bfb-45c4-b0c6-39c0dcdd225e#gs.2sd6ja" target="_blank">
+        <img src="/assets/img/certifications/lakehouse_fundamentals.png" width="200">
+      </a>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+      <a href="https://credentials.databricks.com/67bb58e3-6b91-4334-b0a4-1a1208e786ef#gs.2x42a9" target="_blank">
+        <img src="/assets/img/certifications/generative_ai_fundamentals.png" width="200">
+      </a>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+      <a href="https://credentials.databricks.com/01fa2c3b-c4c7-440c-a9e1-47d4065e2018#gs.3rlg6q" target="_blank">
+        <img src="/assets/img/certifications/databricks_machine_learning_associate.png" width="200">
+      </a>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+      <a href="https://credentials.databricks.com/f26f68ec-27bc-49b2-808f-5081abdbadb3#acc.EP6oU8FI" target="_blank">
+        <img src="/assets/img/certifications/databricks_machine_learning_professional.png" width="200">
+      </a>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
     </div>
   </div>
 <h2 class="category">courses</h2>
