@@ -3,7 +3,7 @@
         "name": "Machine Learning in Production",
         "platform": "Databricks",
         "date": "14 Jan 2025",
-        "hours": "~6",
+        "hours": "~5",
         "skills": "Lakehouse, Production, Deployment, Testing, Security, Machine Learning, Data Science, Apache Spark, Hyperopt",
         "credential": "",
         "certificate": "<a href=\"/assets/pdf/courses/machine_learning_in_production.pdf\" target=\"_blank\">pdf</a>"
